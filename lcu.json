@@ -1,0 +1,14 @@
+{
+  "templates": {
+    "repository": "lowcodeunit-devkit/lcu-cli-templates-core",
+    "scope": "@fathym",
+    "workspace": "public-web"
+  },
+  "config": {
+    "wc": ["wc/public-web.lcu.js"],
+    "solutions": {},
+    "elements": {},
+    "data-flow": {},
+    "dependencies": {}
+  }
+}
