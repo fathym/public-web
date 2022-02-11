@@ -274,37 +274,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
               </div>
             </p.Stack>
-
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__gqRpN)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__iGrkH)}>
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2__bQqKl
-                  )}
-                >
-                  {"Built for Developer Scale"}
-                </h2>
-              </div>
-
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__pwywb
-                )}
-              >
-                {
-                  "Frontend development is not meant to be a solo activity.  Seamlessly integrating with GitHub, Fathym makes it a collaborative experience with deploy previews for every code change.   "
-                }
-              </div>
-            </p.Stack>
           </p.Stack>
 
           <Section
@@ -317,6 +286,37 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
             >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__gqRpN)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__iGrkH)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__bQqKl
+                    )}
+                  >
+                    {"Built for Developer Scale"}
+                  </h2>
+                </div>
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__pwywb
+                  )}
+                >
+                  {
+                    "Frontend development is not meant to be a solo activity.  Seamlessly integrating with GitHub, Fathym makes it a collaborative experience with deploy previews for every code change.   "
+                  }
+                </div>
+              </p.Stack>
+
               <p.Stack
                 as={"div"}
                 hasGap={true}
