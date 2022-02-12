@@ -203,9 +203,7 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__w1Vzh)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000002" as const
-                    }
+                    link={"/dashboard/create-project" as const}
                   >
                     {"Get Started for Free"}
                   </Button>
@@ -719,9 +717,7 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__iSgU)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000002" as const
-                    }
+                    link={"/dashboard/create-project" as const}
                   >
                     {"Get Started for Free"}
                   </Button>

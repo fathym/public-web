@@ -204,7 +204,7 @@ function PlasmicLandingPagesGatsby__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.button__tvsJe)}
                     color={"blue" as const}
                     link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000002" as const
+                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000006" as const
                     }
                   >
                     {"Get Started for Free"}
