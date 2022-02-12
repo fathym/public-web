@@ -396,6 +396,32 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicIconLink.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "vYatICSdra6",
+          "name": "LandingPagesLowCode",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesLowCode.tsx",
+          "importSpec": {
+            "modulePath": "../pages/lowcode.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesLowCode.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "nlWEqtNh3DK",
+          "name": "LandingPagesGatsby",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesGatsby.tsx",
+          "importSpec": {
+            "modulePath": "../pages/gatsby.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesGatsby.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -690,6 +716,16 @@
           "id": "kiGapQe7PUU",
           "name": "copyright-icon",
           "filePath": "../public/plasmic/new_fathym_com/images/copyrightIcon.png"
+        },
+        {
+          "id": "AqrqLBSBV",
+          "name": "image 16",
+          "filePath": "../public/plasmic/new_fathym_com/images/image16.png"
+        },
+        {
+          "id": "gAeg9LWTo",
+          "name": "image 17",
+          "filePath": "../public/plasmic/new_fathym_com/images/image17.png"
         }
       ],
       "indirect": false,
