@@ -246,7 +246,7 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
                       sty.h2__mHag0
                     )}
                   >
-                    {"JAMStack with Fathym Micro Frontends"}
+                    {"Create with Fathym Micro Frontends"}
                   </h2>
                 </div>
 
