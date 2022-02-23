@@ -811,6 +811,16 @@
           "id": "-hxSoRCTL",
           "name": "iot-ensemble.jpg",
           "filePath": "../public/plasmic/new_fathym_com/images/iotEnsemblejpg.jpeg"
+        },
+        {
+          "id": "6HpWm3oSS",
+          "name": "shopping-cart.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/shoppingCartjpg.jpeg"
+        },
+        {
+          "id": "jtAshE9kb",
+          "name": "shopping-cart2.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/shoppingCart2Jpg.jpeg"
         }
       ],
       "indirect": false,

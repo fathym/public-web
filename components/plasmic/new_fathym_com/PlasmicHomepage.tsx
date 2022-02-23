@@ -1660,6 +1660,76 @@ function PlasmicHomepage__RenderFunc(props: {
               <Banner
                 className={classNames("__wab_instance", sty.banner__gVWhn)}
                 image={{
+                  src: "/plasmic/new_fathym_com/images/shoppingCart2Jpg.jpeg",
+                  fullWidth: 1131,
+                  fullHeight: 800,
+                  aspectRatio: undefined
+                }}
+                left={
+                  <React.Fragment>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zGYf7
+                      )}
+                    >
+                      {"ecommerce in the Wild"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__j0GnU
+                      )}
+                    >
+                      {"forestry + 11ty + snipcart + fathym"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__rVxsW
+                      )}
+                    >
+                      {
+                        "The reality is, there are 100s of different combinations of technology that can be used to achieve an e-Commerce store. This one gets you started with the click of a button. Make it yours today!"
+                      }
+                    </div>
+
+                    <Button
+                      color={"link" as const}
+                      endIcon={
+                        <ChevronRightIcon
+                          className={classNames(projectcss.all, sty.svg__qEHcq)}
+                          role={"img"}
+                        />
+                      }
+                      flat={true}
+                      link={
+                        "https://www.fathym.com/docs/guides/deploying/e-commerce/overview" as const
+                      }
+                      showEndIcon={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ljDK
+                        )}
+                      >
+                        {"Get Started"}
+                      </div>
+                    </Button>
+                  </React.Fragment>
+                }
+              />
+
+              <Banner
+                className={classNames("__wab_instance", sty.banner__bb2O1)}
+                image={{
                   src: "/plasmic/new_fathym_com/images/iotEnsemblejpg.jpeg",
                   fullWidth: 669,
                   fullHeight: 440,
@@ -1671,7 +1741,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__zGYf7
+                        sty.text__sCzWb
                       )}
                     >
                       {"data as an Application"}
@@ -1703,7 +1773,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       color={"link" as const}
                       endIcon={
                         <ChevronRightIcon
-                          className={classNames(projectcss.all, sty.svg__qEHcq)}
+                          className={classNames(projectcss.all, sty.svg__sthRv)}
                           role={"img"}
                         />
                       }
@@ -1717,7 +1787,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__ljDK
+                          sty.text___44UbY
                         )}
                       >
                         {"Get Started"}
