@@ -776,6 +776,41 @@
           "id": "g2Z4HKTGH",
           "name": "angular3.png",
           "filePath": "../public/plasmic/new_fathym_com/images/angular3Png.png"
+        },
+        {
+          "id": "ZpCMm3Zin",
+          "name": "angular4.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/angular4Png.png"
+        },
+        {
+          "id": "V9Rmlu-H3",
+          "name": "react3.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/react3Png.png"
+        },
+        {
+          "id": "5_KLnWm11",
+          "name": "docusaurus.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/docusaurusjpg.jpeg"
+        },
+        {
+          "id": "-Q_WfVkl4",
+          "name": "svelte2.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/svelte2Jpg.jpeg"
+        },
+        {
+          "id": "GmfKjX0jA",
+          "name": "vue2.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/vue2Jpg.jpeg"
+        },
+        {
+          "id": "KC2KtNHwD",
+          "name": "gatsby2.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/gatsby2Png.png"
+        },
+        {
+          "id": "-hxSoRCTL",
+          "name": "iot-ensemble.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/iotEnsemblejpg.jpeg"
         }
       ],
       "indirect": false,

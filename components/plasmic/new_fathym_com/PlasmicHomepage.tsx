@@ -1221,9 +1221,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Banner
                   className={classNames("__wab_instance", sty.banner__ny58A)}
                   image={{
-                    src: "/plasmic/new_fathym_com/images/angular3Png.png",
-                    fullWidth: 360,
-                    fullHeight: 380,
+                    src: "/plasmic/new_fathym_com/images/angular4Png.png",
+                    fullWidth: 225,
+                    fullHeight: 225,
                     aspectRatio: undefined
                   }}
                   left={
@@ -1292,9 +1292,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Banner
                   className={classNames("__wab_instance", sty.banner__gwHsw)}
                   image={{
-                    src: "/plasmic/new_fathym_com/images/react2Png.png",
-                    fullWidth: 880,
-                    fullHeight: 746,
+                    src: "/plasmic/new_fathym_com/images/react3Png.png",
+                    fullWidth: 512,
+                    fullHeight: 512,
                     aspectRatio: undefined
                   }}
                   left={
@@ -1369,7 +1369,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Banner
                   className={classNames("__wab_instance", sty.banner__mkNZh)}
                   image={{
-                    src: "/plasmic/new_fathym_com/images/docusauruspng.png",
+                    src: "/plasmic/new_fathym_com/images/docusaurusjpg.jpeg",
                     fullWidth: 300,
                     fullHeight: 255,
                     aspectRatio: undefined
@@ -1440,7 +1440,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Banner
                   className={classNames("__wab_instance", sty.banner__zs06B)}
                   image={{
-                    src: "/plasmic/new_fathym_com/images/sveltepng.png",
+                    src: "/plasmic/new_fathym_com/images/svelte2Jpg.jpeg",
                     fullWidth: 1200,
                     fullHeight: 1445,
                     aspectRatio: undefined
@@ -1517,9 +1517,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Banner
                   className={classNames("__wab_instance", sty.banner__dhUxY)}
                   image={{
-                    src: "/plasmic/new_fathym_com/images/vuejpg.jpeg",
-                    fullWidth: 900,
-                    fullHeight: 780,
+                    src: "/plasmic/new_fathym_com/images/vue2Jpg.jpeg",
+                    fullWidth: 400,
+                    fullHeight: 366,
                     aspectRatio: undefined
                   }}
                   left={
@@ -1588,9 +1588,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Banner
                   className={classNames("__wab_instance", sty.banner___3JPl)}
                   image={{
-                    src: "/plasmic/new_fathym_com/images/gatsbypng.png",
-                    fullWidth: 1000,
-                    fullHeight: 1000,
+                    src: "/plasmic/new_fathym_com/images/gatsby2Png.png",
+                    fullWidth: 400,
+                    fullHeight: 400,
                     aspectRatio: undefined
                   }}
                   left={
@@ -1660,7 +1660,7 @@ function PlasmicHomepage__RenderFunc(props: {
               <Banner
                 className={classNames("__wab_instance", sty.banner__gVWhn)}
                 image={{
-                  src: "/plasmic/new_fathym_com/images/iotEnsemblepng.png",
+                  src: "/plasmic/new_fathym_com/images/iotEnsemblejpg.jpeg",
                   fullWidth: 669,
                   fullHeight: 440,
                   aspectRatio: undefined
