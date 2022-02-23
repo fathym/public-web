@@ -726,6 +726,56 @@
           "id": "gAeg9LWTo",
           "name": "image 17",
           "filePath": "../public/plasmic/new_fathym_com/images/image17.png"
+        },
+        {
+          "id": "07iCDJm81",
+          "name": "angular.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/angularpng.png"
+        },
+        {
+          "id": "10YczkcSe",
+          "name": "react.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/reactpng.png"
+        },
+        {
+          "id": "Qc1L6o_lt",
+          "name": "docusaurus.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/docusauruspng.png"
+        },
+        {
+          "id": "zDwHu-wj5",
+          "name": "svelte.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/sveltejpg.jpeg"
+        },
+        {
+          "id": "mwUvuPLMx",
+          "name": "vue.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/vuejpg.jpeg"
+        },
+        {
+          "id": "ldiNJjzLX",
+          "name": "gatsby.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/gatsbypng.png"
+        },
+        {
+          "id": "zewIG9KfL",
+          "name": "iot-ensemble.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/iotEnsemblepng.png"
+        },
+        {
+          "id": "8BTxkZPSA",
+          "name": "svelte.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/sveltepng.png"
+        },
+        {
+          "id": "9NSvSU1NS",
+          "name": "react2.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/react2Png.png"
+        },
+        {
+          "id": "g2Z4HKTGH",
+          "name": "angular3.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/angular3Png.png"
         }
       ],
       "indirect": false,
@@ -746,6 +796,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.170",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.170/dist/plasmic.schema.json"
+  "cliVersion": "0.1.171",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.171/dist/plasmic.schema.json"
 }

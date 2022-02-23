@@ -643,6 +643,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   </ListItem>
 
                   <ListItem
+                    bottomBorder={"dark" as const}
                     className={classNames(
                       "__wab_instance",
                       sty.listItem__i5DAi
@@ -666,6 +667,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   </ListItem>
 
                   <ListItem
+                    bottomBorder={"dark" as const}
                     className={classNames(
                       "__wab_instance",
                       sty.listItem__rRgXs
@@ -719,7 +721,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___8DnmW
                       )}
                     >
-                      {"Free During BETA"}
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "                  "
+                        : "Free During BETA"}
                     </div>
                   </div>
 
@@ -1209,12 +1213,456 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__kRwYx)}
             >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__g6Buz)}
+              >
+                <Banner
+                  className={classNames("__wab_instance", sty.banner__ny58A)}
+                  image={{
+                    src: "/plasmic/new_fathym_com/images/angular3Png.png",
+                    fullWidth: 360,
+                    fullHeight: 380,
+                    aspectRatio: undefined
+                  }}
+                  left={
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xluvF
+                        )}
+                      >
+                        {"Superheroic JavaScript MVW Framework"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__sN2VP
+                        )}
+                      >
+                        {"angular + fathym"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__elnSi
+                        )}
+                      >
+                        {
+                          "We get the ball rolling with an Angular + Typescript app that you can run with."
+                        }
+                      </div>
+
+                      <Button
+                        color={"link" as const}
+                        endIcon={
+                          <ChevronRightIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__ky1Fn
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        flat={true}
+                        link={"/angular" as const}
+                        showEndIcon={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__acUSm
+                          )}
+                        >
+                          {"Get Started"}
+                        </div>
+                      </Button>
+                    </React.Fragment>
+                  }
+                />
+
+                <Banner
+                  className={classNames("__wab_instance", sty.banner__gwHsw)}
+                  image={{
+                    src: "/plasmic/new_fathym_com/images/react2Png.png",
+                    fullWidth: 880,
+                    fullHeight: 746,
+                    aspectRatio: undefined
+                  }}
+                  left={
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__w7A53
+                        )}
+                      >
+                        {"A JS library for building user interfaces"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dBNjp
+                        )}
+                      >
+                        {"react + fathym"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cUowN
+                        )}
+                      >
+                        {
+                          "Save the pain and suffering and create your interactive UI's in minutes!"
+                        }
+                      </div>
+
+                      <Button
+                        color={"link" as const}
+                        endIcon={
+                          <ChevronRightIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__faaj2
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        flat={true}
+                        link={"/react" as const}
+                        showEndIcon={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__jnEe3
+                          )}
+                        >
+                          {"Get Started"}
+                        </div>
+                      </Button>
+                    </React.Fragment>
+                  }
+                />
+              </p.Stack>
+
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__akIiw)}
+              >
+                <Banner
+                  className={classNames("__wab_instance", sty.banner__mkNZh)}
+                  image={{
+                    src: "/plasmic/new_fathym_com/images/docusauruspng.png",
+                    fullWidth: 300,
+                    fullHeight: 255,
+                    aspectRatio: undefined
+                  }}
+                  left={
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__fq4NR
+                        )}
+                      >
+                        {"Build optimized websites quickly"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__sN2VP
+                        )}
+                      >
+                        {"docusaurus + fathym"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__elnSi
+                        )}
+                      >
+                        {
+                          "Easy website? Check.\nEasy docs? Check.\nEasy blogs? Check."
+                        }
+                      </div>
+
+                      <Button
+                        color={"link" as const}
+                        endIcon={
+                          <ChevronRightIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__pMeX6
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        flat={true}
+                        link={"/docusaurus" as const}
+                        showEndIcon={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__dlk5L
+                          )}
+                        >
+                          {"Get Started"}
+                        </div>
+                      </Button>
+                    </React.Fragment>
+                  }
+                />
+
+                <Banner
+                  className={classNames("__wab_instance", sty.banner__zs06B)}
+                  image={{
+                    src: "/plasmic/new_fathym_com/images/sveltepng.png",
+                    fullWidth: 1200,
+                    fullHeight: 1445,
+                    aspectRatio: undefined
+                  }}
+                  left={
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qwGzh
+                        )}
+                      >
+                        {"Cybernetically enhanced web apps"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dBNjp
+                        )}
+                      >
+                        {"svelte + fathym"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cUowN
+                        )}
+                      >
+                        {
+                          "Good, clean  true low-code feels like crushed velvet.  Wrap yourself in it."
+                        }
+                      </div>
+
+                      <Button
+                        color={"link" as const}
+                        endIcon={
+                          <ChevronRightIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__b5Vnj
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        flat={true}
+                        link={"/svelte-deployment" as const}
+                        showEndIcon={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__jseEx
+                          )}
+                        >
+                          {"Get Started"}
+                        </div>
+                      </Button>
+                    </React.Fragment>
+                  }
+                />
+              </p.Stack>
+
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__yzbyu)}
+              >
+                <Banner
+                  className={classNames("__wab_instance", sty.banner__dhUxY)}
+                  image={{
+                    src: "/plasmic/new_fathym_com/images/vuejpg.jpeg",
+                    fullWidth: 900,
+                    fullHeight: 780,
+                    aspectRatio: undefined
+                  }}
+                  left={
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__c7Q0Z
+                        )}
+                      >
+                        {"The Progressive JavaScript Framework"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__sN2VP
+                        )}
+                      >
+                        {"vue + fathym"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__elnSi
+                        )}
+                      >
+                        {
+                          "An approachable, performant and versatile framework for building web UIs."
+                        }
+                      </div>
+
+                      <Button
+                        color={"link" as const}
+                        endIcon={
+                          <ChevronRightIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__z494Y
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        flat={true}
+                        link={"/vue" as const}
+                        showEndIcon={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___4VPta
+                          )}
+                        >
+                          {"Get Started"}
+                        </div>
+                      </Button>
+                    </React.Fragment>
+                  }
+                />
+
+                <Banner
+                  className={classNames("__wab_instance", sty.banner___3JPl)}
+                  image={{
+                    src: "/plasmic/new_fathym_com/images/gatsbypng.png",
+                    fullWidth: 1000,
+                    fullHeight: 1000,
+                    aspectRatio: undefined
+                  }}
+                  left={
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__f0Aj
+                        )}
+                      >
+                        {"Frontend Framework for Headless CMS's"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dBNjp
+                        )}
+                      >
+                        {"gatsby + fathym"}
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cUowN
+                        )}
+                      >
+                        {
+                          "Maybe it's time your CMS had a faster frontend. For reals."
+                        }
+                      </div>
+
+                      <Button
+                        color={"link" as const}
+                        endIcon={
+                          <ChevronRightIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__gvgn1
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        flat={true}
+                        link={"/gatsby" as const}
+                        showEndIcon={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ptSpx
+                          )}
+                        >
+                          {"Get Started"}
+                        </div>
+                      </Button>
+                    </React.Fragment>
+                  }
+                />
+              </p.Stack>
+
               <Banner
                 className={classNames("__wab_instance", sty.banner__gVWhn)}
                 image={{
-                  src: "/plasmic/new_fathym_com/images/image8.png",
-                  fullWidth: 450,
-                  fullHeight: 450,
+                  src: "/plasmic/new_fathym_com/images/iotEnsemblepng.png",
+                  fullWidth: 669,
+                  fullHeight: 440,
                   aspectRatio: undefined
                 }}
                 left={
@@ -1236,7 +1684,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text__j0GnU
                       )}
                     >
-                      {"iot ensemble + fathym"}
+                      {"iot ensemble + power bi + fathym"}
                     </div>
 
                     <div
@@ -1247,7 +1695,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Connected?  IoT Ensemble data: data as a cloud API.\nHosted?  Customizable single page app.\nWhen?  Just a fork away."
+                        "IoT Ensemble provides out of the box APIs that allow you to easily connect your device data with Microsoft's Power BI. IoT Ensemble + Fathym goes above and beyond to operate as your virtual development team to automate best practices for IoT application delivery."
                       }
                     </div>
 
@@ -1260,6 +1708,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         />
                       }
                       flat={true}
+                      link={
+                        "https://www.fathym.com/iot/docs/devs/storage/power-bi" as const
+                      }
                       showEndIcon={true}
                     >
                       <div
@@ -1267,223 +1718,6 @@ function PlasmicHomepage__RenderFunc(props: {
                           projectcss.all,
                           projectcss.__wab_text,
                           sty.text__ljDK
-                        )}
-                      >
-                        {"Docs Coming Soon"}
-                      </div>
-                    </Button>
-                  </React.Fragment>
-                }
-              />
-
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__g6Buz)}
-              >
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__ny58A)}
-                  image={{
-                    src: "/plasmic/new_fathym_com/images/image5.png",
-                    fullWidth: 700,
-                    fullHeight: 700,
-                    aspectRatio: undefined
-                  }}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__xluvF
-                        )}
-                      >
-                        {"Clean Frameworks"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__sN2VP
-                        )}
-                      >
-                        {"svelte + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__elnSi
-                        )}
-                      >
-                        {
-                          "Good, clean  true low-code feels like crushed velvet.  Wrap yourself in it."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__ky1Fn
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        link={"/svelte-deployment" as const}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__acUSm
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
-                  }
-                />
-
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__gwHsw)}
-                  image={{
-                    src: "/plasmic/new_fathym_com/images/image3.png",
-                    fullWidth: 1200,
-                    fullHeight: 675,
-                    aspectRatio: undefined
-                  }}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__w7A53
-                        )}
-                      >
-                        {"Clean Frameworks"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dBNjp
-                        )}
-                      >
-                        {"fathym on rails"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__cUowN
-                        )}
-                      >
-                        {
-                          "Let's say your rubies are delivered via rails.  Steam engine?  Diesel?  Nah, let's go mag-lev.  Modernize the cloud infrastructure underneath it."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__faaj2
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__jnEe3
-                          )}
-                        >
-                          {"Docs Coming Soon"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
-                  }
-                />
-              </p.Stack>
-
-              <Banner
-                className={classNames("__wab_instance", sty.banner__jdFAq)}
-                image={{
-                  src: "/plasmic/new_fathym_com/images/image2.png",
-                  fullWidth: 784,
-                  fullHeight: 1019,
-                  aspectRatio: undefined
-                }}
-                left={
-                  <React.Fragment>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___0Fhvs
-                      )}
-                    >
-                      {"Data as an Application"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__tU6D
-                      )}
-                    >
-                      {"11ty + forestry.io + fathym"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__nOoZt
-                      )}
-                    >
-                      {
-                        "Hard to see the forestry through the 11ty trees?  \nDon't lose your head!\nCommit to being headless!"
-                      }
-                    </div>
-
-                    <Button
-                      color={"link" as const}
-                      endIcon={
-                        <ChevronRightIcon
-                          className={classNames(projectcss.all, sty.svg__t5Yh7)}
-                          role={"img"}
-                        />
-                      }
-                      flat={true}
-                      link={
-                        "/docs/guides/e-commerce/forestry-11ty-jamcart/overview" as const
-                      }
-                      showEndIcon={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__jKzWu
                         )}
                       >
                         {"Get Started"}

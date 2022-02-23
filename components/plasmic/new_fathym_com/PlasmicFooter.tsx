@@ -64,14 +64,17 @@ export const PlasmicFooter__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicFooter__OverridesType = {
   root?: p.Flex<"div">;
+  httpswwwfathymcom?: p.Flex<"a"> & Partial<LinkProps>;
   httpswwwiotEnsemblecom?: p.Flex<"a"> & Partial<LinkProps>;
   httpswwwhabistackcom?: p.Flex<"a"> & Partial<LinkProps>;
   httpswwwproadjectcom?: p.Flex<"a"> & Partial<LinkProps>;
+  httpswwwfathymcomdocs?: p.Flex<"a"> & Partial<LinkProps>;
+  httpswwwfathymcomblog?: p.Flex<"a"> & Partial<LinkProps>;
   mailtosupportfathymcom?: p.Flex<"a"> & Partial<LinkProps>;
   textInput2?: p.Flex<typeof TextInput2>;
   button2?: p.Flex<typeof Button2>;
   fathymIt?: p.Flex<typeof IconLink>;
-  twitter?: p.Flex<"svg">;
+  httpstwittercomFathymIt?: p.Flex<"svg">;
   httpsgithubcomfathym?: p.Flex<typeof IconLink>;
   gitHub?: p.Flex<"svg">;
   httpswwwfacebookcomFathymInc?: p.Flex<typeof IconLink>;
@@ -158,14 +161,20 @@ function PlasmicFooter__RenderFunc(props: {
             </div>
 
             <p.PlasmicLink
+              data-plasmic-name={"httpswwwfathymcom"}
+              data-plasmic-override={overrides.httpswwwfathymcom}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
-                sty.link__yhNf
+                sty.httpswwwfathymcom
               )}
               component={Link}
-              href={"" as const}
+              href={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? ("https://www.fathym.com/" as const)
+                  : ("" as const)
+              }
               platform={"nextjs"}
               target={"_blank" as const}
             >
@@ -240,11 +249,13 @@ function PlasmicFooter__RenderFunc(props: {
             </div>
 
             <p.PlasmicLink
+              data-plasmic-name={"httpswwwfathymcomdocs"}
+              data-plasmic-override={overrides.httpswwwfathymcomdocs}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
-                sty.link__wBidf
+                sty.httpswwwfathymcomdocs
               )}
               component={Link}
               href={"" as const}
@@ -255,11 +266,13 @@ function PlasmicFooter__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
+              data-plasmic-name={"httpswwwfathymcomblog"}
+              data-plasmic-override={overrides.httpswwwfathymcomblog}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
-                sty.link___2TpM7
+                sty.httpswwwfathymcomblog
               )}
               component={Link}
               href={"" as const}
@@ -465,9 +478,12 @@ function PlasmicFooter__RenderFunc(props: {
             className={classNames("__wab_instance", sty.fathymIt)}
             icon={
               <TwitterIconIcon
-                data-plasmic-name={"twitter"}
-                data-plasmic-override={overrides.twitter}
-                className={classNames(projectcss.all, sty.twitter)}
+                data-plasmic-name={"httpstwittercomFathymIt"}
+                data-plasmic-override={overrides.httpstwittercomFathymIt}
+                className={classNames(
+                  projectcss.all,
+                  sty.httpstwittercomFathymIt
+                )}
                 role={"img"}
               />
             }
@@ -512,27 +528,33 @@ function PlasmicFooter__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "httpswwwfathymcom",
     "httpswwwiotEnsemblecom",
     "httpswwwhabistackcom",
     "httpswwwproadjectcom",
+    "httpswwwfathymcomdocs",
+    "httpswwwfathymcomblog",
     "mailtosupportfathymcom",
     "textInput2",
     "button2",
     "fathymIt",
-    "twitter",
+    "httpstwittercomFathymIt",
     "httpsgithubcomfathym",
     "gitHub",
     "httpswwwfacebookcomFathymInc",
     "facebook"
   ],
+  httpswwwfathymcom: ["httpswwwfathymcom"],
   httpswwwiotEnsemblecom: ["httpswwwiotEnsemblecom"],
   httpswwwhabistackcom: ["httpswwwhabistackcom"],
   httpswwwproadjectcom: ["httpswwwproadjectcom"],
+  httpswwwfathymcomdocs: ["httpswwwfathymcomdocs"],
+  httpswwwfathymcomblog: ["httpswwwfathymcomblog"],
   mailtosupportfathymcom: ["mailtosupportfathymcom"],
   textInput2: ["textInput2", "button2"],
   button2: ["button2"],
-  fathymIt: ["fathymIt", "twitter"],
-  twitter: ["twitter"],
+  fathymIt: ["fathymIt", "httpstwittercomFathymIt"],
+  httpstwittercomFathymIt: ["httpstwittercomFathymIt"],
   httpsgithubcomfathym: ["httpsgithubcomfathym", "gitHub"],
   gitHub: ["gitHub"],
   httpswwwfacebookcomFathymInc: ["httpswwwfacebookcomFathymInc", "facebook"],
@@ -543,14 +565,17 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  httpswwwfathymcom: "a";
   httpswwwiotEnsemblecom: "a";
   httpswwwhabistackcom: "a";
   httpswwwproadjectcom: "a";
+  httpswwwfathymcomdocs: "a";
+  httpswwwfathymcomblog: "a";
   mailtosupportfathymcom: "a";
   textInput2: typeof TextInput2;
   button2: typeof Button2;
   fathymIt: typeof IconLink;
-  twitter: "svg";
+  httpstwittercomFathymIt: "svg";
   httpsgithubcomfathym: typeof IconLink;
   gitHub: "svg";
   httpswwwfacebookcomFathymInc: typeof IconLink;
@@ -614,14 +639,17 @@ export const PlasmicFooter = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    httpswwwfathymcom: makeNodeComponent("httpswwwfathymcom"),
     httpswwwiotEnsemblecom: makeNodeComponent("httpswwwiotEnsemblecom"),
     httpswwwhabistackcom: makeNodeComponent("httpswwwhabistackcom"),
     httpswwwproadjectcom: makeNodeComponent("httpswwwproadjectcom"),
+    httpswwwfathymcomdocs: makeNodeComponent("httpswwwfathymcomdocs"),
+    httpswwwfathymcomblog: makeNodeComponent("httpswwwfathymcomblog"),
     mailtosupportfathymcom: makeNodeComponent("mailtosupportfathymcom"),
     textInput2: makeNodeComponent("textInput2"),
     button2: makeNodeComponent("button2"),
     fathymIt: makeNodeComponent("fathymIt"),
-    twitter: makeNodeComponent("twitter"),
+    httpstwittercomFathymIt: makeNodeComponent("httpstwittercomFathymIt"),
     httpsgithubcomfathym: makeNodeComponent("httpsgithubcomfathym"),
     gitHub: makeNodeComponent("gitHub"),
     httpswwwfacebookcomFathymInc: makeNodeComponent(
