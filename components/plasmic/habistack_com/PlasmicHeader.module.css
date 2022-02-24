@@ -1,0 +1,100 @@
+.root {
+  width: 100%;
+  height: auto;
+  max-width: var(--token--_9hWElktusQ);
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 16px 8px;
+}
+.link {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.svg {
+  object-fit: cover;
+  width: 100px;
+  height: 48px;
+  color: #fd0505;
+  flex-shrink: 0;
+}
+.freeBox {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: auto;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 20px);
+  width: calc(100% + 20px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 20px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox > :global(.__wab_flex-container) {
+    margin-left: calc(0px - 16px);
+    width: calc(100% + 16px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox > :global(.__wab_flex-container) > *,
+  .freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox > :global(.__wab_flex-container) > picture > img,
+  .freeBox
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 16px;
+    margin-top: 0px;
+  }
+}
+.button:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__otfjg {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg___9XacZ {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.ioTEnsemble:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__ux3G2 {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__l8Djp {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}

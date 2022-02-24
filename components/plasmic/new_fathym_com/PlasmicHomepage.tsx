@@ -42,13 +42,14 @@ import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/compone
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import Testimonial from "../../Testimonial"; // plasmic-import: ckCiVMtRuKmU/component
 import CallToActionSection from "../../CallToActionSection"; // plasmic-import: mTFy8Vt80PPU/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import HabistackFooter from "../../HabistackFooter"; // plasmic-import: m8MF3DD_Un/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
+import plasmic_habistack_com_css from "../habistack_com/plasmic_habistack_com.module.css"; // plasmic-import: hhYAirYt8bU9TEjNgFzExf/projectcss
 import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import: jbURxL3XuiMBQsLhf7apui/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: Z0tmI2kZtwu/css
 
@@ -130,6 +131,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_tokens,
             plasmic_library_plasmic_color_type_css.plasmic_tokens,
+            plasmic_habistack_com_css.plasmic_tokens,
             sty.root
           )}
         >

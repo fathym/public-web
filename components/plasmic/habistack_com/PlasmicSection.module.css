@@ -1,0 +1,106 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-column-gap: 0px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 32px;
+}
+.rootcolor_halfDark {
+  background: linear-gradient(
+      0deg,
+      var(--token-bp_CxDNOQi9) 0%,
+      var(--token-bp_CxDNOQi9) 100%
+    )
+    left 0% top 100% / 100% 50% no-repeat;
+}
+.rootcolor_dark {
+  background: var(--token-dph1wZ7NjV9);
+}
+.content {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: var(--token--_9hWElktusQ);
+  display: flex;
+  position: relative;
+  min-width: 0;
+}
+.content > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.content > :global(.__wab_flex-container) > *,
+.content > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.content > :global(.__wab_flex-container) > picture > img,
+.content
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+.titleContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 0;
+  display: none;
+}
+.titleContainerhasTitle {
+  display: flex;
+}
+.slotTargetTitle {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--token-NEon4Y--Z);
+  text-align: center;
+}
+.subtitleContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 0;
+  display: none;
+}
+.subtitleContainerhasSubtitle {
+  display: flex;
+}
+.slotTargetSubtitle {
+  text-align: left;
+}
+.contentContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.contentContainerhasTitle {
+  margin-top: calc(64px + 10px) !important;
+}
+.contentContainerhasSubtitle {
+  margin-top: calc(64px + 10px) !important;
+}
+.contentContainerhasTitle_hasSubtitle {
+  margin-top: calc(64px + 10px) !important;
+}

@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicIconLink,
   DefaultIconLinkProps
-} from "./plasmic/new_fathym_com/PlasmicIconLink";
+} from "./plasmic/habistack_com/PlasmicIconLink";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined

@@ -701,6 +701,16 @@
       }
     },
     {
+      "name": "Max Content Width",
+      "type": "spacing",
+      "value": "632px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "hhYAirYt8bU9TEjNgFzExf",
+        "id": "-_9hWElktusQ"
+      }
+    },
+    {
       "name": "Spectrum/Blue/00",
       "type": "color",
       "value": "rgb(0,11,27)",
@@ -3101,6 +3111,16 @@
       }
     },
     {
+      "name": "divider",
+      "type": "color",
+      "value": "rgb(234,234,234)",
+      "category": "color",
+      "meta": {
+        "projectId": "hhYAirYt8bU9TEjNgFzExf",
+        "id": "8fgRcA8MIWoy"
+      }
+    },
+    {
       "name": "light/blue",
       "type": "color",
       "value": "#007AFF",
@@ -3201,6 +3221,16 @@
       }
     },
     {
+      "name": "text",
+      "type": "color",
+      "value": "#666666",
+      "category": "color",
+      "meta": {
+        "projectId": "hhYAirYt8bU9TEjNgFzExf",
+        "id": "qEtqsP0-AcEg"
+      }
+    },
+    {
       "name": "white",
       "type": "color",
       "value": "#FFFFFF",
@@ -3208,6 +3238,16 @@
       "meta": {
         "projectId": "jbURxL3XuiMBQsLhf7apui",
         "id": "nXWKqet0fltC"
+      }
+    },
+    {
+      "name": "white",
+      "type": "color",
+      "value": "rgb(255,255,255)",
+      "category": "color",
+      "meta": {
+        "projectId": "hhYAirYt8bU9TEjNgFzExf",
+        "id": "P6AIK44GUcUa"
       }
     },
     {
