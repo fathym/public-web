@@ -187,7 +187,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___9L6Z8
                       )}
                     >
-                      {"The future of the open web"}
+                      {"Build, deploy, & scale modern web projects "}
                     </div>
 
                     <div
@@ -197,9 +197,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___96MzJ
                       )}
                     >
-                      {
-                        "Your Code. Low Code. Now Code.  Bring the power of micro frontends to your organization"
-                      }
+                      {"First class support for every popular  framework"}
                     </div>
                   </p.Stack>
 
@@ -269,9 +267,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"auto" as const}
                   loading={"lazy" as const}
                   src={{
-                    src: "/plasmic/new_fathym_com/images/homeHeropng.png",
-                    fullWidth: 1000,
-                    fullHeight: 825,
+                    src: "/plasmic/new_fathym_com/images/image.png",
+                    fullWidth: 485,
+                    fullHeight: 400,
                     aspectRatio: undefined
                   }}
                 />
