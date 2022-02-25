@@ -16,6 +16,7 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 
 import * as p from "@plasmicapp/react-web";
+import * as ph from "@plasmicapp/host";
 
 import {
   hasVariant,
@@ -39,7 +40,7 @@ import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
-import HabistackFooter3 from "../../HabistackFooter3"; // plasmic-import: BuqTNr9jIT/component
+import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -77,7 +78,7 @@ export type PlasmicLandingPagesSvelte__OverridesType = {
   banner?: p.Flex<typeof Banner>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
-  habistackFooter3?: p.Flex<typeof HabistackFooter3>;
+  habistackFooter?: p.Flex<typeof HabistackFooter>;
 };
 
 export interface DefaultLandingPagesSvelteProps {}
@@ -1127,10 +1128,10 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
             </p.Stack>
           ) : null}
 
-          <HabistackFooter3
-            data-plasmic-name={"habistackFooter3"}
-            data-plasmic-override={overrides.habistackFooter3}
-            className={classNames("__wab_instance", sty.habistackFooter3)}
+          <HabistackFooter
+            data-plasmic-name={"habistackFooter"}
+            data-plasmic-override={overrides.habistackFooter}
+            className={classNames("__wab_instance", sty.habistackFooter)}
           />
         </div>
       </div>
@@ -1149,7 +1150,7 @@ const PlasmicDescendants = {
     "banner",
     "section",
     "foreground3",
-    "habistackFooter3"
+    "habistackFooter"
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
@@ -1159,7 +1160,7 @@ const PlasmicDescendants = {
   banner: ["banner"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
-  habistackFooter3: ["habistackFooter3"]
+  habistackFooter: ["habistackFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1174,7 +1175,7 @@ type NodeDefaultElementType = {
   banner: typeof Banner;
   section: "section";
   foreground3: "div";
-  habistackFooter3: typeof HabistackFooter3;
+  habistackFooter: typeof HabistackFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1242,7 +1243,7 @@ export const PlasmicLandingPagesSvelte = Object.assign(
     banner: makeNodeComponent("banner"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
-    habistackFooter3: makeNodeComponent("habistackFooter3"),
+    habistackFooter: makeNodeComponent("habistackFooter"),
 
     // Metadata about props expected for PlasmicLandingPagesSvelte
     internalVariantProps: PlasmicLandingPagesSvelte__VariantProps,

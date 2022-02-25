@@ -1218,7 +1218,7 @@
 .text__xNutd {
   height: auto;
 }
-.habistackFooter3:global(.__wab_instance):global(.__wab_instance) {
+.habistackFooter:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

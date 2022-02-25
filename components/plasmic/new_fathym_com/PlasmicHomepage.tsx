@@ -16,6 +16,7 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 
 import * as p from "@plasmicapp/react-web";
+import * as ph from "@plasmicapp/host";
 
 import {
   hasVariant,
@@ -42,6 +43,7 @@ import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/compone
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import Testimonial from "../../Testimonial"; // plasmic-import: ckCiVMtRuKmU/component
 import CallToActionSection from "../../CallToActionSection"; // plasmic-import: mTFy8Vt80PPU/component
+import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -77,6 +79,7 @@ export type PlasmicHomepage__OverridesType = {
   logoCloudSection?: p.Flex<typeof Section>;
   testimonialsSection?: p.Flex<typeof Section>;
   callToActionSection?: p.Flex<typeof CallToActionSection>;
+  habistackFooter?: p.Flex<typeof HabistackFooter>;
 };
 
 export interface DefaultHomepageProps {}
@@ -184,7 +187,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___9L6Z8
                       )}
                     >
-                      {"Build, deploy, & scale modern web projects "}
+                      {"The future of the open web"}
                     </div>
 
                     <div
@@ -194,7 +197,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___96MzJ
                       )}
                     >
-                      {"First class support for every popular  framework"}
+                      {
+                        "Your Code. Low Code. Now Code.  Bring the power of micro frontends to your organization"
+                      }
                     </div>
                   </p.Stack>
 
@@ -264,9 +269,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"auto" as const}
                   loading={"lazy" as const}
                   src={{
-                    src: "/plasmic/new_fathym_com/images/image.png",
-                    fullWidth: 485,
-                    fullHeight: 400,
+                    src: "/plasmic/new_fathym_com/images/homeHeropng.png",
+                    fullWidth: 1000,
+                    fullHeight: 825,
                     aspectRatio: undefined
                   }}
                 />
@@ -2082,6 +2087,12 @@ function PlasmicHomepage__RenderFunc(props: {
               </Button>
             </p.Stack>
           </CallToActionSection>
+
+          <HabistackFooter
+            data-plasmic-name={"habistackFooter"}
+            data-plasmic-override={overrides.habistackFooter}
+            className={classNames("__wab_instance", sty.habistackFooter)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -2099,7 +2110,8 @@ const PlasmicDescendants = {
     "shopBannersSection",
     "logoCloudSection",
     "testimonialsSection",
-    "callToActionSection"
+    "callToActionSection",
+    "habistackFooter"
   ],
   headerHeroSection: ["headerHeroSection", "navbar"],
   navbar: ["navbar"],
@@ -2109,7 +2121,8 @@ const PlasmicDescendants = {
   shopBannersSection: ["shopBannersSection"],
   logoCloudSection: ["logoCloudSection"],
   testimonialsSection: ["testimonialsSection"],
-  callToActionSection: ["callToActionSection"]
+  callToActionSection: ["callToActionSection"],
+  habistackFooter: ["habistackFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2125,6 +2138,7 @@ type NodeDefaultElementType = {
   logoCloudSection: typeof Section;
   testimonialsSection: typeof Section;
   callToActionSection: typeof CallToActionSection;
+  habistackFooter: typeof HabistackFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2193,6 +2207,7 @@ export const PlasmicHomepage = Object.assign(
     logoCloudSection: makeNodeComponent("logoCloudSection"),
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     callToActionSection: makeNodeComponent("callToActionSection"),
+    habistackFooter: makeNodeComponent("habistackFooter"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

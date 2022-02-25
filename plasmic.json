@@ -422,86 +422,6 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesGatsby.module.css",
           "scheme": "blackbox",
           "componentType": "page"
-        },
-        {
-          "id": "OyZbUXMunR",
-          "name": "HabistackFooter2",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHabistackFooter2.tsx",
-          "importSpec": {
-            "modulePath": "HabistackFooter2.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicHabistackFooter2.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "BuqTNr9jIT",
-          "name": "HabistackFooter3",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHabistackFooter3.tsx",
-          "importSpec": {
-            "modulePath": "HabistackFooter3.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicHabistackFooter3.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "cYCn1eldGfZ",
-          "name": "Footer2",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicFooter2.tsx",
-          "importSpec": {
-            "modulePath": "Footer2.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicFooter2.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "KEjkl_jgeZ8",
-          "name": "TextInput3",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicTextInput3.tsx",
-          "importSpec": {
-            "modulePath": "TextInput3.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicTextInput3.module.css",
-          "scheme": "blackbox",
-          "componentType": "component",
-          "plumeType": "text-input"
-        },
-        {
-          "id": "wspG9_I0g7M",
-          "name": "Button3",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicButton3.tsx",
-          "importSpec": {
-            "modulePath": "Button3.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicButton3.module.css",
-          "scheme": "blackbox",
-          "componentType": "component",
-          "plumeType": "button"
-        },
-        {
-          "id": "bNtDNMxjRVWu",
-          "name": "IconLink2",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicIconLink2.tsx",
-          "importSpec": {
-            "modulePath": "IconLink2.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicIconLink2.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
         }
       ],
       "icons": [
@@ -609,16 +529,6 @@
           "id": "yeSC35cwTR9f",
           "name": "FacebookIconIcon",
           "moduleFilePath": "plasmic/new_fathym_com/icons/PlasmicIcon__FacebookIcon.tsx"
-        },
-        {
-          "id": "uZwvHnmln5Ol",
-          "name": "InstagramGlyphBlackLogowinesvgIcon",
-          "moduleFilePath": "plasmic/new_fathym_com/icons/PlasmicIcon__InstagramGlyphBlackLogowinesvg.tsx"
-        },
-        {
-          "id": "bM5auaV8f9nE",
-          "name": "LinkedinLinesvgIcon",
-          "moduleFilePath": "plasmic/new_fathym_com/icons/PlasmicIcon__LinkedinLinesvg.tsx"
         }
       ],
       "images": [
@@ -911,6 +821,11 @@
           "id": "jtAshE9kb",
           "name": "shopping-cart2.jpg",
           "filePath": "../public/plasmic/new_fathym_com/images/shoppingCart2Jpg.jpeg"
+        },
+        {
+          "id": "wImljIGb1",
+          "name": "HomeHero.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeHeropng.png"
         }
       ],
       "indirect": false,
