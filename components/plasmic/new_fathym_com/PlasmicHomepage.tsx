@@ -42,7 +42,6 @@ import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/compone
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import Testimonial from "../../Testimonial"; // plasmic-import: ckCiVMtRuKmU/component
 import CallToActionSection from "../../CallToActionSection"; // plasmic-import: mTFy8Vt80PPU/component
-import HabistackFooter3 from "../../HabistackFooter3"; // plasmic-import: BuqTNr9jIT/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -78,7 +77,6 @@ export type PlasmicHomepage__OverridesType = {
   logoCloudSection?: p.Flex<typeof Section>;
   testimonialsSection?: p.Flex<typeof Section>;
   callToActionSection?: p.Flex<typeof CallToActionSection>;
-  habistackFooter3?: p.Flex<typeof HabistackFooter3>;
 };
 
 export interface DefaultHomepageProps {}
@@ -2084,12 +2082,6 @@ function PlasmicHomepage__RenderFunc(props: {
               </Button>
             </p.Stack>
           </CallToActionSection>
-
-          <HabistackFooter3
-            data-plasmic-name={"habistackFooter3"}
-            data-plasmic-override={overrides.habistackFooter3}
-            className={classNames("__wab_instance", sty.habistackFooter3)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -2107,8 +2099,7 @@ const PlasmicDescendants = {
     "shopBannersSection",
     "logoCloudSection",
     "testimonialsSection",
-    "callToActionSection",
-    "habistackFooter3"
+    "callToActionSection"
   ],
   headerHeroSection: ["headerHeroSection", "navbar"],
   navbar: ["navbar"],
@@ -2118,8 +2109,7 @@ const PlasmicDescendants = {
   shopBannersSection: ["shopBannersSection"],
   logoCloudSection: ["logoCloudSection"],
   testimonialsSection: ["testimonialsSection"],
-  callToActionSection: ["callToActionSection"],
-  habistackFooter3: ["habistackFooter3"]
+  callToActionSection: ["callToActionSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2135,7 +2125,6 @@ type NodeDefaultElementType = {
   logoCloudSection: typeof Section;
   testimonialsSection: typeof Section;
   callToActionSection: typeof CallToActionSection;
-  habistackFooter3: typeof HabistackFooter3;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2204,7 +2193,6 @@ export const PlasmicHomepage = Object.assign(
     logoCloudSection: makeNodeComponent("logoCloudSection"),
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     callToActionSection: makeNodeComponent("callToActionSection"),
-    habistackFooter3: makeNodeComponent("habistackFooter3"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

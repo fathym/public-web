@@ -2219,7 +2219,3 @@
   position: relative;
   object-fit: cover;
 }
-.habistackFooter3:global(.__wab_instance):global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
