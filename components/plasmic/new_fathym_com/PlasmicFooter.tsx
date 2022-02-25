@@ -42,7 +42,6 @@ import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlo
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
-import plasmic_habistack_com_css from "../habistack_com/plasmic_habistack_com.module.css"; // plasmic-import: hhYAirYt8bU9TEjNgFzExf/projectcss
 import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import: jbURxL3XuiMBQsLhf7apui/projectcss
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: Q4yy3X_W7vH/css
 
@@ -113,7 +112,6 @@ function PlasmicFooter__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_tokens,
         plasmic_library_plasmic_color_type_css.plasmic_tokens,
-        plasmic_habistack_com_css.plasmic_tokens,
         sty.root
       )}
     >

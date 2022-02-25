@@ -42,14 +42,13 @@ import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/compone
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import Testimonial from "../../Testimonial"; // plasmic-import: ckCiVMtRuKmU/component
 import CallToActionSection from "../../CallToActionSection"; // plasmic-import: mTFy8Vt80PPU/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: m8MF3DD_Un/component
+import HabistackFooter3 from "../../HabistackFooter3"; // plasmic-import: BuqTNr9jIT/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
-import plasmic_habistack_com_css from "../habistack_com/plasmic_habistack_com.module.css"; // plasmic-import: hhYAirYt8bU9TEjNgFzExf/projectcss
 import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import: jbURxL3XuiMBQsLhf7apui/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: Z0tmI2kZtwu/css
 
@@ -79,7 +78,7 @@ export type PlasmicHomepage__OverridesType = {
   logoCloudSection?: p.Flex<typeof Section>;
   testimonialsSection?: p.Flex<typeof Section>;
   callToActionSection?: p.Flex<typeof CallToActionSection>;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  habistackFooter3?: p.Flex<typeof HabistackFooter3>;
 };
 
 export interface DefaultHomepageProps {}
@@ -131,7 +130,6 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_tokens,
             plasmic_library_plasmic_color_type_css.plasmic_tokens,
-            plasmic_habistack_com_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -2087,10 +2085,10 @@ function PlasmicHomepage__RenderFunc(props: {
             </p.Stack>
           </CallToActionSection>
 
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <HabistackFooter3
+            data-plasmic-name={"habistackFooter3"}
+            data-plasmic-override={overrides.habistackFooter3}
+            className={classNames("__wab_instance", sty.habistackFooter3)}
           />
         </div>
       </div>
@@ -2110,7 +2108,7 @@ const PlasmicDescendants = {
     "logoCloudSection",
     "testimonialsSection",
     "callToActionSection",
-    "habistackFooter"
+    "habistackFooter3"
   ],
   headerHeroSection: ["headerHeroSection", "navbar"],
   navbar: ["navbar"],
@@ -2121,7 +2119,7 @@ const PlasmicDescendants = {
   logoCloudSection: ["logoCloudSection"],
   testimonialsSection: ["testimonialsSection"],
   callToActionSection: ["callToActionSection"],
-  habistackFooter: ["habistackFooter"]
+  habistackFooter3: ["habistackFooter3"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2137,7 +2135,7 @@ type NodeDefaultElementType = {
   logoCloudSection: typeof Section;
   testimonialsSection: typeof Section;
   callToActionSection: typeof CallToActionSection;
-  habistackFooter: typeof HabistackFooter;
+  habistackFooter3: typeof HabistackFooter3;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2206,7 +2204,7 @@ export const PlasmicHomepage = Object.assign(
     logoCloudSection: makeNodeComponent("logoCloudSection"),
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     callToActionSection: makeNodeComponent("callToActionSection"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    habistackFooter3: makeNodeComponent("habistackFooter3"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

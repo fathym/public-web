@@ -37,14 +37,13 @@ import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: m8MF3DD_Un/component
+import HabistackFooter3 from "../../HabistackFooter3"; // plasmic-import: BuqTNr9jIT/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
-import plasmic_habistack_com_css from "../habistack_com/plasmic_habistack_com.module.css"; // plasmic-import: hhYAirYt8bU9TEjNgFzExf/projectcss
 import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import: jbURxL3XuiMBQsLhf7apui/projectcss
 import sty from "./PlasmicLandingPagesMicroFrontends.module.css"; // plasmic-import: eDgf6ntQo-zf/css
 
@@ -76,7 +75,7 @@ export type PlasmicLandingPagesMicroFrontends__OverridesType = {
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
   h2?: p.Flex<"h2">;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  habistackFooter3?: p.Flex<typeof HabistackFooter3>;
 };
 
 export interface DefaultLandingPagesMicroFrontendsProps {}
@@ -128,7 +127,6 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_tokens,
             plasmic_library_plasmic_color_type_css.plasmic_tokens,
-            plasmic_habistack_com_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -871,10 +869,10 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
             </p.Stack>
           ) : null}
 
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <HabistackFooter3
+            data-plasmic-name={"habistackFooter3"}
+            data-plasmic-override={overrides.habistackFooter3}
+            className={classNames("__wab_instance", sty.habistackFooter3)}
           />
         </div>
       </div>
@@ -892,7 +890,7 @@ const PlasmicDescendants = {
     "section",
     "foreground3",
     "h2",
-    "habistackFooter"
+    "habistackFooter3"
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
@@ -901,7 +899,7 @@ const PlasmicDescendants = {
   section: ["section", "foreground3", "h2"],
   foreground3: ["foreground3", "h2"],
   h2: ["h2"],
-  habistackFooter: ["habistackFooter"]
+  habistackFooter3: ["habistackFooter3"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -915,7 +913,7 @@ type NodeDefaultElementType = {
   section: "section";
   foreground3: "div";
   h2: "h2";
-  habistackFooter: typeof HabistackFooter;
+  habistackFooter3: typeof HabistackFooter3;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -982,7 +980,7 @@ export const PlasmicLandingPagesMicroFrontends = Object.assign(
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
     h2: makeNodeComponent("h2"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    habistackFooter3: makeNodeComponent("habistackFooter3"),
 
     // Metadata about props expected for PlasmicLandingPagesMicroFrontends
     internalVariantProps: PlasmicLandingPagesMicroFrontends__VariantProps,
