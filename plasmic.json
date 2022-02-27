@@ -834,6 +834,11 @@
           "id": "jtAshE9kb",
           "name": "shopping-cart2.jpg",
           "filePath": "../public/plasmic/new_fathym_com/images/shoppingCart2Jpg.jpeg"
+        },
+        {
+          "id": "JS19Z3KBS",
+          "name": "HomeHero.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeHeropng.png"
         }
       ],
       "indirect": false,

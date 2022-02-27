@@ -38,7 +38,6 @@ import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
-import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
 import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
 
@@ -51,8 +50,8 @@ import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import:
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: ATxjjqNLrrq/css
 
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: lodHYqINbTbi/icon
-import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: gpmIqNjGKjYR/icon
+import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 import HammerIcon from "./icons/PlasmicIcon__Hammer"; // plasmic-import: ZuOYCAXGTqWV/icon
 import TargetIcon from "./icons/PlasmicIcon__Target"; // plasmic-import: rLVg9ppMbHmc/icon
 import FastIcon from "./icons/PlasmicIcon__Fast"; // plasmic-import: R_OTBeuKYlSh/icon
@@ -70,14 +69,13 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
+  headerHeroSection?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
-  foreground?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
-  foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
-  shopBannersSection?: p.Flex<typeof Section>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
+  link?: p.Flex<"a"> & Partial<LinkProps>;
   habistackFooter?: p.Flex<typeof HabistackFooter>;
 };
 
@@ -133,123 +131,215 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <Navbar
-            data-plasmic-name={"navbar"}
-            data-plasmic-override={overrides.navbar}
-            className={classNames("__wab_instance", sty.navbar)}
-          />
-
           <p.Stack
             as={"div"}
+            data-plasmic-name={"headerHeroSection"}
+            data-plasmic-override={overrides.headerHeroSection}
             hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__zcmXm)}
+            className={classNames(projectcss.all, sty.headerHeroSection)}
           >
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"foreground"}
-              data-plasmic-override={overrides.foreground}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.foreground)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__wcXo
-                )}
-              >
-                {"Your Code.  Low Code. \nNo Code."}
-              </div>
-
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__xs7Nt
-                )}
-              >
-                {
-                  "Fathym your ideas, build your solutions, share with the world."
-                }
-              </div>
-            </p.Stack>
-
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image16.png",
-                fullWidth: 327,
-                fullHeight: 327,
-                aspectRatio: undefined
-              }}
+            <Navbar
+              data-plasmic-name={"navbar"}
+              data-plasmic-override={overrides.navbar}
+              className={classNames("__wab_instance", sty.navbar)}
             />
 
             <p.Stack
               as={"div"}
-              data-plasmic-name={"foreground2"}
-              data-plasmic-override={overrides.foreground2}
               hasGap={true}
-              className={classNames(projectcss.all, sty.foreground2)}
+              className={classNames(projectcss.all, sty.columns__seAuK)}
             >
-              <div className={classNames(projectcss.all, sty.columns__y2ST)}>
-                <div className={classNames(projectcss.all, sty.column__vr2Ns)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__kkm8X)}
-                    color={"blue" as const}
-                    link={"/dashboard/create-project" as const}
+              <div className={classNames(projectcss.all, sty.column__sVxUt)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__aZBgb)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__onNZh)}
                   >
-                    {"Get Started for Free"}
-                  </Button>
-                </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__e79UD)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ghYyo
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? "BETA!"
+                          : "BETA!"}
+                      </div>
+                    </div>
 
-                <div className={classNames(projectcss.all, sty.column__opzhM)}>
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__pcOFd
-                    )}
-                    component={Link}
-                    href={"/docs/guides/deploying/frameworks/react" as const}
-                    platform={"nextjs"}
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ghgeg
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "Build, deploy, & scale modern web projects "
+                        : "The open web's future."}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__st5D9
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "First class support for every popular  framework"
+                        : "Your Code. Low Code. No Code."}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5Ayt4
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "First class support for every popular  framework"
+                        : "Develop and deploy micro frontends in a headless, open world."}
+                    </div>
+                  </p.Stack>
+
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__coLUd)}
                   >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
-                </div>
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button___5OnsK
+                      )}
+                      color={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("blue" as const)
+                          : ("blue" as const)
+                      }
+                      endIcon={
+                        <ChevronRightIcon
+                          className={classNames(projectcss.all, sty.svg__kwg5Y)}
+                          role={"img"}
+                        />
+                      }
+                      link={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("/dashboard/create-project" as const)
+                          : ("/dashboard/create-project" as const)
+                      }
+                      showEndIcon={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      }
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__y0OlU
+                        )}
+                      >
+                        {"Get Started for Free"}
+                      </div>
+                    </Button>
+
+                    <Button
+                      bgDifference={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button___0YlIx
+                      )}
+                      color={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("darkGray" as const)
+                          : ("darkGray" as const)
+                      }
+                      link={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("/docs" as const)
+                          : ("/docs" as const)
+                      }
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__tKfB
+                        )}
+                      >
+                        {"Learn more…"}
+                      </div>
+                    </Button>
+                  </p.Stack>
+                </p.Stack>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.column__roneA)}>
+                <p.PlasmicImg
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
+                  alt={""}
+                  className={classNames(sty.img)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"auto" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/homeHeropng.png",
+                    fullWidth: 1000,
+                    fullHeight: 825,
+                    aspectRatio: undefined
+                  }}
+                />
               </div>
             </p.Stack>
+          </p.Stack>
 
-            <Section
-              data-plasmic-name={"valuePropsSection"}
-              data-plasmic-override={overrides.valuePropsSection}
-              className={classNames("__wab_instance", sty.valuePropsSection)}
+          <Section
+            data-plasmic-name={"valuePropsSection"}
+            data-plasmic-override={overrides.valuePropsSection}
+            className={classNames("__wab_instance", sty.valuePropsSection)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___4ZPIa)}
             >
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__zJunS)}
+                className={classNames(projectcss.all, sty.freeBox__oqJ4E)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__uSs3O)}>
+                <div className={classNames(projectcss.all, sty.freeBox__gLviZ)}>
                   <h2
                     className={classNames(
                       projectcss.all,
                       projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h2__o2GpC
+                      sty.h2__zo1R1
                     )}
                   >
-                    {"Create with Fathym Micro Frontends"}
+                    {"Flashup today, scale tomorrow"}
                   </h2>
                 </div>
 
@@ -257,11 +347,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__oCfB4
+                    sty.text__rwtUj
                   )}
                 >
                   {
-                    "The secret sauce you've been looking for to make your JAMStack applications stand out.  Build in record time with the right framework at the right time.  Leverage your code, low code, and no code solution to deliver powerful web experiences for your users."
+                    '"Life moves pretty fast.  If you don\'t stop and look around once in a while, you could miss it."\nIncrease the velocity of development, adoption of new tech, and get more from your time.'
                   }
                 </div>
               </p.Stack>
@@ -269,803 +359,180 @@ function PlasmicHomepage__RenderFunc(props: {
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
+                className={classNames(projectcss.all, sty.freeBox___6Rfho)}
               >
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__nuOoY)}
-                >
-                  <ValueProp
-                    className={classNames(
-                      "__wab_instance",
-                      sty.valueProp___8SiYp
-                    )}
-                    description={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__b1Tg1
-                          )}
-                        >
-                          {
-                            "Gatsby is the fast and flexible framework that makes building websites with any CMS, API, or database fun again. Build and deploy headless websites that drive more traffic, convert better, and earn more revenue!\n\n"
-                          }
-                        </div>
-
-                        <Button link={"/angular" as const}>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__lUpc
-                            )}
-                          >
-                            {"Angular Deployments >"}
-                          </div>
-                        </Button>
-                      </React.Fragment>
-                    }
-                    flatIcon={true}
-                    icon={
-                      <CheckIcon
-                        className={classNames(projectcss.all, sty.svg__fV8Jy)}
-                        role={"img"}
-                      />
-                    }
-                    title={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__q2Iry
-                        )}
-                      >
-                        {"Your Code - GatsbyJS"}
-                      </div>
-                    }
-                  />
-
-                  <ValueProp
-                    className={classNames(
-                      "__wab_instance",
-                      sty.valueProp__hwgIt
-                    )}
-                    description={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__vppsa
-                          )}
-                        >
-                          {
-                            "Save time and focus on your project's documentation. Simply write docs and blog posts with Markdown/MDX and Docusaurus will publish a set of static HTML files ready to serve. You can even embed JSX components into your Markdown thanks to MDX."
-                          }
-                        </div>
-
-                        <Button link={"/vue" as const}>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__vZxky
-                            )}
-                          >
-                            {"Vue Deployments >"}
-                          </div>
-                        </Button>
-                      </React.Fragment>
-                    }
-                    flatIcon={true}
-                    icon={
-                      <CheckIcon
-                        className={classNames(projectcss.all, sty.svg__va6QE)}
-                        role={"img"}
-                      />
-                    }
-                    title={"Low Code - Docusaurus"}
-                  />
-
-                  {true ? (
-                    <ValueProp
+                <ValueProp
+                  className={classNames("__wab_instance", sty.valueProp__xro0B)}
+                  description={
+                    <div
                       className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__bz1UN
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__rzdr
                       )}
-                      description={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__c4CCv
-                            )}
-                          >
-                            {"Coming Soon!\n\n\n\n\n\n\n"}
-                          </div>
-
-                          {true ? (
-                            <Button
-                              className={classNames(
-                                "__wab_instance",
-                                sty.button__tcixz
-                              )}
-                              link={"/svelte-deployment" as const}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__dLhgt
-                                )}
-                              >
-                                {"Svelte Deployments >"}
-                              </div>
-                            </Button>
-                          ) : null}
-                        </React.Fragment>
-                      }
-                      flatIcon={true}
-                      icon={
-                        <CheckIcon
-                          className={classNames(projectcss.all, sty.svg__qVs5X)}
-                          role={"img"}
-                        />
-                      }
-                      title={"No Code - GrapesJS"}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "orchestration tools that bring open source to your solutions."
+                        : "orchestration tools that bring open source to your solutions."}
+                    </div>
+                  }
+                  flatIcon={true}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg___3A6Ji)}
+                      role={"img"}
                     />
-                  ) : null}
-                </p.Stack>
-              </p.Stack>
-            </Section>
-
-            {true ? (
-              <Banner
-                className={classNames("__wab_instance", sty.banner__wkMls)}
-                left={
-                  <React.Fragment>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__nhNc7
-                      )}
-                    >
-                      {"React Example Tutorial"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__p2NTv
-                      )}
-                    >
-                      {"Do it Yourself"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ciVwm
-                      )}
-                    >
-                      {
-                        "Get started now and deploy your React app to production following the simple deployment guide. Have your React micro frontend hosted on your domain in minutes."
-                      }
-                    </div>
-
-                    <div
-                      className={classNames(projectcss.all, sty.columns__jGQr)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.column__fEaxU
-                        )}
-                      >
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button___6I7Pq
-                          )}
-                          color={"blue" as const}
-                          link={
-                            "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000002" as const
-                          }
-                        >
-                          {"Get Started for Free"}
-                        </Button>
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.column__zypuv
-                        )}
-                      >
-                        <Button
-                          link={
-                            "/docs/guides/deploying/frameworks/react" as const
-                          }
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__cgGJm
-                            )}
-                          >
-                            {"Read Documentation >"}
-                          </div>
-                        </Button>
-                      </div>
-                    </div>
-                  </React.Fragment>
-                }
-              />
-            ) : null}
-          </p.Stack>
-
-          <Section
-            data-plasmic-name={"shopBannersSection"}
-            data-plasmic-override={overrides.shopBannersSection}
-            className={classNames("__wab_instance", sty.shopBannersSection)}
-            size={
-              hasVariant(globalVariants, "screen", "mobileOnly")
-                ? ("fullContentWidth" as const)
-                : ("fullContentWidth" as const)
-            }
-          >
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___7WXXa)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___3Aqj4)}
-              >
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__gz7Uu)}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___7VFrs
-                        )}
-                      >
-                        {"Superheroic JavaScript MVW Framework"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__sN2VP
-                        )}
-                      >
-                        {"angular + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__elnSi
-                        )}
-                      >
-                        {
-                          "We get the ball rolling with an Angular + Typescript app that you can run with."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__ymfHb
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___39K1X
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
                   }
+                  title={"Powerful"}
                 />
 
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__w2Dhq)}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ltZf3
-                        )}
-                      >
-                        {"A JS library for building user interfaces"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dBNjp
-                        )}
-                      >
-                        {"react + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__cUowN
-                        )}
-                      >
-                        {
-                          "Save the pain and suffering and create your interactive UI's in minutes!"
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__os6Zc
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__uHjFd
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
+                <ValueProp
+                  className={classNames(
+                    "__wab_instance",
+                    sty.valueProp___8TmHa
+                  )}
+                  description={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__e0Dds
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "pages for your users, faster time to market for your team."
+                        : "pages for your users, faster time to market for your team."}
+                    </div>
                   }
+                  flatIcon={true}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg__rm3Vf)}
+                      role={"img"}
+                    />
+                  }
+                  title={"Faster"}
+                />
+
+                <ValueProp
+                  className={classNames("__wab_instance", sty.valueProp__b0Qka)}
+                  description={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vq0Hk
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "for engaging users with modern web projects."
+                        : "for engaging users with modern web projects."}
+                    </div>
+                  }
+                  flatIcon={true}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg__r05I)}
+                      role={"img"}
+                    />
+                  }
+                  title={"Best practices"}
                 />
               </p.Stack>
 
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___1Z7G5)}
+                className={classNames(projectcss.all, sty.freeBox__xbJiN)}
               >
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__qJqMy)}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__pzjaj
-                        )}
-                      >
-                        {"Build optimized websites quickly"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__sN2VP
-                        )}
-                      >
-                        {"docusaurus + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__elnSi
-                        )}
-                      >
-                        {
-                          "Easy website? Check.\nEasy docs? Check.\nEasy blogs? Check."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__k19Fp
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___7Ctgx
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
+                <ValueProp
+                  className={classNames(
+                    "__wab_instance",
+                    sty.valueProp___4Y5F6
+                  )}
+                  description={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__m5Mu9
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "devops powered by modern devops practices."
+                        : "devops powered by modern devops practices."}
+                    </div>
+                  }
+                  flatIcon={true}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg___2YBg)}
+                      role={"img"}
+                    />
+                  }
+                  title={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4UpxD
+                      )}
+                    >
+                      {"Portable"}
+                    </div>
                   }
                 />
 
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__uo7Uz)}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__lhizx
-                        )}
-                      >
-                        {"Cybernetically enhanced web apps"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dBNjp
-                        )}
-                      >
-                        {"svelte + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__cUowN
-                        )}
-                      >
-                        {
-                          "Good, clean  true low-code feels like crushed velvet.  Wrap yourself in it."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__b4Ykl
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__rcFpf
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
+                <ValueProp
+                  className={classNames("__wab_instance", sty.valueProp__zLhDo)}
+                  description={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__h3QnU
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "make it easier to deliver, test, and iterate on solutions that engage users."
+                        : "make it easier to deliver, test, and iterate on solutions that engage users."}
+                    </div>
                   }
+                  flatIcon={true}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg__kF83)}
+                      role={"img"}
+                    />
+                  }
+                  title={"Micro-frontends"}
+                />
+
+                <ValueProp
+                  className={classNames("__wab_instance", sty.valueProp__loyWh)}
+                  description={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__fxoVt
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "that integrate analytics, A/B testing, engagement and more. "
+                        : "that integrate analytics, A/B testing, engagement and more. "}
+                    </div>
+                  }
+                  flatIcon={true}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg__gRzFy)}
+                      role={"img"}
+                    />
+                  }
+                  title={"Application Modifiers"}
                 />
               </p.Stack>
-
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__swIh2)}
-              >
-                <Banner
-                  className={classNames("__wab_instance", sty.banner___6Bald)}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__tc6Hv
-                        )}
-                      >
-                        {"The Progressive JavaScript Framework"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__sN2VP
-                        )}
-                      >
-                        {"vue + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__elnSi
-                        )}
-                      >
-                        {
-                          "An approachable, performant and versatile framework for building web UIs."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__mTuyn
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__cbjAn
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
-                  }
-                />
-
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__sOin1)}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__nXzwl
-                        )}
-                      >
-                        {"Frontend Framework for Headless CMS's"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dBNjp
-                        )}
-                      >
-                        {"gatsby + fathym"}
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__cUowN
-                        )}
-                      >
-                        {
-                          "Maybe it's time your CMS had a faster frontend. For reals."
-                        }
-                      </div>
-
-                      <Button
-                        color={"link" as const}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___8CBIv
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__nfUz3
-                          )}
-                        >
-                          {"Get Started"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
-                  }
-                />
-              </p.Stack>
-
-              <Banner
-                className={classNames("__wab_instance", sty.banner__n6WiM)}
-                left={
-                  <React.Fragment>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__wq5M
-                      )}
-                    >
-                      {"ecommerce in the Wild"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__j0GnU
-                      )}
-                    >
-                      {"forestry + 11ty + snipcart + fathym"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__rVxsW
-                      )}
-                    >
-                      {
-                        "The reality is, there are 100s of different combinations of technology that can be used to achieve an e-Commerce store. This one gets you started with the click of a button. Make it yours today!"
-                      }
-                    </div>
-
-                    <Button
-                      color={"link" as const}
-                      endIcon={
-                        <p.PlasmicIcon
-                          PlasmicIconType={
-                            hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? ChevronRightIcon
-                              : ChevronRightIcon
-                          }
-                          className={classNames(projectcss.all, sty.svg__bpyi5)}
-                          role={"img"}
-                        />
-                      }
-                      flat={true}
-                      link={
-                        "https://www.fathym.com/docs/guides/deploying/e-commerce/overview" as const
-                      }
-                      showEndIcon={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__gKdKb
-                        )}
-                      >
-                        {"Get Started"}
-                      </div>
-                    </Button>
-                  </React.Fragment>
-                }
-              />
-
-              <Banner
-                className={classNames("__wab_instance", sty.banner___4Asj2)}
-                left={
-                  <React.Fragment>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___6K5Jf
-                      )}
-                    >
-                      {"data as an Application"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__j0GnU
-                      )}
-                    >
-                      {"iot ensemble + power bi + fathym"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__rVxsW
-                      )}
-                    >
-                      {
-                        "IoT Ensemble provides out of the box APIs that allow you to easily connect your device data with Microsoft's Power BI. IoT Ensemble + Fathym goes above and beyond to operate as your virtual development team to automate best practices for IoT application delivery."
-                      }
-                    </div>
-
-                    <Button
-                      color={"link" as const}
-                      endIcon={
-                        <p.PlasmicIcon
-                          PlasmicIconType={
-                            hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? ChevronRightIcon
-                              : ChevronRightIcon
-                          }
-                          className={classNames(projectcss.all, sty.svg__sFFdd)}
-                          role={"img"}
-                        />
-                      }
-                      flat={true}
-                      link={
-                        "https://www.fathym.com/iot/docs/devs/storage/power-bi" as const
-                      }
-                      showEndIcon={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__x6Vxc
-                        )}
-                      >
-                        {"Get Started"}
-                      </div>
-                    </Button>
-                  </React.Fragment>
-                }
-              />
             </p.Stack>
           </Section>
 
@@ -1283,11 +750,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
                 <div className={classNames(projectcss.all, sty.column__w6PBw)}>
                   <p.PlasmicLink
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
                       projectcss.__wab_text,
-                      sty.link__qxwFu
+                      sty.link
                     )}
                     component={Link}
                     href={"/docs/guides/deploying/frameworks/react" as const}
@@ -1724,24 +1193,22 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "headerHeroSection",
     "navbar",
-    "foreground",
     "img",
-    "foreground2",
     "valuePropsSection",
-    "shopBannersSection",
     "section",
     "foreground3",
+    "link",
     "habistackFooter"
   ],
+  headerHeroSection: ["headerHeroSection", "navbar", "img"],
   navbar: ["navbar"],
-  foreground: ["foreground"],
   img: ["img"],
-  foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection"],
-  shopBannersSection: ["shopBannersSection"],
-  section: ["section", "foreground3"],
-  foreground3: ["foreground3"],
+  section: ["section", "foreground3", "link"],
+  foreground3: ["foreground3", "link"],
+  link: ["link"],
   habistackFooter: ["habistackFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1749,14 +1216,13 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  headerHeroSection: "div";
   navbar: typeof Navbar;
-  foreground: "div";
   img: typeof p.PlasmicImg;
-  foreground2: "div";
   valuePropsSection: typeof Section;
-  shopBannersSection: typeof Section;
   section: "section";
   foreground3: "div";
+  link: "a";
   habistackFooter: typeof HabistackFooter;
 };
 
@@ -1817,14 +1283,13 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    headerHeroSection: makeNodeComponent("headerHeroSection"),
     navbar: makeNodeComponent("navbar"),
-    foreground: makeNodeComponent("foreground"),
     img: makeNodeComponent("img"),
-    foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
-    shopBannersSection: makeNodeComponent("shopBannersSection"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
+    link: makeNodeComponent("link"),
     habistackFooter: makeNodeComponent("habistackFooter"),
 
     // Metadata about props expected for PlasmicHomepage
