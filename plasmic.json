@@ -43,19 +43,6 @@
       "cssFilePath": "plasmic/new_fathym_com/plasmic_new_fathym_com.module.css",
       "components": [
         {
-          "id": "Z0tmI2kZtwu",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "yPO2dsHR0-Dj",
           "name": "LandingPagesSvelte",
           "type": "managed",
@@ -420,6 +407,32 @@
             "modulePath": "../pages/gatsby.tsx"
           },
           "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesGatsby.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "Z0tmI2kZtwu",
+          "name": "HomepageOld",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHomepageOld.tsx",
+          "importSpec": {
+            "modulePath": "../pages/old_home.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicHomepageOld.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "ATxjjqNLrrq",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicHomepage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
         }
