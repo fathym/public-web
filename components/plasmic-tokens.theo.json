@@ -561,6 +561,16 @@
       }
     },
     {
+      "name": "Fathym",
+      "type": "color",
+      "value": "#4A918E",
+      "category": "color",
+      "meta": {
+        "projectId": "jbURxL3XuiMBQsLhf7apui",
+        "id": "Fp84Xuw2Y"
+      }
+    },
+    {
       "name": "L/Border+Divider-(G90)",
       "type": "color",
       "value": "rgb(228,230,235)",

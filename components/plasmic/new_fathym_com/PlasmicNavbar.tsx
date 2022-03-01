@@ -163,7 +163,7 @@ function PlasmicNavbar__RenderFunc(props: {
           <Button
             className={classNames("__wab_instance", sty.button__okLvQ)}
             color={"blue" as const}
-            link={"/dashboard/create-project" as const}
+            link={"/dashboard" as const}
           >
             <div
               className={classNames(

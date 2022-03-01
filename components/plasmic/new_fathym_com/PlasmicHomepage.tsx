@@ -35,8 +35,8 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
-import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
+import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
 import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
@@ -51,11 +51,11 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: ATxjjqNLrrq/c
 
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: lodHYqINbTbi/icon
 import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: gpmIqNjGKjYR/icon
-import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 import HammerIcon from "./icons/PlasmicIcon__Hammer"; // plasmic-import: ZuOYCAXGTqWV/icon
 import TargetIcon from "./icons/PlasmicIcon__Target"; // plasmic-import: rLVg9ppMbHmc/icon
 import FastIcon from "./icons/PlasmicIcon__Fast"; // plasmic-import: R_OTBeuKYlSh/icon
 import StrongIcon from "./icons/PlasmicIcon__Strong"; // plasmic-import: xG-_Nh8HQ7l8/icon
+import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 
@@ -69,10 +69,13 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
-  headerHeroSection?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
-  img?: p.Flex<typeof p.PlasmicImg>;
   valuePropsSection?: p.Flex<typeof Section>;
+  valuePropsSection3?: p.Flex<typeof Section>;
+  valuePropsSection2?: p.Flex<typeof Section>;
+  valuePropsSection4?: p.Flex<typeof Section>;
+  valuePropsSection5?: p.Flex<typeof Section>;
+  valuePropsSection6?: p.Flex<typeof Section>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
   link?: p.Flex<"a"> & Partial<LinkProps>;
@@ -131,189 +134,11 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <p.Stack
-            as={"div"}
-            data-plasmic-name={"headerHeroSection"}
-            data-plasmic-override={overrides.headerHeroSection}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.headerHeroSection)}
-          >
-            <Navbar
-              data-plasmic-name={"navbar"}
-              data-plasmic-override={overrides.navbar}
-              className={classNames("__wab_instance", sty.navbar)}
-            />
-
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns__seAuK)}
-            >
-              <div className={classNames(projectcss.all, sty.column__sVxUt)}>
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__aZBgb)}
-                >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__onNZh)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__e79UD)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ghYyo
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? "BETA!"
-                          : "BETA!"}
-                      </div>
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ghgeg
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "Build, deploy, & scale modern web projects "
-                        : "The open web's future."}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__st5D9
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "First class support for every popular  framework"
-                        : "Your Code. Low Code. No Code."}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5Ayt4
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "First class support for every popular  framework"
-                        : "Develop and deploy micro frontends in a headless, open world."}
-                    </div>
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__coLUd)}
-                  >
-                    <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button___5OnsK
-                      )}
-                      color={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? ("blue" as const)
-                          : ("blue" as const)
-                      }
-                      endIcon={
-                        <ChevronRightIcon
-                          className={classNames(projectcss.all, sty.svg__kwg5Y)}
-                          role={"img"}
-                        />
-                      }
-                      link={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? ("/dashboard/create-project" as const)
-                          : ("/dashboard/create-project" as const)
-                      }
-                      showEndIcon={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? true
-                          : true
-                      }
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__y0OlU
-                        )}
-                      >
-                        {"Get Started for Free"}
-                      </div>
-                    </Button>
-
-                    <Button
-                      bgDifference={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? true
-                          : true
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button___0YlIx
-                      )}
-                      color={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? ("darkGray" as const)
-                          : ("darkGray" as const)
-                      }
-                      link={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? ("/docs" as const)
-                          : ("/docs" as const)
-                      }
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__tKfB
-                        )}
-                      >
-                        {"Learn more…"}
-                      </div>
-                    </Button>
-                  </p.Stack>
-                </p.Stack>
-              </div>
-
-              <div className={classNames(projectcss.all, sty.column__roneA)}>
-                <p.PlasmicImg
-                  data-plasmic-name={"img"}
-                  data-plasmic-override={overrides.img}
-                  alt={""}
-                  className={classNames(sty.img)}
-                  displayHeight={"auto" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: "/plasmic/new_fathym_com/images/homeHeropng.png",
-                    fullWidth: 1000,
-                    fullHeight: 825,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-            </p.Stack>
-          </p.Stack>
+          <Navbar
+            data-plasmic-name={"navbar"}
+            data-plasmic-override={overrides.navbar}
+            className={classNames("__wab_instance", sty.navbar)}
+          />
 
           <Section
             data-plasmic-name={"valuePropsSection"}
@@ -331,12 +156,198 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.freeBox__oqJ4E)}
               >
                 <div className={classNames(projectcss.all, sty.freeBox__gLviZ)}>
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.columns__i9DI0)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.column___8YGh6)}
+                    >
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___4ZTg
+                        )}
+                      >
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__wam0
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__uboiu
+                            )}
+                          >
+                            {"The open web's future."}
+                          </div>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__duPzt
+                            )}
+                          >
+                            {"Your Code. Low Code. No Code."}
+                          </div>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ncQxZ
+                            )}
+                          >
+                            {
+                              "Develop and deploy micro frontends in a headless, open world."
+                            }
+                          </div>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.columns__j4TRs
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__pKjij
+                              )}
+                            >
+                              <Button
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.button__jGjip
+                                )}
+                                color={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("blue" as const)
+                                    : ("blue" as const)
+                                }
+                                endIcon={
+                                  <ChevronRightIcon
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.svg__s07XP
+                                    )}
+                                    role={"img"}
+                                  />
+                                }
+                                link={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("/dashboard/create-project" as const)
+                                    : ("/dashboard" as const)
+                                }
+                                showEndIcon={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? true
+                                    : true
+                                }
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__kdWy
+                                  )}
+                                >
+                                  {"Get Started for Free"}
+                                </div>
+                              </Button>
+                            </div>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__lzsXm
+                              )}
+                            >
+                              <Button
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.button__irS16
+                                )}
+                                link={"/docs" as const}
+                              >
+                                {"Learn More >"}
+                              </Button>
+                            </div>
+                          </div>
+                        </p.Stack>
+                      </p.Stack>
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.column__sauIw)}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__x9DLr)}
+                        displayHeight={"auto" as const}
+                        displayMaxHeight={"none" as const}
+                        displayMaxWidth={"100%" as const}
+                        displayMinHeight={"0" as const}
+                        displayMinWidth={"0" as const}
+                        displayWidth={"auto" as const}
+                        loading={"lazy" as const}
+                        src={{
+                          src: "/plasmic/new_fathym_com/images/homeHeropng.png",
+                          fullWidth: 1000,
+                          fullHeight: 825,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                  </p.Stack>
+                </div>
+              </p.Stack>
+            </p.Stack>
+          </Section>
+
+          <Section
+            data-plasmic-name={"valuePropsSection3"}
+            data-plasmic-override={overrides.valuePropsSection3}
+            className={classNames("__wab_instance", sty.valuePropsSection3)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__dhqMu)}
+            >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__hdkWl)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__defQr)}>
                   <h2
                     className={classNames(
                       projectcss.all,
                       projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h2__zo1R1
+                      sty.h2__zc1Gn
                     )}
                   >
                     {"Flashup today, scale tomorrow"}
@@ -347,192 +358,830 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__rwtUj
+                    sty.text__gDdU
                   )}
                 >
                   {
-                    '"Life moves pretty fast.  If you don\'t stop and look around once in a while, you could miss it."\nIncrease the velocity of development, adoption of new tech, and get more from your time.'
+                    '"Life moves pretty fast.  If you don\'t stop and look around once in a while, you could miss it."\nIncrease the velocity of development, adoption of new strategies, and get more out of your time.'
                   }
                 </div>
               </p.Stack>
+            </p.Stack>
+          </Section>
 
+          <Section
+            data-plasmic-name={"valuePropsSection2"}
+            data-plasmic-override={overrides.valuePropsSection2}
+            className={classNames("__wab_instance", sty.valuePropsSection2)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___0VnRe)}
+            >
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___6Rfho)}
+                className={classNames(projectcss.all, sty.freeBox__fr5Jr)}
               >
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__xro0B)}
-                  description={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__rzdr
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "orchestration tools that bring open source to your solutions."
-                        : "orchestration tools that bring open source to your solutions."}
-                    </div>
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg___3A6Ji)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Powerful"}
-                />
-
-                <ValueProp
-                  className={classNames(
-                    "__wab_instance",
-                    sty.valueProp___8TmHa
-                  )}
-                  description={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__e0Dds
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "pages for your users, faster time to market for your team."
-                        : "pages for your users, faster time to market for your team."}
-                    </div>
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__rm3Vf)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Faster"}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__b0Qka)}
-                  description={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vq0Hk
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "for engaging users with modern web projects."
-                        : "for engaging users with modern web projects."}
-                    </div>
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__r05I)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Best practices"}
-                />
+                <div className={classNames(projectcss.all, sty.freeBox__l1Mrb)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__s8RxR
+                    )}
+                  >
+                    {"TAKE THE FATHYM JOURNEY"}
+                  </div>
+                </div>
               </p.Stack>
+            </p.Stack>
+          </Section>
 
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__xbJiN)}
+          <Section
+            data-plasmic-name={"valuePropsSection4"}
+            data-plasmic-override={overrides.valuePropsSection4}
+            className={classNames("__wab_instance", sty.valuePropsSection4)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___6YqY5)}
+            >
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__dtAfs
+                )}
               >
-                <ValueProp
-                  className={classNames(
-                    "__wab_instance",
-                    sty.valueProp___4Y5F6
-                  )}
-                  description={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__m5Mu9
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "devops powered by modern devops practices."
-                        : "devops powered by modern devops practices."}
-                    </div>
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg___2YBg)}
-                      role={"img"}
-                    />
-                  }
-                  title={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___4UpxD
-                      )}
-                    >
-                      {"Portable"}
-                    </div>
-                  }
-                />
+                {"Start with your skills"}
+              </h1>
 
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__zLhDo)}
-                  description={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__h3QnU
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "make it easier to deliver, test, and iterate on solutions that engage users."
-                        : "make it easier to deliver, test, and iterate on solutions that engage users."}
-                    </div>
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__kF83)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Micro-frontends"}
-                />
+              <div className={classNames(projectcss.all, sty.columns__lWwUs)}>
+                <div className={classNames(projectcss.all, sty.column__ljuB)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__gDgTi
+                    )}
+                  >
+                    {
+                      "Developers love the frameworks they love.    No matter the framework, Fathym has you covered.  Deploy with micro frontends to seamlessly leverage the right frameworks for the right job."
+                    }
+                  </div>
+                </div>
 
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__loyWh)}
-                  description={
+                <div className={classNames(projectcss.all, sty.column__w67Ol)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___4PmZi
+                    )}
+                  >
+                    {
+                      "Non developers need a way to showcase their own skills.  Whether a photo gallery, blog, or simple web presence, leverage Fathym to combine proven open source solutions and bring your ideas to life."
+                    }
+                  </div>
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__uVs4P)}>
+                <div className={classNames(projectcss.all, sty.column__nHfvM)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__f4Ktq)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeYourCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__v5YjJ)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ztGRg)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3___3Rk2T
+                      )}
+                    >
+                      {"Your code"}
+                    </h3>
+
                     <div
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__fxoVt
+                        sty.text__fIwE1
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "that integrate analytics, A/B testing, engagement and more. "
-                        : "that integrate analytics, A/B testing, engagement and more. "}
+                      {
+                        "Leverage the frameworks you love to develop solutions your users will love."
+                      }
                     </div>
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__gRzFy)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Application Modifiers"}
-                />
-              </p.Stack>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xztn8)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__oRr9W
+                      )}
+                    >
+                      {"Builds and deploys"}
+                    </h3>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__paJg7
+                      )}
+                    >
+                      {
+                        "Automate devops processes so you can create while Fathym takes on the rest."
+                      }
+                    </div>
+                  </div>
+
+                  <Button
+                    className={classNames("__wab_instance", sty.button__w2R2)}
+                    color={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("blue" as const)
+                        : ("blue" as const)
+                    }
+                    endIcon={
+                      <ChevronRightIcon
+                        className={classNames(projectcss.all, sty.svg__a8MgA)}
+                        role={"img"}
+                      />
+                    }
+                    link={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("/dashboard/create-project" as const)
+                        : ("/dashboard" as const)
+                    }
+                    showEndIcon={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    }
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5Npm
+                      )}
+                    >
+                      {"Get Started for Free"}
+                    </div>
+                  </Button>
+                </div>
+              </div>
+            </p.Stack>
+          </Section>
+
+          <Section
+            data-plasmic-name={"valuePropsSection5"}
+            data-plasmic-override={overrides.valuePropsSection5}
+            className={classNames("__wab_instance", sty.valuePropsSection5)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__vdDkr)}
+            >
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__luXzX
+                )}
+              >
+                {"Use your team to do more"}
+              </h1>
+
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__lZz5D)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__gucet)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__pYMep
+                      )}
+                    >
+                      {
+                        "Keeping up with the ebb and flow of technology is a daunting task for teams.  Get more than the sum of your parts, leverage Fathym to automate your team workflows."
+                      }
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.column___5JlQy)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ks8RN
+                      )}
+                    >
+                      {
+                        "Take your experience and coding skills to new heights.  Fathym will help you develop low code solutions that enable jr and mid level developers to accelerate."
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+
+              <div className={classNames(projectcss.all, sty.columns__g6DHx)}>
+                <div className={classNames(projectcss.all, sty.column__mxCtX)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__ghu4A)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeLowCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column___4AxTz)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__mo7Oz)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__i3Iw9
+                      )}
+                    >
+                      {"Low code"}
+                    </h3>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__jtiaq
+                      )}
+                    >
+                      {
+                        "Use existing open source solutions or turn your code into reusable building blocks."
+                      }
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oZha)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__dPuTo
+                      )}
+                    >
+                      {"Flashups"}
+                    </h3>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__fXr4Z
+                      )}
+                    >
+                      {
+                        "Create micro combinatorial architectures that make it simple to create your business in a day."
+                      }
+                    </div>
+                  </div>
+
+                  <Button
+                    className={classNames("__wab_instance", sty.button___0Q9H7)}
+                    color={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("blue" as const)
+                        : ("blue" as const)
+                    }
+                    endIcon={
+                      <ChevronRightIcon
+                        className={classNames(projectcss.all, sty.svg__vl4Dj)}
+                        role={"img"}
+                      />
+                    }
+                    link={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("/dashboard/create-project" as const)
+                        : ("/dashboard" as const)
+                    }
+                    showEndIcon={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    }
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__k8T5W
+                      )}
+                    >
+                      {"Get Started for Free"}
+                    </div>
+                  </Button>
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__o0Vu8)}>
+                <div className={classNames(projectcss.all, sty.column__mtq3L)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__f629O
+                    )}
+                  >
+                    {"Compose Applications"}
+                  </h2>
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__vl2Vr
+                    )}
+                  >
+                    {
+                      "Fathym micro frontends are a powerful tool that allow your team to use the frameworks best fit for the job.  Break free from monolithic, use open source and custom code in harmony."
+                    }
+                  </div>
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__aOs5T)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__vdklu)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/image18.png",
+                      fullWidth: 1459,
+                      fullHeight: 810,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns___35Y5)}>
+                <div className={classNames(projectcss.all, sty.column__dwfnf)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__pXoua)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeLowCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__xc2Zi)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__s0KxY
+                    )}
+                  >
+                    {"Engage Users"}
+                  </h2>
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__udZPm
+                    )}
+                  >
+                    {
+                      "Don't wait weeks and months, take hours.  Build engaging user experiences that Flashup your idea.  Learn from them and rapidly iterate on solutions to their problems.\n\nDeploy > Learn > Iterate"
+                    }
+                  </div>
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__yzxM1)}>
+                <div className={classNames(projectcss.all, sty.column__tEyTm)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__gGtXu
+                    )}
+                  >
+                    {"Enhance Experiences"}
+                  </h2>
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__zCeO
+                    )}
+                  >
+                    {
+                      "Augment your applications with low code modifiers.  Bring google tag manager to every application, add support chat from your CRM, or develop custom enhancements yourself.  Configure and manage from a central location across all applications."
+                    }
+                  </div>
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column___0CnK)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__atCca)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeLowCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
+            </p.Stack>
+          </Section>
+
+          <Section
+            data-plasmic-name={"valuePropsSection6"}
+            data-plasmic-override={overrides.valuePropsSection6}
+            className={classNames("__wab_instance", sty.valuePropsSection6)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__s22VJ)}
+            >
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__fjZiy
+                )}
+              >
+                {"Scale your solutions"}
+              </h1>
+
+              <div className={classNames(projectcss.all, sty.columns__juFeZ)}>
+                <div className={classNames(projectcss.all, sty.column___0Z9Zj)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__cpCyY
+                    )}
+                  >
+                    {
+                      "You no longer need piles of cash or 100s of days.  Flashup your business across shared infrastructure built to scale with your business and customer needs."
+                    }
+                  </div>
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__wxqTw)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___0Rgid
+                    )}
+                  >
+                    {
+                      "Outgrown our shared infrastructure?  Looking to bolster the value of your business?  Leverage all the same great tools from your own private or managed clouds."
+                    }
+                  </div>
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__cz8Ep)}>
+                <div className={classNames(projectcss.all, sty.column__vr4WB)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__fp3Jx)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeNoCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__cc3Oq)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__s89Ob)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__c7WOn
+                      )}
+                    >
+                      {"No code"}
+                    </h3>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__tUaAp
+                      )}
+                    >
+                      {
+                        "Leverage and build tools that streamline productivity and bring value to your customers"
+                      }
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___0Obms)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__cvWb9
+                      )}
+                    >
+                      {"Cloud scale"}
+                    </h3>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__uydf9
+                      )}
+                    >
+                      {
+                        "Flashup on shared infrastructure, grow with your customers, scale to cloud-native."
+                      }
+                    </div>
+                  </div>
+
+                  <Button
+                    className={classNames("__wab_instance", sty.button__lYZlo)}
+                    color={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("blue" as const)
+                        : ("blue" as const)
+                    }
+                    endIcon={
+                      <ChevronRightIcon
+                        className={classNames(projectcss.all, sty.svg__iQdA1)}
+                        role={"img"}
+                      />
+                    }
+                    link={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("/dashboard/create-project" as const)
+                        : ("/dashboard" as const)
+                    }
+                    showEndIcon={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    }
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hfHex
+                      )}
+                    >
+                      {"Get Started for Free"}
+                    </div>
+                  </Button>
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__aqBq)}>
+                <div className={classNames(projectcss.all, sty.column__sxJ1K)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__tvvwg
+                    )}
+                  >
+                    {"Enterprise as Code"}
+                  </h2>
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ua7Bm
+                    )}
+                  >
+                    {
+                      "Fathym micro frontends are a powerful tool that allow your team to use the frameworks best fit for the job.  Break free from monolithic, use open source and custom code in harmony."
+                    }
+                  </div>
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column___6Jgp)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___0C5J)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/image18.png",
+                      fullWidth: 1459,
+                      fullHeight: 810,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__hXeSq)}>
+                <div className={classNames(projectcss.all, sty.column__fe9Fi)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__aLTob)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeLowCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__kojso)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__gdG7O
+                    )}
+                  >
+                    {"Distributed File System"}
+                  </h2>
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__cbinK
+                    )}
+                  >
+                    {
+                      "Don't wait weeks and months, take hours.  Build engaging user experiences that Flashup your idea.  Learn from them and rapidly iterate on solutions to their problems.\n\nDeploy > Learn > Iterate"
+                    }
+                  </div>
+                </div>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__kl8SD)}>
+                <div className={classNames(projectcss.all, sty.column__q0R3P)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__tOlN1
+                    )}
+                  >
+                    {"Application Runtime"}
+                  </h2>
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___6Fglo
+                    )}
+                  >
+                    {
+                      "Augment your applications with low code modifiers.  Bring google tag manager to every application, add support chat from your CRM, or develop custom enhancements yourself.  Configure and manage from a central location across all applications."
+                    }
+                  </div>
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__jui4G)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__i2Pu9)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/homeLowCodepng.png",
+                      fullWidth: 400,
+                      fullHeight: 400,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
             </p.Stack>
           </Section>
 
@@ -562,7 +1211,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.h2__jp7Mf
                     )}
                   >
-                    {"Why deploy with Fathym Micro Frontends?"}
+                    {"Why deploy with Fathym?"}
                   </h2>
                 </div>
 
@@ -574,7 +1223,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Fathym micro frontends let you get the most out of your development, leveraging the right frameworks and tools when appropriate, for the job at hand.\n\nDiscover new ways to leverage existing resources and business knowledge from your team, leveraging low and no code tools from the open source or developed by your team."
+                    "Fathym micro frontends let you get the most out of your effort, leveraging the right frameworks and tools when appropriate, for the job at hand.\n\nDiscover new ways to leverage existing resources and business knowledge from your team, leveraging low and no code tools from the open source or developed by your team.\n\nMicro Combinatorial Architecture\n\n\n"
                   }
                 </div>
               </p.Stack>
@@ -742,7 +1391,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button___7Pw6B)}
                     color={"blue" as const}
-                    link={"/dashboard/create-project" as const}
+                    link={"/dashboard" as const}
                   >
                     {"Get Started for Free"}
                   </Button>
@@ -1193,19 +1842,25 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "headerHeroSection",
     "navbar",
-    "img",
     "valuePropsSection",
+    "valuePropsSection3",
+    "valuePropsSection2",
+    "valuePropsSection4",
+    "valuePropsSection5",
+    "valuePropsSection6",
     "section",
     "foreground3",
     "link",
     "habistackFooter"
   ],
-  headerHeroSection: ["headerHeroSection", "navbar", "img"],
   navbar: ["navbar"],
-  img: ["img"],
   valuePropsSection: ["valuePropsSection"],
+  valuePropsSection3: ["valuePropsSection3"],
+  valuePropsSection2: ["valuePropsSection2"],
+  valuePropsSection4: ["valuePropsSection4"],
+  valuePropsSection5: ["valuePropsSection5"],
+  valuePropsSection6: ["valuePropsSection6"],
   section: ["section", "foreground3", "link"],
   foreground3: ["foreground3", "link"],
   link: ["link"],
@@ -1216,10 +1871,13 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  headerHeroSection: "div";
   navbar: typeof Navbar;
-  img: typeof p.PlasmicImg;
   valuePropsSection: typeof Section;
+  valuePropsSection3: typeof Section;
+  valuePropsSection2: typeof Section;
+  valuePropsSection4: typeof Section;
+  valuePropsSection5: typeof Section;
+  valuePropsSection6: typeof Section;
   section: "section";
   foreground3: "div";
   link: "a";
@@ -1283,10 +1941,13 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    headerHeroSection: makeNodeComponent("headerHeroSection"),
     navbar: makeNodeComponent("navbar"),
-    img: makeNodeComponent("img"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
+    valuePropsSection3: makeNodeComponent("valuePropsSection3"),
+    valuePropsSection2: makeNodeComponent("valuePropsSection2"),
+    valuePropsSection4: makeNodeComponent("valuePropsSection4"),
+    valuePropsSection5: makeNodeComponent("valuePropsSection5"),
+    valuePropsSection6: makeNodeComponent("valuePropsSection6"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
     link: makeNodeComponent("link"),

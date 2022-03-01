@@ -839,6 +839,26 @@
           "id": "JS19Z3KBS",
           "name": "HomeHero.png",
           "filePath": "../public/plasmic/new_fathym_com/images/homeHeropng.png"
+        },
+        {
+          "id": "Nk4aOy8t9",
+          "name": "HomeYourCode.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeYourCodepng.png"
+        },
+        {
+          "id": "t9j92RZwP",
+          "name": "HomeLowCode.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeLowCodepng.png"
+        },
+        {
+          "id": "j74AIfD4t",
+          "name": "HomeNoCode.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeNoCodepng.png"
+        },
+        {
+          "id": "Ee-ZzKp5F",
+          "name": "image 18",
+          "filePath": "../public/plasmic/new_fathym_com/images/image18.png"
         }
       ],
       "indirect": false,
@@ -1324,6 +1344,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.171",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.171/dist/plasmic.schema.json"
+  "cliVersion": "0.1.173",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.173/dist/plasmic.schema.json"
 }
