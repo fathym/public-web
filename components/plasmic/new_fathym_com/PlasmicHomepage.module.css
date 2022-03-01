@@ -15,8 +15,17 @@
     min-width: 0;
   }
 }
-.valuePropsSection:global(.__wab_instance) {
+.freeBox__jz83 {
+  display: flex;
   position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
 }
 .freeBox___4ZPIa {
   flex-direction: column;
@@ -27,7 +36,7 @@
 }
 .freeBox___4ZPIa > :global(.__wab_flex-container) {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: stretch;
   margin-top: calc(0px - 48px);
   height: calc(100% + 48px);
@@ -616,8 +625,17 @@
   line-height: 28px;
   font-weight: 900;
 }
-.valuePropsSection4:global(.__wab_instance) {
+.freeBox__ukjhZ {
+  display: flex;
   position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
 }
 .freeBox___6YqY5 {
   flex-direction: column;
@@ -1359,6 +1377,9 @@
   line-height: 28px;
   padding-bottom: 0px;
 }
+.text__xm6BA {
+  position: relative;
+}
 .columns__yzxM1 {
   display: flex;
   position: relative;
@@ -1801,6 +1822,7 @@
   position: relative;
   object-fit: cover;
   max-width: 100%;
+  margin-left: 36px;
 }
 .img___0C5J > picture > img {
   object-fit: cover;
@@ -1856,6 +1878,7 @@
   position: relative;
   object-fit: cover;
   max-width: 100%;
+  margin-right: 35px;
 }
 .img__aLTob > picture > img {
   object-fit: cover;
@@ -1943,6 +1966,7 @@
   color: var(--token-3btyuIOaZa0x);
   text-align: left;
   line-height: 28px;
+  padding-left: 0px;
 }
 .column__jui4G {
   display: flex;
@@ -2044,187 +2068,6 @@
   line-height: 28px;
   height: auto;
   padding-bottom: 0px;
-  padding-left: 0px;
-}
-.freeBox__bm0Kh {
-  flex-direction: column;
-  display: flex;
-  position: relative;
-  max-width: 960px;
-}
-.freeBox__bm0Kh > :global(.__wab_flex-container) {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  margin-top: calc(0px - 48px);
-  height: calc(100% + 48px);
-}
-.freeBox__bm0Kh > :global(.__wab_flex-container) > *,
-.freeBox__bm0Kh > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__bm0Kh > :global(.__wab_flex-container) > picture > img,
-.freeBox__bm0Kh
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 48px;
-}
-.columns__mZsGm {
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  height: auto;
-  flex-shrink: 1;
-  min-width: 0;
-  display: none;
-}
-.columns__mZsGm > :global(.__wab_flex-container) {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  min-width: 0;
-  margin-left: calc(0px - 48px);
-  width: calc(100% + 48px);
-}
-.columns__mZsGm > :global(.__wab_flex-container) > :nth-child(4n + 1) {
-  width: calc((100% - 4 * 48px) * 3 / 12);
-}
-.columns__mZsGm > :global(.__wab_flex-container) > :nth-child(4n + 2) {
-  width: calc((100% - 4 * 48px) * 3 / 12);
-}
-.columns__mZsGm > :global(.__wab_flex-container) > :nth-child(4n + 3) {
-  width: calc((100% - 4 * 48px) * 3 / 12);
-}
-.columns__mZsGm > :global(.__wab_flex-container) > :nth-child(4n + 4) {
-  width: calc((100% - 4 * 48px) * 3 / 12);
-}
-.columns__mZsGm > :global(.__wab_flex-container) > *,
-.columns__mZsGm > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.columns__mZsGm > :global(.__wab_flex-container) > picture > img,
-.columns__mZsGm
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 48px;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .columns__mZsGm {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    min-width: 0;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .columns__mZsGm > :global(.__wab_flex-container) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-width: 0;
-    margin-top: calc(0px - 48px);
-    height: calc(100% + 48px);
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .columns__mZsGm > :global(.__wab_flex-container) > :nth-child(1n + 1) {
-    width: calc((100% - 1 * 48px) * 12 / 12);
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .columns__mZsGm > :global(.__wab_flex-container) > *,
-  .columns__mZsGm > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-  .columns__mZsGm > :global(.__wab_flex-container) > picture > img,
-  .columns__mZsGm
-    > :global(.__wab_flex-container)
-    > :global(.__wab_slot)
-    > picture
-    > img {
-    margin-top: 48px;
-  }
-}
-.column___4BvNo {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-.valueProp__m1E8W:global(.__wab_instance) {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.svg__ewbdd {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  color: var(--token-nXWKqet0fltC);
-  width: 28px;
-  height: 28px;
-}
-.text__kxxn9 {
-  padding-left: 0px;
-}
-.column__hVnJf {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-.valueProp__y7Iix:global(.__wab_instance) {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.svg___0Eoz {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  color: var(--token-nXWKqet0fltC);
-  width: 28px;
-  height: 28px;
-}
-.text__tbVcr {
-  padding-left: 0px;
-}
-.column___9U5R9 {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-.valueProp__x5Kwr:global(.__wab_instance) {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.svg__hvtzm {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  color: var(--token-nXWKqet0fltC);
-  width: 28px;
-  height: 28px;
-}
-.text__hzbh0 {
-  padding-left: 0px;
-}
-.column___4VIez {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-.valueProp__ieejF:global(.__wab_instance) {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.svg__fXoHe {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  color: var(--token-nXWKqet0fltC);
-  width: 28px;
-  height: 28px;
-}
-.text___821Fq {
   padding-left: 0px;
 }
 .columns__tPTt {
