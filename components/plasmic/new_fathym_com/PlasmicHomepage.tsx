@@ -36,7 +36,6 @@ import {
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
-import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
@@ -66,10 +65,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
-  valuePropsSection3?: p.Flex<typeof Section>;
-  valuePropsSection2?: p.Flex<typeof Section>;
-  valuePropsSection5?: p.Flex<typeof Section>;
-  valuePropsSection6?: p.Flex<typeof Section>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
   link?: p.Flex<"a"> & Partial<LinkProps>;
@@ -316,78 +311,50 @@ function PlasmicHomepage__RenderFunc(props: {
             </p.Stack>
           </div>
 
-          <Section
-            data-plasmic-name={"valuePropsSection3"}
-            data-plasmic-override={overrides.valuePropsSection3}
-            className={classNames("__wab_instance", sty.valuePropsSection3)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox___0Yia1)}>
             <p.Stack
               as={"div"}
               hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__dhqMu)}
+              className={classNames(projectcss.all, sty.freeBox__hdkWl)}
             >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__hdkWl)}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__defQr)}>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__zc1Gn
-                    )}
-                  >
-                    {"Flashup today, scale tomorrow"}
-                  </h2>
-                </div>
-
-                <div
+              <div className={classNames(projectcss.all, sty.freeBox__defQr)}>
+                <h2
                   className={classNames(
                     projectcss.all,
+                    projectcss.h2,
                     projectcss.__wab_text,
-                    sty.text__gDdU
+                    sty.h2__zc1Gn
                   )}
                 >
-                  {
-                    '"Life moves pretty fast.  If you don\'t stop and look around once in a while, you could miss it."\nIncrease the velocity of development, adoption of new strategies, and get more out of your time.'
-                  }
-                </div>
-              </p.Stack>
-            </p.Stack>
-          </Section>
+                  {"Flashup today, scale tomorrow"}
+                </h2>
+              </div>
 
-          <Section
-            data-plasmic-name={"valuePropsSection2"}
-            data-plasmic-override={overrides.valuePropsSection2}
-            className={classNames("__wab_instance", sty.valuePropsSection2)}
-          >
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___0VnRe)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__fr5Jr)}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__gDdU
+                )}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__l1Mrb)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__s8RxR
-                    )}
-                  >
-                    {"TAKE THE FATHYM JOURNEY"}
-                  </div>
-                </div>
-              </p.Stack>
+                {
+                  '"Life moves pretty fast.  If you don\'t stop and look around once in a while, you could miss it."\nIncrease the velocity of development, adoption of new strategies, and get more out of your time.'
+                }
+              </div>
             </p.Stack>
-          </Section>
+          </div>
+
+          <div className={classNames(projectcss.all, sty.freeBox__xOzus)}>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__s8RxR
+              )}
+            >
+              {"TAKE THE FATHYM JOURNEY"}
+            </div>
+          </div>
 
           <div className={classNames(projectcss.all, sty.freeBox__ukjhZ)}>
             <p.Stack
@@ -551,11 +518,7 @@ function PlasmicHomepage__RenderFunc(props: {
             </p.Stack>
           </div>
 
-          <Section
-            data-plasmic-name={"valuePropsSection5"}
-            data-plasmic-override={overrides.valuePropsSection5}
-            className={classNames("__wab_instance", sty.valuePropsSection5)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__qbKhh)}>
             <p.Stack
               as={"div"}
               hasGap={true}
@@ -880,13 +843,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </p.Stack>
-          </Section>
+          </div>
 
-          <Section
-            data-plasmic-name={"valuePropsSection6"}
-            data-plasmic-override={overrides.valuePropsSection6}
-            className={classNames("__wab_instance", sty.valuePropsSection6)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__ge9I8)}>
             <p.Stack
               as={"div"}
               hasGap={true}
@@ -1187,7 +1146,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </p.Stack>
-          </Section>
+          </div>
 
           <section
             data-plasmic-name={"section"}
@@ -1686,23 +1645,8 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "navbar",
-    "valuePropsSection3",
-    "valuePropsSection2",
-    "valuePropsSection5",
-    "valuePropsSection6",
-    "section",
-    "foreground3",
-    "link",
-    "habistackFooter"
-  ],
+  root: ["root", "navbar", "section", "foreground3", "link", "habistackFooter"],
   navbar: ["navbar"],
-  valuePropsSection3: ["valuePropsSection3"],
-  valuePropsSection2: ["valuePropsSection2"],
-  valuePropsSection5: ["valuePropsSection5"],
-  valuePropsSection6: ["valuePropsSection6"],
   section: ["section", "foreground3", "link"],
   foreground3: ["foreground3", "link"],
   link: ["link"],
@@ -1714,10 +1658,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
-  valuePropsSection3: typeof Section;
-  valuePropsSection2: typeof Section;
-  valuePropsSection5: typeof Section;
-  valuePropsSection6: typeof Section;
   section: "section";
   foreground3: "div";
   link: "a";
@@ -1782,10 +1722,6 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
-    valuePropsSection3: makeNodeComponent("valuePropsSection3"),
-    valuePropsSection2: makeNodeComponent("valuePropsSection2"),
-    valuePropsSection5: makeNodeComponent("valuePropsSection5"),
-    valuePropsSection6: makeNodeComponent("valuePropsSection6"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
     link: makeNodeComponent("link"),
