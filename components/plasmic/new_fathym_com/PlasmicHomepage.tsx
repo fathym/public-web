@@ -416,7 +416,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto" as const}
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/homeYourCodepng2.png",
+                      src: "/plasmic/new_fathym_com/images/homeYourCodepng3.png",
                       fullWidth: 400,
                       fullHeight: 400,
                       aspectRatio: undefined
@@ -586,7 +586,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       displayWidth={"auto" as const}
                       loading={"lazy" as const}
                       src={{
-                        src: "/plasmic/new_fathym_com/images/homeLowCodepng2.png",
+                        src: "/plasmic/new_fathym_com/images/homeLowCodepng3.png",
                         fullWidth: 400,
                         fullHeight: 400,
                         aspectRatio: undefined
@@ -730,7 +730,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto" as const}
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/homeRoutespng2.png",
+                      src: "/plasmic/new_fathym_com/images/homeRoutespng3.png",
                       fullWidth: 400,
                       fullHeight: 400,
                       aspectRatio: undefined
@@ -752,7 +752,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto" as const}
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/homeIteratepng2.png",
+                      src: "/plasmic/new_fathym_com/images/homeIteratepng3.png",
                       fullWidth: 400,
                       fullHeight: 400,
                       aspectRatio: undefined
@@ -834,7 +834,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto" as const}
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/homeModifierpng2.png",
+                      src: "/plasmic/new_fathym_com/images/homeModifierpng3.png",
                       fullWidth: 400,
                       fullHeight: 400,
                       aspectRatio: undefined
@@ -905,7 +905,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto" as const}
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/homeNoCodepng2.png",
+                      src: "/plasmic/new_fathym_com/images/homeNoCodepng3.png",
                       fullWidth: 400,
                       fullHeight: 400,
                       aspectRatio: undefined
@@ -1137,7 +1137,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto" as const}
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/homeHelloNamepng2.png",
+                      src: "/plasmic/new_fathym_com/images/homeHelloNamepng3.png",
                       fullWidth: 400,
                       fullHeight: 400,
                       aspectRatio: undefined

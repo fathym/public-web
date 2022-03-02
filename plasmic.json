@@ -944,6 +944,41 @@
           "id": "EySB8wyWE",
           "name": "HomeHelloName.png 2",
           "filePath": "../public/plasmic/new_fathym_com/images/homeHelloNamepng2.png"
+        },
+        {
+          "id": "KGqZgCoaK",
+          "name": "HomeYourCode.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeYourCodepng3.png"
+        },
+        {
+          "id": "ck0yFvhXu",
+          "name": "HomeLowCode.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeLowCodepng3.png"
+        },
+        {
+          "id": "r5-UvF_F3",
+          "name": "HomeRoutes.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeRoutespng3.png"
+        },
+        {
+          "id": "Kcq3BZ9Bn",
+          "name": "HomeIterate.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeIteratepng3.png"
+        },
+        {
+          "id": "KtDtEzEU0",
+          "name": "HomeModifier.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeModifierpng3.png"
+        },
+        {
+          "id": "SjMDwLVri",
+          "name": "HomeNoCode.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeNoCodepng3.png"
+        },
+        {
+          "id": "EWGO2xfdc",
+          "name": "HomeHelloName.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/homeHelloNamepng3.png"
         }
       ],
       "indirect": false,
