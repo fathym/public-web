@@ -67,7 +67,6 @@ export type PlasmicHomepage__OverridesType = {
   navbar?: p.Flex<typeof Navbar>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
   habistackFooter?: p.Flex<typeof HabistackFooter>;
 };
 
@@ -338,7 +337,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 )}
               >
                 {
-                  '"Life moves pretty fast.  If you don\'t stop and look around once in a while, you could miss it."\nIncrease the velocity of development, adoption of new strategies, and get more out of your time.'
+                  '"Life moves pretty fast. If you don\'t stop and look around once in a while, you could miss it." - Ferris Bueller\nIncrease the tempo of development, adoption of new strategies, and get more out of your time.'
                 }
               </div>
             </p.Stack>
@@ -349,7 +348,7 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__s8RxR
+                sty.text__mnCo2
               )}
             >
               {"TAKE THE FATHYM JOURNEY"}
@@ -370,7 +369,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h1__dtAfs
                 )}
               >
-                {"Start with your skills"}
+                {"1. Start with your skills"}
               </h1>
 
               <div className={classNames(projectcss.all, sty.columns__lWwUs)}>
@@ -383,7 +382,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Developers love the frameworks they love.    No matter the framework, Fathym has you covered.  Deploy with micro frontends to seamlessly leverage the right frameworks for the right job."
+                      "Developers love the frameworks they love. No matter the framework, Fathym has you covered.  Deploy with micro frontends to seamlessly use the right frameworks for the right job."
                     }
                   </div>
                 </div>
@@ -397,7 +396,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Non developers need a way to showcase their own skills.  Whether a photo gallery, blog, or simple web presence, leverage Fathym to combine proven open source solutions and bring your ideas to life."
+                      "Non-developers need a way to showcase their own skills. Whether a photo gallery, blog, or                                                          simple web presence, utilize Fathym to combine proven open source solutions and bring your ideas to life."
                     }
                   </div>
                 </div>
@@ -447,7 +446,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Leverage the frameworks you love to develop solutions your users will love."
+                        "Bring your sites and applications that you already have in GitHub or NPM."
                       }
                     </div>
                   </div>
@@ -463,7 +462,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h3__oRr9W
                       )}
                     >
-                      {"Builds and deploys"}
+                      {"Build and deploy"}
                     </h3>
 
                     <div
@@ -474,7 +473,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Automate devops processes so you can create while Fathym takes on the rest."
+                        "Automate devops processes behind the scenes so you get back to the good stuff."
                       }
                     </div>
                   </div>
@@ -532,7 +531,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h1__luXzX
                 )}
               >
-                {"Use your team to do more"}
+                {"2. Use your team to do more"}
               </h1>
 
               {true ? (
@@ -548,7 +547,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Keeping up with the ebb and flow of technology is a daunting task for teams.  Get more than the sum of your parts, leverage Fathym to automate your team workflows."
+                        "Keeping up with the ebb and flow of technology is a daunting task for teams. Get more than the sum of your parts, leverage Fathym to automate your team workflows."
                       }
                     </div>
                   </div>
@@ -564,7 +563,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Take your experience and coding skills to new heights.  Fathym will help you develop low code solutions that enable jr and mid level developers to accelerate."
+                        "Take your experience and coding skills to new heights. Fathym will help you develop low-code solutions that enable junior and mid-                          level developers to accelerate."
                       }
                     </div>
                   </div>
@@ -646,7 +645,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "Create micro combinatorial architectures that make it simple to create your business in a day."
+                          "Micro frontend applications make it simple to create your business in a day."
                         }
                       </div>
                     </div>
@@ -780,7 +779,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Don't wait weeks and months, take hours.  Build engaging user experiences that Flashup your idea.  Learn from them and rapidly iterate on solutions to their problems."
+                      "Don't wait weeks and months, take hours. Build engaging user experiences that Flashup your idea. Learn from your users and rapidly react with solutions to their problems."
                     }
                   </div>
 
@@ -817,7 +816,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Augment your applications with low code modifiers.  Bring google tag manager to every application, add support chat from your CRM, or develop custom enhancements yourself.  Configure and manage from a central location across all applications.\n\n"
+                      "Augment your applications with low-code modifiers. Bring Google Tag Manager to every application, add support chat from your CRM, or develop custom enhancements yourself. Configure and manage from a central location across all applications.\n\n"
                     }
                   </div>
                 </div>
@@ -859,7 +858,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h1__fjZiy
                 )}
               >
-                {"Scale your solutions"}
+                {"3. Scale your solutions"}
               </h1>
 
               <div className={classNames(projectcss.all, sty.columns__juFeZ)}>
@@ -872,7 +871,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "You no longer need piles of cash or 100s of days.  Flashup your business across shared infrastructure built to scale with your business and customer needs."
+                      "You no longer need a huge budget or months to get started. Flashup your business across shared infrastructure built to scale with you and your customer's needs."
                     }
                   </div>
                 </div>
@@ -886,7 +885,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Outgrown our shared infrastructure?  Looking to bolster the value of your business?  Leverage all the same great tools from your own private or managed clouds."
+                      "Outgrown Fathym's shared infrastructure? Looking to bolster the value of your business? Employ all the same great tools from your own private or managed clouds."
                     }
                   </div>
                 </div>
@@ -936,7 +935,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Leverage and build tools that streamline productivity and bring value to your customers"
+                        "Build tools that streamline productivity and bring value to your customers."
                       }
                     </div>
                   </div>
@@ -963,7 +962,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Flashup on shared infrastructure, grow with your customers, scale to cloud-native."
+                        "Flashup on shared infrastructure, grow with your customers, scale as needed."
                       }
                     </div>
                   </div>
@@ -1005,146 +1004,162 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
 
-              <div className={classNames(projectcss.all, sty.columns__aqBq)}>
-                <div className={classNames(projectcss.all, sty.column__sxJ1K)}>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__tvvwg
-                    )}
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__aqBq)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__sxJ1K)}
                   >
-                    {"Enterprise as Code"}
-                  </h2>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__tvvwg
+                      )}
+                    >
+                      {"Enterprise as Code"}
+                    </h2>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ua7Bm
+                      )}
+                    >
+                      {
+                        "Bringing infrastructure as code, application life cycle and identity management at scale. Develop custom automations that accelerate and enable your existing teams."
+                      }
+                    </div>
+                  </div>
 
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ua7Bm
-                    )}
+                    className={classNames(projectcss.all, sty.column___6Jgp)}
                   >
-                    {
-                      "Bringing infrastructure as code, application life cycle and identity management at scale.  Develop custom automations that accelerate and enable your existing teams."
-                    }
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___0C5J)}
+                      displayHeight={"auto" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"auto" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: "/plasmic/new_fathym_com/images/trekpng2.png",
+                        fullWidth: 650,
+                        fullHeight: 400,
+                        aspectRatio: undefined
+                      }}
+                    />
                   </div>
                 </div>
-
-                <div className={classNames(projectcss.all, sty.column___6Jgp)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img___0C5J)}
-                    displayHeight={"auto" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/trekpng2.png",
-                      fullWidth: 650,
-                      fullHeight: 400,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div className={classNames(projectcss.all, sty.columns__hXeSq)}>
-                <div className={classNames(projectcss.all, sty.column__fe9Fi)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__aLTob)}
-                    displayHeight={"auto" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/applydirectlypng2.png",
-                      fullWidth: 865,
-                      fullHeight: 372,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div className={classNames(projectcss.all, sty.column__kojso)}>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__gdG7O
-                    )}
+              ) : null}
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__hXeSq)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__fe9Fi)}
                   >
-                    {"Application Runtime"}
-                  </h2>
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__aLTob)}
+                      displayHeight={"auto" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"auto" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: "/plasmic/new_fathym_com/images/applydirectlypng2.png",
+                        fullWidth: 865,
+                        fullHeight: 372,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
 
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__cbinK
-                    )}
+                    className={classNames(projectcss.all, sty.column__kojso)}
                   >
-                    {
-                      "Accelerate internal innovation and streamline customer engagement.  Fathym enhances your development workflow so your resources can can focus on the customer."
-                    }
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__gdG7O
+                      )}
+                    >
+                      {"Application Runtime"}
+                    </h2>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__cbinK
+                      )}
+                    >
+                      {
+                        "Accelerate internal innovation and streamline customer engagement. Fathym enhances your development workflow so your resources can can focus on the customer."
+                      }
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className={classNames(projectcss.all, sty.columns__kl8SD)}>
-                <div className={classNames(projectcss.all, sty.column__q0R3P)}>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__tOlN1
-                    )}
+              ) : null}
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__kl8SD)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__q0R3P)}
                   >
-                    {"Enterprise Whitelabels"}
-                  </h2>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__tOlN1
+                      )}
+                    >
+                      {"Enterprise Whitelabels"}
+                    </h2>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___6Fglo
+                      )}
+                    >
+                      {
+                        "Fathym's micro frontends bring open source, distributed SaaS and custom code into a single solution for resale. Enable new lines of business, migrate your legacy solutions, and advance your technology today. "
+                      }
+                    </div>
+                  </div>
 
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___6Fglo
-                    )}
+                    className={classNames(projectcss.all, sty.column__jui4G)}
                   >
-                    {
-                      "Our micro combinatorial architecture brings open source, distributed SaaS and custom code into a single solution.  Enable new lines of business, migrate your legacy and  advance your technology today. "
-                    }
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__i2Pu9)}
+                      displayHeight={"auto" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={"auto" as const}
+                      loading={"lazy" as const}
+                      src={{
+                        src: "/plasmic/new_fathym_com/images/homeHelloNamepng3.png",
+                        fullWidth: 400,
+                        fullHeight: 400,
+                        aspectRatio: undefined
+                      }}
+                    />
                   </div>
                 </div>
-
-                <div className={classNames(projectcss.all, sty.column__jui4G)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__i2Pu9)}
-                    displayHeight={"auto" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/homeHelloNamepng3.png",
-                      fullWidth: 400,
-                      fullHeight: 400,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-              </div>
+              ) : null}
             </p.Stack>
           </div>
 
@@ -1186,7 +1201,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Fathym micro frontends let you get the most out of your effort, leveraging the right frameworks and tools when appropriate, for the job at hand.\n\nDiscover new ways to leverage existing resources and business knowledge from your team, leveraging low and no code tools from the open source or developed by your team."
+                    "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and devops automation, saving both time and money. Plus, the ability to use multiple frameworks!\n\nDiscover new ways to maximize resources and knowledge from your team with your code, low code, and no code tools. Harness solutions from the open source universe or developed by your team."
                   }
                 </div>
               </p.Stack>
@@ -1200,24 +1215,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"Get Started for Free"}
                   </Button>
-                </div>
-
-                <div className={classNames(projectcss.all, sty.column__w6PBw)}>
-                  <p.PlasmicLink
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link
-                    )}
-                    component={Link}
-                    href={"/docs/guides/deploying/frameworks/react" as const}
-                    platform={"nextjs"}
-                  >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
                 </div>
               </div>
             </p.Stack>
@@ -1645,11 +1642,10 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navbar", "section", "foreground3", "link", "habistackFooter"],
+  root: ["root", "navbar", "section", "foreground3", "habistackFooter"],
   navbar: ["navbar"],
-  section: ["section", "foreground3", "link"],
-  foreground3: ["foreground3", "link"],
-  link: ["link"],
+  section: ["section", "foreground3"],
+  foreground3: ["foreground3"],
   habistackFooter: ["habistackFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1660,7 +1656,6 @@ type NodeDefaultElementType = {
   navbar: typeof Navbar;
   section: "section";
   foreground3: "div";
-  link: "a";
   habistackFooter: typeof HabistackFooter;
 };
 
@@ -1724,7 +1719,6 @@ export const PlasmicHomepage = Object.assign(
     navbar: makeNodeComponent("navbar"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
-    link: makeNodeComponent("link"),
     habistackFooter: makeNodeComponent("habistackFooter"),
 
     // Metadata about props expected for PlasmicHomepage
