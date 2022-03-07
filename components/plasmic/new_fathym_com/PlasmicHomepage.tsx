@@ -273,9 +273,18 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "__wab_instance",
                                   sty.button__irS16
                                 )}
+                                color={"link" as const}
                                 link={"/docs" as const}
                               >
-                                {"Learn More >"}
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__htoqd
+                                  )}
+                                >
+                                  {"Learn More >"}
+                                </div>
                               </Button>
                             </div>
                           </div>
