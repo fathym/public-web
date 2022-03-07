@@ -202,9 +202,7 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__fkSyb)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000004" as const
-                    }
+                    link={"/dashboard/create-project/recipe/svelte" as const}
                   >
                     {"Get Started for Free"}
                   </Button>
@@ -453,7 +451,7 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                         )}
                         color={"blue" as const}
                         link={
-                          "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000004" as const
+                          "/dashboard/create-project/recipe/svelte" as const
                         }
                       >
                         {"Get Started for Free"}
@@ -691,9 +689,7 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__rgWxD)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000004" as const
-                    }
+                    link={"/dashboard/create-project/recipe/svelte" as const}
                   >
                     {"Get Started for Free"}
                   </Button>

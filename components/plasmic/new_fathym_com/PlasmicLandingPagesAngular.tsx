@@ -202,9 +202,7 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__aePmE)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000001" as const
-                    }
+                    link={"/dashboard/create-project/recipe/angular" as const}
                   >
                     {"Get Started for Free"}
                   </Button>
@@ -454,7 +452,7 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
                         )}
                         color={"blue" as const}
                         link={
-                          "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000001" as const
+                          "/dashboard/create-project/recipe/angular" as const
                         }
                       >
                         {"Get Started for Free"}
@@ -692,9 +690,7 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__jkN9Q)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000001" as const
-                    }
+                    link={"/dashboard/create-project/recipe/angular" as const}
                   >
                     {"Get Started for Free"}
                   </Button>

@@ -202,9 +202,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button___0V0KA)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000003" as const
-                    }
+                    link={"/dashboard/create-project/recipe/vue" as const}
                   >
                     {"Get Started for Free"}
                   </Button>
@@ -453,9 +451,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           sty.button__tvymk
                         )}
                         color={"blue" as const}
-                        link={
-                          "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000003" as const
-                        }
+                        link={"/dashboard/create-project/recipe/vue" as const}
                       >
                         <div
                           className={classNames(
@@ -698,9 +694,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                   <Button
                     className={classNames("__wab_instance", sty.button__v1Kaa)}
                     color={"blue" as const}
-                    link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000003" as const
-                    }
+                    link={"/dashboard/create-project/recipe/vue" as const}
                   >
                     <div
                       className={classNames(

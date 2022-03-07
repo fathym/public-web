@@ -205,7 +205,7 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.button___0Hti8)}
                     color={"blue" as const}
                     link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000005" as const
+                      "/dashboard/create-project/recipe/docusaurus" as const
                     }
                   >
                     {"Get Started for Free"}
@@ -489,7 +489,7 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.button__fFlzm)}
                     color={"blue" as const}
                     link={
-                      "/dashboard/create-project?recipeId=00000000-0000-0000-0000-000000000005" as const
+                      "/dashboard/create-project/recipe/docusaurus" as const
                     }
                   >
                     {"Get Started for Free"}
