@@ -116,6 +116,7 @@
 }
 .text__zYnX6 {
   width: auto;
+  font-weight: 700;
 }
 .svg__nzvvW {
   width: 24px;
@@ -132,6 +133,9 @@
   position: relative;
   object-fit: cover;
 }
+.text__t74Tr {
+  font-weight: 700;
+}
 .svg__r0XxW {
   width: 24px;
   height: 24px;
@@ -146,6 +150,9 @@
   height: 24px;
   position: relative;
   object-fit: cover;
+}
+.text__oTm5F {
+  font-weight: 700;
 }
 .svg__w46G6 {
   width: 24px;

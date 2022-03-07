@@ -145,14 +145,30 @@ function PlasmicNavbar__RenderFunc(props: {
                 className={classNames("__wab_instance", sty.button__qj7XT)}
                 link={"/blog" as const}
               >
-                {"Blog"}
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__t74Tr
+                  )}
+                >
+                  {"Blog"}
+                </div>
               </Button>
 
               <Button
                 className={classNames("__wab_instance", sty.button___6FORa)}
                 link={"/dashboard" as const}
               >
-                {"Log in"}
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__oTm5F
+                  )}
+                >
+                  {"Log in"}
+                </div>
               </Button>
             </p.Stack>
           ) : null}
