@@ -128,6 +128,7 @@ function PlasmicNavbar__RenderFunc(props: {
             >
               <Button
                 className={classNames("__wab_instance", sty.button__oOzRy)}
+                color={"white" as const}
                 link={"/docs" as const}
               >
                 <div
@@ -143,6 +144,7 @@ function PlasmicNavbar__RenderFunc(props: {
 
               <Button
                 className={classNames("__wab_instance", sty.button__qj7XT)}
+                color={"white" as const}
                 link={"/blog" as const}
               >
                 <div
@@ -158,6 +160,7 @@ function PlasmicNavbar__RenderFunc(props: {
 
               <Button
                 className={classNames("__wab_instance", sty.button___6FORa)}
+                color={"white" as const}
                 link={"/dashboard" as const}
               >
                 <div

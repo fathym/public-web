@@ -273,6 +273,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "__wab_instance",
                                   sty.button__irS16
                                 )}
+                                color={"white" as const}
                                 link={"/docs" as const}
                               >
                                 <div
