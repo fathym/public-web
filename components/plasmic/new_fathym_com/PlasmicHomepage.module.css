@@ -392,27 +392,17 @@
   justify-content: center;
   align-items: center;
   min-width: 0;
-  padding: 8px;
+  padding: 4px;
 }
-.button__irS16:global(.__wab_instance) {
-  max-width: 100%;
+.learnMore {
   position: relative;
+  display: flex;
 }
-.svg__j2UPx {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.text__htoqd {
-  color: var(--token-Gh2swhE2QtwV);
-  font-weight: 700;
-}
-.svg__q1Vfu {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
+.text__bc317 {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  min-width: 0;
 }
 .column__sauIw {
   display: flex;

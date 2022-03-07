@@ -65,6 +65,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
+  learnMore?: p.Flex<"a"> & Partial<LinkProps>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
   habistackFooter?: p.Flex<typeof HabistackFooter>;
@@ -268,24 +269,29 @@ function PlasmicHomepage__RenderFunc(props: {
                                 sty.column__lzsXm
                               )}
                             >
-                              <Button
+                              <p.PlasmicLink
+                                data-plasmic-name={"learnMore"}
+                                data-plasmic-override={overrides.learnMore}
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__irS16
+                                  projectcss.all,
+                                  projectcss.a,
+                                  sty.learnMore
                                 )}
-                                color={"white" as const}
-                                link={"/docs" as const}
+                                component={Link}
+                                href={"/docs" as const}
+                                platform={"nextjs"}
+                                target={"_blank" as const}
                               >
                                 <div
                                   className={classNames(
                                     projectcss.all,
                                     projectcss.__wab_text,
-                                    sty.text__htoqd
+                                    sty.text__bc317
                                   )}
                                 >
-                                  {"Learn More >"}
+                                  {"Learn more >"}
                                 </div>
-                              </Button>
+                              </p.PlasmicLink>
                             </div>
                           </div>
                         </p.Stack>
@@ -1651,8 +1657,16 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navbar", "section", "foreground3", "habistackFooter"],
+  root: [
+    "root",
+    "navbar",
+    "learnMore",
+    "section",
+    "foreground3",
+    "habistackFooter"
+  ],
   navbar: ["navbar"],
+  learnMore: ["learnMore"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
   habistackFooter: ["habistackFooter"]
@@ -1663,6 +1677,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
+  learnMore: "a";
   section: "section";
   foreground3: "div";
   habistackFooter: typeof HabistackFooter;
@@ -1726,6 +1741,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
+    learnMore: makeNodeComponent("learnMore"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
     habistackFooter: makeNodeComponent("habistackFooter"),
