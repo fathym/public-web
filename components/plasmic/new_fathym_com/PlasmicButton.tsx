@@ -240,6 +240,13 @@ function PlasmicButton__RenderFunc(props: {
                 "color",
                 "green"
               ),
+              [sty.slotTargetStartIconcolor_green_showEndIcon]:
+                hasVariant(variants, "showEndIcon", "showEndIcon") &&
+                hasVariant(variants, "color", "green"),
+              [sty.slotTargetStartIconcolor_green_showEndIcon_showStartIcon]:
+                hasVariant(variants, "showStartIcon", "showStartIcon") &&
+                hasVariant(variants, "showEndIcon", "showEndIcon") &&
+                hasVariant(variants, "color", "green"),
               [sty.slotTargetStartIconcolor_indigo]: hasVariant(
                 variants,
                 "color",
@@ -275,18 +282,11 @@ function PlasmicButton__RenderFunc(props: {
                 "isDisabled",
                 "isDisabled"
               ),
-              [sty.slotTargetStartIconshowEndIcon_color_green]:
-                hasVariant(variants, "showEndIcon", "showEndIcon") &&
-                hasVariant(variants, "color", "green"),
               [sty.slotTargetStartIconshowStartIcon]: hasVariant(
                 variants,
                 "showStartIcon",
                 "showStartIcon"
-              ),
-              [sty.slotTargetStartIconshowStartIcon_showEndIcon_color_green]:
-                hasVariant(variants, "showStartIcon", "showStartIcon") &&
-                hasVariant(variants, "showEndIcon", "showEndIcon") &&
-                hasVariant(variants, "color", "green")
+              )
             })
           })
         : null}

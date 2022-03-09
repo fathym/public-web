@@ -158,9 +158,6 @@ function PlasmicButton2__RenderFunc(props: {
             "isDisabled"
           ),
           [sty.rootshape_rounded]: hasVariant(variants, "shape", "rounded"),
-          [sty.rootshape_rounded_showStartIcon]:
-            hasVariant(variants, "shape", "rounded") &&
-            hasVariant(variants, "showStartIcon", "showStartIcon"),
           [sty.rootshowEndIcon]: hasVariant(
             variants,
             "showEndIcon",
@@ -169,25 +166,28 @@ function PlasmicButton2__RenderFunc(props: {
           [sty.rootshowEndIcon_shape_rounded]:
             hasVariant(variants, "showEndIcon", "showEndIcon") &&
             hasVariant(variants, "shape", "rounded"),
+          [sty.rootshowEndIcon_size_compact]:
+            hasVariant(variants, "size", "compact") &&
+            hasVariant(variants, "showEndIcon", "showEndIcon"),
+          [sty.rootshowEndIcon_size_compact_showStartIcon]:
+            hasVariant(variants, "size", "compact") &&
+            hasVariant(variants, "showStartIcon", "showStartIcon") &&
+            hasVariant(variants, "showEndIcon", "showEndIcon"),
           [sty.rootshowStartIcon]: hasVariant(
             variants,
             "showStartIcon",
             "showStartIcon"
           ),
+          [sty.rootshowStartIcon_shape_rounded]:
+            hasVariant(variants, "shape", "rounded") &&
+            hasVariant(variants, "showStartIcon", "showStartIcon"),
           [sty.rootsize_compact]: hasVariant(variants, "size", "compact"),
           [sty.rootsize_compact_shape_rounded]:
             hasVariant(variants, "size", "compact") &&
             hasVariant(variants, "shape", "rounded"),
-          [sty.rootsize_compact_showEndIcon]:
-            hasVariant(variants, "size", "compact") &&
-            hasVariant(variants, "showEndIcon", "showEndIcon"),
           [sty.rootsize_compact_showStartIcon]:
             hasVariant(variants, "size", "compact") &&
-            hasVariant(variants, "showStartIcon", "showStartIcon"),
-          [sty.rootsize_compact_showStartIcon_showEndIcon]:
-            hasVariant(variants, "size", "compact") &&
-            hasVariant(variants, "showStartIcon", "showStartIcon") &&
-            hasVariant(variants, "showEndIcon", "showEndIcon")
+            hasVariant(variants, "showStartIcon", "showStartIcon")
         }
       )}
       data-plasmic-trigger-props={[triggerRootFocusVisibleWithinProps]}
@@ -204,14 +204,14 @@ function PlasmicButton2__RenderFunc(props: {
               "color",
               "blue"
             ),
-            [sty.startIconContainershape_rounded_showStartIcon]:
-              hasVariant(variants, "shape", "rounded") &&
-              hasVariant(variants, "showStartIcon", "showStartIcon"),
             [sty.startIconContainershowStartIcon]: hasVariant(
               variants,
               "showStartIcon",
               "showStartIcon"
-            )
+            ),
+            [sty.startIconContainershowStartIcon_shape_rounded]:
+              hasVariant(variants, "shape", "rounded") &&
+              hasVariant(variants, "showStartIcon", "showStartIcon")
           })}
         >
           {p.renderPlasmicSlot({

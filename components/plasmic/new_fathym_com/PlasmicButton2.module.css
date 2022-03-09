@@ -59,7 +59,7 @@
   background: #fff0ee00;
   border: 1px solid #ca3214;
 }
-.rootshape_rounded_showStartIcon {
+.rootshowStartIcon_shape_rounded {
   padding-left: 16px;
 }
 .rootsize_compact_showStartIcon {
@@ -68,7 +68,7 @@
 .rootshowEndIcon_shape_rounded {
   padding-right: 16px;
 }
-.rootsize_compact_showEndIcon {
+.rootshowEndIcon_size_compact {
   padding-right: 8px;
 }
 .root:hover {
