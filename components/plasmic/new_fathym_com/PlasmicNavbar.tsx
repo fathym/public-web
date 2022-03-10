@@ -60,6 +60,9 @@ export const PlasmicNavbar__ArgProps = new Array<ArgPropType>();
 export type PlasmicNavbar__OverridesType = {
   root?: p.Flex<"div">;
   logo?: p.Flex<typeof Logo>;
+  docs?: p.Flex<"a"> & Partial<LinkProps>;
+  blog?: p.Flex<"a"> & Partial<LinkProps>;
+  logIn?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultNavbarProps {
@@ -126,7 +129,14 @@ function PlasmicNavbar__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__daRol)}
             >
-              <Button link={"/docs" as const}>
+              <p.PlasmicLink
+                data-plasmic-name={"docs"}
+                data-plasmic-override={overrides.docs}
+                className={classNames(projectcss.all, projectcss.a, sty.docs)}
+                component={Link}
+                href={"/docs" as const}
+                platform={"nextjs"}
+              >
                 <div
                   className={classNames(
                     projectcss.all,
@@ -136,9 +146,16 @@ function PlasmicNavbar__RenderFunc(props: {
                 >
                   {"Docs"}
                 </div>
-              </Button>
+              </p.PlasmicLink>
 
-              <Button link={"/blog" as const}>
+              <p.PlasmicLink
+                data-plasmic-name={"blog"}
+                data-plasmic-override={overrides.blog}
+                className={classNames(projectcss.all, projectcss.a, sty.blog)}
+                component={Link}
+                href={"/blog" as const}
+                platform={"nextjs"}
+              >
                 <div
                   className={classNames(
                     projectcss.all,
@@ -148,9 +165,16 @@ function PlasmicNavbar__RenderFunc(props: {
                 >
                   {"Blog"}
                 </div>
-              </Button>
+              </p.PlasmicLink>
 
-              <Button link={"/dashboard" as const}>
+              <p.PlasmicLink
+                data-plasmic-name={"logIn"}
+                data-plasmic-override={overrides.logIn}
+                className={classNames(projectcss.all, projectcss.a, sty.logIn)}
+                component={Link}
+                href={"/dashboard" as const}
+                platform={"nextjs"}
+              >
                 <div
                   className={classNames(
                     projectcss.all,
@@ -160,7 +184,32 @@ function PlasmicNavbar__RenderFunc(props: {
                 >
                   {"Log in"}
                 </div>
-              </Button>
+              </p.PlasmicLink>
+
+              {true ? (
+                <Button
+                  className={classNames("__wab_instance", sty.button__oOzRy)}
+                  link={"/docs" as const}
+                >
+                  {null}
+                </Button>
+              ) : null}
+              {true ? (
+                <Button
+                  className={classNames("__wab_instance", sty.button__qj7XT)}
+                  link={"/blog" as const}
+                >
+                  {null}
+                </Button>
+              ) : null}
+              {true ? (
+                <Button
+                  className={classNames("__wab_instance", sty.button___6FORa)}
+                  link={"/dashboard" as const}
+                >
+                  {null}
+                </Button>
+              ) : null}
             </p.Stack>
           ) : null}
 
@@ -228,8 +277,11 @@ function PlasmicNavbar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo"],
-  logo: ["logo"]
+  root: ["root", "logo", "docs", "blog", "logIn"],
+  logo: ["logo"],
+  docs: ["docs"],
+  blog: ["blog"],
+  logIn: ["logIn"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -237,6 +289,9 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   logo: typeof Logo;
+  docs: "a";
+  blog: "a";
+  logIn: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -297,6 +352,9 @@ export const PlasmicNavbar = Object.assign(
   {
     // Helper components rendering sub-elements
     logo: makeNodeComponent("logo"),
+    docs: makeNodeComponent("docs"),
+    blog: makeNodeComponent("blog"),
+    logIn: makeNodeComponent("logIn"),
 
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
