@@ -126,7 +126,7 @@ function PlasmicNavbar__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__daRol)}
             >
-              <Button color={"navLink" as const} link={"/docs" as const}>
+              <Button link={"/docs" as const}>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -138,7 +138,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 </div>
               </Button>
 
-              <Button color={"navLink" as const} link={"/blog" as const}>
+              <Button link={"/blog" as const}>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -150,7 +150,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 </div>
               </Button>
 
-              <Button color={"navLink" as const} link={"/dashboard" as const}>
+              <Button link={"/dashboard" as const}>
                 <div
                   className={classNames(
                     projectcss.all,
