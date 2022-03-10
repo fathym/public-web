@@ -63,6 +63,9 @@ export type PlasmicNavbar__OverridesType = {
   docs?: p.Flex<"a"> & Partial<LinkProps>;
   blog?: p.Flex<"a"> & Partial<LinkProps>;
   logIn?: p.Flex<"a"> & Partial<LinkProps>;
+  docs2?: p.Flex<"a"> & Partial<LinkProps>;
+  blog2?: p.Flex<"a"> & Partial<LinkProps>;
+  logIn2?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultNavbarProps {
@@ -117,7 +120,7 @@ function PlasmicNavbar__RenderFunc(props: {
             )}
           >
             {hasVariant(globalVariants, "screen", "mobileOnly")
-              ? "Fathym"
+              ? "fathym"
               : "fathym"}
           </div>
 
@@ -238,10 +241,13 @@ function PlasmicNavbar__RenderFunc(props: {
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox___60Ge)}
           >
-            <Button
-              className={classNames("__wab_instance", sty.button__uafY)}
-              color={"white" as const}
-              link={"/docs" as const}
+            <p.PlasmicLink
+              data-plasmic-name={"docs2"}
+              data-plasmic-override={overrides.docs2}
+              className={classNames(projectcss.all, projectcss.a, sty.docs2)}
+              component={Link}
+              href={"/docs" as const}
+              platform={"nextjs"}
             >
               <div
                 className={classNames(
@@ -252,23 +258,79 @@ function PlasmicNavbar__RenderFunc(props: {
               >
                 {"Docs"}
               </div>
-            </Button>
+            </p.PlasmicLink>
 
-            <Button
-              className={classNames("__wab_instance", sty.button__zuqBc)}
-              color={"white" as const}
-              link={"/blog" as const}
+            <p.PlasmicLink
+              data-plasmic-name={"blog2"}
+              data-plasmic-override={overrides.blog2}
+              className={classNames(projectcss.all, projectcss.a, sty.blog2)}
+              component={Link}
+              href={"/blog" as const}
+              platform={"nextjs"}
             >
-              {"Blog"}
-            </Button>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__mYtkh
+                )}
+              >
+                {"Blog"}
+              </div>
+            </p.PlasmicLink>
 
-            <Button
-              className={classNames("__wab_instance", sty.button___2JzDy)}
-              color={"white" as const}
-              link={"/dashboard" as const}
+            <p.PlasmicLink
+              data-plasmic-name={"logIn2"}
+              data-plasmic-override={overrides.logIn2}
+              className={classNames(projectcss.all, projectcss.a, sty.logIn2)}
+              component={Link}
+              href={"/dashboard" as const}
+              platform={"nextjs"}
             >
-              {"Log in"}
-            </Button>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__wNOmy
+                )}
+              >
+                {"Log in"}
+              </div>
+            </p.PlasmicLink>
+
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <Button
+                className={classNames("__wab_instance", sty.button__uafY)}
+                color={"white" as const}
+                link={"/docs" as const}
+              >
+                {null}
+              </Button>
+            ) : null}
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <Button
+                className={classNames("__wab_instance", sty.button__zuqBc)}
+                color={"white" as const}
+                link={"/blog" as const}
+              >
+                {null}
+              </Button>
+            ) : null}
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <Button
+                className={classNames("__wab_instance", sty.button___2JzDy)}
+                color={"white" as const}
+                link={"/dashboard" as const}
+              >
+                {null}
+              </Button>
+            ) : null}
           </p.Stack>
         ) : null}
       </div>
@@ -277,11 +339,14 @@ function PlasmicNavbar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "docs", "blog", "logIn"],
+  root: ["root", "logo", "docs", "blog", "logIn", "docs2", "blog2", "logIn2"],
   logo: ["logo"],
   docs: ["docs"],
   blog: ["blog"],
-  logIn: ["logIn"]
+  logIn: ["logIn"],
+  docs2: ["docs2"],
+  blog2: ["blog2"],
+  logIn2: ["logIn2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -292,6 +357,9 @@ type NodeDefaultElementType = {
   docs: "a";
   blog: "a";
   logIn: "a";
+  docs2: "a";
+  blog2: "a";
+  logIn2: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -355,6 +423,9 @@ export const PlasmicNavbar = Object.assign(
     docs: makeNodeComponent("docs"),
     blog: makeNodeComponent("blog"),
     logIn: makeNodeComponent("logIn"),
+    docs2: makeNodeComponent("docs2"),
+    blog2: makeNodeComponent("blog2"),
+    logIn2: makeNodeComponent("logIn2"),
 
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
