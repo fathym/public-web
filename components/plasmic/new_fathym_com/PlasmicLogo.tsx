@@ -113,7 +113,7 @@ function PlasmicLogo__RenderFunc(props: {
         displayHeight={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("50px" as const)
-            : ("75px" as const)
+            : ("55px" as const)
         }
         displayMaxHeight={"none" as const}
         displayMaxWidth={"none" as const}

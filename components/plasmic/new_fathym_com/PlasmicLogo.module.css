@@ -8,7 +8,7 @@
 .img {
   object-fit: cover;
   width: auto;
-  height: 75px;
+  height: 55px;
 }
 .img > picture > img {
   object-fit: cover;
