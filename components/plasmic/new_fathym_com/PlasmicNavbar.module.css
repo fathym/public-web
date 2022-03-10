@@ -7,6 +7,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  background: #ffffff;
   min-width: 0;
   padding: 8px;
 }
@@ -14,6 +15,7 @@
   flex-direction: row;
   display: flex;
   width: 100%;
+  background: #ffffff;
   min-width: 0;
   padding: 16px;
 }
@@ -65,6 +67,7 @@
   flex-direction: row;
   display: flex;
   position: relative;
+  background: #ffffff;
 }
 .freeBox__daRol > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -117,7 +120,7 @@
 .text__zYnX6 {
   width: auto;
   font-weight: 400;
-  color: var(--token-3btyuIOaZa0x);
+  color: #05050599;
 }
 .svg__gfMj4 {
   width: 24px;
@@ -133,7 +136,7 @@
 }
 .text__t74Tr {
   font-weight: 400;
-  color: var(--token-3btyuIOaZa0x);
+  color: #05050599;
 }
 .svg__aBmxt {
   width: 24px;
@@ -149,7 +152,7 @@
 }
 .text__oTm5F {
   font-weight: 400;
-  color: var(--token-3btyuIOaZa0x);
+  color: #05050599;
 }
 .svg__ixiBj {
   width: 24px;
