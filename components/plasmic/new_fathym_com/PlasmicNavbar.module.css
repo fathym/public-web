@@ -65,7 +65,7 @@
   flex-direction: row;
   display: flex;
   position: relative;
-  background: #ffffff;
+  background: none;
 }
 .freeBox__daRol > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -109,10 +109,6 @@
     margin-top: 8px;
   }
 }
-.docs {
-  position: relative;
-  display: flex;
-}
 .svg___1ZN2S {
   width: 24px;
   height: 24px;
@@ -130,10 +126,6 @@
   position: relative;
   object-fit: cover;
 }
-.blog {
-  position: relative;
-  display: flex;
-}
 .svg__ojJDc {
   width: 24px;
   height: 24px;
@@ -149,10 +141,6 @@
   height: 24px;
   position: relative;
   object-fit: cover;
-}
-.logIn {
-  position: relative;
-  display: flex;
 }
 .svg__dtppi {
   width: 24px;

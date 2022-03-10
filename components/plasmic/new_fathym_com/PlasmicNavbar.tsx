@@ -60,9 +60,6 @@ export const PlasmicNavbar__ArgProps = new Array<ArgPropType>();
 export type PlasmicNavbar__OverridesType = {
   root?: p.Flex<"div">;
   logo?: p.Flex<typeof Logo>;
-  docs?: p.Flex<"a"> & Partial<LinkProps>;
-  blog?: p.Flex<"a"> & Partial<LinkProps>;
-  logIn?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultNavbarProps {
@@ -129,68 +126,41 @@ function PlasmicNavbar__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__daRol)}
             >
-              <p.PlasmicLink
-                data-plasmic-name={"docs"}
-                data-plasmic-override={overrides.docs}
-                className={classNames(projectcss.all, projectcss.a, sty.docs)}
-                component={Link}
-                href={"/docs" as const}
-                platform={"nextjs"}
-              >
-                <Button color={"link" as const} link={"/docs" as const}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__zYnX6
-                    )}
-                  >
-                    {"Docs"}
-                  </div>
-                </Button>
-              </p.PlasmicLink>
+              <Button color={"navLink" as const} link={"/docs" as const}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__zYnX6
+                  )}
+                >
+                  {"Docs"}
+                </div>
+              </Button>
 
-              <p.PlasmicLink
-                data-plasmic-name={"blog"}
-                data-plasmic-override={overrides.blog}
-                className={classNames(projectcss.all, projectcss.a, sty.blog)}
-                component={Link}
-                href={"/blog" as const}
-                platform={"nextjs"}
-              >
-                <Button color={"link" as const} link={"/blog" as const}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__t74Tr
-                    )}
-                  >
-                    {"Blog"}
-                  </div>
-                </Button>
-              </p.PlasmicLink>
+              <Button color={"navLink" as const} link={"/blog" as const}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__t74Tr
+                  )}
+                >
+                  {"Blog"}
+                </div>
+              </Button>
 
-              <p.PlasmicLink
-                data-plasmic-name={"logIn"}
-                data-plasmic-override={overrides.logIn}
-                className={classNames(projectcss.all, projectcss.a, sty.logIn)}
-                component={Link}
-                href={"/dashboard" as const}
-                platform={"nextjs"}
-              >
-                <Button color={"link" as const} link={"/dashboard" as const}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__oTm5F
-                    )}
-                  >
-                    {"Log in"}
-                  </div>
-                </Button>
-              </p.PlasmicLink>
+              <Button color={"navLink" as const} link={"/dashboard" as const}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__oTm5F
+                  )}
+                >
+                  {"Log in"}
+                </div>
+              </Button>
             </p.Stack>
           ) : null}
 
@@ -258,11 +228,8 @@ function PlasmicNavbar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "docs", "blog", "logIn"],
-  logo: ["logo"],
-  docs: ["docs"],
-  blog: ["blog"],
-  logIn: ["logIn"]
+  root: ["root", "logo"],
+  logo: ["logo"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -270,9 +237,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   logo: typeof Logo;
-  docs: "a";
-  blog: "a";
-  logIn: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -333,9 +297,6 @@ export const PlasmicNavbar = Object.assign(
   {
     // Helper components rendering sub-elements
     logo: makeNodeComponent("logo"),
-    docs: makeNodeComponent("docs"),
-    blog: makeNodeComponent("blog"),
-    logIn: makeNodeComponent("logIn"),
 
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
