@@ -1241,407 +1241,409 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox___8ZCkT)}
             >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__edd3O)}
-              >
+              {true ? (
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___8Rvuk)}
+                  className={classNames(projectcss.all, sty.freeBox__edd3O)}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__qYFk)}
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox___8Rvuk)}
                   >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__qYFk)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xxDhW
+                        )}
+                      >
+                        {"Pricing plans"}
+                      </div>
+                    </div>
+
                     <div
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__xxDhW
+                        sty.text__gxpeQ
                       )}
                     >
-                      {"Pricing plans"}
+                      {
+                        "Nascetur nascetur ridiculus scelerisque adipiscing a nascetur varius sed eu a ad semper a est nec litora ante at orci rhoncus a varius auctor aliquam inceptos vestibulum ridiculus."
+                      }
                     </div>
-                  </div>
+                  </p.Stack>
 
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__gxpeQ
-                    )}
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__vtpB)}
                   >
-                    {
-                      "Nascetur nascetur ridiculus scelerisque adipiscing a nascetur varius sed eu a ad semper a est nec litora ante at orci rhoncus a varius auctor aliquam inceptos vestibulum ridiculus."
-                    }
-                  </div>
+                    <PriceCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__kbKyq
+                      )}
+                      description={
+                        <React.Fragment>
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__l9Dy7
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__tHrZg
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__muGj5
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__lOy2O
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+                        </React.Fragment>
+                      }
+                      dollars={"0"}
+                    />
+
+                    <PriceCard
+                      action={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__dKsUe
+                          )}
+                        >
+                          {"Buy Pro"}
+                        </div>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__fIhYa
+                      )}
+                      description={
+                        <React.Fragment>
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp___6BdqE
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__dHYsH
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__yuEoS
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__ruCzQ
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__x6Xux
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__iuimI
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+                        </React.Fragment>
+                      }
+                      dollars={"8"}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__doZ7B
+                          )}
+                        >
+                          {"Pro"}
+                        </div>
+                      }
+                    />
+
+                    <PriceCard
+                      action={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__gaPL
+                          )}
+                        >
+                          {"Buy Team"}
+                        </div>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__f8Dv5
+                      )}
+                      description={
+                        <React.Fragment>
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__iqiot
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__wXfsi
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__vd8AV
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__xOud1
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__bXfxm
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__pe0Jm
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__ipej
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__b9J5R
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+                        </React.Fragment>
+                      }
+                      dollars={"16"}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__uJxUx
+                          )}
+                        >
+                          {"Team"}
+                        </div>
+                      }
+                    />
+
+                    <PriceCard
+                      action={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___0Z4J
+                          )}
+                        >
+                          {"Contact us"}
+                        </div>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard___6HDjg
+                      )}
+                      description={
+                        <React.Fragment>
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__gIGse
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__dpVaA
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__xo6Lk
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__gy3Bk
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__kx9Lm
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__b36G
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp___0EluE
+                            )}
+                            description={"Nulla odio mauris."}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg___4FkOm
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+                        </React.Fragment>
+                      }
+                      dollars={"?"}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___93AKv
+                          )}
+                        >
+                          {"Enterprise"}
+                        </div>
+                      }
+                      primary={true}
+                    />
+                  </p.Stack>
                 </p.Stack>
-
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__vtpB)}
-                >
-                  <PriceCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__kbKyq
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__l9Dy7
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__tHrZg
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__muGj5
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__lOy2O
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={"0"}
-                  />
-
-                  <PriceCard
-                    action={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dKsUe
-                        )}
-                      >
-                        {"Buy Pro"}
-                      </div>
-                    }
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__fIhYa
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp___6BdqE
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__dHYsH
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__yuEoS
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__ruCzQ
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__x6Xux
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__iuimI
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={"8"}
-                    label={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__doZ7B
-                        )}
-                      >
-                        {"Pro"}
-                      </div>
-                    }
-                  />
-
-                  <PriceCard
-                    action={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__gaPL
-                        )}
-                      >
-                        {"Buy Team"}
-                      </div>
-                    }
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__f8Dv5
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__iqiot
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__wXfsi
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__vd8AV
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__xOud1
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__bXfxm
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__pe0Jm
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__ipej
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__b9J5R
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={"16"}
-                    label={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__uJxUx
-                        )}
-                      >
-                        {"Team"}
-                      </div>
-                    }
-                  />
-
-                  <PriceCard
-                    action={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___0Z4J
-                        )}
-                      >
-                        {"Contact us"}
-                      </div>
-                    }
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard___6HDjg
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__gIGse
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__dpVaA
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__xo6Lk
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__gy3Bk
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__kx9Lm
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__b36G
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp___0EluE
-                          )}
-                          description={"Nulla odio mauris."}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___4FkOm
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={"?"}
-                    label={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___93AKv
-                        )}
-                      >
-                        {"Enterprise"}
-                      </div>
-                    }
-                    primary={true}
-                  />
-                </p.Stack>
-              </p.Stack>
+              ) : null}
             </p.Stack>
           ) : null}
 
