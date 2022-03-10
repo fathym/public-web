@@ -65,7 +65,6 @@
   flex-direction: row;
   display: flex;
   position: relative;
-  background: none;
 }
 .freeBox__daRol > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -117,8 +116,8 @@
 }
 .text__zYnX6 {
   width: auto;
-  font-weight: 700;
-  color: var(--token-Gh2swhE2QtwV);
+  font-weight: 400;
+  color: var(--token-3btyuIOaZa0x);
 }
 .svg__gfMj4 {
   width: 24px;
@@ -133,8 +132,8 @@
   object-fit: cover;
 }
 .text__t74Tr {
-  font-weight: 700;
-  color: var(--token-Gh2swhE2QtwV);
+  font-weight: 400;
+  color: var(--token-3btyuIOaZa0x);
 }
 .svg__aBmxt {
   width: 24px;
@@ -149,8 +148,8 @@
   object-fit: cover;
 }
 .text__oTm5F {
-  font-weight: 700;
-  color: var(--token-Gh2swhE2QtwV);
+  font-weight: 400;
+  color: var(--token-3btyuIOaZa0x);
 }
 .svg__ixiBj {
   width: 24px;
