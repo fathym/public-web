@@ -109,10 +109,11 @@
     margin-top: 8px;
   }
 }
-.button__oOzRy:global(.__wab_instance) {
+.docs {
   position: relative;
+  display: flex;
 }
-.svg__inj9K {
+.svg___1ZN2S {
   width: 24px;
   height: 24px;
   position: relative;
@@ -123,16 +124,17 @@
   font-weight: 700;
   color: var(--token-Gh2swhE2QtwV);
 }
-.svg__nzvvW {
+.svg__gfMj4 {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.button__qj7XT:global(.__wab_instance) {
+.blog {
   position: relative;
+  display: flex;
 }
-.svg__v8Bxa {
+.svg__ojJDc {
   width: 24px;
   height: 24px;
   position: relative;
@@ -142,16 +144,17 @@
   font-weight: 700;
   color: var(--token-Gh2swhE2QtwV);
 }
-.svg__r0XxW {
+.svg__aBmxt {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.button___6FORa:global(.__wab_instance) {
+.logIn {
   position: relative;
+  display: flex;
 }
-.svg__dOdZu {
+.svg__dtppi {
   width: 24px;
   height: 24px;
   position: relative;
@@ -161,7 +164,7 @@
   font-weight: 700;
   color: var(--token-Gh2swhE2QtwV);
 }
-.svg__w46G6 {
+.svg__ixiBj {
   width: 24px;
   height: 24px;
   position: relative;
