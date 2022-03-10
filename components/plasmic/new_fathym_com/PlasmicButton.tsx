@@ -46,15 +46,7 @@ import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: lodHYqINb
 export type PlasmicButton__VariantMembers = {
   showStartIcon: "showStartIcon";
   showEndIcon: "showEndIcon";
-  color:
-    | "green"
-    | "indigo"
-    | "blue"
-    | "red"
-    | "white"
-    | "darkGray"
-    | "link"
-    | "navLink";
+  color: "green" | "indigo" | "blue" | "red" | "white" | "link" | "navLink";
   iconOnly: "iconOnly";
   outline: "outline";
   bgDifference: "bgDifference";
@@ -69,14 +61,7 @@ export type PlasmicButton__VariantsArgs = {
   showStartIcon?: SingleBooleanChoiceArg<"showStartIcon">;
   showEndIcon?: SingleBooleanChoiceArg<"showEndIcon">;
   color?: SingleChoiceArg<
-    | "green"
-    | "indigo"
-    | "blue"
-    | "red"
-    | "white"
-    | "darkGray"
-    | "link"
-    | "navLink"
+    "green" | "indigo" | "blue" | "red" | "white" | "link" | "navLink"
   >;
   iconOnly?: SingleBooleanChoiceArg<"iconOnly">;
   outline?: SingleBooleanChoiceArg<"outline">;
@@ -124,14 +109,7 @@ export type PlasmicButton__OverridesType = {
 
 export interface DefaultButtonProps extends pp.BaseButtonProps {
   color?: SingleChoiceArg<
-    | "green"
-    | "indigo"
-    | "blue"
-    | "red"
-    | "white"
-    | "darkGray"
-    | "link"
-    | "navLink"
+    "green" | "indigo" | "blue" | "red" | "white" | "link" | "navLink"
   >;
   iconOnly?: SingleBooleanChoiceArg<"iconOnly">;
   outline?: SingleBooleanChoiceArg<"outline">;
@@ -174,7 +152,6 @@ function PlasmicButton__RenderFunc(props: {
             "bgDifference"
           ),
           [sty.rootcolor_blue]: hasVariant(variants, "color", "blue"),
-          [sty.rootcolor_darkGray]: hasVariant(variants, "color", "darkGray"),
           [sty.rootcolor_green]: hasVariant(variants, "color", "green"),
           [sty.rootcolor_indigo]: hasVariant(variants, "color", "indigo"),
           [sty.rootcolor_navLink]: hasVariant(variants, "color", "navLink"),
@@ -229,11 +206,6 @@ function PlasmicButton__RenderFunc(props: {
                 variants,
                 "color",
                 "blue"
-              ),
-              [sty.slotTargetStartIconcolor_darkGray]: hasVariant(
-                variants,
-                "color",
-                "darkGray"
               ),
               [sty.slotTargetStartIconcolor_green]: hasVariant(
                 variants,
@@ -304,11 +276,6 @@ function PlasmicButton__RenderFunc(props: {
                 variants,
                 "color",
                 "blue"
-              ),
-              [sty.slotTargetChildrencolor_darkGray]: hasVariant(
-                variants,
-                "color",
-                "darkGray"
               ),
               [sty.slotTargetChildrencolor_green]: hasVariant(
                 variants,
@@ -391,11 +358,6 @@ function PlasmicButton__RenderFunc(props: {
                 variants,
                 "color",
                 "blue"
-              ),
-              [sty.slotTargetEndIconcolor_darkGray]: hasVariant(
-                variants,
-                "color",
-                "darkGray"
               ),
               [sty.slotTargetEndIconcolor_green]: hasVariant(
                 variants,

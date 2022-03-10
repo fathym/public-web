@@ -238,7 +238,6 @@ function PlasmicHomepageOld__RenderFunc(props: {
                         "__wab_instance",
                         sty.button__ynVlc
                       )}
-                      color={"darkGray" as const}
                       link={"/docs" as const}
                     >
                       <div
