@@ -979,6 +979,16 @@
           "id": "EWGO2xfdc",
           "name": "HomeHelloName.png 3",
           "filePath": "../public/plasmic/new_fathym_com/images/homeHelloNamepng3.png"
+        },
+        {
+          "id": "2_DsGYoEA",
+          "name": "fathym-angular.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/fathymAngularpng.jpeg"
+        },
+        {
+          "id": "oPyJB5aVx",
+          "name": "fathym-angular2.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/fathymAngular2Png.png"
         }
       ],
       "indirect": false,
@@ -1443,6 +1453,25 @@
       "globalContextsFilePath": "",
       "codeComponents": [],
       "jsBundleThemes": []
+    },
+    {
+      "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
+      "projectApiToken": "3n3SKEMyDjMJptsNvaK6yxRaa8PAgqwkfIhRbKT4ZG9SobeM3Kb5rE2pSYmbR338Z5p6vBTScOAnptZwGSbQ",
+      "projectName": "react-youtube",
+      "version": "3.0.2",
+      "cssFilePath": "plasmic/react_youtube/plasmic_react_youtube.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CHO21V9uYw",
+          "name": "YouTube",
+          "componentImportPath": "@plasmicpkgs/react-youtube"
+        }
+      ]
     }
   ],
   "globalVariants": {

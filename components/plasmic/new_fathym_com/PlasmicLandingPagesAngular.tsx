@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
+import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
@@ -74,7 +75,11 @@ export type PlasmicLandingPagesAngular__OverridesType = {
   foreground?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
   foreground2?: p.Flex<"div">;
+  youTube?: p.Flex<typeof YouTube>;
   valuePropsSection?: p.Flex<typeof Section>;
+  react?: p.Flex<"a"> & Partial<LinkProps>;
+  vue?: p.Flex<"a"> & Partial<LinkProps>;
+  svelte?: p.Flex<"a"> & Partial<LinkProps>;
   banner?: p.Flex<typeof Banner>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
@@ -137,352 +142,486 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
             className={classNames("__wab_instance", sty.navbar)}
           />
 
-          <p.Stack
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___7K8P9)}
-          >
+          {true ? (
             <p.Stack
               as={"div"}
-              data-plasmic-name={"foreground"}
-              data-plasmic-override={overrides.foreground}
               hasGap={true}
-              className={classNames(projectcss.all, sty.foreground)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___0CrGy
-                )}
-              >
-                {"Angular Deployments\nwith Fathym"}
-              </div>
-
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___42HHg
-                )}
-              >
-                {"Create, build, and deploy your next Angular app with Fathym"}
-              </div>
-            </p.Stack>
-
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image13.png",
-                fullWidth: 800,
-                fullHeight: 800,
-                aspectRatio: undefined
-              }}
-            />
-
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"foreground2"}
-              data-plasmic-override={overrides.foreground2}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.foreground2)}
-            >
-              <div className={classNames(projectcss.all, sty.columns__xuUd)}>
-                <div className={classNames(projectcss.all, sty.column___1PbHe)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__aePmE)}
-                    color={"blue" as const}
-                    link={"/dashboard/create-project/recipe/angular" as const}
-                  >
-                    {"Get Started for Free"}
-                  </Button>
-                </div>
-
-                <div className={classNames(projectcss.all, sty.column__dGyu6)}>
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link___2TmJ8
-                    )}
-                    component={Link}
-                    href={"/docs/guides/deploying/frameworks/angular" as const}
-                    platform={"nextjs"}
-                  >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
-                </div>
-              </div>
-            </p.Stack>
-
-            <Section
-              data-plasmic-name={"valuePropsSection"}
-              data-plasmic-override={overrides.valuePropsSection}
-              className={classNames("__wab_instance", sty.valuePropsSection)}
+              className={classNames(projectcss.all, sty.freeBox___7K8P9)}
             >
               <p.Stack
                 as={"div"}
+                data-plasmic-name={"foreground"}
+                data-plasmic-override={overrides.foreground}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__fJikh)}
+                className={classNames(projectcss.all, sty.foreground)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__wesQc)}>
-                  <h2
+                <div className={classNames(projectcss.all, sty.freeBox__uTnwA)}>
+                  <p.PlasmicImg
+                    data-plasmic-name={"img"}
+                    data-plasmic-override={overrides.img}
+                    alt={""}
+                    className={classNames(sty.img)}
+                    displayHeight={"97px" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/image13.png",
+                      fullWidth: 800,
+                      fullHeight: 800,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h2__ocA9Q
+                      sty.text___0CrGy
                     )}
                   >
-                    {"See how Angular Compares"}
-                  </h2>
+                    {"Angular Deployments\nwith Fathym"}
+                  </div>
                 </div>
 
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text___8FSm
+                    sty.text___42HHg
                   )}
                 >
                   {
-                    "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy Angular alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Angular app free with Fathym's micro frontend framework."
+                    "Create, build, and deploy your next Angular app with Fathym"
                   }
                 </div>
               </p.Stack>
 
               <p.Stack
                 as={"div"}
+                data-plasmic-name={"foreground2"}
+                data-plasmic-override={overrides.foreground2}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
+                className={classNames(projectcss.all, sty.foreground2)}
+              >
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__iBjri
+                  )}
+                  component={Link}
+                  href={"https://www.youtube.com/watch?v=soINXhRkse8" as const}
+                  platform={"nextjs"}
+                  target={"_blank" as const}
+                >
+                  <YouTube
+                    data-plasmic-name={"youTube"}
+                    data-plasmic-override={overrides.youTube}
+                    className={classNames("__wab_instance", sty.youTube)}
+                    videoId={"soINXhRkse8" as const}
+                  />
+                </p.PlasmicLink>
+
+                <div className={classNames(projectcss.all, sty.columns__xuUd)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column___1PbHe)}
+                  >
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__aePmE
+                      )}
+                      color={"blue" as const}
+                      link={"/dashboard/create-project/recipe/angular" as const}
+                    >
+                      {"Get Started for Free"}
+                    </Button>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.column__dGyu6)}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        projectcss.__wab_text,
+                        sty.link___2TmJ8
+                      )}
+                      component={Link}
+                      href={
+                        "/docs/guides/deploying/frameworks/angular" as const
+                      }
+                      platform={"nextjs"}
+                    >
+                      {"Learn more >"}
+                    </p.PlasmicLink>
+                  </div>
+                </div>
+              </p.Stack>
+
+              <Section
+                data-plasmic-name={"valuePropsSection"}
+                data-plasmic-override={overrides.valuePropsSection}
+                className={classNames("__wab_instance", sty.valuePropsSection)}
               >
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__nuOoY)}
+                  className={classNames(projectcss.all, sty.freeBox__fJikh)}
                 >
-                  <ValueProp
-                    className={classNames(
-                      "__wab_instance",
-                      sty.valueProp__e8W2M
-                    )}
-                    description={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__aaggr
-                          )}
-                        >
-                          {
-                            "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components."
-                          }
-                        </div>
-
-                        <Button link={"/react" as const}>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___55WFh
-                            )}
-                          >
-                            {"React Deployments >"}
-                          </div>
-                        </Button>
-                      </React.Fragment>
-                    }
-                    flatIcon={true}
-                    icon={
-                      <CheckIcon
-                        className={classNames(projectcss.all, sty.svg__ypiA6)}
-                        role={"img"}
-                      />
-                    }
-                    title={"Angular vs React"}
-                  />
-
-                  <ValueProp
-                    className={classNames(
-                      "__wab_instance",
-                      sty.valueProp__kZzrt
-                    )}
-                    description={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__dN4
-                          )}
-                        >
-                          {
-                            "The progressive javascript framework.  Already know HTML, CSS and JavaScript? Read the guide and start deploying VueJS apps in no time!               \n"
-                          }
-                        </div>
-
-                        <Button link={"/vue" as const}>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___2InBy
-                            )}
-                          >
-                            {"Vue Deployments >"}
-                          </div>
-                        </Button>
-                      </React.Fragment>
-                    }
-                    flatIcon={true}
-                    icon={
-                      <CheckIcon
-                        className={classNames(projectcss.all, sty.svg__xh9LW)}
-                        role={"img"}
-                      />
-                    }
-                    title={"Angular vs VueJS"}
-                  />
-
-                  <ValueProp
-                    className={classNames(
-                      "__wab_instance",
-                      sty.valueProp__fSr4Z
-                    )}
-                    description={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__kujm7
-                          )}
-                        >
-                          {
-                            "Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app."
-                          }
-                        </div>
-
-                        <Button link={"/svelte-deployment" as const}>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__sOugM
-                            )}
-                          >
-                            {"Svelte Deployments >"}
-                          </div>
-                        </Button>
-                      </React.Fragment>
-                    }
-                    flatIcon={true}
-                    icon={
-                      <CheckIcon
-                        className={classNames(projectcss.all, sty.svg__bIrbp)}
-                        role={"img"}
-                      />
-                    }
-                    title={"Angular vs Svelte"}
-                  />
-                </p.Stack>
-              </p.Stack>
-            </Section>
-
-            <Banner
-              data-plasmic-name={"banner"}
-              data-plasmic-override={overrides.banner}
-              className={classNames("__wab_instance", sty.banner)}
-              left={
-                <React.Fragment>
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__kLlj8
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__wesQc)}
                   >
-                    {"Angular Example Tutorial"}
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__ocA9Q
+                      )}
+                    >
+                      {"See how Angular Compares"}
+                    </h2>
                   </div>
 
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__p2NTv
-                    )}
-                  >
-                    {"Do it Yourself"}
-                  </div>
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ciVwm
+                      sty.text___8FSm
                     )}
                   >
                     {
-                      "Get started now and deploy your Angular app to production following the simple deployment guide. Have your Angular micro frontend hosted on your domain in minutes."
+                      "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy Angular alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Angular app free with Fathym's micro frontend framework."
                     }
                   </div>
+                </p.Stack>
 
-                  <div
-                    className={classNames(projectcss.all, sty.columns__eNf1S)}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__nuOoY)}
                   >
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__e8W2M
+                      )}
+                      description={
+                        <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__aaggr
+                            )}
+                          >
+                            {
+                              "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components."
+                            }
+                          </div>
+
+                          <p.PlasmicLink
+                            data-plasmic-name={"react"}
+                            data-plasmic-override={overrides.react}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.react
+                            )}
+                            component={Link}
+                            href={"https://www.fathym.com/react/" as const}
+                            platform={"nextjs"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___55WFh
+                              )}
+                            >
+                              {"React Deployments >"}
+                            </div>
+                          </p.PlasmicLink>
+
+                          {true ? (
+                            <Button
+                              className={classNames(
+                                "__wab_instance",
+                                sty.button__orvOt
+                              )}
+                              link={"/react" as const}
+                            >
+                              {null}
+                            </Button>
+                          ) : null}
+                        </React.Fragment>
+                      }
+                      flatIcon={true}
+                      icon={
+                        <CheckIcon
+                          className={classNames(projectcss.all, sty.svg__ypiA6)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Angular vs React"}
+                    />
+
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__kZzrt
+                      )}
+                      description={
+                        <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__dN4
+                            )}
+                          >
+                            {
+                              "The progressive javascript framework.  Already know HTML, CSS and JavaScript? Read the guide and start deploying VueJS apps in no time!               \n"
+                            }
+                          </div>
+
+                          <p.PlasmicLink
+                            data-plasmic-name={"vue"}
+                            data-plasmic-override={overrides.vue}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.vue
+                            )}
+                            component={Link}
+                            href={"https://www.fathym.com/vue/" as const}
+                            platform={"nextjs"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___2InBy
+                              )}
+                            >
+                              {"Vue Deployments >"}
+                            </div>
+                          </p.PlasmicLink>
+
+                          {true ? (
+                            <Button
+                              className={classNames(
+                                "__wab_instance",
+                                sty.button__jc7Vf
+                              )}
+                              link={"/vue" as const}
+                            >
+                              {null}
+                            </Button>
+                          ) : null}
+                        </React.Fragment>
+                      }
+                      flatIcon={true}
+                      icon={
+                        <CheckIcon
+                          className={classNames(projectcss.all, sty.svg__xh9LW)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Angular vs VueJS"}
+                    />
+
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__fSr4Z
+                      )}
+                      description={
+                        <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kujm7
+                            )}
+                          >
+                            {
+                              "Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app."
+                            }
+                          </div>
+
+                          <p.PlasmicLink
+                            data-plasmic-name={"svelte"}
+                            data-plasmic-override={overrides.svelte}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.svelte
+                            )}
+                            component={Link}
+                            href={
+                              "https://www.fathym.com/svelte-deployment/" as const
+                            }
+                            platform={"nextjs"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__sOugM
+                              )}
+                            >
+                              {"Svelte Deployments >"}
+                            </div>
+                          </p.PlasmicLink>
+
+                          {true ? (
+                            <Button
+                              className={classNames(
+                                "__wab_instance",
+                                sty.button__tcixz
+                              )}
+                              link={"/svelte-deployment" as const}
+                            >
+                              {null}
+                            </Button>
+                          ) : null}
+                        </React.Fragment>
+                      }
+                      flatIcon={true}
+                      icon={
+                        <CheckIcon
+                          className={classNames(projectcss.all, sty.svg__bIrbp)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Angular vs Svelte"}
+                    />
+                  </p.Stack>
+                </p.Stack>
+              </Section>
+
+              <Banner
+                data-plasmic-name={"banner"}
+                data-plasmic-override={overrides.banner}
+                className={classNames("__wab_instance", sty.banner)}
+                left={
+                  <React.Fragment>
                     <div
-                      className={classNames(projectcss.all, sty.column___8URFu)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kLlj8
+                      )}
                     >
-                      <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__l9QH4
-                        )}
-                        color={"blue" as const}
-                        link={
-                          "/dashboard/create-project/recipe/angular" as const
-                        }
-                      >
-                        {"Get Started for Free"}
-                      </Button>
+                      {"Angular Example Tutorial"}
                     </div>
 
                     <div
-                      className={classNames(projectcss.all, sty.column__rdhWw)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__p2NTv
+                      )}
                     >
-                      <Button
-                        link={
-                          "/docs/guides/deploying/frameworks/angular" as const
-                        }
+                      {"Do it Yourself"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ciVwm
+                      )}
+                    >
+                      {
+                        "Get started now and deploy your Angular app to production following the simple deployment guide. Have your Angular micro frontend hosted on your domain in minutes."
+                      }
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.columns__eNf1S)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column___8URFu
+                        )}
                       >
-                        <div
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__l9QH4
+                          )}
+                          color={"blue" as const}
+                          link={
+                            "/dashboard/create-project/recipe/angular" as const
+                          }
+                        >
+                          {"Get Started for Free"}
+                        </Button>
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column__rdhWw
+                        )}
+                      >
+                        <p.PlasmicLink
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__uNsew
+                            projectcss.a,
+                            sty.link__xKbY
                           )}
+                          component={Link}
+                          href={
+                            "/docs/guides/deploying/frameworks/angular" as const
+                          }
+                          platform={"nextjs"}
                         >
-                          {"Read Documentation >"}
-                        </div>
-                      </Button>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__uNsew
+                            )}
+                          >
+                            {"Read Documentation >"}
+                          </div>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button___5UfXl
+                            )}
+                            link={
+                              "/docs/guides/deploying/frameworks/angular" as const
+                            }
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
-                </React.Fragment>
-              }
-            />
-          </p.Stack>
+                  </React.Fragment>
+                }
+              />
+            </p.Stack>
+          ) : null}
 
           <section
             data-plasmic-name={"section"}
@@ -687,30 +826,43 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
 
               <div className={classNames(projectcss.all, sty.columns___7KOse)}>
                 <div className={classNames(projectcss.all, sty.column__uB6RH)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__jkN9Q)}
-                    color={"blue" as const}
-                    link={"/dashboard/create-project/recipe/angular" as const}
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__bNift)}
                   >
-                    {"Get Started for Free"}
-                  </Button>
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__jkN9Q
+                      )}
+                      color={"blue" as const}
+                      link={"/dashboard/create-project/recipe/angular" as const}
+                    >
+                      {"Get Started for Free"}
+                    </Button>
+
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        projectcss.__wab_text,
+                        sty.link__hll0Q
+                      )}
+                      component={Link}
+                      href={
+                        "/docs/guides/deploying/frameworks/angular" as const
+                      }
+                      platform={"nextjs"}
+                    >
+                      {"Learn more >"}
+                    </p.PlasmicLink>
+                  </div>
                 </div>
 
-                <div className={classNames(projectcss.all, sty.column__qXOvn)}>
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__hll0Q
-                    )}
-                    component={Link}
-                    href={"/docs/guides/deploying/frameworks/angular" as const}
-                    platform={"nextjs"}
-                  >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
-                </div>
+                {true ? (
+                  <div
+                    className={classNames(projectcss.all, sty.column__qXOvn)}
+                  />
+                ) : null}
               </div>
             </p.Stack>
           </section>
@@ -1143,17 +1295,25 @@ const PlasmicDescendants = {
     "foreground",
     "img",
     "foreground2",
+    "youTube",
     "valuePropsSection",
+    "react",
+    "vue",
+    "svelte",
     "banner",
     "section",
     "foreground3",
     "habistackFooter"
   ],
   navbar: ["navbar"],
-  foreground: ["foreground"],
+  foreground: ["foreground", "img"],
   img: ["img"],
-  foreground2: ["foreground2"],
-  valuePropsSection: ["valuePropsSection"],
+  foreground2: ["foreground2", "youTube"],
+  youTube: ["youTube"],
+  valuePropsSection: ["valuePropsSection", "react", "vue", "svelte"],
+  react: ["react"],
+  vue: ["vue"],
+  svelte: ["svelte"],
   banner: ["banner"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
@@ -1168,7 +1328,11 @@ type NodeDefaultElementType = {
   foreground: "div";
   img: typeof p.PlasmicImg;
   foreground2: "div";
+  youTube: typeof YouTube;
   valuePropsSection: typeof Section;
+  react: "a";
+  vue: "a";
+  svelte: "a";
   banner: typeof Banner;
   section: "section";
   foreground3: "div";
@@ -1236,7 +1400,11 @@ export const PlasmicLandingPagesAngular = Object.assign(
     foreground: makeNodeComponent("foreground"),
     img: makeNodeComponent("img"),
     foreground2: makeNodeComponent("foreground2"),
+    youTube: makeNodeComponent("youTube"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
+    react: makeNodeComponent("react"),
+    vue: makeNodeComponent("vue"),
+    svelte: makeNodeComponent("svelte"),
     banner: makeNodeComponent("banner"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),

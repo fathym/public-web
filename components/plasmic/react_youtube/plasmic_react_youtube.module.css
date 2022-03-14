@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+
+.plasmic_default_styles {
+  --mixin--kyW0m5UUw_font-family: "Inter";
+  --mixin--kyW0m5UUw_font-size: 16px;
+  --mixin--kyW0m5UUw_font-weight: 400;
+  --mixin--kyW0m5UUw_font-style: normal;
+  --mixin--kyW0m5UUw_color: #535353;
+  --mixin--kyW0m5UUw_text-align: left;
+  --mixin--kyW0m5UUw_text-transform: none;
+  --mixin--kyW0m5UUw_line-height: 1.5;
+  --mixin--kyW0m5UUw_letter-spacing: normal;
+  --mixin--kyW0m5UUw_white-space: pre-wrap;
+  --mixin--kyW0m5UUw_user-select: text;
+  --mixin--kyW0m5UUw_text-decoration-line: none;
+  --mixin--kyW0m5UUw_text-overflow: clip;
+  --mixin-LOIV-n0mn9_color: #000000;
+  --mixin-LOIV-n0mn9_font-weight: 900;
+  --mixin-LOIV-n0mn9_font-size: 72px;
+  --mixin-LOIV-n0mn9_line-height: 1;
+  --mixin-LOIV-n0mn9_letter-spacing: -4px;
+  --mixin-K3r-iL5H2Q_color: #000000;
+  --mixin-K3r-iL5H2Q_font-weight: 700;
+  --mixin-K3r-iL5H2Q_font-size: 48px;
+  --mixin-K3r-iL5H2Q_line-height: 1.1;
+  --mixin-K3r-iL5H2Q_letter-spacing: -1px;
+  --mixin-6IGUyxpFlo_color: #3291ff;
+  --mixin-KVHO3pL6jU_color: #000000;
+  --mixin-KVHO3pL6jU_font-weight: 600;
+  --mixin-KVHO3pL6jU_font-size: 32px;
+  --mixin-KVHO3pL6jU_line-height: 1.2;
+  --mixin-KVHO3pL6jU_letter-spacing: -0.8px;
+  --mixin-U26CiwGUpM_color: #000000;
+  --mixin-U26CiwGUpM_font-weight: 600;
+  --mixin-U26CiwGUpM_font-size: 24px;
+  --mixin-U26CiwGUpM_line-height: 1.3;
+  --mixin-U26CiwGUpM_letter-spacing: -0.5px;
+}
+
+:where(.all) {
+  display: block;
+  white-space: inherit;
+  grid-row: auto;
+  grid-column: auto;
+  position: relative;
+  background: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  margin: 0;
+  border-width: 0px;
+}
+:where(.img) {
+  display: inline-block;
+}
+:where(.li) {
+  display: list-item;
+}
+:where(.span) {
+  display: inline;
+  position: static;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+:where(.input) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+:where(.textarea) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+:where(.button) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  background-image: none;
+  align-items: flex-start;
+  text-align: center;
+  padding: 2px 6px;
+  border: 1px solid lightgray;
+}
+:where(.code) {
+  font-family: inherit;
+  line-height: inherit;
+}
+:where(.pre) {
+  font-family: inherit;
+  line-height: inherit;
+}
+:where(.p) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+:where(.h1) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.h2) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.h3) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.h4) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.h5) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.h6) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.address) {
+  font-style: inherit;
+}
+:where(.a) {
+  color: inherit;
+}
+:where(.ol) {
+  list-style-type: none;
+  padding: 0;
+}
+:where(.ul) {
+  list-style-type: none;
+  padding: 0;
+}
+:where(.select) {
+  padding: 2px 6px;
+}
+.plasmic_default__component_wrapper {
+  display: grid;
+}
+.plasmic_default__inline {
+  display: inline;
+}
+.plasmic_page_wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: stretch;
+  align-self: start;
+}
+.plasmic_page_wrapper > * {
+  height: auto !important;
+}
+.root_reset {
+  font-family: var(--mixin--kyW0m5UUw_font-family);
+  font-size: var(--mixin--kyW0m5UUw_font-size);
+  font-weight: var(--mixin--kyW0m5UUw_font-weight);
+  font-style: var(--mixin--kyW0m5UUw_font-style);
+  color: var(--mixin--kyW0m5UUw_color);
+  text-align: var(--mixin--kyW0m5UUw_text-align);
+  text-transform: var(--mixin--kyW0m5UUw_text-transform);
+  line-height: var(--mixin--kyW0m5UUw_line-height);
+  letter-spacing: var(--mixin--kyW0m5UUw_letter-spacing);
+  white-space: var(--mixin--kyW0m5UUw_white-space);
+}
+
+:where(.root_reset .plasmic_default__h1),
+:where(.root_reset .h1),
+:where(.root_reset.plasmic_default__h1) {
+  color: var(--mixin-LOIV-n0mn9_color);
+  font-weight: var(--mixin-LOIV-n0mn9_font-weight);
+  font-size: var(--mixin-LOIV-n0mn9_font-size);
+  line-height: var(--mixin-LOIV-n0mn9_line-height);
+  letter-spacing: var(--mixin-LOIV-n0mn9_letter-spacing);
+}
+
+:where(.root_reset .plasmic_default__h2),
+:where(.root_reset .h2),
+:where(.root_reset.plasmic_default__h2) {
+  color: var(--mixin-K3r-iL5H2Q_color);
+  font-weight: var(--mixin-K3r-iL5H2Q_font-weight);
+  font-size: var(--mixin-K3r-iL5H2Q_font-size);
+  line-height: var(--mixin-K3r-iL5H2Q_line-height);
+  letter-spacing: var(--mixin-K3r-iL5H2Q_letter-spacing);
+}
+
+:where(.root_reset .plasmic_default__a),
+:where(.root_reset .a),
+:where(.root_reset.plasmic_default__a) {
+  color: var(--mixin-6IGUyxpFlo_color);
+}
+
+:where(.root_reset .plasmic_default__h3),
+:where(.root_reset .h3),
+:where(.root_reset.plasmic_default__h3) {
+  color: var(--mixin-KVHO3pL6jU_color);
+  font-weight: var(--mixin-KVHO3pL6jU_font-weight);
+  font-size: var(--mixin-KVHO3pL6jU_font-size);
+  line-height: var(--mixin-KVHO3pL6jU_line-height);
+  letter-spacing: var(--mixin-KVHO3pL6jU_letter-spacing);
+}
+
+:where(.root_reset .plasmic_default__h4),
+:where(.root_reset .h4),
+:where(.root_reset.plasmic_default__h4) {
+  color: var(--mixin-U26CiwGUpM_color);
+  font-weight: var(--mixin-U26CiwGUpM_font-weight);
+  font-size: var(--mixin-U26CiwGUpM_font-size);
+  line-height: var(--mixin-U26CiwGUpM_line-height);
+  letter-spacing: var(--mixin-U26CiwGUpM_letter-spacing);
+}
