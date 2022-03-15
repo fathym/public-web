@@ -219,6 +219,9 @@
 }
 .valuePropsSection:global(.__wab_instance) {
   position: relative;
+  max-width: 1529px;
+  width: 100%;
+  min-width: 0;
 }
 .freeBox__fJikh {
   flex-direction: column;

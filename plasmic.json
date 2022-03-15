@@ -1471,7 +1471,8 @@
           "name": "YouTube",
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
