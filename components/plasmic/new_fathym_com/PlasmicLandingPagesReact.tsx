@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
+import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
@@ -73,6 +74,7 @@ export type PlasmicLandingPagesReact__OverridesType = {
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
+  youTube?: p.Flex<typeof YouTube>;
   foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
   banner?: p.Flex<typeof Banner>;
@@ -149,14 +151,36 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.foreground)}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ohiUz
-                )}
-              >
-                {"React Deployments\nwith Fathym"}
+              <div className={classNames(projectcss.all, sty.freeBox___21DvX)}>
+                <p.PlasmicImg
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
+                  alt={""}
+                  className={classNames(sty.img)}
+                  displayHeight={"102px" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"auto" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/image12.png",
+                    fullWidth: 1200,
+                    fullHeight: 848,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__ohiUz
+                  )}
+                >
+                  {"React Deployments\nwith Fathym"}
+                </div>
               </div>
 
               <div
@@ -172,24 +196,11 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
               </div>
             </p.Stack>
 
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image12.png",
-                fullWidth: 1200,
-                fullHeight: 848,
-                aspectRatio: undefined
-              }}
+            <YouTube
+              data-plasmic-name={"youTube"}
+              data-plasmic-override={overrides.youTube}
+              className={classNames("__wab_instance", sty.youTube)}
+              videoId={"dueeskfHs4Y" as const}
             />
 
             <p.Stack
@@ -293,7 +304,16 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/angular" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__hHlGr
+                          )}
+                          component={Link}
+                          href={"/angular" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -303,7 +323,19 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                           >
                             {"Angular Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__orvOt
+                            )}
+                            link={"/angular" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -335,7 +367,16 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/vue" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__fZuj
+                          )}
+                          component={Link}
+                          href={"/vue" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -345,7 +386,19 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                           >
                             {"Vue Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__jc7Vf
+                            )}
+                            link={"/vue" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -377,7 +430,16 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/svelte-deployment" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__a8CcV
+                          )}
+                          component={Link}
+                          href={"/svelte-deployment" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -387,7 +449,19 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                           >
                             {"Svelte Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__tcixz
+                            )}
+                            link={"/svelte-deployment" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -462,10 +536,17 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.column__zypuv)}
                     >
-                      <Button
-                        link={
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__txxc5
+                        )}
+                        component={Link}
+                        href={
                           "/docs/guides/deploying/frameworks/react" as const
                         }
+                        platform={"nextjs"}
                       >
                         <div
                           className={classNames(
@@ -476,7 +557,21 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                         >
                           {"Read Documentation >"}
                         </div>
-                      </Button>
+                      </p.PlasmicLink>
+
+                      {true ? (
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__b48JH
+                          )}
+                          link={
+                            "/docs/guides/deploying/frameworks/react" as const
+                          }
+                        >
+                          {null}
+                        </Button>
+                      ) : null}
                     </div>
                   </div>
                 </React.Fragment>
@@ -1142,6 +1237,7 @@ const PlasmicDescendants = {
     "navbar",
     "foreground",
     "img",
+    "youTube",
     "foreground2",
     "valuePropsSection",
     "banner",
@@ -1150,8 +1246,9 @@ const PlasmicDescendants = {
     "habistackFooter"
   ],
   navbar: ["navbar"],
-  foreground: ["foreground"],
+  foreground: ["foreground", "img"],
   img: ["img"],
+  youTube: ["youTube"],
   foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection"],
   banner: ["banner"],
@@ -1167,6 +1264,7 @@ type NodeDefaultElementType = {
   navbar: typeof Navbar;
   foreground: "div";
   img: typeof p.PlasmicImg;
+  youTube: typeof YouTube;
   foreground2: "div";
   valuePropsSection: typeof Section;
   banner: typeof Banner;
@@ -1235,6 +1333,7 @@ export const PlasmicLandingPagesReact = Object.assign(
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
     img: makeNodeComponent("img"),
+    youTube: makeNodeComponent("youTube"),
     foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
     banner: makeNodeComponent("banner"),
