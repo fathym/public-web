@@ -216,7 +216,6 @@
 }
 .freeBox__d3H {
   flex-direction: column;
-  max-width: var(--token-_lqAwWtqgIF3);
   display: flex;
   height: auto;
 }

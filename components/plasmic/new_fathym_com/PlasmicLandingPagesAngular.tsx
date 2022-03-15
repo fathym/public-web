@@ -74,8 +74,8 @@ export type PlasmicLandingPagesAngular__OverridesType = {
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
-  foreground2?: p.Flex<"div">;
   youTube?: p.Flex<typeof YouTube>;
+  foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
   react?: p.Flex<"a"> & Partial<LinkProps>;
   vue?: p.Flex<"a"> & Partial<LinkProps>;
@@ -200,6 +200,13 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
                 </div>
               </p.Stack>
 
+              <YouTube
+                data-plasmic-name={"youTube"}
+                data-plasmic-override={overrides.youTube}
+                className={classNames("__wab_instance", sty.youTube)}
+                videoId={"soINXhRkse8" as const}
+              />
+
               <p.Stack
                 as={"div"}
                 data-plasmic-name={"foreground2"}
@@ -207,25 +214,6 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.foreground2)}
               >
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__iBjri
-                  )}
-                  component={Link}
-                  href={"https://www.youtube.com/watch?v=soINXhRkse8" as const}
-                  platform={"nextjs"}
-                  target={"_blank" as const}
-                >
-                  <YouTube
-                    data-plasmic-name={"youTube"}
-                    data-plasmic-override={overrides.youTube}
-                    className={classNames("__wab_instance", sty.youTube)}
-                    videoId={"soINXhRkse8" as const}
-                  />
-                </p.PlasmicLink>
-
                 <div className={classNames(projectcss.all, sty.columns__xuUd)}>
                   <div
                     className={classNames(projectcss.all, sty.column___1PbHe)}
@@ -1294,8 +1282,8 @@ const PlasmicDescendants = {
     "navbar",
     "foreground",
     "img",
-    "foreground2",
     "youTube",
+    "foreground2",
     "valuePropsSection",
     "react",
     "vue",
@@ -1308,8 +1296,8 @@ const PlasmicDescendants = {
   navbar: ["navbar"],
   foreground: ["foreground", "img"],
   img: ["img"],
-  foreground2: ["foreground2", "youTube"],
   youTube: ["youTube"],
+  foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection", "react", "vue", "svelte"],
   react: ["react"],
   vue: ["vue"],
@@ -1327,8 +1315,8 @@ type NodeDefaultElementType = {
   navbar: typeof Navbar;
   foreground: "div";
   img: typeof p.PlasmicImg;
-  foreground2: "div";
   youTube: typeof YouTube;
+  foreground2: "div";
   valuePropsSection: typeof Section;
   react: "a";
   vue: "a";
@@ -1399,8 +1387,8 @@ export const PlasmicLandingPagesAngular = Object.assign(
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
     img: makeNodeComponent("img"),
-    foreground2: makeNodeComponent("foreground2"),
     youTube: makeNodeComponent("youTube"),
+    foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
     react: makeNodeComponent("react"),
     vue: makeNodeComponent("vue"),
