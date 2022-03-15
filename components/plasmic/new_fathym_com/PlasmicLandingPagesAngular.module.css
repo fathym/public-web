@@ -108,7 +108,7 @@
   flex-direction: column;
   display: flex;
   position: relative;
-  max-width: 960px;
+  max-width: 1080px;
 }
 .foreground2 > :global(.__wab_flex-container) {
   flex-direction: column;
