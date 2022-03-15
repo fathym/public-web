@@ -323,8 +323,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  margin-left: calc(0px - 48px);
-  width: calc(100% + 48px);
+  margin-left: calc(0px - 15px);
+  width: calc(100% + 15px);
 }
 .freeBox__nuOoY > :global(.__wab_flex-container) > *,
 .freeBox__nuOoY > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
@@ -334,7 +334,7 @@
   > :global(.__wab_slot)
   > picture
   > img {
-  margin-left: 48px;
+  margin-left: 15px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__nuOoY {
