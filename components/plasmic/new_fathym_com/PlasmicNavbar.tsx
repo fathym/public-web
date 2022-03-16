@@ -185,7 +185,7 @@ function PlasmicNavbar__RenderFunc(props: {
                     sty.text__oTm5F
                   )}
                 >
-                  {"Log in"}
+                  {"Login"}
                 </div>
               </p.PlasmicLink>
 

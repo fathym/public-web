@@ -989,6 +989,61 @@
           "id": "oPyJB5aVx",
           "name": "fathym-angular2.png",
           "filePath": "../public/plasmic/new_fathym_com/images/fathymAngular2Png.png"
+        },
+        {
+          "id": "fPfX-ACV8",
+          "name": "enterprise-as-code.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/enterpriseAsCodejpg.jpeg"
+        },
+        {
+          "id": "eDkRgGSwT",
+          "name": "application-runtime.jpg",
+          "filePath": "../public/plasmic/new_fathym_com/images/applicationRuntimejpg.jpeg"
+        },
+        {
+          "id": "9kQ8kmuoI",
+          "name": "AdobeStock_190866679.jpeg",
+          "filePath": "../public/plasmic/new_fathym_com/images/adobeStock190866679Jpeg.jpeg"
+        },
+        {
+          "id": "03KwahTB6",
+          "name": "AdobeStock_318975944.jpeg",
+          "filePath": "../public/plasmic/new_fathym_com/images/adobeStock318975944Jpeg.jpeg"
+        },
+        {
+          "id": "3nk5ZnOp7",
+          "name": "AdobeStock_169790305.jpeg",
+          "filePath": "../public/plasmic/new_fathym_com/images/adobeStock169790305Jpeg.jpeg"
+        },
+        {
+          "id": "1-N7ynY99",
+          "name": "enterprise-as-code.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/enterpriseAsCodepng.png"
+        },
+        {
+          "id": "ct6umLC0R",
+          "name": "enterprise-as-code.png 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/enterpriseAsCodepng2.png"
+        },
+        {
+          "id": "CPUXNoUSW",
+          "name": "enterprise-as-code.png 3",
+          "filePath": "../public/plasmic/new_fathym_com/images/enterpriseAsCodepng3.png"
+        },
+        {
+          "id": "xcg-skHTZ",
+          "name": "accelerate-innovation.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/accelerateInnovationpng.png"
+        },
+        {
+          "id": "sLpVQZyPp",
+          "name": "accelerate-innovation.png 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/accelerateInnovationpng2.png"
+        },
+        {
+          "id": "P27iIfL0S",
+          "name": "enterprise-whitelabels.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/enterpriseWhitelabelspng.png"
         }
       ],
       "indirect": false,

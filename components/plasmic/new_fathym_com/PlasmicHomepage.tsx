@@ -1059,12 +1059,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       displayMaxWidth={"100%" as const}
                       displayMinHeight={"0" as const}
                       displayMinWidth={"0" as const}
-                      displayWidth={"auto" as const}
+                      displayWidth={"480px" as const}
                       loading={"lazy" as const}
                       src={{
-                        src: "/plasmic/new_fathym_com/images/trekpng2.png",
-                        fullWidth: 650,
-                        fullHeight: 400,
+                        src: "/plasmic/new_fathym_com/images/enterpriseAsCodepng3.png",
+                        fullWidth: 1120,
+                        fullHeight: 670,
                         aspectRatio: undefined
                       }}
                     />
@@ -1079,17 +1079,17 @@ function PlasmicHomepage__RenderFunc(props: {
                     <p.PlasmicImg
                       alt={""}
                       className={classNames(sty.img__aLTob)}
-                      displayHeight={"auto" as const}
+                      displayHeight={"270px" as const}
                       displayMaxHeight={"none" as const}
                       displayMaxWidth={"100%" as const}
                       displayMinHeight={"0" as const}
                       displayMinWidth={"0" as const}
-                      displayWidth={"auto" as const}
+                      displayWidth={"480px" as const}
                       loading={"lazy" as const}
                       src={{
-                        src: "/plasmic/new_fathym_com/images/applydirectlypng2.png",
-                        fullWidth: 865,
-                        fullHeight: 372,
+                        src: "/plasmic/new_fathym_com/images/accelerateInnovationpng2.png",
+                        fullWidth: 517,
+                        fullHeight: 308,
                         aspectRatio: undefined
                       }}
                     />
@@ -1106,7 +1106,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h2__gdG7O
                       )}
                     >
-                      {"Application Runtime"}
+                      {"Accelerate Innovation"}
                     </h2>
 
                     <div
@@ -1117,7 +1117,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Accelerate internal innovation and streamline customer engagement. Fathym enhances your development workflow so your resources can can focus on the customer."
+                        "Fathym enhances your development workflow so your resources can can focus on the customer. Accelerate internal innovation and streamline customer engagement."
                       }
                     </div>
                   </div>
@@ -1147,7 +1147,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Fathym's micro frontends bring open source, distributed SaaS and custom code into a single solution for resale. Enable new lines of business, migrate your legacy solutions, and advance your technology today. "
+                        "Enable new lines of business, migrate your legacy solutions, and advance your technology today. Flashup a website in mere minutes with plug-and-play open-source apps."
                       }
                     </div>
                   </div>
@@ -1163,12 +1163,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       displayMaxWidth={"100%" as const}
                       displayMinHeight={"0" as const}
                       displayMinWidth={"0" as const}
-                      displayWidth={"auto" as const}
+                      displayWidth={"480px" as const}
                       loading={"lazy" as const}
                       src={{
-                        src: "/plasmic/new_fathym_com/images/homeHelloNamepng3.png",
-                        fullWidth: 400,
-                        fullHeight: 400,
+                        src: "/plasmic/new_fathym_com/images/enterpriseWhitelabelspng.png",
+                        fullWidth: 741,
+                        fullHeight: 439,
                         aspectRatio: undefined
                       }}
                     />
