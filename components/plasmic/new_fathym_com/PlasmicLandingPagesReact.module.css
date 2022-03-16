@@ -62,32 +62,6 @@
   > img {
   margin-top: 16px;
 }
-.freeBox___21DvX {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 612px;
-  height: 97px;
-  max-width: 100%;
-  background: #ffffff33;
-  flex-shrink: 0;
-  padding: 8px;
-}
-.img {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  margin-bottom: 0px;
-  height: 102px;
-}
-.img > picture > img {
-  object-fit: cover;
-}
-.img > .__wab_img-spacer > img {
-  object-fit: cover;
-}
 .text__ohiUz {
   height: auto;
   font-size: 48px;
@@ -95,9 +69,14 @@
   color: #000000d9;
   line-height: 1;
   text-align: center;
-  width: auto;
+  margin-right: 0px;
+  margin-top: calc(0px + 16px) !important;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 100%;
   padding-right: 0px;
-  margin: 0px;
+  max-width: 545px;
+  min-width: 0;
 }
 .text__vizqX {
   font-size: 20px;

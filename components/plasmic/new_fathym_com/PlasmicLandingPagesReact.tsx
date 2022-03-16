@@ -73,7 +73,6 @@ export type PlasmicLandingPagesReact__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
   youTube?: p.Flex<typeof YouTube>;
   foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
@@ -151,36 +150,14 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.foreground)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox___21DvX)}>
-                <p.PlasmicImg
-                  data-plasmic-name={"img"}
-                  data-plasmic-override={overrides.img}
-                  alt={""}
-                  className={classNames(sty.img)}
-                  displayHeight={"102px" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"auto" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: "/plasmic/new_fathym_com/images/image12.png",
-                    fullWidth: 1200,
-                    fullHeight: 848,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ohiUz
-                  )}
-                >
-                  {"React Deployments\nwith Fathym"}
-                </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__ohiUz
+                )}
+              >
+                {"React Deployments\nwith Fathym"}
               </div>
 
               <div
@@ -1236,7 +1213,6 @@ const PlasmicDescendants = {
     "root",
     "navbar",
     "foreground",
-    "img",
     "youTube",
     "foreground2",
     "valuePropsSection",
@@ -1246,8 +1222,7 @@ const PlasmicDescendants = {
     "habistackFooter"
   ],
   navbar: ["navbar"],
-  foreground: ["foreground", "img"],
-  img: ["img"],
+  foreground: ["foreground"],
   youTube: ["youTube"],
   foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection"],
@@ -1263,7 +1238,6 @@ type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
   foreground: "div";
-  img: typeof p.PlasmicImg;
   youTube: typeof YouTube;
   foreground2: "div";
   valuePropsSection: typeof Section;
@@ -1332,7 +1306,6 @@ export const PlasmicLandingPagesReact = Object.assign(
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
-    img: makeNodeComponent("img"),
     youTube: makeNodeComponent("youTube"),
     foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),

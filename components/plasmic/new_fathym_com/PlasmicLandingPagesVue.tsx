@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
+import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
@@ -72,7 +73,7 @@ export type PlasmicLandingPagesVue__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  youTube?: p.Flex<typeof YouTube>;
   foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
   banner?: p.Flex<typeof Banner>;
@@ -170,24 +171,11 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
               </div>
             </p.Stack>
 
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image14.png",
-                fullWidth: 1200,
-                fullHeight: 1040,
-                aspectRatio: undefined
-              }}
+            <YouTube
+              data-plasmic-name={"youTube"}
+              data-plasmic-override={overrides.youTube}
+              className={classNames("__wab_instance", sty.youTube)}
+              videoId={"ZJI1bYxuGMg" as const}
             />
 
             <p.Stack
@@ -291,7 +279,16 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/react" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__uGuJw
+                          )}
+                          component={Link}
+                          href={"/react" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -301,7 +298,19 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           >
                             {"React Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__orvOt
+                            )}
+                            link={"/react" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -333,7 +342,16 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/angular" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__gXbDf
+                          )}
+                          component={Link}
+                          href={"/angular" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -343,7 +361,19 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           >
                             {"Angular Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__jc7Vf
+                            )}
+                            link={"/angular" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -375,7 +405,16 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/svelte-deployment" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__yqV4L
+                          )}
+                          component={Link}
+                          href={"/svelte-deployment" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -385,7 +424,19 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                           >
                             {"Svelte Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__tcixz
+                            )}
+                            link={"/svelte-deployment" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -468,8 +519,15 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.column__a20Vb)}
                     >
-                      <Button
-                        link={"/docs/guides/deploying/frameworks/vue" as const}
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__ihMgO
+                        )}
+                        component={Link}
+                        href={"/docs/guides/deploying/frameworks/vue" as const}
+                        platform={"nextjs"}
                       >
                         <div
                           className={classNames(
@@ -480,7 +538,21 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                         >
                           {"Read Documentation >"}
                         </div>
-                      </Button>
+                      </p.PlasmicLink>
+
+                      {true ? (
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__jsB55
+                          )}
+                          link={
+                            "/docs/guides/deploying/frameworks/vue" as const
+                          }
+                        >
+                          {null}
+                        </Button>
+                      ) : null}
                     </div>
                   </div>
                 </React.Fragment>
@@ -689,41 +761,52 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                 ) : null}
               </p.Stack>
 
-              <div className={classNames(projectcss.all, sty.columns__fVRfg)}>
-                <div className={classNames(projectcss.all, sty.column__xzcuo)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__v1Kaa)}
-                    color={"blue" as const}
-                    link={"/dashboard/create-project/recipe/vue" as const}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__nGcRf
-                      )}
-                    >
-                      {"Get Started for Free"}
-                    </div>
-                  </Button>
-                </div>
-
-                <div className={classNames(projectcss.all, sty.column__mTjMs)}>
-                  <p.PlasmicLink
+              <div className={classNames(projectcss.all, sty.freeBox__op8CK)}>
+                <Button
+                  className={classNames("__wab_instance", sty.button__v1Kaa)}
+                  color={"blue" as const}
+                  link={"/dashboard/create-project/recipe/vue" as const}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
                       projectcss.__wab_text,
-                      sty.link__hmdGq
+                      sty.text__nGcRf
                     )}
-                    component={Link}
-                    href={"/docs/guides/deploying/frameworks/vue" as const}
-                    platform={"nextjs"}
                   >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
-                </div>
+                    {"Get Started for Free"}
+                  </div>
+                </Button>
+
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__hmdGq
+                  )}
+                  component={Link}
+                  href={"/docs/guides/deploying/frameworks/vue" as const}
+                  platform={"nextjs"}
+                >
+                  {"Learn more >"}
+                </p.PlasmicLink>
               </div>
+
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__fVRfg)}>
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.column__xzcuo)}
+                    />
+                  ) : null}
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.column__mTjMs)}
+                    />
+                  ) : null}
+                </div>
+              ) : null}
             </p.Stack>
           </section>
 
@@ -1153,7 +1236,7 @@ const PlasmicDescendants = {
     "root",
     "navbar",
     "foreground",
-    "img",
+    "youTube",
     "foreground2",
     "valuePropsSection",
     "banner",
@@ -1163,7 +1246,7 @@ const PlasmicDescendants = {
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
-  img: ["img"],
+  youTube: ["youTube"],
   foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection"],
   banner: ["banner"],
@@ -1178,7 +1261,7 @@ type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
   foreground: "div";
-  img: typeof p.PlasmicImg;
+  youTube: typeof YouTube;
   foreground2: "div";
   valuePropsSection: typeof Section;
   banner: typeof Banner;
@@ -1246,7 +1329,7 @@ export const PlasmicLandingPagesVue = Object.assign(
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
-    img: makeNodeComponent("img"),
+    youTube: makeNodeComponent("youTube"),
     foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
     banner: makeNodeComponent("banner"),

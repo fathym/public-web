@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
+import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
@@ -72,7 +73,7 @@ export type PlasmicLandingPagesSvelte__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  youTube?: p.Flex<typeof YouTube>;
   foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
   banner?: p.Flex<typeof Banner>;
@@ -170,24 +171,11 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
               </div>
             </p.Stack>
 
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image10.png",
-                fullWidth: 1702,
-                fullHeight: 2049,
-                aspectRatio: undefined
-              }}
+            <YouTube
+              data-plasmic-name={"youTube"}
+              data-plasmic-override={overrides.youTube}
+              className={classNames("__wab_instance", sty.youTube)}
+              videoId={"bkeo2JYwWcM" as const}
             />
 
             <p.Stack
@@ -288,7 +276,16 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/react" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__tzCcK
+                          )}
+                          component={Link}
+                          href={"/react" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -298,7 +295,19 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                           >
                             {"React Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__orvOt
+                            )}
+                            link={"/react" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -330,7 +339,16 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/vue" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__bywyd
+                          )}
+                          component={Link}
+                          href={"/vue" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -340,7 +358,19 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                           >
                             {"Vue Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__jc7Vf
+                            )}
+                            link={"/vue" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -372,7 +402,16 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                           }
                         </div>
 
-                        <Button link={"/angular" as const}>
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link___1Pczu
+                          )}
+                          component={Link}
+                          href={"/angular" as const}
+                          platform={"nextjs"}
+                        >
                           <div
                             className={classNames(
                               projectcss.all,
@@ -382,7 +421,19 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                           >
                             {"Angular Deployments >"}
                           </div>
-                        </Button>
+                        </p.PlasmicLink>
+
+                        {true ? (
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__tcixz
+                            )}
+                            link={"/angular" as const}
+                          >
+                            {null}
+                          </Button>
+                        ) : null}
                       </React.Fragment>
                     }
                     flatIcon={true}
@@ -461,10 +512,17 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.column__hWyXc)}
                     >
-                      <Button
-                        link={
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link___2MNx7
+                        )}
+                        component={Link}
+                        href={
                           "/docs/guides/deploying/frameworks/svelte" as const
                         }
+                        platform={"nextjs"}
                       >
                         <div
                           className={classNames(
@@ -475,7 +533,21 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                         >
                           {"Read Documentation >"}
                         </div>
-                      </Button>
+                      </p.PlasmicLink>
+
+                      {true ? (
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button___4ZbXy
+                          )}
+                          link={
+                            "/docs/guides/deploying/frameworks/svelte" as const
+                          }
+                        >
+                          {null}
+                        </Button>
+                      ) : null}
                     </div>
                   </div>
                 </React.Fragment>
@@ -684,33 +756,41 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                 ) : null}
               </p.Stack>
 
-              <div className={classNames(projectcss.all, sty.columns__cw0L)}>
-                <div className={classNames(projectcss.all, sty.column___8YkY)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__rgWxD)}
-                    color={"blue" as const}
-                    link={"/dashboard/create-project/recipe/svelte" as const}
-                  >
-                    {"Get Started for Free"}
-                  </Button>
-                </div>
+              <div className={classNames(projectcss.all, sty.freeBox__zayM)}>
+                <Button
+                  className={classNames("__wab_instance", sty.button__rgWxD)}
+                  color={"blue" as const}
+                  link={"/dashboard/create-project/recipe/svelte" as const}
+                >
+                  {"Get Started for Free"}
+                </Button>
 
-                <div className={classNames(projectcss.all, sty.column__i6Dp9)}>
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__sba7O
-                    )}
-                    component={Link}
-                    href={"/docs/guides/deploying/frameworks/svelte" as const}
-                    platform={"nextjs"}
-                  >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
-                </div>
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__sba7O
+                  )}
+                  component={Link}
+                  href={"/docs/guides/deploying/frameworks/svelte" as const}
+                  platform={"nextjs"}
+                >
+                  {"Learn more >"}
+                </p.PlasmicLink>
               </div>
+
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__cw0L)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column___8YkY)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.column__i6Dp9)}
+                  />
+                </div>
+              ) : null}
             </p.Stack>
           </section>
 
@@ -1140,7 +1220,7 @@ const PlasmicDescendants = {
     "root",
     "navbar",
     "foreground",
-    "img",
+    "youTube",
     "foreground2",
     "valuePropsSection",
     "banner",
@@ -1150,7 +1230,7 @@ const PlasmicDescendants = {
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
-  img: ["img"],
+  youTube: ["youTube"],
   foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection"],
   banner: ["banner"],
@@ -1165,7 +1245,7 @@ type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
   foreground: "div";
-  img: typeof p.PlasmicImg;
+  youTube: typeof YouTube;
   foreground2: "div";
   valuePropsSection: typeof Section;
   banner: typeof Banner;
@@ -1233,7 +1313,7 @@ export const PlasmicLandingPagesSvelte = Object.assign(
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
-    img: makeNodeComponent("img"),
+    youTube: makeNodeComponent("youTube"),
     foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
     banner: makeNodeComponent("banner"),

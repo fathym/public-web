@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
+import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
@@ -70,7 +71,7 @@ export type PlasmicLandingPagesDocusaurus__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  youTube?: p.Flex<typeof YouTube>;
   foreground2?: p.Flex<"div">;
   h1?: p.Flex<"h1">;
   section?: p.Flex<"section">;
@@ -172,24 +173,11 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
               </div>
             </p.Stack>
 
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image11.png",
-                fullWidth: 200,
-                fullHeight: 200,
-                aspectRatio: undefined
-              }}
+            <YouTube
+              data-plasmic-name={"youTube"}
+              data-plasmic-override={overrides.youTube}
+              className={classNames("__wab_instance", sty.youTube)}
+              videoId={"iZH9Zq3rJoQ" as const}
             />
 
             <p.Stack
@@ -483,37 +471,43 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
                 ) : null}
               </p.Stack>
 
-              <div className={classNames(projectcss.all, sty.columns__vv9Ak)}>
-                <div className={classNames(projectcss.all, sty.column___3Fori)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__fFlzm)}
-                    color={"blue" as const}
-                    link={
-                      "/dashboard/create-project/recipe/docusaurus" as const
-                    }
-                  >
-                    {"Get Started for Free"}
-                  </Button>
-                </div>
+              <div className={classNames(projectcss.all, sty.freeBox__wDpf2)}>
+                <Button
+                  className={classNames("__wab_instance", sty.button__fFlzm)}
+                  color={"blue" as const}
+                  link={"/dashboard/create-project/recipe/docusaurus" as const}
+                >
+                  {"Get Started for Free"}
+                </Button>
 
-                <div className={classNames(projectcss.all, sty.column__cku9H)}>
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__oAlp0
-                    )}
-                    component={Link}
-                    href={
-                      "/docs/guides/deploying/site-builders/docusaurus-sites" as const
-                    }
-                    platform={"nextjs"}
-                  >
-                    {"Learn more >"}
-                  </p.PlasmicLink>
-                </div>
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__oAlp0
+                  )}
+                  component={Link}
+                  href={
+                    "/docs/guides/deploying/site-builders/docusaurus-sites" as const
+                  }
+                  platform={"nextjs"}
+                >
+                  {"Learn more >"}
+                </p.PlasmicLink>
               </div>
+
+              {true ? (
+                <div className={classNames(projectcss.all, sty.columns__vv9Ak)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column___3Fori)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.column__cku9H)}
+                  />
+                </div>
+              ) : null}
             </p.Stack>
           </section>
 
@@ -943,7 +937,7 @@ const PlasmicDescendants = {
     "root",
     "navbar",
     "foreground",
-    "img",
+    "youTube",
     "foreground2",
     "h1",
     "section",
@@ -953,7 +947,7 @@ const PlasmicDescendants = {
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
-  img: ["img"],
+  youTube: ["youTube"],
   foreground2: ["foreground2"],
   h1: ["h1"],
   section: ["section", "foreground3", "h2"],
@@ -968,7 +962,7 @@ type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
   foreground: "div";
-  img: typeof p.PlasmicImg;
+  youTube: typeof YouTube;
   foreground2: "div";
   h1: "h1";
   section: "section";
@@ -1036,7 +1030,7 @@ export const PlasmicLandingPagesDocusaurus = Object.assign(
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
-    img: makeNodeComponent("img"),
+    youTube: makeNodeComponent("youTube"),
     foreground2: makeNodeComponent("foreground2"),
     h1: makeNodeComponent("h1"),
     section: makeNodeComponent("section"),

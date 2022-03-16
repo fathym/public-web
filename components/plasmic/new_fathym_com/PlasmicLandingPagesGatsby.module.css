@@ -544,7 +544,10 @@
   justify-content: center;
   align-items: center;
   min-width: 0;
-  padding: 8px;
+  padding: 8px 8px 8px 21px;
+}
+.button__fEOyd:global(.__wab_instance) {
+  display: none;
 }
 .svg___3AMlw {
   width: 24px;
@@ -552,16 +555,20 @@
   position: relative;
   object-fit: cover;
 }
-.text__atVt6 {
-  height: auto;
-  width: auto;
-  color: var(--token-vImgGkP7257E);
-}
 .svg___11XPu {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
+}
+.link__x9Af {
+  display: flex;
+  font-weight: 700;
+}
+.text__atVt6 {
+  height: auto;
+  width: auto;
+  color: var(--token-vImgGkP7257E);
 }
 .section {
   display: flex;
@@ -823,8 +830,37 @@
 .text__vk3Q2 {
   padding-left: 0px;
 }
-.columns__afYm5 {
+.freeBox__hXoPy {
   display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 355px;
+  height: auto;
+  max-width: 100%;
+  background: none;
+  padding: 8px;
+}
+.button__krAxB:global(.__wab_instance) {
+  position: relative;
+}
+.svg__gzYt4 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  object-fit: cover;
+}
+.svg__yw5Xg {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  object-fit: cover;
+}
+.link__t9RlH {
+  position: relative;
+}
+.columns__afYm5 {
   position: relative;
   width: 100%;
   height: auto;
@@ -833,6 +869,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
+  display: none;
   padding: 8px;
 }
 .columns__afYm5 > :nth-child(2n + 1) {
@@ -867,23 +904,7 @@
   min-width: 0;
   padding: 8px;
 }
-.button__krAxB:global(.__wab_instance) {
-  position: relative;
-}
-.svg__gzYt4 {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.svg__yw5Xg {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
 .column__tchFx {
-  display: flex;
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -892,10 +913,8 @@
   justify-content: center;
   align-items: center;
   min-width: 0;
+  display: none;
   padding: 8px;
-}
-.link__t9RlH {
-  position: relative;
 }
 .freeBox__lvoxc {
   flex-direction: column;

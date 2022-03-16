@@ -478,10 +478,31 @@ function PlasmicLandingPagesGatsby__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.column__zypuv)}
                     >
-                      <Button
-                        link={
+                      {true ? (
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__fEOyd
+                          )}
+                          link={
+                            "/docs/guides/deploying/site-builders/gatsby" as const
+                          }
+                        >
+                          {null}
+                        </Button>
+                      ) : null}
+
+                      <p.PlasmicLink
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__x9Af
+                        )}
+                        component={Link}
+                        href={
                           "/docs/guides/deploying/site-builders/gatsby" as const
                         }
+                        platform={"nextjs"}
                       >
                         <div
                           className={classNames(
@@ -492,7 +513,7 @@ function PlasmicLandingPagesGatsby__RenderFunc(props: {
                         >
                           {"Read Documentation >"}
                         </div>
-                      </Button>
+                      </p.PlasmicLink>
                     </div>
                   </div>
                 </React.Fragment>
@@ -716,42 +737,50 @@ function PlasmicLandingPagesGatsby__RenderFunc(props: {
                   ) : null}
                 </p.Stack>
 
-                <div className={classNames(projectcss.all, sty.columns__afYm5)}>
-                  <div
-                    className={classNames(projectcss.all, sty.column__odFo7)}
+                <div className={classNames(projectcss.all, sty.freeBox__hXoPy)}>
+                  <Button
+                    className={classNames("__wab_instance", sty.button__krAxB)}
+                    color={"blue" as const}
+                    link={"/dashboard/create-project/recipe/gatsby" as const}
                   >
-                    <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__krAxB
-                      )}
-                      color={"blue" as const}
-                      link={"/dashboard/create-project/recipe/gatsby" as const}
-                    >
-                      {"Get Started for Free"}
-                    </Button>
-                  </div>
+                    {"Get Started for Free"}
+                  </Button>
 
-                  <div
-                    className={classNames(projectcss.all, sty.column__tchFx)}
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link__t9RlH
+                    )}
+                    component={Link}
+                    href={
+                      "/docs/guides/deploying/site-builders/gatsby" as const
+                    }
+                    platform={"nextjs"}
                   >
-                    <p.PlasmicLink
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        projectcss.__wab_text,
-                        sty.link__t9RlH
-                      )}
-                      component={Link}
-                      href={
-                        "/docs/guides/deploying/site-builders/gatsby" as const
-                      }
-                      platform={"nextjs"}
-                    >
-                      {"Learn more >"}
-                    </p.PlasmicLink>
-                  </div>
+                    {"Learn more >"}
+                  </p.PlasmicLink>
                 </div>
+
+                {true ? (
+                  <div
+                    className={classNames(projectcss.all, sty.columns__afYm5)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.column__odFo7)}
+                    />
+
+                    {true ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column__tchFx
+                        )}
+                      />
+                    ) : null}
+                  </div>
+                ) : null}
               </p.Stack>
             </section>
           ) : null}
