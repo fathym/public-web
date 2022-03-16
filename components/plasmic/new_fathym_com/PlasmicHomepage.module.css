@@ -1719,7 +1719,6 @@
   object-fit: cover;
   max-width: 100%;
   margin-left: 36px;
-  width: 480px;
 }
 .img___0C5J > picture > img {
   object-fit: cover;
@@ -1776,9 +1775,6 @@
   object-fit: cover;
   max-width: 100%;
   margin-right: 35px;
-  height: 270px;
-  width: 480px;
-  flex-shrink: 0;
 }
 .img__aLTob > picture > img {
   object-fit: cover;
@@ -1885,7 +1881,6 @@
   position: relative;
   object-fit: cover;
   max-width: 100%;
-  width: 480px;
 }
 .img__i2Pu9 > picture > img {
   object-fit: cover;

@@ -1059,7 +1059,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       displayMaxWidth={"100%" as const}
                       displayMinHeight={"0" as const}
                       displayMinWidth={"0" as const}
-                      displayWidth={"480px" as const}
+                      displayWidth={"auto" as const}
                       loading={"lazy" as const}
                       src={{
                         src: "/plasmic/new_fathym_com/images/enterpriseAsCodepng3.png",
@@ -1079,12 +1079,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     <p.PlasmicImg
                       alt={""}
                       className={classNames(sty.img__aLTob)}
-                      displayHeight={"270px" as const}
+                      displayHeight={"auto" as const}
                       displayMaxHeight={"none" as const}
                       displayMaxWidth={"100%" as const}
                       displayMinHeight={"0" as const}
                       displayMinWidth={"0" as const}
-                      displayWidth={"480px" as const}
+                      displayWidth={"auto" as const}
                       loading={"lazy" as const}
                       src={{
                         src: "/plasmic/new_fathym_com/images/accelerateInnovationpng2.png",
@@ -1163,7 +1163,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       displayMaxWidth={"100%" as const}
                       displayMinHeight={"0" as const}
                       displayMinWidth={"0" as const}
-                      displayWidth={"480px" as const}
+                      displayWidth={"auto" as const}
                       loading={"lazy" as const}
                       src={{
                         src: "/plasmic/new_fathym_com/images/enterpriseWhitelabelspng.png",
