@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
+import YouTube from "@plasmicpkgs/react-youtube"; // plasmic-import: CHO21V9uYw/codeComponent
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
@@ -72,7 +73,7 @@ export type PlasmicLandingPagesGatsby__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   foreground?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  youTube?: p.Flex<typeof YouTube>;
   foreground2?: p.Flex<"div">;
   valuePropsSection?: p.Flex<typeof Section>;
   banner?: p.Flex<typeof Banner>;
@@ -172,24 +173,11 @@ function PlasmicLandingPagesGatsby__RenderFunc(props: {
               </div>
             </p.Stack>
 
-            <p.PlasmicImg
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"293px" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/image17.png",
-                fullWidth: 400,
-                fullHeight: 400,
-                aspectRatio: undefined
-              }}
+            <YouTube
+              data-plasmic-name={"youTube"}
+              data-plasmic-override={overrides.youTube}
+              className={classNames("__wab_instance", sty.youTube)}
+              videoId={"pfgJFR12jKs" as const}
             />
 
             <p.Stack
@@ -1210,7 +1198,7 @@ const PlasmicDescendants = {
     "root",
     "navbar",
     "foreground",
-    "img",
+    "youTube",
     "foreground2",
     "valuePropsSection",
     "banner",
@@ -1220,7 +1208,7 @@ const PlasmicDescendants = {
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
-  img: ["img"],
+  youTube: ["youTube"],
   foreground2: ["foreground2"],
   valuePropsSection: ["valuePropsSection"],
   banner: ["banner"],
@@ -1235,7 +1223,7 @@ type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
   foreground: "div";
-  img: typeof p.PlasmicImg;
+  youTube: typeof YouTube;
   foreground2: "div";
   valuePropsSection: typeof Section;
   banner: typeof Banner;
@@ -1303,7 +1291,7 @@ export const PlasmicLandingPagesGatsby = Object.assign(
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
     foreground: makeNodeComponent("foreground"),
-    img: makeNodeComponent("img"),
+    youTube: makeNodeComponent("youTube"),
     foreground2: makeNodeComponent("foreground2"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
     banner: makeNodeComponent("banner"),

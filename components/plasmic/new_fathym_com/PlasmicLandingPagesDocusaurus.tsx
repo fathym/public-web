@@ -177,7 +177,7 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
               data-plasmic-name={"youTube"}
               data-plasmic-override={overrides.youTube}
               className={classNames("__wab_instance", sty.youTube)}
-              videoId={"iZH9Zq3rJoQ" as const}
+              videoId={"bmFvFF9A348" as const}
             />
 
             <p.Stack

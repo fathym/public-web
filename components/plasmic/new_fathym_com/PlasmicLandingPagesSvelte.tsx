@@ -175,7 +175,7 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
               data-plasmic-name={"youTube"}
               data-plasmic-override={overrides.youTube}
               className={classNames("__wab_instance", sty.youTube)}
-              videoId={"bkeo2JYwWcM" as const}
+              videoId={"gOo_lTcJo7Y" as const}
             />
 
             <p.Stack
@@ -464,7 +464,7 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                   >
                     {hasVariant(globalVariants, "screen", "mobileOnly")
                       ? "Svelte Example Tutorial"
-                      : "React Example Tutorial"}
+                      : "svelte Example Tutorial"}
                   </div>
 
                   <div

@@ -76,19 +76,13 @@
   line-height: 28px;
   text-align: center;
 }
-.img {
-  position: relative;
-  object-fit: cover;
+.youTube:global(.__wab_instance) {
+  height: 390px;
+  width: 640px;
+  max-height: 100%;
   max-width: 100%;
-  margin-bottom: 0px;
-  height: 293px;
+  position: relative;
   flex-shrink: 0;
-}
-.img > picture > img {
-  object-fit: cover;
-}
-.img > .__wab_img-spacer > img {
-  object-fit: cover;
 }
 .foreground2 {
   flex-direction: column;

@@ -177,7 +177,7 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
               data-plasmic-name={"youTube"}
               data-plasmic-override={overrides.youTube}
               className={classNames("__wab_instance", sty.youTube)}
-              videoId={"dueeskfHs4Y" as const}
+              videoId={"afqLbfqUF5Q" as const}
             />
 
             <p.Stack
