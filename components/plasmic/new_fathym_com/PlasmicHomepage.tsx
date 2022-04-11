@@ -118,6 +118,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.all,
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
+            projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_library_plasmic_color_type_css.plasmic_tokens,
             sty.root
@@ -1265,18 +1266,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         {"Pricing plans"}
                       </div>
                     </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__gxpeQ
-                      )}
-                    >
-                      {
-                        "Nascetur nascetur ridiculus scelerisque adipiscing a nascetur varius sed eu a ad semper a est nec litora ante at orci rhoncus a varius auctor aliquam inceptos vestibulum ridiculus."
-                      }
-                    </div>
                   </p.Stack>
 
                   <p.Stack
@@ -1285,6 +1274,17 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__vtpB)}
                   >
                     <PriceCard
+                      action={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__aMLvk
+                          )}
+                        >
+                          {"Start for free"}
+                        </div>
+                      }
                       className={classNames(
                         "__wab_instance",
                         sty.priceCard__kbKyq
@@ -1296,7 +1296,17 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__l9Dy7
                             )}
-                            description={"Nulla odio mauris."}
+                            description={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__gnLl
+                                )}
+                              >
+                                {"Unlimited Projects"}
+                              </div>
+                            }
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1313,9 +1323,106 @@ function PlasmicHomepage__RenderFunc(props: {
                           <ValueProp
                             className={classNames(
                               "__wab_instance",
+                              sty.valueProp__ceq4N
+                            )}
+                            description={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__rRvo
+                                )}
+                              >
+                                {"Team Social Feed"}
+                              </div>
+                            }
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__nUgCb
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp___52U
+                            )}
+                            description={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__sme3I
+                                )}
+                              >
+                                {"Deploy any Version"}
+                              </div>
+                            }
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__h8Dg
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
+                              sty.valueProp__lKorr
+                            )}
+                            description={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___0EwHf
+                                )}
+                              >
+                                {"Custom Domain"}
+                              </div>
+                            }
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg___2YBxn
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
                               sty.valueProp__muGj5
                             )}
-                            description={"Nulla odio mauris."}
+                            description={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__lVIlK
+                                )}
+                              >
+                                {"Free SSL"}
+                              </div>
+                            }
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1342,7 +1449,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__dKsUe
                           )}
                         >
-                          {"Buy Pro"}
+                          {"Buy Personal"}
                         </div>
                       }
                       className={classNames(
@@ -1356,7 +1463,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp___6BdqE
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Starter plan, plus:"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1373,9 +1480,28 @@ function PlasmicHomepage__RenderFunc(props: {
                           <ValueProp
                             className={classNames(
                               "__wab_instance",
+                              sty.valueProp__vGtWy
+                            )}
+                            description={"Single Sign-on and Access Control"}
+                            flatIcon={true}
+                            icon={
+                              <CheckIcon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__tuiZa
+                                )}
+                                role={"img"}
+                              />
+                            }
+                            noTitle={true}
+                          />
+
+                          <ValueProp
+                            className={classNames(
+                              "__wab_instance",
                               sty.valueProp__yuEoS
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Application  Modifiers"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1394,7 +1520,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__x6Xux
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Server-less Functions"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1418,7 +1544,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__doZ7B
                           )}
                         >
-                          {"Pro"}
+                          {"personal"}
                         </div>
                       }
                     />
@@ -1432,7 +1558,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__gaPL
                           )}
                         >
-                          {"Buy Team"}
+                          {"Buy Pro"}
                         </div>
                       }
                       className={classNames(
@@ -1446,7 +1572,17 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__iqiot
                             )}
-                            description={"Nulla odio mauris."}
+                            description={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__w8KZf
+                                )}
+                              >
+                                {"Personal plan, plus:"}
+                              </div>
+                            }
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1465,7 +1601,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__vd8AV
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Branded Custom Single Sign-on"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1484,7 +1620,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__bXfxm
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Affiliate White-labeling"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1503,7 +1639,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__ipej
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Priority Support"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1518,7 +1654,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           />
                         </React.Fragment>
                       }
-                      dollars={"16"}
+                      dollars={"30"}
                       label={
                         <div
                           className={classNames(
@@ -1527,7 +1663,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__uJxUx
                           )}
                         >
-                          {"Team"}
+                          {"pro"}
                         </div>
                       }
                     />
@@ -1541,7 +1677,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text___0Z4J
                           )}
                         >
-                          {"Contact us"}
+                          {"Buy Business"}
                         </div>
                       }
                       className={classNames(
@@ -1555,7 +1691,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__gIGse
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Pro plan, plus:"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1574,7 +1710,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__xo6Lk
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Customer Licensing Tools"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1593,7 +1729,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp__kx9Lm
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Enterprise White Labeling"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1612,7 +1748,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               "__wab_instance",
                               sty.valueProp___0EluE
                             )}
-                            description={"Nulla odio mauris."}
+                            description={"Cloud Cost Management"}
                             flatIcon={true}
                             icon={
                               <CheckIcon
@@ -1627,7 +1763,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           />
                         </React.Fragment>
                       }
-                      dollars={"?"}
+                      dollars={"99"}
                       label={
                         <div
                           className={classNames(
@@ -1636,10 +1772,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text___93AKv
                           )}
                         >
-                          {"Enterprise"}
+                          {"business"}
                         </div>
                       }
-                      primary={true}
                     />
                   </p.Stack>
                 </p.Stack>

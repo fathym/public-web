@@ -136,12 +136,23 @@
   font-weight: 400;
   color: var(--token-3btyuIOaZa0x);
 }
-.logIn {
+.pricing {
   display: flex;
   margin-top: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   margin-left: calc(1rem + 8px) !important;
+}
+.pricing2 {
+  font-weight: 400;
+  color: var(--token-3btyuIOaZa0x);
+}
+.logIn {
+  display: flex;
+  margin-top: 0rem;
+  margin-right: 1rem;
+  margin-bottom: 0rem;
+  margin-left: calc(0rem + 8px) !important;
 }
 .text__oTm5F {
   font-weight: 400;
@@ -264,27 +275,40 @@
 }
 .docs2 {
   display: flex;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: calc(1rem + 8px) !important;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
 }
 .text__qzSpX {
   width: auto;
 }
 .blog2 {
   display: flex;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: calc(1rem + 8px) !important;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
+}
+.pricing3 {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .pricing3 {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+  }
 }
 .logIn2 {
   display: flex;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: calc(1rem + 8px) !important;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
 }
 .button__uafY:global(.__wab_instance) {
   position: relative;

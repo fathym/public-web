@@ -143,6 +143,21 @@
   > img {
   margin-top: 32px;
 }
+.svg__wu2Uh {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  object-fit: cover;
+}
+.text__tkOLu {
+  height: auto;
+}
+.svg__wMoAv {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  object-fit: cover;
+}
 .freeBox__yeub {
   flex-direction: column;
   display: flex;
@@ -184,19 +199,4 @@
   color: #34c759;
   width: 24px;
   height: 24px;
-}
-.svg__wu2Uh {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.text__tkOLu {
-  height: auto;
-}
-.svg__wMoAv {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
 }

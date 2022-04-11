@@ -40,8 +40,6 @@ import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/compone
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
 import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
 
-import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
@@ -90,10 +88,6 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
 }) {
   const { variants, args, overrides, forNode } = props;
 
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsbzFq34BwReL2()
-  });
-
   return (
     <React.Fragment>
       <Head>
@@ -126,6 +120,7 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
             projectcss.all,
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
+            projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_library_plasmic_color_type_css.plasmic_tokens,
             sty.root

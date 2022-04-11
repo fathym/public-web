@@ -153,6 +153,23 @@
   --mixin-IphcTWRQ-t7k_list-style-type: disc;
 }
 
+.plasmic_mixins {
+  --mixin-qA5vBD0zkxtl_box-shadow: 0px 0px 0px 3px #007aff80;
+  --plasmic-mixin-focus-shadow_box-shadow: var(--mixin-qA5vBD0zkxtl_box-shadow);
+  --mixin-N1IXSOtGalpi_box-shadow: 0px 0px 0px 4px #0095ff80;
+  --plasmic-mixin-focus-outline_box-shadow: var(
+    --mixin-N1IXSOtGalpi_box-shadow
+  );
+  --mixin-C87iIxZVAeRu_box-shadow: 0px 1px 1px 1px #0000001a;
+  --plasmic-mixin-extra-small-shadow_box-shadow: var(
+    --mixin-C87iIxZVAeRu_box-shadow
+  );
+  --mixin-mX58zh5lMwnb_box-shadow: 0px 10px 10px 0px #00000026;
+  --plasmic-mixin-medium-shadow_box-shadow: var(
+    --mixin-mX58zh5lMwnb_box-shadow
+  );
+}
+
 :where(.all) {
   display: block;
   white-space: inherit;

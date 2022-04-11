@@ -62,9 +62,13 @@ export type PlasmicNavbar__OverridesType = {
   logo?: p.Flex<typeof Logo>;
   docs?: p.Flex<"a"> & Partial<LinkProps>;
   blog?: p.Flex<"a"> & Partial<LinkProps>;
+  pricing?: p.Flex<"a"> & Partial<LinkProps>;
+  pricing2?: p.Flex<"div">;
   logIn?: p.Flex<"a"> & Partial<LinkProps>;
   docs2?: p.Flex<"a"> & Partial<LinkProps>;
   blog2?: p.Flex<"a"> & Partial<LinkProps>;
+  pricing3?: p.Flex<"a"> & Partial<LinkProps>;
+  pricing4?: p.Flex<"div">;
   logIn2?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
@@ -96,6 +100,7 @@ function PlasmicNavbar__RenderFunc(props: {
           projectcss.all,
           projectcss.root_reset,
           projectcss.plasmic_default_styles,
+          projectcss.plasmic_mixins,
           projectcss.plasmic_tokens,
           plasmic_library_plasmic_color_type_css.plasmic_tokens,
           sty.root
@@ -167,6 +172,31 @@ function PlasmicNavbar__RenderFunc(props: {
                   )}
                 >
                   {"Blog"}
+                </div>
+              </p.PlasmicLink>
+
+              <p.PlasmicLink
+                data-plasmic-name={"pricing"}
+                data-plasmic-override={overrides.pricing}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.pricing
+                )}
+                component={Link}
+                href={"/pricing" as const}
+                platform={"nextjs"}
+              >
+                <div
+                  data-plasmic-name={"pricing2"}
+                  data-plasmic-override={overrides.pricing2}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.pricing2
+                  )}
+                >
+                  {"Pricing"}
                 </div>
               </p.PlasmicLink>
 
@@ -280,6 +310,27 @@ function PlasmicNavbar__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
+              data-plasmic-name={"pricing3"}
+              data-plasmic-override={overrides.pricing3}
+              className={classNames(projectcss.all, projectcss.a, sty.pricing3)}
+              component={Link}
+              href={"/blog" as const}
+              platform={"nextjs"}
+            >
+              <div
+                data-plasmic-name={"pricing4"}
+                data-plasmic-override={overrides.pricing4}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.pricing4
+                )}
+              >
+                {"Pricing"}
+              </div>
+            </p.PlasmicLink>
+
+            <p.PlasmicLink
               data-plasmic-name={"logIn2"}
               data-plasmic-override={overrides.logIn2}
               className={classNames(projectcss.all, projectcss.a, sty.logIn2)}
@@ -339,13 +390,30 @@ function PlasmicNavbar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "docs", "blog", "logIn", "docs2", "blog2", "logIn2"],
+  root: [
+    "root",
+    "logo",
+    "docs",
+    "blog",
+    "pricing",
+    "pricing2",
+    "logIn",
+    "docs2",
+    "blog2",
+    "pricing3",
+    "pricing4",
+    "logIn2"
+  ],
   logo: ["logo"],
   docs: ["docs"],
   blog: ["blog"],
+  pricing: ["pricing", "pricing2"],
+  pricing2: ["pricing2"],
   logIn: ["logIn"],
   docs2: ["docs2"],
   blog2: ["blog2"],
+  pricing3: ["pricing3", "pricing4"],
+  pricing4: ["pricing4"],
   logIn2: ["logIn2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -356,9 +424,13 @@ type NodeDefaultElementType = {
   logo: typeof Logo;
   docs: "a";
   blog: "a";
+  pricing: "a";
+  pricing2: "div";
   logIn: "a";
   docs2: "a";
   blog2: "a";
+  pricing3: "a";
+  pricing4: "div";
   logIn2: "a";
 };
 
@@ -422,9 +494,13 @@ export const PlasmicNavbar = Object.assign(
     logo: makeNodeComponent("logo"),
     docs: makeNodeComponent("docs"),
     blog: makeNodeComponent("blog"),
+    pricing: makeNodeComponent("pricing"),
+    pricing2: makeNodeComponent("pricing2"),
     logIn: makeNodeComponent("logIn"),
     docs2: makeNodeComponent("docs2"),
     blog2: makeNodeComponent("blog2"),
+    pricing3: makeNodeComponent("pricing3"),
+    pricing4: makeNodeComponent("pricing4"),
     logIn2: makeNodeComponent("logIn2"),
 
     // Metadata about props expected for PlasmicNavbar

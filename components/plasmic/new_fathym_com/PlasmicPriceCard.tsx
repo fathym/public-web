@@ -35,8 +35,8 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Divider from "../../Divider"; // plasmic-import: jar6THUCtxN0/component
-import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
+import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -44,8 +44,8 @@ import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_typ
 import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import: jbURxL3XuiMBQsLhf7apui/projectcss
 import sty from "./PlasmicPriceCard.module.css"; // plasmic-import: WPq9gUgwYyDn/css
 
-import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: lodHYqINbTbi/icon
+import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 
 export type PlasmicPriceCard__VariantMembers = {
   primary: "primary";
@@ -113,6 +113,7 @@ function PlasmicPriceCard__RenderFunc(props: {
         projectcss.all,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_library_plasmic_color_type_css.plasmic_tokens,
         sty.root,
@@ -194,6 +195,34 @@ function PlasmicPriceCard__RenderFunc(props: {
         hasGap={true}
         className={classNames(projectcss.all, sty.freeBox__vHry7)}
       >
+        <Button
+          data-plasmic-name={"button"}
+          data-plasmic-override={overrides.button}
+          color={
+            hasVariant(variants, "primary", "primary")
+              ? ("green" as const)
+              : ("white" as const)
+          }
+          extraSmallShadow={true}
+          link={"/dashboard" as const}
+        >
+          {p.renderPlasmicSlot({
+            defaultContents: (
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__tkOLu
+                )}
+              >
+                {"Buy starter"}
+              </div>
+            ),
+
+            value: args.action
+          })}
+        </Button>
+
         <p.Stack
           as={"div"}
           hasGap={true}
@@ -233,34 +262,6 @@ function PlasmicPriceCard__RenderFunc(props: {
             value: args.description
           })}
         </p.Stack>
-
-        <Button
-          data-plasmic-name={"button"}
-          data-plasmic-override={overrides.button}
-          color={
-            hasVariant(variants, "primary", "primary")
-              ? ("green" as const)
-              : ("white" as const)
-          }
-          extraSmallShadow={true}
-          link={"/dashboard" as const}
-        >
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__tkOLu
-                )}
-              >
-                {"Buy starter"}
-              </div>
-            ),
-
-            value: args.action
-          })}
-        </Button>
       </p.Stack>
     </div>
   ) as React.ReactElement | null;
