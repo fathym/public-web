@@ -1,5 +1,5 @@
 {
-  "name": "tmp-cpa",
+  "name": "temp-cpa",
   "private": true,
   "scripts": {
     "dev": "next dev",
