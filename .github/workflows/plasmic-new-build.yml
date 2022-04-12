@@ -1,11 +1,9 @@
 # Plasmic workflow v3
-name: LCU Sync, build and deploy Plasmic app
+name: Sync, build and deploy Plasmic app
 
 on:
   repository_dispatch:
     types: [plasmic]
-  push:
-    branches: [main]
 
 jobs:
   job:
@@ -22,7 +20,7 @@ jobs:
         name: Setting up node v14...
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "14"
       - id: cache
         name: Recovering cache...
         uses: actions/cache@v2
@@ -82,19 +80,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_branch: ${{ steps.sync.outputs.new_branch }}
           destination_branch: ${{ github.event.client_payload.data.branch }}
-          
-      # publish github artifacts
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        if: ${{ steps.build.outputs.publish_dir }}
-        with:
-          name: mcgear-random
-          path: ${{ steps.build.outputs.publish_dir }}
-          
-      # build & publish npm packages to npmjs.org
-      - name: npm build & publish
-        if: ${{ steps.versionBump.outputs.new_tag != '' }}
-        run: ${{ env.DeployCommand }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
