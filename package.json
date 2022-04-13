@@ -1,26 +1,27 @@
 {
-  "name": "temp-cpa",
-  "private": true,
+  "name": "@fathym/public-web",
+  "version": "0.0.3",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm version patch && npm run deploy:app",
+    "deploy:app": "npm version patch --prefix public && npm run export && npm publish ./out --access public",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@plasmicapp/cli": "^0.1.176",
-    "@plasmicapp/host": "^1.0.6",
-    "@plasmicapp/react-web": "^0.2.93",
-    "@plasmicpkgs/react-youtube": "^7.13.22",
-    "next": "12.0.10",
+    "@plasmicapp/loader-nextjs": "^1.0.83",
+    "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "17.0.16",
-    "@types/react": "17.0.39",
-    "eslint": "8.8.0",
-    "eslint-config-next": "12.0.10",
-    "typescript": "4.5.5"
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.40",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "typescript": "4.6.2"
   }
 }
