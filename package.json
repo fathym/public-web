@@ -12,6 +12,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@plasmicapp/react-web": "0.2.93",
+    "@plasmicpkgs/react-youtube": "7.13.38",
     "@plasmicapp/loader-nextjs": "^1.0.83",
     "next": "12.1.0",
     "react": "17.0.2",
@@ -22,7 +24,6 @@
     "@types/react": "17.0.40",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
-    "typescript": "4.6.2",
-    "@plasmicapp/react-web": "0.2.93"
+    "typescript": "4.6.2"
   }
 }
