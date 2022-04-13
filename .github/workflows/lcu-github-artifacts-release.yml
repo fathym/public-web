@@ -12,6 +12,7 @@ env:
   NPMRegistry: https://registry.npmjs.org/
   InstallCommand: npm i
   BuildCommand: npm run build
+  DeployCommand: npm run deploy
   Output: ./public
 
 jobs:
