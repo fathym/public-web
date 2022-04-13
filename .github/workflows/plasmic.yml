@@ -89,12 +89,5 @@ jobs:
         if: ${{ steps.build.outputs.publish_dir }}
         with:
           name: mcgear-random
-          path: ${{ steps.build.outputs.publish_dir }}
-          
-      # build & publish npm packages to npmjs.org
-      - name: npm build & publish
-        if: ${{ steps.versionBump.outputs.new_tag != '' }}
-        run: ${{ env.DeployCommand }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          path: ${{ steps.build.outputs.publish_dir }}          
 
