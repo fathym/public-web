@@ -42,6 +42,8 @@ import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
 import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
 
+import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
@@ -89,6 +91,11 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, args, overrides, forNode } = props;
+  const $props = props.args;
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsbzFq34BwReL2()
+  });
 
   return (
     <React.Fragment>
