@@ -12,7 +12,6 @@ env:
   NPMRegistry: https://registry.npmjs.org/
   InstallCommand: npm i
   BuildCommand: npm run build
-  DeployCommand: npm run deploy
   Output: ./public
 
 jobs:
@@ -95,12 +94,10 @@ jobs:
         if: ${{ !!env.InstallCommand && steps.package_json_exists.outputs.files_exists == 'true' }}
         run: ${{ env.InstallCommand }}
 
-      # build & publish npm packages to npmjs.org
-      - name: npm build & publish
-        if: ${{ steps.versionBump.outputs.new_tag != '' }}
-        run: ${{ env.DeployCommand }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # build npm
+      - name: npm build
+        if: ${{ !!env.BuildCommand && steps.package_json_exists.outputs.files_exists == 'true' }}
+        run: ${{ env.BuildCommand }}
 
       # publish github artifacts
       - name: Archive production artifacts
