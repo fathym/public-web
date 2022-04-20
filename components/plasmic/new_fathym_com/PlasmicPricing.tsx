@@ -1382,7 +1382,12 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard__a71ZL
                         )}
                         description={
-                          <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__xYnYw
+                            )}
+                          >
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1527,7 +1532,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </React.Fragment>
+                          </div>
                         }
                         dollars={"0"}
                       />
@@ -1564,7 +1569,12 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard__p06Lz
                         )}
                         description={
-                          <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__qv28U
+                            )}
+                          >
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1640,7 +1650,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </React.Fragment>
+                          </div>
                         }
                         dollars={"8"}
                         label={
@@ -1688,7 +1698,12 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard__nkMM
                         )}
                         description={
-                          <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__hdAui
+                            )}
+                          >
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1774,7 +1789,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </React.Fragment>
+                          </div>
                         }
                         dollars={"30"}
                         label={
@@ -1822,7 +1837,12 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard___5RfAi
                         )}
                         description={
-                          <React.Fragment>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__bvtYe
+                            )}
+                          >
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1898,7 +1918,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </React.Fragment>
+                          </div>
                         }
                         dollars={"99"}
                         label={
