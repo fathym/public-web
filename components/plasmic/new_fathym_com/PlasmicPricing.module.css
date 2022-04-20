@@ -2045,7 +2045,7 @@
   justify-content: flex-start;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 336px;
   min-width: 0;
   padding: 8px;
 }
@@ -2145,7 +2145,7 @@
   justify-content: flex-start;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 336px;
   min-width: 0;
   padding: 8px;
 }
@@ -2215,7 +2215,7 @@
   justify-content: flex-start;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 336px;
   min-width: 0;
   padding: 8px;
 }
@@ -2288,7 +2288,7 @@
   justify-content: flex-start;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 336px;
   min-width: 0;
   padding: 8px;
 }
