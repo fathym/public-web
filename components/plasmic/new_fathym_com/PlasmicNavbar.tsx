@@ -67,8 +67,10 @@ export type PlasmicNavbar__OverridesType = {
   logIn?: p.Flex<"a"> & Partial<LinkProps>;
   docs2?: p.Flex<"a"> & Partial<LinkProps>;
   blog2?: p.Flex<"a"> & Partial<LinkProps>;
-  pricing3?: p.Flex<"a"> & Partial<LinkProps>;
-  pricing4?: p.Flex<"div">;
+  docs3?: p.Flex<"a"> & Partial<LinkProps>;
+  blogs?: p.Flex<"a"> & Partial<LinkProps>;
+  pricing5?: p.Flex<"a"> & Partial<LinkProps>;
+  login?: p.Flex<"a"> & Partial<LinkProps>;
   logIn2?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
@@ -162,7 +164,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 data-plasmic-override={overrides.blog}
                 className={classNames(projectcss.all, projectcss.a, sty.blog)}
                 component={Link}
-                href={"/blog" as const}
+                href={"/blog/" as const}
                 platform={"nextjs"}
               >
                 <div
@@ -260,7 +262,7 @@ function PlasmicNavbar__RenderFunc(props: {
               )}
             >
               {hasVariant(globalVariants, "screen", "mobileOnly")
-                ? "Get started for free"
+                ? "Start  for free"
                 : "Get Started for Free"}
             </div>
           </Button>
@@ -272,10 +274,55 @@ function PlasmicNavbar__RenderFunc(props: {
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox___60Ge)}
           >
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <p.PlasmicLink
+                data-plasmic-name={"docs2"}
+                data-plasmic-override={overrides.docs2}
+                className={classNames(projectcss.all, projectcss.a, sty.docs2)}
+                component={Link}
+                href={"/docs" as const}
+                platform={"nextjs"}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__qzSpX
+                  )}
+                >
+                  {"Docs"}
+                </div>
+              </p.PlasmicLink>
+            ) : null}
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <p.PlasmicLink
+                data-plasmic-name={"blog2"}
+                data-plasmic-override={overrides.blog2}
+                className={classNames(projectcss.all, projectcss.a, sty.blog2)}
+                component={Link}
+                href={"/blog" as const}
+                platform={"nextjs"}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__mYtkh
+                  )}
+                >
+                  {"Blog"}
+                </div>
+              </p.PlasmicLink>
+            ) : null}
+
             <p.PlasmicLink
-              data-plasmic-name={"docs2"}
-              data-plasmic-override={overrides.docs2}
-              className={classNames(projectcss.all, projectcss.a, sty.docs2)}
+              data-plasmic-name={"docs3"}
+              data-plasmic-override={overrides.docs3}
+              className={classNames(projectcss.all, projectcss.a, sty.docs3)}
               component={Link}
               href={"/docs" as const}
               platform={"nextjs"}
@@ -284,7 +331,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__qzSpX
+                  sty.text__oT3H
                 )}
               >
                 {"Docs"}
@@ -292,18 +339,18 @@ function PlasmicNavbar__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
-              data-plasmic-name={"blog2"}
-              data-plasmic-override={overrides.blog2}
-              className={classNames(projectcss.all, projectcss.a, sty.blog2)}
+              data-plasmic-name={"blogs"}
+              data-plasmic-override={overrides.blogs}
+              className={classNames(projectcss.all, projectcss.a, sty.blogs)}
               component={Link}
-              href={"/blog" as const}
+              href={"/blog/" as const}
               platform={"nextjs"}
             >
               <div
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__mYtkh
+                  sty.text__kcrQ
                 )}
               >
                 {"Blog"}
@@ -311,20 +358,18 @@ function PlasmicNavbar__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
-              data-plasmic-name={"pricing3"}
-              data-plasmic-override={overrides.pricing3}
-              className={classNames(projectcss.all, projectcss.a, sty.pricing3)}
+              data-plasmic-name={"pricing5"}
+              data-plasmic-override={overrides.pricing5}
+              className={classNames(projectcss.all, projectcss.a, sty.pricing5)}
               component={Link}
-              href={"/blog" as const}
+              href={"/pricing" as const}
               platform={"nextjs"}
             >
               <div
-                data-plasmic-name={"pricing4"}
-                data-plasmic-override={overrides.pricing4}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.pricing4
+                  sty.text__mYn6Y
                 )}
               >
                 {"Pricing"}
@@ -332,24 +377,46 @@ function PlasmicNavbar__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
-              data-plasmic-name={"logIn2"}
-              data-plasmic-override={overrides.logIn2}
-              className={classNames(projectcss.all, projectcss.a, sty.logIn2)}
+              data-plasmic-name={"login"}
+              data-plasmic-override={overrides.login}
+              className={classNames(projectcss.all, projectcss.a, sty.login)}
               component={Link}
-              href={"/dashboard" as const}
+              href={"/dashboard/" as const}
               platform={"nextjs"}
             >
               <div
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__wNOmy
+                  sty.text__mChNz
                 )}
               >
-                {"Log in"}
+                {"Login"}
               </div>
             </p.PlasmicLink>
 
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <p.PlasmicLink
+                data-plasmic-name={"logIn2"}
+                data-plasmic-override={overrides.logIn2}
+                className={classNames(projectcss.all, projectcss.a, sty.logIn2)}
+                component={Link}
+                href={"/dashboard" as const}
+                platform={"nextjs"}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__wNOmy
+                  )}
+                >
+                  {"Log in"}
+                </div>
+              </p.PlasmicLink>
+            ) : null}
             {(
               hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
             ) ? (
@@ -401,8 +468,10 @@ const PlasmicDescendants = {
     "logIn",
     "docs2",
     "blog2",
-    "pricing3",
-    "pricing4",
+    "docs3",
+    "blogs",
+    "pricing5",
+    "login",
     "logIn2"
   ],
   logo: ["logo"],
@@ -413,8 +482,10 @@ const PlasmicDescendants = {
   logIn: ["logIn"],
   docs2: ["docs2"],
   blog2: ["blog2"],
-  pricing3: ["pricing3", "pricing4"],
-  pricing4: ["pricing4"],
+  docs3: ["docs3"],
+  blogs: ["blogs"],
+  pricing5: ["pricing5"],
+  login: ["login"],
   logIn2: ["logIn2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -430,8 +501,10 @@ type NodeDefaultElementType = {
   logIn: "a";
   docs2: "a";
   blog2: "a";
-  pricing3: "a";
-  pricing4: "div";
+  docs3: "a";
+  blogs: "a";
+  pricing5: "a";
+  login: "a";
   logIn2: "a";
 };
 
@@ -500,8 +573,10 @@ export const PlasmicNavbar = Object.assign(
     logIn: makeNodeComponent("logIn"),
     docs2: makeNodeComponent("docs2"),
     blog2: makeNodeComponent("blog2"),
-    pricing3: makeNodeComponent("pricing3"),
-    pricing4: makeNodeComponent("pricing4"),
+    docs3: makeNodeComponent("docs3"),
+    blogs: makeNodeComponent("blogs"),
+    pricing5: makeNodeComponent("pricing5"),
+    login: makeNodeComponent("login"),
     logIn2: makeNodeComponent("logIn2"),
 
     // Metadata about props expected for PlasmicNavbar

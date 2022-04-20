@@ -231,7 +231,18 @@ function PlasmicPriceCard__RenderFunc(props: {
         >
           {p.renderPlasmicSlot({
             defaultContents: (
-              <React.Fragment>
+              <div className={classNames(projectcss.all, sty.freeBox__m5P8H)}>
+                <ValueProp
+                  className={classNames("__wab_instance", sty.valueProp__lPs2I)}
+                  description={"Mus consequat a justo"}
+                  icon={
+                    <CheckIcon
+                      className={classNames(projectcss.all, sty.svg__c1Mpf)}
+                      role={"img"}
+                    />
+                  }
+                />
+
                 <ValueProp
                   className={classNames(
                     "__wab_instance",
@@ -242,24 +253,14 @@ function PlasmicPriceCard__RenderFunc(props: {
                   }
                   icon={
                     <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__jcAlY)}
+                      className={classNames(projectcss.all, sty.svg___5ZBtk)}
                       role={"img"}
                     />
                   }
                 />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__lPs2I)}
-                  description={"Mus consequat a justo"}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__bKKiN)}
-                      role={"img"}
-                    />
-                  }
-                />
-              </React.Fragment>
+              </div>
             ),
+
             value: args.description
           })}
         </p.Stack>

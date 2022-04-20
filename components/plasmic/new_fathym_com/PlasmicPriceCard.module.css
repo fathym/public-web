@@ -180,21 +180,33 @@
   > img {
   margin-top: 16px;
 }
-.valueProp___5Wp1F:global(.__wab_instance) {
+.freeBox__m5P8H {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
+  height: auto;
+  max-width: 100%;
   min-width: 0;
-}
-.svg__jcAlY {
-  object-fit: cover;
-  color: #34c759;
-  width: 24px;
-  height: 24px;
+  padding: 8px;
 }
 .valueProp__lPs2I:global(.__wab_instance) {
   width: 100%;
   min-width: 0;
 }
-.svg__bKKiN {
+.svg__c1Mpf {
+  object-fit: cover;
+  color: #34c759;
+  width: 24px;
+  height: 24px;
+}
+.valueProp___5Wp1F:global(.__wab_instance) {
+  width: 100%;
+  min-width: 0;
+}
+.svg___5ZBtk {
   object-fit: cover;
   color: #34c759;
   width: 24px;

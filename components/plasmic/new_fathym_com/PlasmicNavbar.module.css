@@ -254,9 +254,15 @@
   margin-left: 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___60Ge {
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
   .freeBox___60Ge > :global(.__wab_flex-container) {
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     margin-top: calc(0px - 8px);
     height: calc(100% + 8px);
   }
@@ -280,8 +286,16 @@
   margin-bottom: 0.5rem;
   margin-left: calc(0.5rem + 8px) !important;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .docs2 {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+    display: none;
+  }
+}
 .text__qzSpX {
   width: auto;
+  align-self: center;
 }
 .blog2 {
   display: flex;
@@ -290,18 +304,95 @@
   margin-bottom: 0.5rem;
   margin-left: calc(0.5rem + 8px) !important;
 }
-.pricing3 {
+@media (min-width: 0px) and (max-width: 768px) {
+  .blog2 {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+    display: none;
+  }
+}
+.text__mYtkh {
+  align-self: center;
+}
+.docs3 {
   display: flex;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: calc(0.5rem + 8px) !important;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+  align-self: auto;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .pricing3 {
+  .docs3 {
     margin-left: calc(0.5rem + 8px) !important;
     margin-top: calc(0.5rem + 8px) !important;
   }
+}
+.text__oT3H {
+  align-self: stretch;
+}
+.blogs {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+  align-self: auto;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .blogs {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+  }
+}
+.text__kcrQ {
+  align-self: stretch;
+}
+.pricing5 {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+  align-self: auto;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .pricing5 {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+  }
+}
+.text__mYn6Y {
+  align-self: stretch;
+}
+.login {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(0.5rem + 8px) !important;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+  align-self: auto;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .login {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+  }
+}
+.text__mChNz {
+  align-self: stretch;
 }
 .logIn2 {
   display: flex;
@@ -309,6 +400,16 @@
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: calc(0.5rem + 8px) !important;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .logIn2 {
+    margin-left: calc(0.5rem + 8px) !important;
+    margin-top: calc(0.5rem + 8px) !important;
+    display: none;
+  }
+}
+.text__wNOmy {
+  align-self: center;
 }
 .button__uafY:global(.__wab_instance) {
   position: relative;
