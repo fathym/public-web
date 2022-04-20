@@ -2115,7 +2115,8 @@
 .priceCard__p06Lz:global(.__wab_instance) {
   position: relative;
   width: 100%;
-  min-width: 0;
+  min-width: auto;
+  max-width: 316px;
 }
 .text__evMy3 {
   color: var(--token-dPpkVE5bFb5j);
@@ -2169,6 +2170,7 @@
 .priceCard__nkMM:global(.__wab_instance) {
   position: relative;
   width: 100%;
+  max-width: 316px;
   min-width: 0;
 }
 .text__prfTe {
@@ -2226,6 +2228,7 @@
 .priceCard___5RfAi:global(.__wab_instance) {
   position: relative;
   width: 100%;
+  max-width: 316px;
   min-width: 0;
 }
 .text__bxx3I {

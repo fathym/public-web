@@ -362,7 +362,7 @@ function PlasmicNavbar__RenderFunc(props: {
               data-plasmic-override={overrides.pricing5}
               className={classNames(projectcss.all, projectcss.a, sty.pricing5)}
               component={Link}
-              href={"/pricing" as const}
+              href={"/pricing/" as const}
               platform={"nextjs"}
             >
               <div
