@@ -1389,12 +1389,7 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard__a71ZL
                         )}
                         description={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__xYnYw
-                            )}
-                          >
+                          <React.Fragment>
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1539,7 +1534,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </div>
+                          </React.Fragment>
                         }
                         dollars={"0"}
                       />
@@ -1576,12 +1571,7 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard__p06Lz
                         )}
                         description={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__qv28U
-                            )}
-                          >
+                          <React.Fragment>
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1599,6 +1589,7 @@ function PlasmicPricing__RenderFunc(props: {
                                 />
                               }
                               noTitle={true}
+                              title={"Label"}
                             />
 
                             <ValueProp
@@ -1657,7 +1648,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </div>
+                          </React.Fragment>
                         }
                         dollars={"8"}
                         label={
@@ -1705,12 +1696,7 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard__nkMM
                         )}
                         description={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__hdAui
-                            )}
-                          >
+                          <React.Fragment>
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1796,7 +1782,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </div>
+                          </React.Fragment>
                         }
                         dollars={"30"}
                         label={
@@ -1844,12 +1830,7 @@ function PlasmicPricing__RenderFunc(props: {
                           sty.priceCard___5RfAi
                         )}
                         description={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__bvtYe
-                            )}
-                          >
+                          <React.Fragment>
                             <ValueProp
                               className={classNames(
                                 "__wab_instance",
@@ -1925,7 +1906,7 @@ function PlasmicPricing__RenderFunc(props: {
                               }
                               noTitle={true}
                             />
-                          </div>
+                          </React.Fragment>
                         }
                         dollars={"99"}
                         label={
