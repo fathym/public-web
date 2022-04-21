@@ -1322,28 +1322,35 @@ function PlasmicPricing__RenderFunc(props: {
                     hasGap={true}
                     className={classNames(projectcss.all, sty.freeBox___6Rimt)}
                   >
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__yqjB5)}
-                    >
-                      <div
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__gaSeN
+                          sty.freeBox__yqjB5
                         )}
                       >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__pSvG
-                          )}
-                        >
-                          {"Pricing plans"}
-                        </div>
-                      </div>
-                    </p.Stack>
+                        {true ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__gaSeN
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__pSvG
+                              )}
+                            >
+                              {"Pricing plans"}
+                            </div>
+                          </div>
+                        ) : null}
+                      </p.Stack>
+                    ) : null}
 
                     <p.Stack
                       as={"div"}
