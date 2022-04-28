@@ -1,6 +1,6 @@
 {
   "name": "@fathym/public-web",
-  "version": "0.75.9",
+  "version": "0.76.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
