@@ -1057,6 +1057,26 @@
           "id": "P27iIfL0S",
           "name": "enterprise-whitelabels.png",
           "filePath": "../public/plasmic/new_fathym_com/images/enterpriseWhitelabelspng.png"
+        },
+        {
+          "id": "s56FGOpfk",
+          "name": "personal.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/personalpng.png"
+        },
+        {
+          "id": "-M91HzoPM",
+          "name": "pro.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/propng.png"
+        },
+        {
+          "id": "WYIg0S9x7",
+          "name": "starter.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/starterpng.png"
+        },
+        {
+          "id": "8Bd5B3OKv",
+          "name": "business.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/businesspng.png"
         }
       ],
       "indirect": false,
