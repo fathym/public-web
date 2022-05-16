@@ -1,6 +1,9 @@
 # Plasmic workflow v3
 name: Sync, build and deploy Plasmic app
 
+permissions:
+  contents: write
+
 on:
   repository_dispatch:
     types: [plasmic]
@@ -17,10 +20,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - id: node
-        name: Setting up node v14...
+        name: Setting up node v16...
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
       - id: cache
         name: Recovering cache...
         uses: actions/cache@v2
