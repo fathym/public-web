@@ -448,6 +448,32 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicPricing.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "uslE6cORX7L",
+          "name": "HomepageVariant2",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHomepageVariant2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/home2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicHomepageVariant2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "IM6IUPKqqu",
+          "name": "EnterpriseAgreement",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicEnterpriseAgreement.tsx",
+          "importSpec": {
+            "modulePath": "../pages/enterprise-agreement.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicEnterpriseAgreement.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -555,6 +581,11 @@
           "id": "yeSC35cwTR9f",
           "name": "FacebookIconIcon",
           "moduleFilePath": "plasmic/new_fathym_com/icons/PlasmicIcon__FacebookIcon.tsx"
+        },
+        {
+          "id": "Y7h0VzwwKE0",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/new_fathym_com/icons/PlasmicIcon__Icon2.tsx"
         }
       ],
       "images": [
@@ -1077,6 +1108,31 @@
           "id": "8Bd5B3OKv",
           "name": "business.png",
           "filePath": "../public/plasmic/new_fathym_com/images/businesspng.png"
+        },
+        {
+          "id": "9kpgErbsBxF",
+          "name": "image 20",
+          "filePath": "../public/plasmic/new_fathym_com/images/image20.jpeg"
+        },
+        {
+          "id": "NBnZzJilEMu",
+          "name": "image 21",
+          "filePath": "../public/plasmic/new_fathym_com/images/image21.jpeg"
+        },
+        {
+          "id": "dC-1fAeQ5TL",
+          "name": "image 22",
+          "filePath": "../public/plasmic/new_fathym_com/images/image22.jpeg"
+        },
+        {
+          "id": "hwfd8EQUzS-",
+          "name": "image 23",
+          "filePath": "../public/plasmic/new_fathym_com/images/image23.jpeg"
+        },
+        {
+          "id": "fm4f8AXGKAU",
+          "name": "image 24",
+          "filePath": "../public/plasmic/new_fathym_com/images/image24.jpeg"
         }
       ],
       "indirect": false,

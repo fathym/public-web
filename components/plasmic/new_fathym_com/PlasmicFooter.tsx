@@ -72,6 +72,7 @@ export type PlasmicFooter__OverridesType = {
   httpswwwfathymcomdocs?: p.Flex<"a"> & Partial<LinkProps>;
   httpswwwfathymcomblog?: p.Flex<"a"> & Partial<LinkProps>;
   mailtosupportfathymcom?: p.Flex<"a"> & Partial<LinkProps>;
+  httpswwwfathymcomenterpriseAgreement?: p.Flex<"a"> & Partial<LinkProps>;
   textInput2?: p.Flex<typeof TextInput2>;
   button2?: p.Flex<typeof Button2>;
   fathymIt?: p.Flex<typeof IconLink>;
@@ -349,11 +350,15 @@ function PlasmicFooter__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
+              data-plasmic-name={"httpswwwfathymcomenterpriseAgreement"}
+              data-plasmic-override={
+                overrides.httpswwwfathymcomenterpriseAgreement
+              }
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
-                sty.link__gKlGv
+                sty.httpswwwfathymcomenterpriseAgreement
               )}
               component={Link}
               href={"" as const}
@@ -538,6 +543,7 @@ const PlasmicDescendants = {
     "httpswwwfathymcomdocs",
     "httpswwwfathymcomblog",
     "mailtosupportfathymcom",
+    "httpswwwfathymcomenterpriseAgreement",
     "textInput2",
     "button2",
     "fathymIt",
@@ -554,6 +560,9 @@ const PlasmicDescendants = {
   httpswwwfathymcomdocs: ["httpswwwfathymcomdocs"],
   httpswwwfathymcomblog: ["httpswwwfathymcomblog"],
   mailtosupportfathymcom: ["mailtosupportfathymcom"],
+  httpswwwfathymcomenterpriseAgreement: [
+    "httpswwwfathymcomenterpriseAgreement"
+  ],
   textInput2: ["textInput2", "button2"],
   button2: ["button2"],
   fathymIt: ["fathymIt", "httpstwittercomFathymIt"],
@@ -575,6 +584,7 @@ type NodeDefaultElementType = {
   httpswwwfathymcomdocs: "a";
   httpswwwfathymcomblog: "a";
   mailtosupportfathymcom: "a";
+  httpswwwfathymcomenterpriseAgreement: "a";
   textInput2: typeof TextInput2;
   button2: typeof Button2;
   fathymIt: typeof IconLink;
@@ -649,6 +659,9 @@ export const PlasmicFooter = Object.assign(
     httpswwwfathymcomdocs: makeNodeComponent("httpswwwfathymcomdocs"),
     httpswwwfathymcomblog: makeNodeComponent("httpswwwfathymcomblog"),
     mailtosupportfathymcom: makeNodeComponent("mailtosupportfathymcom"),
+    httpswwwfathymcomenterpriseAgreement: makeNodeComponent(
+      "httpswwwfathymcomenterpriseAgreement"
+    ),
     textInput2: makeNodeComponent("textInput2"),
     button2: makeNodeComponent("button2"),
     fathymIt: makeNodeComponent("fathymIt"),
