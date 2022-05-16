@@ -332,7 +332,7 @@
   text-decoration-line: underline;
   color: var(--token-NEon4Y--Z);
 }
-.httpswwwfathymcomenterpriseAgreement {
+.enterpriseAgreement {
   position: relative;
   color: var(--token-EAvSUfuNRAq);
   font-size: 14px;
@@ -341,7 +341,7 @@
   font-family: "Encode Sans Semi Condensed", sans-serif;
   min-width: 0;
 }
-.root .httpswwwfathymcomenterpriseAgreement:hover {
+.root .enterpriseAgreement:hover {
   text-decoration-line: underline;
   color: var(--token-NEon4Y--Z);
 }

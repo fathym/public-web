@@ -474,6 +474,32 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicEnterpriseAgreement.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "4hgTMGuV5F0",
+          "name": "TermsOfServices",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicTermsOfServices.tsx",
+          "importSpec": {
+            "modulePath": "../pages/terms-of-services.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicTermsOfServices.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "8Fxhz1anqdV",
+          "name": "PrivacyPolicy",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicPrivacyPolicy.tsx",
+          "importSpec": {
+            "modulePath": "../pages/privacy-policy.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicPrivacyPolicy.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
