@@ -312,6 +312,19 @@
   font-size: 16px;
   font-family: "Encode Sans Semi Condensed", sans-serif;
 }
+.enterpriseAgreement {
+  position: relative;
+  color: var(--token-EAvSUfuNRAq);
+  font-size: 14px;
+  max-width: 153px;
+  width: 100%;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  min-width: 0;
+}
+.root .enterpriseAgreement:hover {
+  text-decoration-line: underline;
+  color: var(--token-NEon4Y--Z);
+}
 .link__hmTbY {
   color: var(--token-EAvSUfuNRAq);
   font-size: 14px;
@@ -329,19 +342,6 @@
   font-family: "Encode Sans Semi Condensed", sans-serif;
 }
 .root .link__usBz:hover {
-  text-decoration-line: underline;
-  color: var(--token-NEon4Y--Z);
-}
-.enterpriseAgreement {
-  position: relative;
-  color: var(--token-EAvSUfuNRAq);
-  font-size: 14px;
-  max-width: 153px;
-  width: 100%;
-  font-family: "Encode Sans Semi Condensed", sans-serif;
-  min-width: 0;
-}
-.root .enterpriseAgreement:hover {
   text-decoration-line: underline;
   color: var(--token-NEon4Y--Z);
 }

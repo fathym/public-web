@@ -320,6 +320,23 @@ function PlasmicFooter__RenderFunc(props: {
             </div>
 
             <p.PlasmicLink
+              data-plasmic-name={"enterpriseAgreement"}
+              data-plasmic-override={overrides.enterpriseAgreement}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.enterpriseAgreement
+              )}
+              component={Link}
+              href={"/enterprise-agreement" as const}
+              platform={"nextjs"}
+              target={undefined}
+            >
+              {"Enterprise Agreement"}
+            </p.PlasmicLink>
+
+            <p.PlasmicLink
               className={classNames(
                 projectcss.all,
                 projectcss.a,
@@ -347,23 +364,6 @@ function PlasmicFooter__RenderFunc(props: {
               target={"_blank" as const}
             >
               {"Privacy Policy"}
-            </p.PlasmicLink>
-
-            <p.PlasmicLink
-              data-plasmic-name={"enterpriseAgreement"}
-              data-plasmic-override={overrides.enterpriseAgreement}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.enterpriseAgreement
-              )}
-              component={Link}
-              href={"/enterprise-agreement" as const}
-              platform={"nextjs"}
-              target={undefined}
-            >
-              {"Enterprise Agreement"}
             </p.PlasmicLink>
           </p.Stack>
 
