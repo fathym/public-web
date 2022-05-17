@@ -22,4 +22,4 @@ To learn more about Plasmic, take a look at the following resources:
 - [Plasmic Documentation](https://docs.plasmic.app/learn/)
 - [Plasmic Slack Community](https://www.plasmic.app/slack)
 
-You can check out [the Plasmic GitHub repository](https://github.com/plasmicapp/plasmic) - your feedback and contributions are welcome!!
+You can check out [the Plasmic GitHub repository](https://github.com/plasmicapp/plasmic) - your feedback and contributions are welcome!!!
