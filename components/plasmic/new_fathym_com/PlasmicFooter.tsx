@@ -219,22 +219,24 @@ function PlasmicFooter__RenderFunc(props: {
               {"Habistack"}
             </p.PlasmicLink>
 
-            <p.PlasmicLink
-              data-plasmic-name={"httpswwwproadjectcom"}
-              data-plasmic-override={overrides.httpswwwproadjectcom}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.httpswwwproadjectcom
-              )}
-              component={Link}
-              href={"https://www.proadject.com/" as const}
-              platform={"nextjs"}
-              target={"_blank" as const}
-            >
-              {"pROADject"}
-            </p.PlasmicLink>
+            {true ? (
+              <p.PlasmicLink
+                data-plasmic-name={"httpswwwproadjectcom"}
+                data-plasmic-override={overrides.httpswwwproadjectcom}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.httpswwwproadjectcom
+                )}
+                component={Link}
+                href={"https://www.proadject.com/" as const}
+                platform={"nextjs"}
+                target={"_blank" as const}
+              >
+                {"pROADject"}
+              </p.PlasmicLink>
+            ) : null}
           </p.Stack>
 
           <p.Stack
