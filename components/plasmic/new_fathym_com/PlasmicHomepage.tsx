@@ -1218,7 +1218,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and devops automation, saving both time and money. Plus, the ability to use multiple frameworks!\n\nDiscover new ways to maximize resources and knowledge from your team with your code, low code, and no code tools. Harness solutions from the open source universe or developed by your team."
+                    "Fathym's powerful micro-frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and devops automation, saving both time and money. Plus, the ability to use multiple frameworks!\n\nDiscover new ways to maximize resources and knowledge from your team with your code, low code, and no code tools. Harness solutions from the open source universe or developed by your team."
                   }
                 </div>
               </p.Stack>

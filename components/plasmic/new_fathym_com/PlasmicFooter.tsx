@@ -73,6 +73,8 @@ export type PlasmicFooter__OverridesType = {
   httpswwwfathymcomblog?: p.Flex<"a"> & Partial<LinkProps>;
   mailtosupportfathymcom?: p.Flex<"a"> & Partial<LinkProps>;
   enterpriseAgreement?: p.Flex<"a"> & Partial<LinkProps>;
+  termsOfService?: p.Flex<"a"> & Partial<LinkProps>;
+  privacyPolicy?: p.Flex<"a"> & Partial<LinkProps>;
   textInput2?: p.Flex<typeof TextInput2>;
   button2?: p.Flex<typeof Button2>;
   fathymIt?: p.Flex<typeof IconLink>;
@@ -339,31 +341,35 @@ function PlasmicFooter__RenderFunc(props: {
             </p.PlasmicLink>
 
             <p.PlasmicLink
+              data-plasmic-name={"termsOfService"}
+              data-plasmic-override={overrides.termsOfService}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
-                sty.link__hmTbY
+                sty.termsOfService
               )}
               component={Link}
-              href={"" as const}
+              href={"/terms-of-services" as const}
               platform={"nextjs"}
-              target={"_blank" as const}
+              target={undefined}
             >
               {"Terms of Services"}
             </p.PlasmicLink>
 
             <p.PlasmicLink
+              data-plasmic-name={"privacyPolicy"}
+              data-plasmic-override={overrides.privacyPolicy}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
-                sty.link__usBz
+                sty.privacyPolicy
               )}
               component={Link}
-              href={"" as const}
+              href={"/privacy-policy" as const}
               platform={"nextjs"}
-              target={"_blank" as const}
+              target={undefined}
             >
               {"Privacy Policy"}
             </p.PlasmicLink>
@@ -544,6 +550,8 @@ const PlasmicDescendants = {
     "httpswwwfathymcomblog",
     "mailtosupportfathymcom",
     "enterpriseAgreement",
+    "termsOfService",
+    "privacyPolicy",
     "textInput2",
     "button2",
     "fathymIt",
@@ -561,6 +569,8 @@ const PlasmicDescendants = {
   httpswwwfathymcomblog: ["httpswwwfathymcomblog"],
   mailtosupportfathymcom: ["mailtosupportfathymcom"],
   enterpriseAgreement: ["enterpriseAgreement"],
+  termsOfService: ["termsOfService"],
+  privacyPolicy: ["privacyPolicy"],
   textInput2: ["textInput2", "button2"],
   button2: ["button2"],
   fathymIt: ["fathymIt", "httpstwittercomFathymIt"],
@@ -583,6 +593,8 @@ type NodeDefaultElementType = {
   httpswwwfathymcomblog: "a";
   mailtosupportfathymcom: "a";
   enterpriseAgreement: "a";
+  termsOfService: "a";
+  privacyPolicy: "a";
   textInput2: typeof TextInput2;
   button2: typeof Button2;
   fathymIt: typeof IconLink;
@@ -658,6 +670,8 @@ export const PlasmicFooter = Object.assign(
     httpswwwfathymcomblog: makeNodeComponent("httpswwwfathymcomblog"),
     mailtosupportfathymcom: makeNodeComponent("mailtosupportfathymcom"),
     enterpriseAgreement: makeNodeComponent("enterpriseAgreement"),
+    termsOfService: makeNodeComponent("termsOfService"),
+    privacyPolicy: makeNodeComponent("privacyPolicy"),
     textInput2: makeNodeComponent("textInput2"),
     button2: makeNodeComponent("button2"),
     fathymIt: makeNodeComponent("fathymIt"),

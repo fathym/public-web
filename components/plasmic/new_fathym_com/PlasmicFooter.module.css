@@ -322,32 +322,30 @@
   position: relative;
   color: var(--token-EAvSUfuNRAq);
   font-size: 14px;
-  max-width: 153px;
-  width: 100%;
+  max-width: none;
   font-family: "Encode Sans Semi Condensed", sans-serif;
-  min-width: 0;
 }
 .root .enterpriseAgreement:hover {
   text-decoration-line: underline;
   color: var(--token-NEon4Y--Z);
 }
-.link__hmTbY {
+.termsOfService {
   color: var(--token-EAvSUfuNRAq);
   font-size: 14px;
   margin-right: 0px;
   font-family: "Encode Sans Semi Condensed", sans-serif;
 }
-.root .link__hmTbY:hover {
+.root .termsOfService:hover {
   text-decoration-line: underline;
   color: var(--token-NEon4Y--Z);
 }
-.link__usBz {
+.privacyPolicy {
   position: relative;
   color: var(--token-EAvSUfuNRAq);
   font-size: 14px;
   font-family: "Encode Sans Semi Condensed", sans-serif;
 }
-.root .link__usBz:hover {
+.root .privacyPolicy:hover {
   text-decoration-line: underline;
   color: var(--token-NEon4Y--Z);
 }
