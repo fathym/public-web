@@ -321,9 +321,9 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         displayWidth={"auto" as const}
                         loading={"lazy" as const}
                         src={{
-                          src: "/plasmic/new_fathym_com/images/homeHeropng2.png",
-                          fullWidth: 1000,
-                          fullHeight: 825,
+                          src: "/plasmic/new_fathym_com/images/socialFeedDashboardpng.png",
+                          fullWidth: 1400,
+                          fullHeight: 1486,
                           aspectRatio: undefined
                         }}
                       />
@@ -340,18 +340,16 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox___10Kjo)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__fit5U)}>
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2__yoyI0
-                  )}
-                >
-                  {"Say goodbye to unwieldy frontend monoliths."}
-                </h2>
-              </div>
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__yoyI0
+                )}
+              >
+                {"Say goodbye to unwieldy frontend monoliths."}
+              </h2>
 
               <div
                 className={classNames(
@@ -360,9 +358,20 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   sty.text__aml0A
                 )}
               >
-                {
-                  " \n\nFathym automates builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks and Static Site Generators you love. \n\nSteer clear of unwieldly frontend monoliths. Break your website down into smaller, flexible and more manageable pieces for independent builds and deployments. "
-                }
+                <React.Fragment>
+                  <React.Fragment>
+                    {
+                      " \n\nFathym automates builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks and Static Site Generators you love. \n\nSteer clear of unwieldly frontend monoliths.\n\nBreak your website down into smaller, flexible and more manageable pieces for "
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"independent builds and deployments"}
+                  </span>
+                  <React.Fragment>{". "}</React.Fragment>
+                </React.Fragment>
               </div>
             </p.Stack>
           </div>
@@ -520,12 +529,12 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           displayMaxWidth={"100%" as const}
                           displayMinHeight={"0" as const}
                           displayMinWidth={"0" as const}
-                          displayWidth={"358px" as const}
+                          displayWidth={"auto" as const}
                           loading={"lazy" as const}
                           src={{
-                            src: "/plasmic/new_fathym_com/images/homeYourCodepng3.png",
-                            fullWidth: 400,
-                            fullHeight: 400,
+                            src: "/plasmic/new_fathym_com/images/getStartedWithATemplatePng.png",
+                            fullWidth: 1724,
+                            fullHeight: 1472,
                             aspectRatio: undefined
                           }}
                         />
@@ -706,7 +715,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           sty.h3__rZuBw
                         )}
                       >
-                        {"Compose your sites"}
+                        {"You're a composer"}
                       </h3>
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
@@ -720,7 +729,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Build with the freedom to use different JavaScript frameworks or Static Site Generators for one website. Use the right framework for the right job.  \n\nFathym effortlessly brings your project’s apps together to compose one cohesive website or web app on your custom domain. "
+                      "Build with the freedom to use different JavaScript frameworks or Static Site Generators on the one site. Use the right framework for the right job.  \n\nFathym effortlessly brings your project’s apps together to compose one cohesive website or web app on your custom domain. "
                     }
                   </div>
                 </div>
@@ -748,6 +757,51 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
             </p.Stack>
           </div>
 
+          <div className={classNames(projectcss.all, sty.freeBox__cGo34)}>
+            <div className={classNames(projectcss.all, sty.freeBox__uaXaw)}>
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__meclb
+                )}
+              >
+                {"3. Deploy with confidence"}
+              </h1>
+
+              <div className={classNames(projectcss.all, sty.columns__xdHKp)}>
+                <div className={classNames(projectcss.all, sty.column__bhMmI)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__mc3FI
+                    )}
+                  >
+                    {
+                      "The Fathym Global Edge Network delivers your content and sites at global points closest to your users.  \n\n"
+                    }
+                  </div>
+                </div>
+
+                <div className={classNames(projectcss.all, sty.column__b30D)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__kg0H
+                    )}
+                  >
+                    {
+                      "Update to any version of your site through our version control, and easily rollback when things go awry. "
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className={classNames(projectcss.all, sty.freeBox__gtKs)}>
             <p.Stack
               as={"div"}
@@ -762,7 +816,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   sty.h1__tsnhg
                 )}
               >
-                {"3. Scale as you grow"}
+                {"4. Scale as you grow"}
               </h1>
 
               <div className={classNames(projectcss.all, sty.columns___72XVq)}>

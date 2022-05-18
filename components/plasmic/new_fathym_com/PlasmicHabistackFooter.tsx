@@ -54,7 +54,7 @@ type ArgPropType = keyof PlasmicHabistackFooter__ArgsType;
 export const PlasmicHabistackFooter__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHabistackFooter__OverridesType = {
-  root?: p.Flex<typeof Footer>;
+  root2?: p.Flex<typeof Footer>;
 };
 
 export interface DefaultHabistackFooterProps {
@@ -73,23 +73,23 @@ function PlasmicHabistackFooter__RenderFunc(props: {
 
   return (
     <Footer
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"root2"}
+      data-plasmic-override={overrides.root2}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      className={classNames("__wab_instance", sty.root)}
+      className={classNames("__wab_instance", sty.root2)}
     />
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root2: ["root2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  root: typeof Footer;
+  root2: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -136,7 +136,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "root2") {
     func.displayName = "PlasmicHabistackFooter";
   } else {
     func.displayName = `PlasmicHabistackFooter.${nodeName}`;
@@ -146,7 +146,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicHabistackFooter = Object.assign(
   // Top-level PlasmicHabistackFooter renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("root2"),
   {
     // Helper components rendering sub-elements
 

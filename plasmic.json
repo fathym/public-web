@@ -1159,6 +1159,16 @@
           "id": "fm4f8AXGKAU",
           "name": "image 24",
           "filePath": "../public/plasmic/new_fathym_com/images/image24.jpeg"
+        },
+        {
+          "id": "3hQOA4omE",
+          "name": "Social feed dashboard.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/socialFeedDashboardpng.png"
+        },
+        {
+          "id": "-3mfUUPuN",
+          "name": "Get started with a template .png",
+          "filePath": "../public/plasmic/new_fathym_com/images/getStartedWithATemplatePng.png"
         }
       ],
       "indirect": false,

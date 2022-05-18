@@ -1782,12 +1782,13 @@ function PlasmicHomepage__RenderFunc(props: {
               ) : null}
             </p.Stack>
           ) : null}
-
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
-          />
+          {true ? (
+            <HabistackFooter
+              data-plasmic-name={"habistackFooter"}
+              data-plasmic-override={overrides.habistackFooter}
+              className={classNames("__wab_instance", sty.habistackFooter)}
+            />
+          ) : null}
         </div>
       </div>
     </React.Fragment>
