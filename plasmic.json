@@ -500,6 +500,19 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicPrivacyPolicy.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "3jTJ0D37Jf",
+          "name": "FathymFooter",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicFathymFooter.tsx",
+          "importSpec": {
+            "modulePath": "FathymFooter.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicFathymFooter.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -1169,6 +1182,31 @@
           "id": "-3mfUUPuN",
           "name": "Get started with a template .png",
           "filePath": "../public/plasmic/new_fathym_com/images/getStartedWithATemplatePng.png"
+        },
+        {
+          "id": "ehOuWxKA8",
+          "name": "Fathym-logo-aqua-01 (1) 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/fathymLogoAqua0112.png"
+        },
+        {
+          "id": "QxR0oGJd7",
+          "name": "Processor Details.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/processorDetailspng.png"
+        },
+        {
+          "id": "rL-rr-MvU",
+          "name": "Routes, custom domain, modifiers .png",
+          "filePath": "../public/plasmic/new_fathym_com/images/routesCustomDomainModifiersPng.png"
+        },
+        {
+          "id": "suIqAj1AR",
+          "name": "Another social feed shot.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/anotherSocialFeedShotpng.png"
+        },
+        {
+          "id": "37hOY75rJ",
+          "name": "Routes.png",
+          "filePath": "../public/plasmic/new_fathym_com/images/routespng.png"
         }
       ],
       "indirect": false,

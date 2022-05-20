@@ -35,7 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -66,7 +66,7 @@ export type PlasmicPrivacyPolicy__OverridesType = {
   mainSection2?: p.Flex<"div">;
   container3?: p.Flex<"div">;
   h3?: p.Flex<"h3">;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
 export interface DefaultPrivacyPolicyProps {}
@@ -269,10 +269,10 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
             </div>
           </div>
 
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <FathymFooter
+            data-plasmic-name={"fathymFooter"}
+            data-plasmic-override={overrides.fathymFooter}
+            className={classNames("__wab_instance", sty.fathymFooter)}
           />
         </p.Stack>
       </div>
@@ -292,7 +292,7 @@ const PlasmicDescendants = {
     "mainSection2",
     "container3",
     "h3",
-    "habistackFooter"
+    "fathymFooter"
   ],
   navbar: ["navbar"],
   mainSection: ["mainSection", "pageBanner", "columns", "h1", "img"],
@@ -303,7 +303,7 @@ const PlasmicDescendants = {
   mainSection2: ["mainSection2", "container3", "h3"],
   container3: ["container3", "h3"],
   h3: ["h3"],
-  habistackFooter: ["habistackFooter"]
+  fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -319,7 +319,7 @@ type NodeDefaultElementType = {
   mainSection2: "div";
   container3: "div";
   h3: "h3";
-  habistackFooter: typeof HabistackFooter;
+  fathymFooter: typeof FathymFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -388,7 +388,7 @@ export const PlasmicPrivacyPolicy = Object.assign(
     mainSection2: makeNodeComponent("mainSection2"),
     container3: makeNodeComponent("container3"),
     h3: makeNodeComponent("h3"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicPrivacyPolicy
     internalVariantProps: PlasmicPrivacyPolicy__VariantProps,

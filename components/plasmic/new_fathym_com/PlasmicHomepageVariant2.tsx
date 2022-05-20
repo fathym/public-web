@@ -36,9 +36,7 @@ import {
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
-import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
-import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -50,7 +48,6 @@ import sty from "./PlasmicHomepageVariant2.module.css"; // plasmic-import: uslE6
 
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: lodHYqINbTbi/icon
 import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: gpmIqNjGKjYR/icon
-import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: B6LQdT961rE8/icon
 
 export type PlasmicHomepageVariant2__VariantMembers = {};
 
@@ -66,11 +63,13 @@ export const PlasmicHomepageVariant2__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepageVariant2__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
+  h1?: p.Flex<"h1">;
+  svg?: p.Flex<"svg">;
   learnMore?: p.Flex<"a"> & Partial<LinkProps>;
   ol?: p.Flex<"ol">;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
 export interface DefaultHomepageVariant2Props {}
@@ -169,17 +168,31 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                             sty.freeBox__bgER
                           )}
                         >
-                          <div
+                          <h1
+                            data-plasmic-name={"h1"}
+                            data-plasmic-override={overrides.h1}
                             className={classNames(
                               projectcss.all,
+                              projectcss.h1,
                               projectcss.__wab_text,
-                              sty.text__iCzwf
+                              sty.h1
                             )}
                           >
-                            {
-                              "Deliver stunning sites with the utmost flexibility and speed"
-                            }
-                          </div>
+                            <React.Fragment>
+                              <React.Fragment>
+                                {"Deliver stunning sites with the "}
+                              </React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#885BCB" }}
+                              >
+                                {"utmost flexibility and speed"}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                            </React.Fragment>
+                          </h1>
 
                           <div
                             className={classNames(
@@ -234,9 +247,11 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 }
                                 endIcon={
                                   <ChevronRightIcon
+                                    data-plasmic-name={"svg"}
+                                    data-plasmic-override={overrides.svg}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.svg__s48Gj
+                                      sty.svg
                                     )}
                                     role={"img"}
                                   />
@@ -361,16 +376,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 <React.Fragment>
                   <React.Fragment>
                     {
-                      " \n\nFathym automates builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks and Static Site Generators you love. \n\nSteer clear of unwieldly frontend monoliths.\n\nBreak your website down into smaller, flexible and more manageable pieces for "
+                      " \n\nFathym automates CI/CD builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks and Static Site Generators you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
                     }
                   </React.Fragment>
                   <span
                     className={"plasmic_default__all plasmic_default__span"}
                     style={{ fontWeight: 700 }}
                   >
-                    {"independent builds and deployments"}
+                    {
+                      "Break your web project down into smaller and more manageable pieces for independent, super flexible builds and deployments. "
+                    }
                   </span>
-                  <React.Fragment>{". "}</React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               </div>
             </p.Stack>
@@ -394,16 +411,16 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox___4D0Ej)}
             >
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__p6Cdd
+                  sty.h2__p6Cdd
                 )}
               >
                 {"1. Start with your code"}
-              </h1>
+              </h2>
 
               <div className={classNames(projectcss.all, sty.columns__anwWz)}>
                 <div className={classNames(projectcss.all, sty.column___7FFd)}>
@@ -415,7 +432,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Getting started is as simple as connecting your GitHub repository. \n\nSelect an open-source recipe from your favourite frameworks and Static Site Builders to see Fathym in action or bring in your own code."
+                      "Getting started is as simple as connecting your GitHub repository. \n\nSelect an open-source recipe from your favorite frameworks and Static Site Builders to see Fathym in action or bring in your own code."
                     }
                   </div>
 
@@ -552,16 +569,16 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__ok7Ef)}
             >
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__uglUb
+                  sty.h2__uglUb
                 )}
               >
                 {"2. Break it down"}
-              </h1>
+              </h2>
 
               {true ? (
                 <div
@@ -682,7 +699,25 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 }
                                 style={{ fontWeight: 700 }}
                               >
-                                {"deployments "}
+                                {"deployments"}
+                              </span>
+                              <React.Fragment>{"\n\n"}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {""}
+                              </span>
+                              <React.Fragment>{"\n"}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {" "}
                               </span>
                               <React.Fragment>{""}</React.Fragment>
                             </React.Fragment>
@@ -759,44 +794,79 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
 
           <div className={classNames(projectcss.all, sty.freeBox__cGo34)}>
             <div className={classNames(projectcss.all, sty.freeBox__uaXaw)}>
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__meclb
+                  sty.h2__meclb
                 )}
               >
                 {"3. Deploy with confidence"}
-              </h1>
+              </h2>
 
-              <div className={classNames(projectcss.all, sty.columns__xdHKp)}>
-                <div className={classNames(projectcss.all, sty.column__bhMmI)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__mc3FI
-                    )}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__mc3FI
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{"The "}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
                   >
+                    {"Fathym Global Edge Network"}
+                  </span>
+                  <React.Fragment>
                     {
-                      "The Fathym Global Edge Network delivers your content and sites at global points closest to your users.  \n\n"
+                      " delivers your content and sites at the global points closest to your users. \n\nTake advantage of independent builds and deployments of your apps so you can work concurrently on your web project.\n\nUpdate to any version of your apps through our version control, and easily rollback when things go awry without impacting your live site. \n\n"
                     }
-                  </div>
+                  </React.Fragment>
+                </React.Fragment>
+              </div>
+
+              <div className={classNames(projectcss.all, sty.columns__ru70O)}>
+                <div className={classNames(projectcss.all, sty.column__opza)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__m8JVp)}
+                    displayHeight={"400px" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"100%" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/processorDetailspng.png",
+                      fullWidth: 1180,
+                      fullHeight: 1026,
+                      aspectRatio: undefined
+                    }}
+                  />
                 </div>
 
-                <div className={classNames(projectcss.all, sty.column__b30D)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__kg0H
-                    )}
-                  >
-                    {
-                      "Update to any version of your site through our version control, and easily rollback when things go awry. "
-                    }
-                  </div>
+                <div className={classNames(projectcss.all, sty.column__mtf70)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__ibJu)}
+                    displayHeight={"400px" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"150%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"100%" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/routespng.png",
+                      fullWidth: 628,
+                      fullHeight: 540,
+                      aspectRatio: undefined
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -808,16 +878,16 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__kGaun)}
             >
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__tsnhg
+                  sty.h2__tsnhg
                 )}
               >
                 {"4. Scale as you grow"}
-              </h1>
+              </h2>
 
               <div className={classNames(projectcss.all, sty.columns___72XVq)}>
                 <div className={classNames(projectcss.all, sty.column__dociy)}>
@@ -828,9 +898,20 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       sty.text__jPzIb
                     )}
                   >
-                    {
-                      "Get started for free in a shared infrastructure environment built to scale with you and your customer's needs."
-                    }
+                    <React.Fragment>
+                      <React.Fragment>
+                        {"Get started for free in a "}
+                      </React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"shared infrastructure environment"}
+                      </span>
+                      <React.Fragment>
+                        {" built to scale with you and your customer's needs."}
+                      </React.Fragment>
+                    </React.Fragment>
                   </div>
                 </div>
 
@@ -842,13 +923,135 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       sty.text__cK42J
                     )}
                   >
-                    {
-                      "Outgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own private or managed clouds."
-                    }
+                    <React.Fragment>
+                      <React.Fragment>
+                        {
+                          "Outgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
+                        }
+                      </React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"private or managed clouds."}
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
                   </div>
                 </div>
               </div>
             </p.Stack>
+          </div>
+
+          <div className={classNames(projectcss.all, sty.freeBox__poMuo)}>
+            <h2
+              className={classNames(
+                projectcss.all,
+                projectcss.h2,
+                projectcss.__wab_text,
+                sty.h2__jkk90
+              )}
+            >
+              {"Stay in sync with your team"}
+            </h2>
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__pVhLz
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  {
+                    "Collaborating and keeping updated with your teammate’s builds, pull requests and deploys has never been easier than through our"
+                  }
+                </React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700 }}
+                >
+                  {" interactive social feed"}
+                </span>
+                <React.Fragment>
+                  {
+                    ".  \n\nFathym provides one consolidated workflow for you to view and manage your web projects and their corresponding repositories. "
+                  }
+                </React.Fragment>
+              </React.Fragment>
+            </div>
+
+            <p.PlasmicImg
+              alt={""}
+              className={classNames(sty.img__fqLpJ)}
+              displayHeight={"520px" as const}
+              displayMaxHeight={"none" as const}
+              displayMaxWidth={"100%" as const}
+              displayMinHeight={"0" as const}
+              displayMinWidth={"0" as const}
+              displayWidth={"750px" as const}
+              loading={"lazy" as const}
+              src={{
+                src: "/plasmic/new_fathym_com/images/anotherSocialFeedShotpng.png",
+                fullWidth: 2144,
+                fullHeight: 1496,
+                aspectRatio: undefined
+              }}
+            />
+          </div>
+
+          <div className={classNames(projectcss.all, sty.freeBox__jd4L4)}>
+            <h2
+              className={classNames(
+                projectcss.all,
+                projectcss.h2,
+                projectcss.__wab_text,
+                sty.h2__j71Ux
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  {"Leverage the power of Azure\n"}
+                </React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#885BCB" }}
+                >
+                  {"minus the complexity"}
+                </span>
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </h2>
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__bVZlj
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  {
+                    "Fathym is built on Azure for enterprise grade infrastructure and security. \n\n"
+                  }
+                </React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700 }}
+                >
+                  {
+                    "Bring in your own custom domains, secure with SSL encryption. "
+                  }
+                </span>
+                <React.Fragment>
+                  {
+                    "\n\nControl who accesses your apps through out of the box authentication and identity management filters. "
+                  }
+                </React.Fragment>
+              </React.Fragment>
+            </div>
           </div>
 
           <section
@@ -889,7 +1092,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and DevOps automation, saving both time and money. Plus, the ability to use multiple frameworks!\n\nDiscover new ways to maximize resources and knowledge from your team with your code, low code, and no code tools. Harness solutions from the open source universe or developed by your team."
+                    "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and DevOps automation, saving both time and money. Plus, the freedom to use multiple frameworks and Static Site Generators on the one project!\n\nDiscover new ways to maximize resources and knowledge from your team with your code and low code and no code tools. Harness solutions from the open source universe or developed by your team."
                   }
                 </div>
               </p.Stack>
@@ -908,556 +1111,10 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
             </p.Stack>
           </section>
 
-          {true ? (
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__oVxm)}
-            >
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__dRz3)}
-                >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__ub7Gc)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__ugi2W)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__hAbe
-                        )}
-                      >
-                        {"Pricing plans"}
-                      </div>
-                    </div>
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__lvfcz)}
-                  >
-                    <PriceCard
-                      action={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__mtgca
-                          )}
-                        >
-                          {"Start for free"}
-                        </div>
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard__bN9Db
-                      )}
-                      description={
-                        <React.Fragment>
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__cKAg
-                            )}
-                            description={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___3GceM
-                                )}
-                              >
-                                {"Unlimited Projects"}
-                              </div>
-                            }
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__e8Ntg
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__ceq4N
-                            )}
-                            description={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__ywrXy
-                                )}
-                              >
-                                {"Team Social Feed"}
-                              </div>
-                            }
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__xsKOr
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp___52U
-                            )}
-                            description={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__cW8Un
-                                )}
-                              >
-                                {"Deploy any Version"}
-                              </div>
-                            }
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__aLC4
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__lKorr
-                            )}
-                            description={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__u4GQ
-                                )}
-                              >
-                                {"Custom Domain"}
-                              </div>
-                            }
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__xC4Z9
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__muGj5
-                            )}
-                            description={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__dLGkV
-                                )}
-                              >
-                                {"Free SSL"}
-                              </div>
-                            }
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__qNDi
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-                        </React.Fragment>
-                      }
-                      dollars={"0"}
-                    />
-
-                    <PriceCard
-                      action={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__h4Qzr
-                          )}
-                        >
-                          {"Buy Personal"}
-                        </div>
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard__tx2JV
-                      )}
-                      description={
-                        <React.Fragment>
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__cdxsq
-                            )}
-                            description={"Starter plan, plus:"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__szob7
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__vGtWy
-                            )}
-                            description={"Single Sign-on and Access Control"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__uyjNg
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__yuEoS
-                            )}
-                            description={"Application  Modifiers"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__ndLu2
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__x6Xux
-                            )}
-                            description={"Server-less Functions"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__eQ2HX
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-                        </React.Fragment>
-                      }
-                      dollars={"8"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___4UVzp
-                          )}
-                        >
-                          {"personal"}
-                        </div>
-                      }
-                    />
-
-                    <PriceCard
-                      action={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__torBy
-                          )}
-                        >
-                          {"Buy Pro"}
-                        </div>
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard__mr11H
-                      )}
-                      description={
-                        <React.Fragment>
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__fM7Du
-                            )}
-                            description={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___5WkUd
-                                )}
-                              >
-                                {"Personal plan, plus:"}
-                              </div>
-                            }
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__er88R
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__vd8AV
-                            )}
-                            description={"Branded Custom Single Sign-on"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg___8MZGu
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__bXfxm
-                            )}
-                            description={"Affiliate White-labeling"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__dhQzX
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__ipej
-                            )}
-                            description={"Priority Support"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__giUdb
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-                        </React.Fragment>
-                      }
-                      dollars={"30"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ayQ6G
-                          )}
-                        >
-                          {"pro"}
-                        </div>
-                      }
-                    />
-
-                    <PriceCard
-                      action={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__uyykv
-                          )}
-                        >
-                          {"Buy Business"}
-                        </div>
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard__xAg6L
-                      )}
-                      description={
-                        <React.Fragment>
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__cTcb
-                            )}
-                            description={"Pro plan, plus:"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__iHmt1
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__xo6Lk
-                            )}
-                            description={"Customer Licensing Tools"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__gVt9Z
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp__kx9Lm
-                            )}
-                            description={"Enterprise White Labeling"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__qIw3V
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-
-                          <ValueProp
-                            className={classNames(
-                              "__wab_instance",
-                              sty.valueProp___0EluE
-                            )}
-                            description={"Cloud Cost Management"}
-                            flatIcon={true}
-                            icon={
-                              <CheckIcon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg___9KCyK
-                                )}
-                                role={"img"}
-                              />
-                            }
-                            noTitle={true}
-                          />
-                        </React.Fragment>
-                      }
-                      dollars={"99"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__w63Dc
-                          )}
-                        >
-                          {"business"}
-                        </div>
-                      }
-                    />
-                  </p.Stack>
-                </p.Stack>
-              ) : null}
-            </p.Stack>
-          ) : null}
-
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <FathymFooter
+            data-plasmic-name={"fathymFooter"}
+            data-plasmic-override={overrides.fathymFooter}
+            className={classNames("__wab_instance", sty.fathymFooter)}
           />
         </div>
       </div>
@@ -1469,18 +1126,22 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navbar",
+    "h1",
+    "svg",
     "learnMore",
     "ol",
     "section",
     "foreground3",
-    "habistackFooter"
+    "fathymFooter"
   ],
   navbar: ["navbar"],
+  h1: ["h1"],
+  svg: ["svg"],
   learnMore: ["learnMore"],
   ol: ["ol"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
-  habistackFooter: ["habistackFooter"]
+  fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1488,11 +1149,13 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
+  h1: "h1";
+  svg: "svg";
   learnMore: "a";
   ol: "ol";
   section: "section";
   foreground3: "div";
-  habistackFooter: typeof HabistackFooter;
+  fathymFooter: typeof FathymFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1553,11 +1216,13 @@ export const PlasmicHomepageVariant2 = Object.assign(
   {
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
+    h1: makeNodeComponent("h1"),
+    svg: makeNodeComponent("svg"),
     learnMore: makeNodeComponent("learnMore"),
     ol: makeNodeComponent("ol"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicHomepageVariant2
     internalVariantProps: PlasmicHomepageVariant2__VariantProps,

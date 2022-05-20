@@ -38,7 +38,7 @@ import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -76,7 +76,7 @@ export type PlasmicLandingPagesMicroFrontends__OverridesType = {
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
   h2?: p.Flex<"h2">;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
 export interface DefaultLandingPagesMicroFrontendsProps {}
@@ -872,10 +872,10 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
             </p.Stack>
           ) : null}
 
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <FathymFooter
+            data-plasmic-name={"fathymFooter"}
+            data-plasmic-override={overrides.fathymFooter}
+            className={classNames("__wab_instance", sty.fathymFooter)}
           />
         </div>
       </div>
@@ -893,7 +893,7 @@ const PlasmicDescendants = {
     "section",
     "foreground3",
     "h2",
-    "habistackFooter"
+    "fathymFooter"
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
@@ -902,7 +902,7 @@ const PlasmicDescendants = {
   section: ["section", "foreground3", "h2"],
   foreground3: ["foreground3", "h2"],
   h2: ["h2"],
-  habistackFooter: ["habistackFooter"]
+  fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -916,7 +916,7 @@ type NodeDefaultElementType = {
   section: "section";
   foreground3: "div";
   h2: "h2";
-  habistackFooter: typeof HabistackFooter;
+  fathymFooter: typeof FathymFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -983,7 +983,7 @@ export const PlasmicLandingPagesMicroFrontends = Object.assign(
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
     h2: makeNodeComponent("h2"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicLandingPagesMicroFrontends
     internalVariantProps: PlasmicLandingPagesMicroFrontends__VariantProps,

@@ -3123,7 +3123,7 @@
     {
       "name": "divider",
       "type": "color",
-      "value": "rgb(234,234,234)",
+      "value": "#EAEAEA",
       "category": "color",
       "meta": {
         "projectId": "jbURxL3XuiMBQsLhf7apui",

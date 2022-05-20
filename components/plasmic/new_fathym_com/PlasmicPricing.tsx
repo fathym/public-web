@@ -38,7 +38,7 @@ import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
 import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -72,7 +72,7 @@ export type PlasmicPricing__OverridesType = {
   businessPlan?: p.Flex<"a"> & Partial<LinkProps>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
 export interface DefaultPricingProps {}
@@ -1863,10 +1863,10 @@ function PlasmicPricing__RenderFunc(props: {
               </section>
             ) : null}
 
-            <HabistackFooter
-              data-plasmic-name={"habistackFooter"}
-              data-plasmic-override={overrides.habistackFooter}
-              className={classNames("__wab_instance", sty.habistackFooter)}
+            <FathymFooter
+              data-plasmic-name={"fathymFooter"}
+              data-plasmic-override={overrides.fathymFooter}
+              className={classNames("__wab_instance", sty.fathymFooter)}
             />
           </div>
         ) : null}
@@ -1886,7 +1886,7 @@ const PlasmicDescendants = {
     "businessPlan",
     "section",
     "foreground3",
-    "habistackFooter"
+    "fathymFooter"
   ],
   navbar: ["navbar"],
   learnMore: ["learnMore"],
@@ -1896,7 +1896,7 @@ const PlasmicDescendants = {
   businessPlan: ["businessPlan"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
-  habistackFooter: ["habistackFooter"]
+  fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1911,7 +1911,7 @@ type NodeDefaultElementType = {
   businessPlan: "a";
   section: "section";
   foreground3: "div";
-  habistackFooter: typeof HabistackFooter;
+  fathymFooter: typeof FathymFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1979,7 +1979,7 @@ export const PlasmicPricing = Object.assign(
     businessPlan: makeNodeComponent("businessPlan"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicPricing
     internalVariantProps: PlasmicPricing__VariantProps,

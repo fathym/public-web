@@ -40,7 +40,7 @@ import Section from "../../Section"; // plasmic-import: pqxD5V2UHfS3/component
 import ValueProp from "../../ValueProp"; // plasmic-import: w1ZnbKd31u0d/component
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -78,7 +78,7 @@ export type PlasmicLandingPagesLowCode__OverridesType = {
   banner?: p.Flex<typeof Banner>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
 export interface DefaultLandingPagesLowCodeProps {}
@@ -1155,10 +1155,10 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
             </p.Stack>
           ) : null}
 
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <FathymFooter
+            data-plasmic-name={"fathymFooter"}
+            data-plasmic-override={overrides.fathymFooter}
+            className={classNames("__wab_instance", sty.fathymFooter)}
           />
         </div>
       </div>
@@ -1177,7 +1177,7 @@ const PlasmicDescendants = {
     "banner",
     "section",
     "foreground3",
-    "habistackFooter"
+    "fathymFooter"
   ],
   navbar: ["navbar"],
   foreground: ["foreground"],
@@ -1187,7 +1187,7 @@ const PlasmicDescendants = {
   banner: ["banner"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
-  habistackFooter: ["habistackFooter"]
+  fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1202,7 +1202,7 @@ type NodeDefaultElementType = {
   banner: typeof Banner;
   section: "section";
   foreground3: "div";
-  habistackFooter: typeof HabistackFooter;
+  fathymFooter: typeof FathymFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1270,7 +1270,7 @@ export const PlasmicLandingPagesLowCode = Object.assign(
     banner: makeNodeComponent("banner"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicLandingPagesLowCode
     internalVariantProps: PlasmicLandingPagesLowCode__VariantProps,

@@ -270,7 +270,7 @@ function PlasmicFooter__RenderFunc(props: {
               platform={"nextjs"}
               target={"_blank" as const}
             >
-              {"Documentation"}
+              {"Docs"}
             </p.PlasmicLink>
 
             <p.PlasmicLink

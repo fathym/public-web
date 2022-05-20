@@ -43,7 +43,7 @@ import PriceCard from "../../PriceCard"; // plasmic-import: WPq9gUgwYyDn/compone
 import Banner from "../../Banner"; // plasmic-import: 5SnsQScnhaLp/component
 import Testimonial from "../../Testimonial"; // plasmic-import: ckCiVMtRuKmU/component
 import CallToActionSection from "../../CallToActionSection"; // plasmic-import: mTFy8Vt80PPU/component
-import HabistackFooter from "../../HabistackFooter"; // plasmic-import: GpokPUrpKl/component
+import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
 
@@ -79,7 +79,7 @@ export type PlasmicHomepageOld__OverridesType = {
   logoCloudSection?: p.Flex<typeof Section>;
   testimonialsSection?: p.Flex<typeof Section>;
   callToActionSection?: p.Flex<typeof CallToActionSection>;
-  habistackFooter?: p.Flex<typeof HabistackFooter>;
+  fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
 export interface DefaultHomepageOldProps {}
@@ -2087,10 +2087,10 @@ function PlasmicHomepageOld__RenderFunc(props: {
             </p.Stack>
           </CallToActionSection>
 
-          <HabistackFooter
-            data-plasmic-name={"habistackFooter"}
-            data-plasmic-override={overrides.habistackFooter}
-            className={classNames("__wab_instance", sty.habistackFooter)}
+          <FathymFooter
+            data-plasmic-name={"fathymFooter"}
+            data-plasmic-override={overrides.fathymFooter}
+            className={classNames("__wab_instance", sty.fathymFooter)}
           />
         </div>
       </div>
@@ -2110,7 +2110,7 @@ const PlasmicDescendants = {
     "logoCloudSection",
     "testimonialsSection",
     "callToActionSection",
-    "habistackFooter"
+    "fathymFooter"
   ],
   headerHeroSection: ["headerHeroSection", "navbar"],
   navbar: ["navbar"],
@@ -2121,7 +2121,7 @@ const PlasmicDescendants = {
   logoCloudSection: ["logoCloudSection"],
   testimonialsSection: ["testimonialsSection"],
   callToActionSection: ["callToActionSection"],
-  habistackFooter: ["habistackFooter"]
+  fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2137,7 +2137,7 @@ type NodeDefaultElementType = {
   logoCloudSection: typeof Section;
   testimonialsSection: typeof Section;
   callToActionSection: typeof CallToActionSection;
-  habistackFooter: typeof HabistackFooter;
+  fathymFooter: typeof FathymFooter;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2206,7 +2206,7 @@ export const PlasmicHomepageOld = Object.assign(
     logoCloudSection: makeNodeComponent("logoCloudSection"),
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     callToActionSection: makeNodeComponent("callToActionSection"),
-    habistackFooter: makeNodeComponent("habistackFooter"),
+    fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicHomepageOld
     internalVariantProps: PlasmicHomepageOld__VariantProps,
