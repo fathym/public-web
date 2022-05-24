@@ -190,7 +190,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 className={
                                   "plasmic_default__all plasmic_default__span"
                                 }
-                                style={{ color: "#885BCB" }}
+                                style={{ color: "#5856D6" }}
                               >
                                 {"utmost flexibility and speed"}
                               </span>
@@ -480,7 +480,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                               className={
                                 "plasmic_default__all plasmic_default__span"
                               }
-                              style={{ fontWeight: 700 }}
+                              style={{ fontWeight: 700, color: "#000000" }}
                             >
                               {"GitHub"}
                             </span>
@@ -489,7 +489,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                               className={
                                 "plasmic_default__all plasmic_default__span"
                               }
-                              style={{ fontWeight: 700 }}
+                              style={{ fontWeight: 700, color: "#000000" }}
                             >
                               {"NPM"}
                             </span>
@@ -523,9 +523,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                               className={
                                 "plasmic_default__all plasmic_default__span"
                               }
+                              style={{ fontWeight: 700, color: "#000000" }}
+                            >
+                              {"automated build pipelines and deployments"}
+                            </span>
+                            <React.Fragment>{""}</React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
                               style={{ fontWeight: 700 }}
                             >
-                              {"automated build pipelines and deployments "}
+                              {" "}
                             </span>
                             <React.Fragment>
                               {
@@ -629,11 +638,20 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 className={
                                   "plasmic_default__all plasmic_default__span"
                                 }
-                                style={{ fontWeight: 700 }}
+                                style={{ fontWeight: 700, color: "#000000" }}
                               >
                                 {"codebases"}
                               </span>
-                              <React.Fragment>{" \n"}</React.Fragment>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#000000" }}
+                              >
+                                {" "}
+                              </span>
+                              <React.Fragment>{"\n"}</React.Fragment>
                             </React.Fragment>
                           </li>
 
@@ -653,9 +671,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 className={
                                   "plasmic_default__all plasmic_default__span"
                                 }
+                                style={{ fontWeight: 700, color: "#000000" }}
+                              >
+                                {"builds"}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
                                 style={{ fontWeight: 700 }}
                               >
-                                {"builds "}
+                                {" "}
                               </span>
                               <React.Fragment>{"\n"}</React.Fragment>
                             </React.Fragment>
@@ -677,11 +704,47 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 className={
                                   "plasmic_default__all plasmic_default__span"
                                 }
+                                style={{ fontWeight: 700, color: "#000000" }}
+                              >
+                                {"release"}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
                                 style={{ fontWeight: 700 }}
                               >
-                                {"release management"}
+                                {" "}
                               </span>
-                              <React.Fragment>{" \n"}</React.Fragment>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700, color: "#000000" }}
+                              >
+                                {"management"}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#000000" }}
+                              >
+                                {" "}
+                              </span>
+                              <React.Fragment>{"\n"}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#000000" }}
+                              >
+                                {""}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
                             </React.Fragment>
                           </li>
 
@@ -695,13 +758,13 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           >
                             <React.Fragment>
                               <React.Fragment>
-                                {"incremental upgrades and independent "}
+                                {"incremental upgrades and independent \n"}
                               </React.Fragment>
                               <span
                                 className={
                                   "plasmic_default__all plasmic_default__span"
                                 }
-                                style={{ fontWeight: 700 }}
+                                style={{ fontWeight: 700, color: "#000000" }}
                               >
                                 {"deployments"}
                               </span>
@@ -820,7 +883,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   <React.Fragment>{"The "}</React.Fragment>
                   <span
                     className={"plasmic_default__all plasmic_default__span"}
-                    style={{ fontWeight: 700 }}
+                    style={{ fontWeight: 700, color: "#000000" }}
                   >
                     {"Fathym Global Edge Network"}
                   </span>
@@ -908,7 +971,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       </React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700 }}
+                        style={{ fontWeight: 700, color: "#000000" }}
                       >
                         {"shared infrastructure environment"}
                       </span>
@@ -935,7 +998,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       </React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700 }}
+                        style={{ fontWeight: 700, color: "#000000" }}
                       >
                         {"private or managed clouds."}
                       </span>
@@ -1020,7 +1083,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 </React.Fragment>
                 <span
                   className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#885BCB" }}
+                  style={{ color: "#5856D6" }}
                 >
                   {"minus the complexity"}
                 </span>
