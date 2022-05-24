@@ -72,6 +72,15 @@ export interface DefaultBannerProps {
   className?: string;
 }
 
+export const defaultBanner__Args: Partial<PlasmicBanner__ArgsType> = {
+  image: {
+    src: "/plasmic/new_fathym_com/images/image15.png",
+    fullWidth: 1384,
+    fullHeight: 1023,
+    aspectRatio: undefined
+  }
+};
+
 function PlasmicBanner__RenderFunc(props: {
   variants: PlasmicBanner__VariantsArgs;
   args: PlasmicBanner__ArgsType;
@@ -79,8 +88,9 @@ function PlasmicBanner__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultBanner__Args, props.args);
+  const $props = args;
 
   return (
     <div
@@ -114,16 +124,7 @@ function PlasmicBanner__RenderFunc(props: {
           displayMinHeight={"0" as const}
           displayMinWidth={"0" as const}
           displayWidth={"100%" as const}
-          src={
-            args.image !== undefined
-              ? args.image
-              : {
-                  src: "/plasmic/new_fathym_com/images/image15.png",
-                  fullWidth: 1384,
-                  fullHeight: 1023,
-                  aspectRatio: undefined
-                }
-          }
+          src={args.image}
         />
 
         {true ? (

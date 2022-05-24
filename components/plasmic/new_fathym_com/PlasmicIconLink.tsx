@@ -64,6 +64,8 @@ export interface DefaultIconLinkProps {
   className?: string;
 }
 
+export const defaultIconLink__Args: Partial<PlasmicIconLink__ArgsType> = {};
+
 function PlasmicIconLink__RenderFunc(props: {
   variants: PlasmicIconLink__VariantsArgs;
   args: PlasmicIconLink__ArgsType;
@@ -71,8 +73,9 @@ function PlasmicIconLink__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultIconLink__Args, props.args);
+  const $props = args;
 
   return (
     <div

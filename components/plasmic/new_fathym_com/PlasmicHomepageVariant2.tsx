@@ -74,6 +74,9 @@ export type PlasmicHomepageVariant2__OverridesType = {
 
 export interface DefaultHomepageVariant2Props {}
 
+export const defaultHomepageVariant2__Args: Partial<PlasmicHomepageVariant2__ArgsType> =
+  {};
+
 function PlasmicHomepageVariant2__RenderFunc(props: {
   variants: PlasmicHomepageVariant2__VariantsArgs;
   args: PlasmicHomepageVariant2__ArgsType;
@@ -81,8 +84,9 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultHomepageVariant2__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -1047,7 +1051,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 </span>
                 <React.Fragment>
                   {
-                    "\n\nControl who accesses your apps through out of the box authentication and identity management filters. "
+                    "\n\nControl who accesses your apps through out-of-the-box authentication and identity management filters. "
                   }
                 </React.Fragment>
               </React.Fragment>

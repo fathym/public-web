@@ -82,6 +82,9 @@ export type PlasmicLandingPagesDocusaurus__OverridesType = {
 
 export interface DefaultLandingPagesDocusaurusProps {}
 
+export const defaultLandingPagesDocusaurus__Args: Partial<PlasmicLandingPagesDocusaurus__ArgsType> =
+  {};
+
 function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
   variants: PlasmicLandingPagesDocusaurus__VariantsArgs;
   args: PlasmicLandingPagesDocusaurus__ArgsType;
@@ -89,8 +92,13 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign(
+    {},
+    defaultLandingPagesDocusaurus__Args,
+    props.args
+  );
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

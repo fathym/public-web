@@ -120,6 +120,8 @@ export interface DefaultButtonProps extends pp.BaseButtonProps {
   extraSmallShadow?: SingleBooleanChoiceArg<"extraSmallShadow">;
 }
 
+export const defaultButton__Args: Partial<PlasmicButton__ArgsType> = {};
+
 function PlasmicButton__RenderFunc(props: {
   variants: PlasmicButton__VariantsArgs;
   args: PlasmicButton__ArgsType;
@@ -127,8 +129,9 @@ function PlasmicButton__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultButton__Args, props.args);
+  const $props = args;
 
   return (
     <p.Stack

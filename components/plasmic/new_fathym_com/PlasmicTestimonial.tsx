@@ -75,6 +75,15 @@ export interface DefaultTestimonialProps {
   className?: string;
 }
 
+export const defaultTestimonial__Args: Partial<PlasmicTestimonial__ArgsType> = {
+  image: {
+    src: "/plasmic/new_fathym_com/images/tracy.png",
+    fullWidth: 500,
+    fullHeight: 500,
+    aspectRatio: undefined
+  }
+};
+
 function PlasmicTestimonial__RenderFunc(props: {
   variants: PlasmicTestimonial__VariantsArgs;
   args: PlasmicTestimonial__ArgsType;
@@ -82,8 +91,9 @@ function PlasmicTestimonial__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultTestimonial__Args, props.args);
+  const $props = args;
 
   return (
     <p.Stack
@@ -132,16 +142,7 @@ function PlasmicTestimonial__RenderFunc(props: {
           displayMinHeight={"0" as const}
           displayMinWidth={"0" as const}
           displayWidth={"64px" as const}
-          src={
-            args.image !== undefined
-              ? args.image
-              : {
-                  src: "/plasmic/new_fathym_com/images/tracy.png",
-                  fullWidth: 500,
-                  fullHeight: 500,
-                  aspectRatio: undefined
-                }
-          }
+          src={args.image}
         />
 
         <p.Stack

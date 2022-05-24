@@ -77,6 +77,8 @@ export type PlasmicPricing__OverridesType = {
 
 export interface DefaultPricingProps {}
 
+export const defaultPricing__Args: Partial<PlasmicPricing__ArgsType> = {};
+
 function PlasmicPricing__RenderFunc(props: {
   variants: PlasmicPricing__VariantsArgs;
   args: PlasmicPricing__ArgsType;
@@ -84,8 +86,9 @@ function PlasmicPricing__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultPricing__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

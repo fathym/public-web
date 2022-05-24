@@ -73,6 +73,8 @@ export type PlasmicHomepage__OverridesType = {
 
 export interface DefaultHomepageProps {}
 
+export const defaultHomepage__Args: Partial<PlasmicHomepage__ArgsType> = {};
+
 function PlasmicHomepage__RenderFunc(props: {
   variants: PlasmicHomepage__VariantsArgs;
   args: PlasmicHomepage__ArgsType;
@@ -80,8 +82,9 @@ function PlasmicHomepage__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultHomepage__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

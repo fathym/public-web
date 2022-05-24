@@ -103,6 +103,8 @@ export interface DefaultButton2Props extends pp.BaseButtonProps {
   >;
 }
 
+export const defaultButton2__Args: Partial<PlasmicButton2__ArgsType> = {};
+
 function PlasmicButton2__RenderFunc(props: {
   variants: PlasmicButton2__VariantsArgs;
   args: PlasmicButton2__ArgsType;
@@ -110,8 +112,9 @@ function PlasmicButton2__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultButton2__Args, props.args);
+  const $props = args;
 
   const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
     useTrigger("useFocusVisibleWithin", {

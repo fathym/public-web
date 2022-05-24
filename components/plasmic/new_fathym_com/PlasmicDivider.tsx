@@ -59,6 +59,8 @@ export interface DefaultDividerProps {
   className?: string;
 }
 
+export const defaultDivider__Args: Partial<PlasmicDivider__ArgsType> = {};
+
 function PlasmicDivider__RenderFunc(props: {
   variants: PlasmicDivider__VariantsArgs;
   args: PlasmicDivider__ArgsType;
@@ -66,8 +68,9 @@ function PlasmicDivider__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultDivider__Args, props.args);
+  const $props = args;
 
   return (
     <div

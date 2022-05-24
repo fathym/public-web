@@ -72,6 +72,9 @@ export type PlasmicEnterpriseAgreement__OverridesType = {
 
 export interface DefaultEnterpriseAgreementProps {}
 
+export const defaultEnterpriseAgreement__Args: Partial<PlasmicEnterpriseAgreement__ArgsType> =
+  {};
+
 function PlasmicEnterpriseAgreement__RenderFunc(props: {
   variants: PlasmicEnterpriseAgreement__VariantsArgs;
   args: PlasmicEnterpriseAgreement__ArgsType;
@@ -79,8 +82,9 @@ function PlasmicEnterpriseAgreement__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultEnterpriseAgreement__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

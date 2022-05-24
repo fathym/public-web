@@ -75,6 +75,9 @@ export interface DefaultFathymFooterProps {
   className?: string;
 }
 
+export const defaultFathymFooter__Args: Partial<PlasmicFathymFooter__ArgsType> =
+  {};
+
 function PlasmicFathymFooter__RenderFunc(props: {
   variants: PlasmicFathymFooter__VariantsArgs;
   args: PlasmicFathymFooter__ArgsType;
@@ -82,8 +85,9 @@ function PlasmicFathymFooter__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultFathymFooter__Args, props.args);
+  const $props = args;
 
   return (
     <div

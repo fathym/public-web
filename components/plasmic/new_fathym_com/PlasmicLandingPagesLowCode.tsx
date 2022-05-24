@@ -83,6 +83,9 @@ export type PlasmicLandingPagesLowCode__OverridesType = {
 
 export interface DefaultLandingPagesLowCodeProps {}
 
+export const defaultLandingPagesLowCode__Args: Partial<PlasmicLandingPagesLowCode__ArgsType> =
+  {};
+
 function PlasmicLandingPagesLowCode__RenderFunc(props: {
   variants: PlasmicLandingPagesLowCode__VariantsArgs;
   args: PlasmicLandingPagesLowCode__ArgsType;
@@ -90,8 +93,9 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultLandingPagesLowCode__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
