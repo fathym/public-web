@@ -72,6 +72,9 @@ export type PlasmicTermsOfServices__OverridesType = {
 
 export interface DefaultTermsOfServicesProps {}
 
+export const defaultTermsOfServices__Args: Partial<PlasmicTermsOfServices__ArgsType> =
+  {};
+
 function PlasmicTermsOfServices__RenderFunc(props: {
   variants: PlasmicTermsOfServices__VariantsArgs;
   args: PlasmicTermsOfServices__ArgsType;
@@ -79,8 +82,9 @@ function PlasmicTermsOfServices__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultTermsOfServices__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

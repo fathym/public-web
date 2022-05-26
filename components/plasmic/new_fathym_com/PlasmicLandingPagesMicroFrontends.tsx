@@ -81,6 +81,9 @@ export type PlasmicLandingPagesMicroFrontends__OverridesType = {
 
 export interface DefaultLandingPagesMicroFrontendsProps {}
 
+export const defaultLandingPagesMicroFrontends__Args: Partial<PlasmicLandingPagesMicroFrontends__ArgsType> =
+  {};
+
 function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
   variants: PlasmicLandingPagesMicroFrontends__VariantsArgs;
   args: PlasmicLandingPagesMicroFrontends__ArgsType;
@@ -88,8 +91,13 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign(
+    {},
+    defaultLandingPagesMicroFrontends__Args,
+    props.args
+  );
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

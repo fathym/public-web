@@ -84,6 +84,9 @@ export type PlasmicLandingPagesGatsby__OverridesType = {
 
 export interface DefaultLandingPagesGatsbyProps {}
 
+export const defaultLandingPagesGatsby__Args: Partial<PlasmicLandingPagesGatsby__ArgsType> =
+  {};
+
 function PlasmicLandingPagesGatsby__RenderFunc(props: {
   variants: PlasmicLandingPagesGatsby__VariantsArgs;
   args: PlasmicLandingPagesGatsby__ArgsType;
@@ -91,8 +94,9 @@ function PlasmicLandingPagesGatsby__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultLandingPagesGatsby__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

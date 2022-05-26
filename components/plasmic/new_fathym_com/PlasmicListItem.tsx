@@ -82,6 +82,8 @@ export interface DefaultListItemProps {
   className?: string;
 }
 
+export const defaultListItem__Args: Partial<PlasmicListItem__ArgsType> = {};
+
 function PlasmicListItem__RenderFunc(props: {
   variants: PlasmicListItem__VariantsArgs;
   args: PlasmicListItem__ArgsType;
@@ -89,8 +91,9 @@ function PlasmicListItem__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultListItem__Args, props.args);
+  const $props = args;
 
   return (
     <p.Stack

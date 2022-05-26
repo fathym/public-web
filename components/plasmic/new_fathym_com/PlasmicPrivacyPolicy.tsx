@@ -71,6 +71,9 @@ export type PlasmicPrivacyPolicy__OverridesType = {
 
 export interface DefaultPrivacyPolicyProps {}
 
+export const defaultPrivacyPolicy__Args: Partial<PlasmicPrivacyPolicy__ArgsType> =
+  {};
+
 function PlasmicPrivacyPolicy__RenderFunc(props: {
   variants: PlasmicPrivacyPolicy__VariantsArgs;
   args: PlasmicPrivacyPolicy__ArgsType;
@@ -78,8 +81,9 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultPrivacyPolicy__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

@@ -94,6 +94,8 @@ export interface DefaultPriceCardProps {
   className?: string;
 }
 
+export const defaultPriceCard__Args: Partial<PlasmicPriceCard__ArgsType> = {};
+
 function PlasmicPriceCard__RenderFunc(props: {
   variants: PlasmicPriceCard__VariantsArgs;
   args: PlasmicPriceCard__ArgsType;
@@ -101,8 +103,9 @@ function PlasmicPriceCard__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultPriceCard__Args, props.args);
+  const $props = args;
 
   return (
     <div

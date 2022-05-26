@@ -59,6 +59,9 @@ export interface DefaultHamburgerMenuProps {
   className?: string;
 }
 
+export const defaultHamburgerMenu__Args: Partial<PlasmicHamburgerMenu__ArgsType> =
+  {};
+
 function PlasmicHamburgerMenu__RenderFunc(props: {
   variants: PlasmicHamburgerMenu__VariantsArgs;
   args: PlasmicHamburgerMenu__ArgsType;
@@ -66,8 +69,9 @@ function PlasmicHamburgerMenu__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultHamburgerMenu__Args, props.args);
+  const $props = args;
 
   return (
     <div

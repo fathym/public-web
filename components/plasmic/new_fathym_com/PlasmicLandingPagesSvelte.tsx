@@ -84,6 +84,9 @@ export type PlasmicLandingPagesSvelte__OverridesType = {
 
 export interface DefaultLandingPagesSvelteProps {}
 
+export const defaultLandingPagesSvelte__Args: Partial<PlasmicLandingPagesSvelte__ArgsType> =
+  {};
+
 function PlasmicLandingPagesSvelte__RenderFunc(props: {
   variants: PlasmicLandingPagesSvelte__VariantsArgs;
   args: PlasmicLandingPagesSvelte__ArgsType;
@@ -91,8 +94,9 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultLandingPagesSvelte__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

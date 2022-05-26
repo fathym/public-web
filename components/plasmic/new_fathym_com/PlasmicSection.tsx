@@ -76,6 +76,8 @@ export interface DefaultSectionProps {
   className?: string;
 }
 
+export const defaultSection__Args: Partial<PlasmicSection__ArgsType> = {};
+
 function PlasmicSection__RenderFunc(props: {
   variants: PlasmicSection__VariantsArgs;
   args: PlasmicSection__ArgsType;
@@ -83,8 +85,9 @@ function PlasmicSection__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultSection__Args, props.args);
+  const $props = args;
 
   return (
     <div

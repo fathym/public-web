@@ -61,6 +61,9 @@ export interface DefaultHabistackFooterProps {
   className?: string;
 }
 
+export const defaultHabistackFooter__Args: Partial<PlasmicHabistackFooter__ArgsType> =
+  {};
+
 function PlasmicHabistackFooter__RenderFunc(props: {
   variants: PlasmicHabistackFooter__VariantsArgs;
   args: PlasmicHabistackFooter__ArgsType;
@@ -68,8 +71,9 @@ function PlasmicHabistackFooter__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultHabistackFooter__Args, props.args);
+  const $props = args;
 
   return (
     <Footer

@@ -68,6 +68,9 @@ export interface DefaultSignUpPromptProps {
   className?: string;
 }
 
+export const defaultSignUpPrompt__Args: Partial<PlasmicSignUpPrompt__ArgsType> =
+  {};
+
 function PlasmicSignUpPrompt__RenderFunc(props: {
   variants: PlasmicSignUpPrompt__VariantsArgs;
   args: PlasmicSignUpPrompt__ArgsType;
@@ -75,8 +78,9 @@ function PlasmicSignUpPrompt__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultSignUpPrompt__Args, props.args);
+  const $props = args;
 
   return (
     <p.Stack

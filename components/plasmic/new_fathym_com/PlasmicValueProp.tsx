@@ -97,6 +97,8 @@ export interface DefaultValuePropProps {
   className?: string;
 }
 
+export const defaultValueProp__Args: Partial<PlasmicValueProp__ArgsType> = {};
+
 function PlasmicValueProp__RenderFunc(props: {
   variants: PlasmicValueProp__VariantsArgs;
   args: PlasmicValueProp__ArgsType;
@@ -104,8 +106,9 @@ function PlasmicValueProp__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultValueProp__Args, props.args);
+  const $props = args;
 
   return (
     <p.Stack

@@ -79,6 +79,16 @@ export interface DefaultCallToActionSectionProps {
   className?: string;
 }
 
+export const defaultCallToActionSection__Args: Partial<PlasmicCallToActionSection__ArgsType> =
+  {
+    image: {
+      src: "/plasmic/new_fathym_com/images/meeting.jpeg",
+      fullWidth: 2916,
+      fullHeight: 1787,
+      aspectRatio: undefined
+    }
+  };
+
 function PlasmicCallToActionSection__RenderFunc(props: {
   variants: PlasmicCallToActionSection__VariantsArgs;
   args: PlasmicCallToActionSection__ArgsType;
@@ -86,8 +96,9 @@ function PlasmicCallToActionSection__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultCallToActionSection__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -128,16 +139,7 @@ function PlasmicCallToActionSection__RenderFunc(props: {
             displayMinHeight={"0" as const}
             displayMinWidth={"0" as const}
             displayWidth={"auto" as const}
-            src={
-              args.image !== undefined
-                ? args.image
-                : {
-                    src: "/plasmic/new_fathym_com/images/meeting.jpeg",
-                    fullWidth: 2916,
-                    fullHeight: 1787,
-                    aspectRatio: undefined
-                  }
-            }
+            src={args.image}
           />
 
           {true ? (

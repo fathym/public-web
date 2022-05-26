@@ -84,6 +84,9 @@ export type PlasmicLandingPagesReact__OverridesType = {
 
 export interface DefaultLandingPagesReactProps {}
 
+export const defaultLandingPagesReact__Args: Partial<PlasmicLandingPagesReact__ArgsType> =
+  {};
+
 function PlasmicLandingPagesReact__RenderFunc(props: {
   variants: PlasmicLandingPagesReact__VariantsArgs;
   args: PlasmicLandingPagesReact__ArgsType;
@@ -91,8 +94,9 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultLandingPagesReact__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

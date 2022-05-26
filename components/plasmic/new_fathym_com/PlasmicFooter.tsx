@@ -89,6 +89,8 @@ export interface DefaultFooterProps {
   className?: string;
 }
 
+export const defaultFooter__Args: Partial<PlasmicFooter__ArgsType> = {};
+
 function PlasmicFooter__RenderFunc(props: {
   variants: PlasmicFooter__VariantsArgs;
   args: PlasmicFooter__ArgsType;
@@ -96,8 +98,9 @@ function PlasmicFooter__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultFooter__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

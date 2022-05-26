@@ -78,6 +78,8 @@ export interface DefaultNavbarProps {
   className?: string;
 }
 
+export const defaultNavbar__Args: Partial<PlasmicNavbar__ArgsType> = {};
+
 function PlasmicNavbar__RenderFunc(props: {
   variants: PlasmicNavbar__VariantsArgs;
   args: PlasmicNavbar__ArgsType;
@@ -85,8 +87,9 @@ function PlasmicNavbar__RenderFunc(props: {
 
   forNode?: string;
 }) {
-  const { variants, args, overrides, forNode } = props;
-  const $props = props.args;
+  const { variants, overrides, forNode } = props;
+  const args = Object.assign({}, defaultNavbar__Args, props.args);
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -145,7 +148,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 data-plasmic-override={overrides.docs}
                 className={classNames(projectcss.all, projectcss.a, sty.docs)}
                 component={Link}
-                href={"/docs" as const}
+                href={"https://www.fathym.com/docs/" as const}
                 platform={"nextjs"}
               >
                 <div
@@ -164,7 +167,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 data-plasmic-override={overrides.blog}
                 className={classNames(projectcss.all, projectcss.a, sty.blog)}
                 component={Link}
-                href={"/blog/" as const}
+                href={"https://www.fathym.com/blog/" as const}
                 platform={"nextjs"}
               >
                 <div
@@ -187,7 +190,7 @@ function PlasmicNavbar__RenderFunc(props: {
                   sty.pricing
                 )}
                 component={Link}
-                href={"/pricing" as const}
+                href={"https://www.fathym.com/pricing/" as const}
                 platform={"nextjs"}
               >
                 <div
