@@ -165,7 +165,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                   sty.text__uIBjF
                 )}
               >
-                {"Fathym Framework"}
+                {"Fathym Platform"}
               </div>
             </p.PlasmicLink>
 
