@@ -66,6 +66,7 @@ export type PlasmicHomepageVariant2__OverridesType = {
   h1?: p.Flex<"h1">;
   svg?: p.Flex<"svg">;
   learnMore?: p.Flex<"a"> & Partial<LinkProps>;
+  link?: p.Flex<"a"> & Partial<LinkProps>;
   ol?: p.Flex<"ol">;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
@@ -230,9 +231,29 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                   sty.h2___4O9Ov
                                 )}
                               >
-                                {
-                                  "Frontend developers use Fathym to host, manage and deploy Jamstack sites and web applications with the flexibility and speed the modern web demands.\n\n"
-                                }
+                                <React.Fragment>
+                                  <React.Fragment>
+                                    {
+                                      "Developers use Fathym to host, manage and deploy future-proof web projects and applications – "
+                                    }
+                                  </React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#5856D6"
+                                    }}
+                                  >
+                                    {"powered by Azure"}
+                                  </span>
+                                  <React.Fragment>
+                                    {
+                                      " – with the flexibility and speed the modern web demands.\n\n"
+                                    }
+                                  </React.Fragment>
+                                </React.Fragment>
                               </h2>
                               <React.Fragment>{""}</React.Fragment>
                             </React.Fragment>
@@ -395,7 +416,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 <React.Fragment>
                   <React.Fragment>
                     {
-                      " \n\nFathym automates CI/CD builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks and Static Site Generators you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
+                      " \n\nFathym automates CI/CD builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks, Static Site Generators or no code builders you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
                     }
                   </React.Fragment>
                   <span
@@ -452,9 +473,37 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       sty.text__aK0D
                     )}
                   >
-                    {
-                      "Getting started is as simple as connecting your GitHub repository. \n\nSelect an open-source recipe from your favorite frameworks and Static Site Builders to see Fathym in action or bring in your own code."
-                    }
+                    <React.Fragment>
+                      <React.Fragment>
+                        {
+                          "Getting started is as simple as connecting your GitHub repository. \n\n"
+                        }
+                      </React.Fragment>
+                      <p.PlasmicLink
+                        data-plasmic-name={"link"}
+                        data-plasmic-override={overrides.link}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          projectcss.plasmic_default__inline,
+                          sty.link
+                        )}
+                        component={Link}
+                        href={
+                          "https://www.fathym.com/dashboard/create-project" as const
+                        }
+                        platform={"nextjs"}
+                        target={"_blank" as const}
+                      >
+                        {"Select an open-source recipe"}
+                      </p.PlasmicLink>
+                      <React.Fragment>
+                        {
+                          " from your favorite frameworks or static site generators see Fathym in action or bring in your own code."
+                        }
+                      </React.Fragment>
+                    </React.Fragment>
                   </div>
 
                   <div
@@ -821,7 +870,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     <React.Fragment>
                       <React.Fragment>
                         {
-                          "Build with the freedom to use different JavaScript frameworks or Static Site Generators on the one site. \n\n"
+                          "Build with the freedom to use different JavaScript frameworks, Static Site Generators or even no code builders on the one site. \n\n"
                         }
                       </React.Fragment>
                       <span
@@ -915,7 +964,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     </span>
                     <React.Fragment>
                       {
-                        " leverages the Azure content delivery network to deliver your content and sites to the global points closest to your users. \n\nTake advantage of independent builds and deployments so you can work concurrently on your web project.\n\nUpdate to any version of your apps with version control, and easily rollback when things go awry without impacting your production site. \n\n"
+                        " leverages the Azure CDN to deliver your content and sites to the global points closest to your users. \n\nTake advantage of "
+                      }
+                    </React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#5856D6", fontWeight: 700 }}
+                    >
+                      {"independent builds and deployments"}
+                    </span>
+                    <React.Fragment>
+                      {
+                        " so you can work concurrently on your web project.\n\nUpdate to any version of your apps with version control, and easily rollback when things go awry without impacting your production site. \n\n"
                       }
                     </React.Fragment>
                   </React.Fragment>
@@ -1141,13 +1201,17 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               displayHeight={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("274px" as const)
-                  : ("508px" as const)
+                  : ("527px" as const)
               }
               displayMaxHeight={"none" as const}
               displayMaxWidth={"100%" as const}
               displayMinHeight={"0" as const}
               displayMinWidth={"0" as const}
-              displayWidth={"750px" as const}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? ("407px" as const)
+                  : ("750px" as const)
+              }
               loading={"lazy" as const}
               src={{
                 src: "/plasmic/new_fathym_com/images/anotherSocialFeedShotpng.png",
@@ -1266,7 +1330,11 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               displayMaxWidth={"100%" as const}
               displayMinHeight={"0" as const}
               displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? ("439px" as const)
+                  : ("auto" as const)
+              }
               loading={"lazy" as const}
               src={{
                 src: "/plasmic/new_fathym_com/images/microsoftTeamsImage4Png.png",
@@ -1314,9 +1382,22 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     sty.text__c7SrJ
                   )}
                 >
-                  {
-                    "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and DevOps automation, saving time and money. Plus, the freedom to use multiple frameworks and Static Site Generators on the one project!\n\nDiscover new ways to maximize resources and knowledge from your team with your code and low code and no code tools. Harness solutions from the open source universe or developed by your team."
-                  }
+                  <React.Fragment>
+                    <React.Fragment>
+                      {
+                        "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and DevOps automation, saving you time and money. \n\nPlus, the freedom to use multiple frameworks, static site generators or no code builders on the one project!\n\n"
+                      }
+                    </React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ fontWeight: 700 }}
+                    >
+                      {
+                        "Take advantage of Fathym's streamlined PaaS developer experience while future proofing your tech stack in the knowledge that you can scale to your own automated Azure cloud when ready."
+                      }
+                    </span>
+                    <React.Fragment>{"\n"}</React.Fragment>
+                  </React.Fragment>
                 </div>
               </p.Stack>
 
@@ -1352,6 +1433,7 @@ const PlasmicDescendants = {
     "h1",
     "svg",
     "learnMore",
+    "link",
     "ol",
     "section",
     "foreground3",
@@ -1361,6 +1443,7 @@ const PlasmicDescendants = {
   h1: ["h1"],
   svg: ["svg"],
   learnMore: ["learnMore"],
+  link: ["link"],
   ol: ["ol"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
@@ -1375,6 +1458,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   svg: "svg";
   learnMore: "a";
+  link: "a";
   ol: "ol";
   section: "section";
   foreground3: "div";
@@ -1442,6 +1526,7 @@ export const PlasmicHomepageVariant2 = Object.assign(
     h1: makeNodeComponent("h1"),
     svg: makeNodeComponent("svg"),
     learnMore: makeNodeComponent("learnMore"),
+    link: makeNodeComponent("link"),
     ol: makeNodeComponent("ol"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
