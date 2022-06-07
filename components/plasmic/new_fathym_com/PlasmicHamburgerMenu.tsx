@@ -72,6 +72,7 @@ function PlasmicHamburgerMenu__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultHamburgerMenu__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <div

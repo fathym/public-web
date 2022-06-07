@@ -99,6 +99,7 @@ function PlasmicCallToActionSection__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultCallToActionSection__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()

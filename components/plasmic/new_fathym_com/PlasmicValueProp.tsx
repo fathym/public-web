@@ -109,6 +109,7 @@ function PlasmicValueProp__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultValueProp__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <p.Stack

@@ -91,6 +91,7 @@ function PlasmicBanner__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultBanner__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <div

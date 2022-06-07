@@ -81,6 +81,7 @@ function PlasmicSignUpPrompt__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultSignUpPrompt__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <p.Stack

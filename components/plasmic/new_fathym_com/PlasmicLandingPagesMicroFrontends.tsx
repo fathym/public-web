@@ -98,6 +98,7 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
     props.args
   );
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
