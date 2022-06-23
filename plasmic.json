@@ -526,6 +526,110 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicHomepageVariant3Test.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "yxCymkLmDta",
+          "name": "HomepageVariant4Test",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicHomepageVariant4Test.tsx",
+          "importSpec": {
+            "modulePath": "../pages/-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicHomepageVariant4Test.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "zA550Sjzi3Z",
+          "name": "LandingPagesAngular2Test",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesAngular2Test.tsx",
+          "importSpec": {
+            "modulePath": "../pages/angular-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesAngular2Test.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "wekS4hHH5lD",
+          "name": "LandingPagesDocusaurus2Test",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesDocusaurus2Test.tsx",
+          "importSpec": {
+            "modulePath": "../pages/docusaurus-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesDocusaurus2Test.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "l_3anF0QEEH",
+          "name": "LandingPagesGatsby2Test",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesGatsby2Test.tsx",
+          "importSpec": {
+            "modulePath": "../pages/gatsby-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesGatsby2Test.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "D16KkgQ21Vy",
+          "name": "LandingPagesMicroFrontends2Test",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesMicroFrontends2Test.tsx",
+          "importSpec": {
+            "modulePath": "../pages/micro-frontends-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesMicroFrontends2Test.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "W4t1u5CMWHJ",
+          "name": "LandingPagesReact2",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesReact2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/react-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesReact2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "OdRS0mW2EXa",
+          "name": "LandingPagesSvelte2",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesSvelte2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/svelte-deployment-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesSvelte2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "vqYcrTrm6F4",
+          "name": "LandingPagesVue2",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesVue2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/vue-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesVue2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -1250,10 +1354,155 @@
           "id": "9sDYZcYQP",
           "name": "Micro Frontend wFathym 2.gif",
           "filePath": "../public/plasmic/new_fathym_com/images/microFrontendWFathym2Gif.gif"
+        },
+        {
+          "id": "xRGOWa4aQ",
+          "name": "Dashboard Image 1.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/dashboardImage1Gif.gif"
+        },
+        {
+          "id": "H3sNsw8kp",
+          "name": "Getting Started Image.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/gettingStartedImagegif.gif"
+        },
+        {
+          "id": "vNkG0kNfs",
+          "name": "MFE Tree.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/mfeTreegif.gif"
+        },
+        {
+          "id": "sKjWMpGOs",
+          "name": "Routes Image.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/routesImagegif.gif"
+        },
+        {
+          "id": "2T9g9o-ds",
+          "name": "Processor Details.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/processorDetailsgif.gif"
+        },
+        {
+          "id": "NqH-dmoW7",
+          "name": "Dashboard Full.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/dashboardFullgif.gif"
+        },
+        {
+          "id": "nwh4l6YPM",
+          "name": "Gears.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/gearsgif.gif"
+        },
+        {
+          "id": "LSTU1qRUa",
+          "name": "Blue Code.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/blueCodegif.gif"
+        },
+        {
+          "id": "tlE3AQs7i",
+          "name": "Deploy Cycle.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/deployCyclegif.gif"
+        },
+        {
+          "id": "VnsK1512R",
+          "name": "White Label.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/whiteLabelgif.gif"
+        },
+        {
+          "id": "xUJTKeVA4",
+          "name": "Your Code Image.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/yourCodeImagegif.gif"
+        },
+        {
+          "id": "uaGxeP1t5",
+          "name": "No Code Image.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/noCodeImagegif.gif"
+        },
+        {
+          "id": "o1mdtESAK",
+          "name": "Micro Frontend wFathym.gif 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/microFrontendWFathymgif2.gif"
+        },
+        {
+          "id": "BKQeJKbpQ",
+          "name": "MFE Tree.gif 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/mfeTreegif2.gif"
+        },
+        {
+          "id": "m1MVvKEbN",
+          "name": "Low CodeModifier.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/lowCodeModifiergif.gif"
+        },
+        {
+          "id": "caI8eOuOz",
+          "name": "Low Code Image.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/lowCodeImagegif.gif"
+        },
+        {
+          "id": "3iOeMRyeV",
+          "name": "Deploy Cycle.gif 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/deployCyclegif2.gif"
+        },
+        {
+          "id": "V-3TIGcUo",
+          "name": "White Label 10s.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/whiteLabel10Sgif.gif"
+        },
+        {
+          "id": "ipOv07SZ-",
+          "name": "Blue Code 10s.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/blueCode10Sgif.gif"
+        },
+        {
+          "id": "MZj-GldWL",
+          "name": "Gears 10s.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/gears10Sgif.gif"
+        },
+        {
+          "id": "xbehjobFr",
+          "name": "frameworks stack.gif 2",
+          "filePath": "../public/plasmic/new_fathym_com/images/frameworksStackgif2.gif"
+        },
+        {
+          "id": "yBqdVM-Cp",
+          "name": "MFE Tree 10s.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/mfeTree10Sgif.gif"
+        },
+        {
+          "id": "m6nKh7jko",
+          "name": "Dashboard Image 1.svg",
+          "filePath": "../public/plasmic/new_fathym_com/images/dashboardImage1Svg.svg"
+        },
+        {
+          "id": "DXU3jV5eN",
+          "name": "Getting Started Image.svg",
+          "filePath": "../public/plasmic/new_fathym_com/images/gettingStartedImagesvg.svg"
+        },
+        {
+          "id": "w6ZLXO_0Q",
+          "name": "Dashboard Full.svg",
+          "filePath": "../public/plasmic/new_fathym_com/images/dashboardFullsvg.svg"
+        },
+        {
+          "id": "J8EnJMB5a",
+          "name": "MFE Tree House.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/mfeTreeHousegif.gif"
+        },
+        {
+          "id": "zYZms_Vkf",
+          "name": "Deploy Cycle.svg",
+          "filePath": "../public/plasmic/new_fathym_com/images/deployCyclesvg.svg"
+        },
+        {
+          "id": "teAxOFG8x",
+          "name": "Frameworks Stack.svg",
+          "filePath": "../public/plasmic/new_fathym_com/images/frameworksStacksvg.svg"
+        },
+        {
+          "id": "5e7hfyUAw",
+          "name": "Micro Frontend wFathym blue.gif",
+          "filePath": "../public/plasmic/new_fathym_com/images/microFrontendWFathymBluegif.gif"
         }
       ],
       "indirect": false,
-      "globalContextsFilePath": "",
+      "globalContextsFilePath": "plasmic/new_fathym_com/PlasmicGlobalContextsProvider.tsx",
       "codeComponents": []
     },
     {
@@ -1789,6 +2038,30 @@
         }
       ],
       "jsBundleThemes": []
+    },
+    {
+      "projectId": "84wxoth5npGrp6RRXPL88z",
+      "projectApiToken": "hOzXksPB8gkTrKnfJeV9VDS8m8dnIXQn1xxDQZ5MHxv9orQY6JNgwmk6aDMZPLkocV2KtD9gNJXv5JwIbbzIQ",
+      "projectName": "react-scroll-parallax-global",
+      "version": "4.0.1",
+      "cssFilePath": "plasmic/react_scroll_parallax_global/plasmic_react_scroll_parallax_global.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/react_scroll_parallax_global/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
+        {
+          "id": "bozP4lLlAZ",
+          "name": "ParallaxWrapper",
+          "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
+        },
+        {
+          "id": "L6MfauX2Cw",
+          "name": "ParallaxProviderWrapper",
+          "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
+        }
+      ]
     }
   ],
   "globalVariants": {
@@ -1817,6 +2090,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.180",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.180/dist/plasmic.schema.json"
+  "cliVersion": "0.1.182",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.182/dist/plasmic.schema.json"
 }

@@ -69,7 +69,6 @@ export type PlasmicHomepageVariant3Test__OverridesType = {
   learnMore?: p.Flex<"a"> & Partial<LinkProps>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
   ol?: p.Flex<"ol">;
-  reveal?: p.Flex<typeof Reveal>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
   fathymFooter?: p.Flex<typeof FathymFooter>;
@@ -155,34 +154,33 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
             className={classNames("__wab_instance", sty.navbar)}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__pWpqt)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__kkWb)}
-            >
+          <div className={classNames(projectcss.all, sty.columns__pWpqt)}>
+            <div className={classNames(projectcss.all, sty.column__k9KSv)}>
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__fGV)}
+                className={classNames(projectcss.all, sty.freeBox__kkWb)}
               >
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___9AKEm)}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__fGV)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.columns___266P9)}
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___9AKEm)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.column__xf487)}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(
+                        projectcss.all,
+                        sty.columns___266P9
+                      )}
                     >
-                      <p.Stack
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__bvKsF
+                          sty.column__xf487
                         )}
                       >
                         <p.Stack
@@ -190,127 +188,203 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                           hasGap={true}
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__cFsEl
+                            sty.freeBox__bvKsF
                           )}
                         >
-                          <h1
-                            data-plasmic-name={"h1"}
-                            data-plasmic-override={overrides.h1}
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.h1,
-                              projectcss.__wab_text,
-                              sty.h1
+                              sty.freeBox__cFsEl
                             )}
                           >
-                            <React.Fragment>
+                            <h1
+                              data-plasmic-name={"h1"}
+                              data-plasmic-override={overrides.h1}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.h1,
+                                projectcss.__wab_text,
+                                sty.h1
+                              )}
+                            >
                               <React.Fragment>
-                                {"Deliver stunning sites with the "}
-                              </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#5856D6" }}
-                              >
-                                {"utmost flexibility and speed."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </h1>
-
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__tDnC
-                            )}
-                          >
-                            <React.Fragment>
-                              <React.Fragment>{""}</React.Fragment>
-                              <h2
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.h2,
-                                  projectcss.__wab_text,
-                                  sty.h2___91SbE
-                                )}
-                              >
                                 <React.Fragment>
-                                  <React.Fragment>
-                                    {
-                                      "Developers use Fathym to host, manage and deploy future-proof web projects and applications – "
-                                    }
-                                  </React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      fontWeight: 700,
-                                      color: "#5856D6"
-                                    }}
-                                  >
-                                    {"powered by Azure"}
-                                  </span>
-                                  <React.Fragment>
-                                    {
-                                      " – with the flexibility and speed the modern web demands.\n\n"
-                                    }
-                                  </React.Fragment>
+                                  {"Deliver stunning sites with the "}
                                 </React.Fragment>
-                              </h2>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </div>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#5856D6" }}
+                                >
+                                  {"utmost flexibility and speed."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
+                              </React.Fragment>
+                            </h1>
 
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.columns__n2Fvz
-                            )}
-                          >
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.column__dCSdY
+                                projectcss.__wab_text,
+                                sty.text__tDnC
                               )}
                             >
-                              <Button
+                              <React.Fragment>
+                                <React.Fragment>{""}</React.Fragment>
+                                <h2
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.h2,
+                                    projectcss.__wab_text,
+                                    sty.h2___91SbE
+                                  )}
+                                >
+                                  <React.Fragment>
+                                    <React.Fragment>
+                                      {
+                                        "Developers use Fathym to host, manage and deploy future-proof web projects and applications – "
+                                      }
+                                    </React.Fragment>
+                                    <span
+                                      className={
+                                        "plasmic_default__all plasmic_default__span"
+                                      }
+                                      style={{
+                                        fontWeight: 700,
+                                        color: "#5856D6"
+                                      }}
+                                    >
+                                      {"powered by Azure"}
+                                    </span>
+                                    <React.Fragment>
+                                      {
+                                        " – with the flexibility and speed the modern web demands.\n\n"
+                                      }
+                                    </React.Fragment>
+                                  </React.Fragment>
+                                </h2>
+                                <React.Fragment>{""}</React.Fragment>
+                              </React.Fragment>
+                            </div>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.columns__n2Fvz
+                              )}
+                            >
+                              <div
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__lKlv
+                                  projectcss.all,
+                                  sty.column__dCSdY
                                 )}
-                                color={
-                                  hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? ("blue" as const)
-                                    : ("blue" as const)
-                                }
-                                endIcon={
-                                  <ChevronRightIcon
-                                    data-plasmic-name={"svg"}
-                                    data-plasmic-override={overrides.svg}
+                              >
+                                <Button
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.button__lKlv
+                                  )}
+                                  color={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? ("blue" as const)
+                                      : ("blue" as const)
+                                  }
+                                  endIcon={
+                                    <ChevronRightIcon
+                                      data-plasmic-name={"svg"}
+                                      data-plasmic-override={overrides.svg}
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.svg
+                                      )}
+                                      role={"img"}
+                                    />
+                                  }
+                                  link={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? ("/dashboard/create-project" as const)
+                                      : ("/dashboard" as const)
+                                  }
+                                  showEndIcon={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? true
+                                      : true
+                                  }
+                                >
+                                  <div
                                     className={classNames(
                                       projectcss.all,
-                                      sty.svg
+                                      projectcss.__wab_text,
+                                      sty.text__wy011
                                     )}
-                                    role={"img"}
-                                  />
-                                }
-                                link={
-                                  hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? ("/dashboard/create-project" as const)
-                                    : ("/dashboard" as const)
-                                }
-                                showEndIcon={
+                                  >
+                                    {"Get Started for Free"}
+                                  </div>
+                                </Button>
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.column__ddNe
+                                )}
+                              >
+                                <p.PlasmicLink
+                                  data-plasmic-name={"learnMore"}
+                                  data-plasmic-override={overrides.learnMore}
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.a,
+                                    sty.learnMore
+                                  )}
+                                  component={Link}
+                                  href={"/docs" as const}
+                                  platform={"nextjs"}
+                                  target={"_blank" as const}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text___0Faao
+                                    )}
+                                  >
+                                    {"Learn more >"}
+                                  </div>
+                                </p.PlasmicLink>
+                              </div>
+                            </div>
+
+                            {(
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? true
+                                : true
+                            ) ? (
+                              <Reveal
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.reveal__wyLv
+                                )}
+                                direction={"left" as const}
+                                effect={"slide" as const}
+                                triggerOnce={false}
+                              >
+                                {(
                                   hasVariant(
                                     globalVariants,
                                     "screen",
@@ -318,80 +392,65 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                   )
                                     ? true
                                     : true
-                                }
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__wy011
-                                  )}
-                                >
-                                  {"Get Started for Free"}
-                                </div>
-                              </Button>
-                            </div>
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.column__ddNe
-                              )}
-                            >
-                              <p.PlasmicLink
-                                data-plasmic-name={"learnMore"}
-                                data-plasmic-override={overrides.learnMore}
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.a,
-                                  sty.learnMore
-                                )}
-                                component={Link}
-                                href={"/docs" as const}
-                                platform={"nextjs"}
-                                target={"_blank" as const}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text___0Faao
-                                  )}
-                                >
-                                  {"Learn more >"}
-                                </div>
-                              </p.PlasmicLink>
-                            </div>
-                          </div>
+                                ) ? (
+                                  <p.PlasmicImg
+                                    alt={""}
+                                    className={classNames(sty.img__asb8S)}
+                                    displayHeight={"auto" as const}
+                                    displayMaxHeight={"none" as const}
+                                    displayMaxWidth={"100%" as const}
+                                    displayMinHeight={"0" as const}
+                                    displayMinWidth={"0" as const}
+                                    displayWidth={"auto" as const}
+                                    loading={"lazy" as const}
+                                    src={{
+                                      src: "/plasmic/new_fathym_com/images/dashboardImage1Gif.gif",
+                                      fullWidth: 1048,
+                                      fullHeight: 1110,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                ) : null}
+                              </Reveal>
+                            ) : null}
+                          </p.Stack>
                         </p.Stack>
-                      </p.Stack>
-                    </div>
-
-                    <div
-                      className={classNames(projectcss.all, sty.column___2ZB3J)}
-                    >
-                      <p.PlasmicImg
-                        alt={""}
-                        className={classNames(sty.img___06GTm)}
-                        displayHeight={"491px" as const}
-                        displayMaxHeight={"none" as const}
-                        displayMaxWidth={"100%" as const}
-                        displayMinHeight={"0" as const}
-                        displayMinWidth={"0" as const}
-                        displayWidth={"auto" as const}
-                        loading={"lazy" as const}
-                        src={{
-                          src: "/plasmic/new_fathym_com/images/socialFeedDashboardpng.png",
-                          fullWidth: 1400,
-                          fullHeight: 1486,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </div>
-                  </p.Stack>
-                </div>
+                      </div>
+                    </p.Stack>
+                  </div>
+                </p.Stack>
               </p.Stack>
-            </p.Stack>
+            </div>
+
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <div className={classNames(projectcss.all, sty.column__kp8IR)}>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__eMcWw)}
+                  direction={"right" as const}
+                  triggerOnce={false}
+                >
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__kaCyh)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/new_fathym_com/images/dashboardImage1Svg.svg",
+                      fullWidth: 142,
+                      fullHeight: 150,
+                      aspectRatio: 0.943472
+                    }}
+                  />
+                </Reveal>
+              </div>
+            ) : null}
           </div>
 
           <div className={classNames(projectcss.all, sty.freeBox__cVzYe)}>
@@ -631,23 +690,32 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                           sty.column__rAicW
                         )}
                       >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__bauoH)}
-                          displayHeight={"364px" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: "/plasmic/new_fathym_com/images/gettingStartedTemplatepng.png",
-                            fullWidth: 1962,
-                            fullHeight: 1544,
-                            aspectRatio: undefined
-                          }}
-                        />
+                        <Reveal
+                          className={classNames(
+                            "__wab_instance",
+                            sty.reveal__kActz
+                          )}
+                          direction={"right" as const}
+                          triggerOnce={false}
+                        >
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__nf09Y)}
+                            displayHeight={"auto" as const}
+                            displayMaxHeight={"none" as const}
+                            displayMaxWidth={"100%" as const}
+                            displayMinHeight={"0" as const}
+                            displayMinWidth={"0" as const}
+                            displayWidth={"auto" as const}
+                            loading={"lazy" as const}
+                            src={{
+                              src: "/plasmic/new_fathym_com/images/gettingStartedImagesvg.svg",
+                              fullWidth: 170,
+                              fullHeight: 150,
+                              aspectRatio: 1.136662
+                            }}
+                          />
+                        </Reveal>
                       </div>
                     </div>
                   </div>
@@ -899,23 +967,38 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                 </div>
 
                 <div className={classNames(projectcss.all, sty.column__t5AuA)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__qeHcW)}
-                    displayHeight={"auto" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/homeRoutespng3.png",
-                      fullWidth: 400,
-                      fullHeight: 400,
-                      aspectRatio: undefined
-                    }}
-                  />
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__vgCn)}
+                    direction={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("left" as const)
+                        : ("right" as const)
+                    }
+                    effect={"slide" as const}
+                    triggerOnce={true}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___5NvVz)}
+                      displayHeight={"auto" as const}
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("400px" as const)
+                          : ("auto" as const)
+                      }
+                      loading={"lazy" as const}
+                      src={{
+                        src: "/plasmic/new_fathym_com/images/mfeTree10Sgif.gif",
+                        fullWidth: 600,
+                        fullHeight: 600,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </Reveal>
                 </div>
               </div>
             </p.Stack>
@@ -987,43 +1070,156 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
 
               <div className={classNames(projectcss.all, sty.columns___7F8Qj)}>
                 <div className={classNames(projectcss.all, sty.column__noKk)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__epxVn)}
-                    displayHeight={"400px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/processorDetailspng.png",
-                      fullWidth: 1180,
-                      fullHeight: 1026,
-                      aspectRatio: undefined
-                    }}
-                  />
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Reveal
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reveal__xh6IL
+                      )}
+                      direction={"right" as const}
+                      triggerOnce={false}
+                    >
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__aJnz7)}
+                          displayHeight={"auto" as const}
+                          displayMaxHeight={"none" as const}
+                          displayMaxWidth={"100%" as const}
+                          displayMinHeight={"0" as const}
+                          displayMinWidth={"0" as const}
+                          displayWidth={"auto" as const}
+                          loading={"lazy" as const}
+                          src={{
+                            src: "/plasmic/new_fathym_com/images/processorDetailspng.png",
+                            fullWidth: 1180,
+                            fullHeight: 1026,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      ) : null}
+                    </Reveal>
+                  ) : null}
+
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__cUmX)}
+                    direction={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("right" as const)
+                        : undefined
+                    }
+                    effect={"slide" as const}
+                    triggerOnce={false}
+                  >
+                    {(
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    ) ? (
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__woUxC)}
+                        displayHeight={"400px" as const}
+                        displayMaxHeight={"none" as const}
+                        displayMaxWidth={"100%" as const}
+                        displayMinHeight={"0" as const}
+                        displayMinWidth={"0" as const}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? ("100%" as const)
+                            : ("auto" as const)
+                        }
+                        loading={"lazy" as const}
+                        src={{
+                          src: "/plasmic/new_fathym_com/images/processorDetailsgif.gif",
+                          fullWidth: 1158,
+                          fullHeight: 1006,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    ) : null}
+                  </Reveal>
                 </div>
 
                 <div className={classNames(projectcss.all, sty.column__nUq6Z)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__mZuWu)}
-                    displayHeight={"400px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"150%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/routes2Png.png",
-                      fullWidth: 624,
-                      fullHeight: 626,
-                      aspectRatio: undefined
-                    }}
-                  />
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Reveal
+                      className={classNames("__wab_instance", sty.reveal__dCWm)}
+                      direction={"left" as const}
+                      triggerOnce={false}
+                    >
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__gbgKe)}
+                          displayHeight={"auto" as const}
+                          displayMaxHeight={"none" as const}
+                          displayMaxWidth={"100%" as const}
+                          displayMinHeight={"0" as const}
+                          displayMinWidth={"0" as const}
+                          displayWidth={"auto" as const}
+                          loading={"lazy" as const}
+                          src={{
+                            src: "/plasmic/new_fathym_com/images/routes2Png.png",
+                            fullWidth: 624,
+                            fullHeight: 626,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      ) : null}
+                    </Reveal>
+                  ) : null}
+
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__wVshl)}
+                    direction={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("left" as const)
+                        : ("right" as const)
+                    }
+                    effect={"slide" as const}
+                    triggerOnce={false}
+                  >
+                    {(
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    ) ? (
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__xhqWq)}
+                        displayHeight={"400px" as const}
+                        displayMaxHeight={"none" as const}
+                        displayMaxWidth={"100%" as const}
+                        displayMinHeight={"0" as const}
+                        displayMinWidth={"0" as const}
+                        displayWidth={"auto" as const}
+                        loading={"lazy" as const}
+                        src={{
+                          src: "/plasmic/new_fathym_com/images/routesImagegif.gif",
+                          fullWidth: 1158,
+                          fullHeight: 1006,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    ) : null}
+                  </Reveal>
                 </div>
               </div>
             </div>
@@ -1198,31 +1394,37 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
               </React.Fragment>
             </div>
 
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img___0GuZv)}
-              displayHeight={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("274px" as const)
-                  : ("527px" as const)
-              }
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("407px" as const)
-                  : ("750px" as const)
-              }
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/anotherSocialFeedShotpng.png",
-                fullWidth: 2144,
-                fullHeight: 1496,
-                aspectRatio: undefined
-              }}
-            />
+            <Reveal
+              className={classNames("__wab_instance", sty.reveal___442N)}
+              effect={"bounce" as const}
+              triggerOnce={false}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__cyleg)}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? ("295px" as const)
+                    : ("548px" as const)
+                }
+                displayMaxHeight={"none" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"0" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? ("100%" as const)
+                    : ("auto" as const)
+                }
+                loading={"lazy" as const}
+                src={{
+                  src: "/plasmic/new_fathym_com/images/dashboardFullsvg.svg",
+                  fullWidth: 215,
+                  fullHeight: 150,
+                  aspectRatio: 1.434492
+                }}
+              />
+            </Reveal>
           </div>
 
           <div className={classNames(projectcss.all, sty.freeBox__rA2Uf)}>
@@ -1323,9 +1525,9 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
           </div>
 
           <Reveal
-            data-plasmic-name={"reveal"}
-            data-plasmic-override={overrides.reveal}
-            className={classNames("__wab_instance", sty.reveal)}
+            className={classNames("__wab_instance", sty.reveal__qHuiO)}
+            duration={1500 as const}
+            effect={"fade" as const}
             triggerOnce={true}
           >
             <p.PlasmicImg
@@ -1437,7 +1639,6 @@ const PlasmicDescendants = {
     "learnMore",
     "link",
     "ol",
-    "reveal",
     "section",
     "foreground3",
     "fathymFooter"
@@ -1448,7 +1649,6 @@ const PlasmicDescendants = {
   learnMore: ["learnMore"],
   link: ["link"],
   ol: ["ol"],
-  reveal: ["reveal"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
   fathymFooter: ["fathymFooter"]
@@ -1464,7 +1664,6 @@ type NodeDefaultElementType = {
   learnMore: "a";
   link: "a";
   ol: "ol";
-  reveal: typeof Reveal;
   section: "section";
   foreground3: "div";
   fathymFooter: typeof FathymFooter;
@@ -1533,7 +1732,6 @@ export const PlasmicHomepageVariant3Test = Object.assign(
     learnMore: makeNodeComponent("learnMore"),
     link: makeNodeComponent("link"),
     ol: makeNodeComponent("ol"),
-    reveal: makeNodeComponent("reveal"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
     fathymFooter: makeNodeComponent("fathymFooter"),
