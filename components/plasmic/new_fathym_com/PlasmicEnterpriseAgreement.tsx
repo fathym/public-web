@@ -72,9 +72,6 @@ export type PlasmicEnterpriseAgreement__OverridesType = {
 
 export interface DefaultEnterpriseAgreementProps {}
 
-export const defaultEnterpriseAgreement__Args: Partial<PlasmicEnterpriseAgreement__ArgsType> =
-  {};
-
 function PlasmicEnterpriseAgreement__RenderFunc(props: {
   variants: PlasmicEnterpriseAgreement__VariantsArgs;
   args: PlasmicEnterpriseAgreement__ArgsType;
@@ -83,9 +80,19 @@ function PlasmicEnterpriseAgreement__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultEnterpriseAgreement__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -356,12 +363,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicEnterpriseAgreement__ArgProps,
-      internalVariantPropNames: PlasmicEnterpriseAgreement__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicEnterpriseAgreement__ArgProps,
+          internalVariantPropNames: PlasmicEnterpriseAgreement__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicEnterpriseAgreement__RenderFunc({
       variants,

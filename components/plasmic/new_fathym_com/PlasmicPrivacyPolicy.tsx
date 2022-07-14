@@ -71,9 +71,6 @@ export type PlasmicPrivacyPolicy__OverridesType = {
 
 export interface DefaultPrivacyPolicyProps {}
 
-export const defaultPrivacyPolicy__Args: Partial<PlasmicPrivacyPolicy__ArgsType> =
-  {};
-
 function PlasmicPrivacyPolicy__RenderFunc(props: {
   variants: PlasmicPrivacyPolicy__VariantsArgs;
   args: PlasmicPrivacyPolicy__ArgsType;
@@ -82,9 +79,19 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPrivacyPolicy__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -357,12 +364,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPrivacyPolicy__ArgProps,
-      internalVariantPropNames: PlasmicPrivacyPolicy__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPrivacyPolicy__ArgProps,
+          internalVariantPropNames: PlasmicPrivacyPolicy__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPrivacyPolicy__RenderFunc({
       variants,

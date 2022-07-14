@@ -84,9 +84,6 @@ export type PlasmicLandingPagesVue__OverridesType = {
 
 export interface DefaultLandingPagesVueProps {}
 
-export const defaultLandingPagesVue__Args: Partial<PlasmicLandingPagesVue__ArgsType> =
-  {};
-
 function PlasmicLandingPagesVue__RenderFunc(props: {
   variants: PlasmicLandingPagesVue__VariantsArgs;
   args: PlasmicLandingPagesVue__ArgsType;
@@ -95,9 +92,19 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesVue__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,6 +120,11 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Vue Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Vue Development & Deployments in record time"}
         />
       </Head>
@@ -252,7 +264,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy Vue alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Vue app free with Fathym's micro frontend framework."
+                    "Looking for the right framework for your next Jamstack example, tutorial or project?  Deploy Vue alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Vue app free with Fathym's micro frontend framework."
                   }
                 </div>
               </p.Stack>
@@ -1307,12 +1319,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesVue__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesVue__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesVue__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesVue__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesVue__RenderFunc({
       variants,

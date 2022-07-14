@@ -76,9 +76,6 @@ export type PlasmicHomepageVariant3Test__OverridesType = {
 
 export interface DefaultHomepageVariant3TestProps {}
 
-export const defaultHomepageVariant3Test__Args: Partial<PlasmicHomepageVariant3Test__ArgsType> =
-  {};
-
 function PlasmicHomepageVariant3Test__RenderFunc(props: {
   variants: PlasmicHomepageVariant3Test__VariantsArgs;
   args: PlasmicHomepageVariant3Test__ArgsType;
@@ -87,9 +84,19 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomepageVariant3Test__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -98,7 +105,7 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
           {"Fathym - Develop & Deploy modern web experiences with your team"}
         </title>
@@ -110,9 +117,29 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
           }
         />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={
+            "Fathym - Develop & Deploy modern web experiences with your team"
+          }
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
           }
@@ -120,6 +147,13 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
         <meta
           key="og:image"
           property="og:image"
+          content={
+            "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
+          }
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
           content={
             "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
           }
@@ -210,20 +244,46 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                               )}
                             >
                               <React.Fragment>
-                                <React.Fragment>
-                                  {"Deliver stunning sites with the "}
-                                </React.Fragment>
+                                <React.Fragment>{""}</React.Fragment>
                                 <span
                                   className={
                                     "plasmic_default__all plasmic_default__span"
                                   }
-                                  style={{ color: "#5856D6" }}
+                                  style={{ color: "#000000" }}
                                 >
-                                  {"utmost flexibility and speed."}
+                                  {"Fast. Flexible."}
+                                </span>
+                                <React.Fragment>{"\n"}</React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#000000" }}
+                                >
+                                  {"Future Proof."}
+                                </span>
+                                <React.Fragment>{"\n"}</React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#5F7AE6" }}
+                                >
+                                  {"Fathym."}
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </h1>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__t797Y
+                              )}
+                            >
+                              {"Fathym."}
+                            </div>
 
                             <div
                               className={classNames(
@@ -234,38 +294,20 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                             >
                               <React.Fragment>
                                 <React.Fragment>{""}</React.Fragment>
-                                <h2
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.h2,
-                                    projectcss.__wab_text,
-                                    sty.h2___91SbE
-                                  )}
-                                >
-                                  <React.Fragment>
-                                    <React.Fragment>
-                                      {
-                                        "Developers use Fathym to host, manage and deploy future-proof web projects and applications – "
-                                      }
-                                    </React.Fragment>
-                                    <span
-                                      className={
-                                        "plasmic_default__all plasmic_default__span"
-                                      }
-                                      style={{
-                                        fontWeight: 700,
-                                        color: "#5856D6"
-                                      }}
-                                    >
-                                      {"powered by Azure"}
-                                    </span>
-                                    <React.Fragment>
-                                      {
-                                        " – with the flexibility and speed the modern web demands.\n\n"
-                                      }
-                                    </React.Fragment>
-                                  </React.Fragment>
-                                </h2>
+                                {
+                                  <h2
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.h2,
+                                      projectcss.__wab_text,
+                                      sty.h2___91SbE
+                                    )}
+                                  >
+                                    {
+                                      "Bring your favorite tech stacks, frameworks, no-code builders and data sources together on one domain - powered by Azure - so you can future-proof with Fathym, fast.\n\n"
+                                    }
+                                  </h2>
+                                }
                                 <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </div>
@@ -433,19 +475,23 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                 >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img__kaCyh)}
-                    displayHeight={"auto" as const}
+                    className={classNames(sty.img___6C8A)}
+                    displayHeight={"514px" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("400px" as const)
+                        : ("auto" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/dashboardImage1Svg.svg",
-                      fullWidth: 142,
-                      fullHeight: 150,
-                      aspectRatio: 0.943472
+                      src: "/plasmic/new_fathym_com/images/mfeTree10Sgif.gif",
+                      fullWidth: 600,
+                      fullHeight: 600,
+                      aspectRatio: undefined
                     }}
                   />
                 </Reveal>
@@ -543,25 +589,27 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                           "Getting started is as simple as connecting your GitHub repository. \n\n"
                         }
                       </React.Fragment>
-                      <p.PlasmicLink
-                        data-plasmic-name={"link"}
-                        data-plasmic-override={overrides.link}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          projectcss.plasmic_default__inline,
-                          sty.link
-                        )}
-                        component={Link}
-                        href={
-                          "https://www.fathym.com/dashboard/create-project" as const
-                        }
-                        platform={"nextjs"}
-                        target={"_blank" as const}
-                      >
-                        {"Select an open-source recipe"}
-                      </p.PlasmicLink>
+                      {
+                        <p.PlasmicLink
+                          data-plasmic-name={"link"}
+                          data-plasmic-override={overrides.link}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.link
+                          )}
+                          component={Link}
+                          href={
+                            "https://www.fathym.com/dashboard/create-project" as const
+                          }
+                          platform={"nextjs"}
+                          target={"_blank" as const}
+                        >
+                          {"Select an open-source recipe"}
+                        </p.PlasmicLink>
+                      }
                       <React.Fragment>
                         {
                           " from your favorite frameworks or static site generators see Fathym in action or bring in your own code."
@@ -767,137 +815,139 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                     >
                       <React.Fragment>
                         <React.Fragment>{""}</React.Fragment>
-                        <ol
-                          data-plasmic-name={"ol"}
-                          data-plasmic-override={overrides.ol}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.ol,
-                            sty.ol
-                          )}
-                        >
-                          <li
+                        {
+                          <ol
+                            data-plasmic-name={"ol"}
+                            data-plasmic-override={overrides.ol}
                             className={classNames(
                               projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__iSlmE
+                              projectcss.ol,
+                              sty.ol
                             )}
                           >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__iSlmE
+                              )}
+                            >
                               <React.Fragment>
-                                {"Smaller, more cohesive, decoupled "}
+                                <React.Fragment>
+                                  {"Smaller, more cohesive, decoupled "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"codebases."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"codebases."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__d6QgW
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__d6QgW
+                              )}
+                            >
                               <React.Fragment>
-                                {"Smaller, faster "}
+                                <React.Fragment>
+                                  {"Smaller, faster "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"builds."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"builds."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__emM9A
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__emM9A
+                              )}
+                            >
                               <React.Fragment>
-                                {"Simple testing, version control and "}
+                                <React.Fragment>
+                                  {"Simple testing, version control and "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"release management."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"release management."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__pDmlc
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__pDmlc
+                              )}
+                            >
                               <React.Fragment>
-                                {"Incremental upgrades and independent "}
+                                <React.Fragment>
+                                  {"Incremental upgrades and independent "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"deployments."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"deployments."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__nqNwt
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__nqNwt
+                              )}
+                            >
                               <React.Fragment>
-                                {"Flexibility to fork and "}
+                                <React.Fragment>
+                                  {"Flexibility to fork and "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"re-use modular apps"}
+                                </span>
+                                <React.Fragment>
+                                  {" for other projects."}
+                                </React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"re-use modular apps"}
-                              </span>
-                              <React.Fragment>
-                                {" for other projects."}
-                              </React.Fragment>
-                            </React.Fragment>
-                          </li>
-                        </ol>
+                            </li>
+                          </ol>
+                        }
                         <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     </div>
@@ -917,16 +967,18 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                   >
                     <React.Fragment>
                       <React.Fragment>{""}</React.Fragment>
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__u1MSh
-                        )}
-                      >
-                        {"You're a composer."}
-                      </h3>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__u1MSh
+                          )}
+                        >
+                          {"You're a composer."}
+                        </h3>
+                      }
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </h2>
@@ -1699,12 +1751,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomepageVariant3Test__ArgProps,
-      internalVariantPropNames: PlasmicHomepageVariant3Test__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomepageVariant3Test__ArgProps,
+          internalVariantPropNames: PlasmicHomepageVariant3Test__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomepageVariant3Test__RenderFunc({
       variants,

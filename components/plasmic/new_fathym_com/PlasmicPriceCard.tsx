@@ -94,8 +94,6 @@ export interface DefaultPriceCardProps {
   className?: string;
 }
 
-export const defaultPriceCard__Args: Partial<PlasmicPriceCard__ArgsType> = {};
-
 function PlasmicPriceCard__RenderFunc(props: {
   variants: PlasmicPriceCard__VariantsArgs;
   args: PlasmicPriceCard__ArgsType;
@@ -104,9 +102,19 @@ function PlasmicPriceCard__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPriceCard__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -317,12 +325,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPriceCard__ArgProps,
-      internalVariantPropNames: PlasmicPriceCard__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPriceCard__ArgProps,
+          internalVariantPropNames: PlasmicPriceCard__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPriceCard__RenderFunc({
       variants,

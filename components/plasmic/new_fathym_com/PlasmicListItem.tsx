@@ -82,8 +82,6 @@ export interface DefaultListItemProps {
   className?: string;
 }
 
-export const defaultListItem__Args: Partial<PlasmicListItem__ArgsType> = {};
-
 function PlasmicListItem__RenderFunc(props: {
   variants: PlasmicListItem__VariantsArgs;
   args: PlasmicListItem__ArgsType;
@@ -92,9 +90,19 @@ function PlasmicListItem__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultListItem__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -187,12 +195,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicListItem__ArgProps,
-      internalVariantPropNames: PlasmicListItem__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicListItem__ArgProps,
+          internalVariantPropNames: PlasmicListItem__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicListItem__RenderFunc({
       variants,

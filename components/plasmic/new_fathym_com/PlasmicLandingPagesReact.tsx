@@ -84,9 +84,6 @@ export type PlasmicLandingPagesReact__OverridesType = {
 
 export interface DefaultLandingPagesReactProps {}
 
-export const defaultLandingPagesReact__Args: Partial<PlasmicLandingPagesReact__ArgsType> =
-  {};
-
 function PlasmicLandingPagesReact__RenderFunc(props: {
   variants: PlasmicLandingPagesReact__VariantsArgs;
   args: PlasmicLandingPagesReact__ArgsType;
@@ -95,9 +92,19 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesReact__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,6 +120,11 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - React Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - React Development & Deployments in record time"}
         />
       </Head>
@@ -254,7 +266,7 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy React alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Host your React app free with Fathym's micro frontend framework."
+                    "Looking for the right framework for your next Jamstack example, tutorial or project?  Deploy React alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Host your React app free with Fathym's micro frontend framework."
                   }
                 </div>
               </p.Stack>
@@ -1284,12 +1296,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesReact__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesReact__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesReact__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesReact__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesReact__RenderFunc({
       variants,

@@ -81,9 +81,6 @@ export type PlasmicLandingPagesMicroFrontends__OverridesType = {
 
 export interface DefaultLandingPagesMicroFrontendsProps {}
 
-export const defaultLandingPagesMicroFrontends__Args: Partial<PlasmicLandingPagesMicroFrontends__ArgsType> =
-  {};
-
 function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
   variants: PlasmicLandingPagesMicroFrontends__VariantsArgs;
   args: PlasmicLandingPagesMicroFrontends__ArgsType;
@@ -92,13 +89,19 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign(
-    {},
-    defaultLandingPagesMicroFrontends__Args,
-    props.args
-  );
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -114,6 +117,13 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={
+            "Fathym - Micro Frontend Development & Deployments in record time"
+          }
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={
             "Fathym - Micro Frontend Development & Deployments in record time"
           }
@@ -958,12 +968,17 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesMicroFrontends__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesMicroFrontends__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesMicroFrontends__ArgProps,
+          internalVariantPropNames:
+            PlasmicLandingPagesMicroFrontends__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesMicroFrontends__RenderFunc({
       variants,

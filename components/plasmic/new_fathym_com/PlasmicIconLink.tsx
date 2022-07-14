@@ -64,8 +64,6 @@ export interface DefaultIconLinkProps {
   className?: string;
 }
 
-export const defaultIconLink__Args: Partial<PlasmicIconLink__ArgsType> = {};
-
 function PlasmicIconLink__RenderFunc(props: {
   variants: PlasmicIconLink__VariantsArgs;
   args: PlasmicIconLink__ArgsType;
@@ -74,9 +72,19 @@ function PlasmicIconLink__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultIconLink__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -157,12 +165,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicIconLink__ArgProps,
-      internalVariantPropNames: PlasmicIconLink__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicIconLink__ArgProps,
+          internalVariantPropNames: PlasmicIconLink__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicIconLink__RenderFunc({
       variants,

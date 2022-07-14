@@ -79,16 +79,6 @@ export interface DefaultCallToActionSectionProps {
   className?: string;
 }
 
-export const defaultCallToActionSection__Args: Partial<PlasmicCallToActionSection__ArgsType> =
-  {
-    image: {
-      src: "/plasmic/new_fathym_com/images/meeting.jpeg",
-      fullWidth: 2916,
-      fullHeight: 1787,
-      aspectRatio: undefined
-    }
-  };
-
 function PlasmicCallToActionSection__RenderFunc(props: {
   variants: PlasmicCallToActionSection__VariantsArgs;
   args: PlasmicCallToActionSection__ArgsType;
@@ -97,9 +87,25 @@ function PlasmicCallToActionSection__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultCallToActionSection__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {
+          image: {
+            src: "/plasmic/new_fathym_com/images/meeting.jpeg",
+            fullWidth: 2916,
+            fullHeight: 1787,
+            aspectRatio: undefined
+          }
+        },
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -309,12 +315,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicCallToActionSection__ArgProps,
-      internalVariantPropNames: PlasmicCallToActionSection__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicCallToActionSection__ArgProps,
+          internalVariantPropNames: PlasmicCallToActionSection__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicCallToActionSection__RenderFunc({
       variants,

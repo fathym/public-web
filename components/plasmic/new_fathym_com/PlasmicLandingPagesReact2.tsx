@@ -85,9 +85,6 @@ export type PlasmicLandingPagesReact2__OverridesType = {
 
 export interface DefaultLandingPagesReact2Props {}
 
-export const defaultLandingPagesReact2__Args: Partial<PlasmicLandingPagesReact2__ArgsType> =
-  {};
-
 function PlasmicLandingPagesReact2__RenderFunc(props: {
   variants: PlasmicLandingPagesReact2__VariantsArgs;
   args: PlasmicLandingPagesReact2__ArgsType;
@@ -96,9 +93,19 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesReact2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -114,6 +121,11 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - React Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - React Development & Deployments in record time"}
         />
       </Head>
@@ -278,7 +290,7 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy React alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Host your React app free with Fathym's micro frontend framework."
+                      "Looking for the right framework for your next Jamstack example, tutorial or project?  Deploy React alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Host your React app free with Fathym's micro frontend framework."
                     }
                   </div>
                 </p.Stack>
@@ -289,15 +301,15 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
               >
-                <Reveal
-                  className={classNames("__wab_instance", sty.reveal__s3Lc)}
-                  direction={"up" as const}
-                  triggerOnce={false}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__nuOoY)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__nuOoY)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__sXbmf)}
+                    direction={"up" as const}
+                    triggerOnce={false}
                   >
                     <ValueProp
                       className={classNames(
@@ -361,7 +373,13 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
                       }
                       title={"React vs Angular"}
                     />
+                  </Reveal>
 
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__hKwjK)}
+                    direction={"up" as const}
+                    triggerOnce={false}
+                  >
                     <ValueProp
                       className={classNames(
                         "__wab_instance",
@@ -424,7 +442,13 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
                       }
                       title={"React vs VueJS"}
                     />
+                  </Reveal>
 
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal___0Kn31)}
+                    direction={"up" as const}
+                    triggerOnce={false}
+                  >
                     <ValueProp
                       className={classNames(
                         "__wab_instance",
@@ -487,8 +511,8 @@ function PlasmicLandingPagesReact2__RenderFunc(props: {
                       }
                       title={"React vs Svelte"}
                     />
-                  </p.Stack>
-                </Reveal>
+                  </Reveal>
+                </p.Stack>
               </p.Stack>
             </Section>
 
@@ -1327,12 +1351,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesReact2__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesReact2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesReact2__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesReact2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesReact2__RenderFunc({
       variants,

@@ -83,9 +83,6 @@ export type PlasmicLandingPagesLowCode__OverridesType = {
 
 export interface DefaultLandingPagesLowCodeProps {}
 
-export const defaultLandingPagesLowCode__Args: Partial<PlasmicLandingPagesLowCode__ArgsType> =
-  {};
-
 function PlasmicLandingPagesLowCode__RenderFunc(props: {
   variants: PlasmicLandingPagesLowCode__VariantsArgs;
   args: PlasmicLandingPagesLowCode__ArgsType;
@@ -94,9 +91,19 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesLowCode__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -112,6 +119,11 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Low Code Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Low Code Development & Deployments in record time"}
         />
       </Head>
@@ -266,7 +278,7 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
                   )}
                 >
                   {
-                    "The secret sauce you've been looking for to make your JAMStack applications stand out.  Build in record time with the right framework at the right time.  Leverage your code, low code, and no code solution to deliver powerful web experiences for your users."
+                    "The secret sauce you've been looking for to make your Jamstack applications stand out. Build in record time with the right framework at the right time.  Leverage your code, low code, and no code solution to deliver powerful web experiences for your users."
                   }
                 </div>
               </p.Stack>
@@ -1240,12 +1252,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesLowCode__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesLowCode__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesLowCode__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesLowCode__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesLowCode__RenderFunc({
       variants,

@@ -630,6 +630,19 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicLandingPagesVue2.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "sAz_-C62Tws",
+          "name": "Pricing2",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicPricing2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/pricing-2.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicPricing2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -1981,8 +1994,7 @@
           "name": "YouTube",
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -2001,8 +2013,7 @@
           "name": "Reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -2027,17 +2038,11 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         },
         {
-          "id": "Tg8iODh_BQ",
-          "name": "EmbedCss",
-          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
-        },
-        {
           "id": "PKldDYkH42",
           "name": "Embed",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "84wxoth5npGrp6RRXPL88z",
@@ -2077,12 +2082,6 @@
         "name": "Screen",
         "projectId": "hhYAirYt8bU9TEjNgFzExf",
         "contextFilePath": "plasmic/habistack_com/PlasmicGlobalVariant__Screen.tsx"
-      },
-      {
-        "id": "q2e6W8ulGYz",
-        "name": "Screen",
-        "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
-        "contextFilePath": "plasmic/plasmic_basic_components/PlasmicGlobalVariant__Screen.tsx"
       }
     ]
   },
@@ -2090,6 +2089,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.182",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.182/dist/plasmic.schema.json"
+  "cliVersion": "0.1.184",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.184/dist/plasmic.schema.json"
 }

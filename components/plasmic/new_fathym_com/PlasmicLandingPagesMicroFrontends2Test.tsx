@@ -83,9 +83,6 @@ export type PlasmicLandingPagesMicroFrontends2Test__OverridesType = {
 
 export interface DefaultLandingPagesMicroFrontends2TestProps {}
 
-export const defaultLandingPagesMicroFrontends2Test__Args: Partial<PlasmicLandingPagesMicroFrontends2Test__ArgsType> =
-  {};
-
 function PlasmicLandingPagesMicroFrontends2Test__RenderFunc(props: {
   variants: PlasmicLandingPagesMicroFrontends2Test__VariantsArgs;
   args: PlasmicLandingPagesMicroFrontends2Test__ArgsType;
@@ -94,13 +91,19 @@ function PlasmicLandingPagesMicroFrontends2Test__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign(
-    {},
-    defaultLandingPagesMicroFrontends2Test__Args,
-    props.args
-  );
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -116,6 +119,13 @@ function PlasmicLandingPagesMicroFrontends2Test__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={
+            "Fathym - Micro Frontend Development & Deployments in record time"
+          }
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={
             "Fathym - Micro Frontend Development & Deployments in record time"
           }
@@ -202,7 +212,11 @@ function PlasmicLandingPagesMicroFrontends2Test__RenderFunc(props: {
                 data-plasmic-override={overrides.img}
                 alt={""}
                 className={classNames(sty.img)}
-                displayHeight={"564px" as const}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? ("256px" as const)
+                    : ("564px" as const)
+                }
                 displayMaxHeight={"none" as const}
                 displayMaxWidth={"100%" as const}
                 displayMinHeight={"0" as const}
@@ -986,13 +1000,18 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesMicroFrontends2Test__ArgProps,
-      internalVariantPropNames:
-        PlasmicLandingPagesMicroFrontends2Test__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames:
+            PlasmicLandingPagesMicroFrontends2Test__ArgProps,
+          internalVariantPropNames:
+            PlasmicLandingPagesMicroFrontends2Test__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesMicroFrontends2Test__RenderFunc({
       variants,

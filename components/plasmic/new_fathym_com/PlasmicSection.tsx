@@ -76,8 +76,6 @@ export interface DefaultSectionProps {
   className?: string;
 }
 
-export const defaultSection__Args: Partial<PlasmicSection__ArgsType> = {};
-
 function PlasmicSection__RenderFunc(props: {
   variants: PlasmicSection__VariantsArgs;
   args: PlasmicSection__ArgsType;
@@ -86,9 +84,19 @@ function PlasmicSection__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultSection__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -177,12 +185,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicSection__ArgProps,
-      internalVariantPropNames: PlasmicSection__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicSection__ArgProps,
+          internalVariantPropNames: PlasmicSection__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicSection__RenderFunc({
       variants,

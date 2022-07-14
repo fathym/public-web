@@ -75,9 +75,6 @@ export type PlasmicHomepageVariant4Test__OverridesType = {
 
 export interface DefaultHomepageVariant4TestProps {}
 
-export const defaultHomepageVariant4Test__Args: Partial<PlasmicHomepageVariant4Test__ArgsType> =
-  {};
-
 function PlasmicHomepageVariant4Test__RenderFunc(props: {
   variants: PlasmicHomepageVariant4Test__VariantsArgs;
   args: PlasmicHomepageVariant4Test__ArgsType;
@@ -86,9 +83,19 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomepageVariant4Test__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -104,6 +111,13 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={
+            "Fathym - Develop & Deploy modern web experiences with your team"
+          }
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={
             "Fathym - Develop & Deploy modern web experiences with your team"
           }
@@ -2073,12 +2087,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomepageVariant4Test__ArgProps,
-      internalVariantPropNames: PlasmicHomepageVariant4Test__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomepageVariant4Test__ArgProps,
+          internalVariantPropNames: PlasmicHomepageVariant4Test__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomepageVariant4Test__RenderFunc({
       variants,

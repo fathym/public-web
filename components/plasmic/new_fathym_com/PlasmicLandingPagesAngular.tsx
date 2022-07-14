@@ -87,9 +87,6 @@ export type PlasmicLandingPagesAngular__OverridesType = {
 
 export interface DefaultLandingPagesAngularProps {}
 
-export const defaultLandingPagesAngular__Args: Partial<PlasmicLandingPagesAngular__ArgsType> =
-  {};
-
 function PlasmicLandingPagesAngular__RenderFunc(props: {
   variants: PlasmicLandingPagesAngular__VariantsArgs;
   args: PlasmicLandingPagesAngular__ArgsType;
@@ -98,9 +95,19 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesAngular__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -116,6 +123,11 @@ function PlasmicLandingPagesAngular__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Angular Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Angular Development & Deployments in record time"}
         />
       </Head>
@@ -1338,12 +1350,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesAngular__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesAngular__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesAngular__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesAngular__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesAngular__RenderFunc({
       variants,

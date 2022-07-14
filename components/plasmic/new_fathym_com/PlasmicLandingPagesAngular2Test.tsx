@@ -89,9 +89,6 @@ export type PlasmicLandingPagesAngular2Test__OverridesType = {
 
 export interface DefaultLandingPagesAngular2TestProps {}
 
-export const defaultLandingPagesAngular2Test__Args: Partial<PlasmicLandingPagesAngular2Test__ArgsType> =
-  {};
-
 function PlasmicLandingPagesAngular2Test__RenderFunc(props: {
   variants: PlasmicLandingPagesAngular2Test__VariantsArgs;
   args: PlasmicLandingPagesAngular2Test__ArgsType;
@@ -100,13 +97,19 @@ function PlasmicLandingPagesAngular2Test__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign(
-    {},
-    defaultLandingPagesAngular2Test__Args,
-    props.args
-  );
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -122,6 +125,11 @@ function PlasmicLandingPagesAngular2Test__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Angular Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Angular Development & Deployments in record time"}
         />
       </Head>
@@ -323,223 +331,260 @@ function PlasmicLandingPagesAngular2Test__RenderFunc(props: {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
                 >
-                  <Reveal
-                    className={classNames("__wab_instance", sty.reveal__gaW8Z)}
-                    direction={"up" as const}
-                    triggerOnce={false}
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__nuOoY)}
                   >
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__nuOoY)}
-                    >
-                      <ValueProp
+                    {(
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    ) ? (
+                      <Reveal
                         className={classNames(
                           "__wab_instance",
-                          sty.valueProp__zoh2
+                          sty.reveal__tghOu
                         )}
-                        description={
-                          <React.Fragment>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__fwB0Y
-                              )}
-                            >
-                              {
-                                "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components."
-                              }
-                            </div>
-
-                            <p.PlasmicLink
-                              data-plasmic-name={"react"}
-                              data-plasmic-override={overrides.react}
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.react
-                              )}
-                              component={Link}
-                              href={"https://www.fathym.com/react/" as const}
-                              platform={"nextjs"}
-                            >
+                        direction={"up" as const}
+                        triggerOnce={false}
+                      >
+                        <ValueProp
+                          className={classNames(
+                            "__wab_instance",
+                            sty.valueProp__zoh2
+                          )}
+                          description={
+                            <React.Fragment>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___55WFh
+                                  sty.text__fwB0Y
                                 )}
                               >
-                                {"React Deployments >"}
+                                {
+                                  "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components."
+                                }
                               </div>
-                            </p.PlasmicLink>
 
-                            {true ? (
-                              <Button
+                              <p.PlasmicLink
+                                data-plasmic-name={"react"}
+                                data-plasmic-override={overrides.react}
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__orvOt
+                                  projectcss.all,
+                                  projectcss.a,
+                                  sty.react
                                 )}
-                                link={"/react" as const}
+                                component={Link}
+                                href={"https://www.fathym.com/react/" as const}
+                                platform={"nextjs"}
                               >
-                                {null}
-                              </Button>
-                            ) : null}
-                          </React.Fragment>
-                        }
-                        flatIcon={true}
-                        icon={
-                          <CheckIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__pQuuD
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        title={"Angular vs React"}
-                      />
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text___55WFh
+                                  )}
+                                >
+                                  {"React Deployments >"}
+                                </div>
+                              </p.PlasmicLink>
 
-                      <ValueProp
+                              {true ? (
+                                <Button
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.button__orvOt
+                                  )}
+                                  link={"/react" as const}
+                                >
+                                  {null}
+                                </Button>
+                              ) : null}
+                            </React.Fragment>
+                          }
+                          flatIcon={true}
+                          icon={
+                            <CheckIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__pQuuD
+                              )}
+                              role={"img"}
+                            />
+                          }
+                          title={"Angular vs React"}
+                        />
+                      </Reveal>
+                    ) : null}
+                    {(
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    ) ? (
+                      <Reveal
                         className={classNames(
                           "__wab_instance",
-                          sty.valueProp__eMp95
+                          sty.reveal___6KIdh
                         )}
-                        description={
-                          <React.Fragment>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___3ZWvz
-                              )}
-                            >
-                              {
-                                "The progressive javascript framework.  Already know HTML, CSS and JavaScript? Read the guide and start deploying VueJS apps in no time!               \n"
-                              }
-                            </div>
-
-                            <p.PlasmicLink
-                              data-plasmic-name={"vue"}
-                              data-plasmic-override={overrides.vue}
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.vue
-                              )}
-                              component={Link}
-                              href={"https://www.fathym.com/vue/" as const}
-                              platform={"nextjs"}
-                            >
+                        direction={"up" as const}
+                        triggerOnce={false}
+                      >
+                        <ValueProp
+                          className={classNames(
+                            "__wab_instance",
+                            sty.valueProp__eMp95
+                          )}
+                          description={
+                            <React.Fragment>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___2InBy
+                                  sty.text___3ZWvz
                                 )}
                               >
-                                {"Vue Deployments >"}
+                                {
+                                  "The progressive javascript framework.  Already know HTML, CSS and JavaScript? Read the guide and start deploying VueJS apps in no time!               \n"
+                                }
                               </div>
-                            </p.PlasmicLink>
 
-                            {true ? (
-                              <Button
+                              <p.PlasmicLink
+                                data-plasmic-name={"vue"}
+                                data-plasmic-override={overrides.vue}
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__jc7Vf
+                                  projectcss.all,
+                                  projectcss.a,
+                                  sty.vue
                                 )}
-                                link={"/vue" as const}
+                                component={Link}
+                                href={"https://www.fathym.com/vue/" as const}
+                                platform={"nextjs"}
                               >
-                                {null}
-                              </Button>
-                            ) : null}
-                          </React.Fragment>
-                        }
-                        flatIcon={true}
-                        icon={
-                          <CheckIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__v6S8
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        title={"Angular vs VueJS"}
-                      />
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text___2InBy
+                                  )}
+                                >
+                                  {"Vue Deployments >"}
+                                </div>
+                              </p.PlasmicLink>
 
-                      <ValueProp
+                              {true ? (
+                                <Button
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.button__jc7Vf
+                                  )}
+                                  link={"/vue" as const}
+                                >
+                                  {null}
+                                </Button>
+                              ) : null}
+                            </React.Fragment>
+                          }
+                          flatIcon={true}
+                          icon={
+                            <CheckIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__v6S8
+                              )}
+                              role={"img"}
+                            />
+                          }
+                          title={"Angular vs VueJS"}
+                        />
+                      </Reveal>
+                    ) : null}
+                    {(
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    ) ? (
+                      <Reveal
                         className={classNames(
                           "__wab_instance",
-                          sty.valueProp__wMWux
+                          sty.reveal__vS6QP
                         )}
-                        description={
-                          <React.Fragment>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__xLc3
-                              )}
-                            >
-                              {
-                                "Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app."
-                              }
-                            </div>
-
-                            <p.PlasmicLink
-                              data-plasmic-name={"svelte"}
-                              data-plasmic-override={overrides.svelte}
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.svelte
-                              )}
-                              component={Link}
-                              href={
-                                "https://www.fathym.com/svelte-deployment/" as const
-                              }
-                              platform={"nextjs"}
-                            >
+                        direction={"up" as const}
+                        triggerOnce={false}
+                      >
+                        <ValueProp
+                          className={classNames(
+                            "__wab_instance",
+                            sty.valueProp__wMWux
+                          )}
+                          description={
+                            <React.Fragment>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__sOugM
+                                  sty.text__xLc3
                                 )}
                               >
-                                {"Svelte Deployments >"}
+                                {
+                                  "Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app."
+                                }
                               </div>
-                            </p.PlasmicLink>
 
-                            {true ? (
-                              <Button
+                              <p.PlasmicLink
+                                data-plasmic-name={"svelte"}
+                                data-plasmic-override={overrides.svelte}
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__tcixz
+                                  projectcss.all,
+                                  projectcss.a,
+                                  sty.svelte
                                 )}
-                                link={"/svelte-deployment" as const}
+                                component={Link}
+                                href={
+                                  "https://www.fathym.com/svelte-deployment/" as const
+                                }
+                                platform={"nextjs"}
                               >
-                                {null}
-                              </Button>
-                            ) : null}
-                          </React.Fragment>
-                        }
-                        flatIcon={true}
-                        icon={
-                          <CheckIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__bc8Gg
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        title={"Angular vs Svelte"}
-                      />
-                    </p.Stack>
-                  </Reveal>
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__sOugM
+                                  )}
+                                >
+                                  {"Svelte Deployments >"}
+                                </div>
+                              </p.PlasmicLink>
+
+                              {true ? (
+                                <Button
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.button__tcixz
+                                  )}
+                                  link={"/svelte-deployment" as const}
+                                >
+                                  {null}
+                                </Button>
+                              ) : null}
+                            </React.Fragment>
+                          }
+                          flatIcon={true}
+                          icon={
+                            <CheckIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__bc8Gg
+                              )}
+                              role={"img"}
+                            />
+                          }
+                          title={"Angular vs Svelte"}
+                        />
+                      </Reveal>
+                    ) : null}
+                  </p.Stack>
                 </p.Stack>
               </Section>
 
@@ -1409,12 +1454,17 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesAngular2Test__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesAngular2Test__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesAngular2Test__ArgProps,
+          internalVariantPropNames:
+            PlasmicLandingPagesAngular2Test__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesAngular2Test__RenderFunc({
       variants,

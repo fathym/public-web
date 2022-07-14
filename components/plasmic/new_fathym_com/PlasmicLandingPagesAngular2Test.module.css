@@ -320,10 +320,6 @@
     margin-top: 24px;
   }
 }
-.reveal__gaW8Z:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
 .freeBox__nuOoY {
   flex-direction: row;
   display: flex;
@@ -377,6 +373,16 @@
     margin-top: 24px;
   }
 }
+.reveal__tghOu:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .reveal__tghOu:global(.__wab_instance) {
+    display: flex;
+  }
+}
 .valueProp__zoh2:global(.__wab_instance) {
   width: 100%;
   min-width: 0;
@@ -400,13 +406,13 @@
 .button__orvOt:global(.__wab_instance) {
   display: none;
 }
-.svg__u0WZ1 {
+.svg__cdU5W {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg__fuAoQ {
+.svg__ys5X {
   width: 24px;
   height: 24px;
   position: relative;
@@ -417,6 +423,16 @@
   width: 28px;
   height: 28px;
   color: #34c759;
+}
+.reveal___6KIdh:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .reveal___6KIdh:global(.__wab_instance) {
+    display: flex;
+  }
 }
 .valueProp__eMp95:global(.__wab_instance) {
   width: 100%;
@@ -439,13 +455,13 @@
 .button__jc7Vf:global(.__wab_instance) {
   display: none;
 }
-.svg__jFy8 {
+.svg__sZcw {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg__ktc9P {
+.svg__drvf6 {
   width: 24px;
   height: 24px;
   position: relative;
@@ -456,6 +472,16 @@
   width: 28px;
   height: 28px;
   color: #34c759;
+}
+.reveal__vS6QP:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .reveal__vS6QP:global(.__wab_instance) {
+    display: flex;
+  }
 }
 .valueProp__wMWux:global(.__wab_instance) {
   width: 100%;
@@ -479,13 +505,13 @@
 .button__tcixz:global(.__wab_instance) {
   display: none;
 }
-.svg__e0RpY {
+.svg__mg3Wr {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg__jMlR {
+.svg__qdglK {
   width: 24px;
   height: 24px;
   position: relative;

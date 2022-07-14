@@ -84,9 +84,6 @@ export type PlasmicLandingPagesSvelte__OverridesType = {
 
 export interface DefaultLandingPagesSvelteProps {}
 
-export const defaultLandingPagesSvelte__Args: Partial<PlasmicLandingPagesSvelte__ArgsType> =
-  {};
-
 function PlasmicLandingPagesSvelte__RenderFunc(props: {
   variants: PlasmicLandingPagesSvelte__VariantsArgs;
   args: PlasmicLandingPagesSvelte__ArgsType;
@@ -95,9 +92,19 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesSvelte__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,6 +120,11 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Svelte Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Svelte Development & Deployments in record time"}
         />
       </Head>
@@ -252,7 +264,7 @@ function PlasmicLandingPagesSvelte__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy Svelte alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Svelte app free with Fathym's micro frontend framework."
+                    "Looking for the right framework for your next Jamstack example, tutorial or project?  Deploy Svelte alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Svelte app free with Fathym's micro frontend framework."
                   }
                 </div>
               </p.Stack>
@@ -1291,12 +1303,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesSvelte__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesSvelte__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesSvelte__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesSvelte__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesSvelte__RenderFunc({
       variants,

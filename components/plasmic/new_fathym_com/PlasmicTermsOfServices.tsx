@@ -72,9 +72,6 @@ export type PlasmicTermsOfServices__OverridesType = {
 
 export interface DefaultTermsOfServicesProps {}
 
-export const defaultTermsOfServices__Args: Partial<PlasmicTermsOfServices__ArgsType> =
-  {};
-
 function PlasmicTermsOfServices__RenderFunc(props: {
   variants: PlasmicTermsOfServices__VariantsArgs;
   args: PlasmicTermsOfServices__ArgsType;
@@ -83,9 +80,19 @@ function PlasmicTermsOfServices__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultTermsOfServices__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -355,12 +362,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicTermsOfServices__ArgProps,
-      internalVariantPropNames: PlasmicTermsOfServices__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicTermsOfServices__ArgProps,
+          internalVariantPropNames: PlasmicTermsOfServices__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicTermsOfServices__RenderFunc({
       variants,

@@ -85,9 +85,6 @@ export type PlasmicLandingPagesVue2__OverridesType = {
 
 export interface DefaultLandingPagesVue2Props {}
 
-export const defaultLandingPagesVue2__Args: Partial<PlasmicLandingPagesVue2__ArgsType> =
-  {};
-
 function PlasmicLandingPagesVue2__RenderFunc(props: {
   variants: PlasmicLandingPagesVue2__VariantsArgs;
   args: PlasmicLandingPagesVue2__ArgsType;
@@ -96,9 +93,19 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesVue2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -114,6 +121,11 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Vue Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Vue Development & Deployments in record time"}
         />
       </Head>
@@ -276,7 +288,7 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy Vue alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Vue app free with Fathym's micro frontend framework."
+                      "Looking for the right framework for your next Jamstack example, tutorial or project?  Deploy Vue alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Vue app free with Fathym's micro frontend framework."
                     }
                   </div>
                 </p.Stack>
@@ -287,15 +299,15 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
               >
-                <Reveal
-                  className={classNames("__wab_instance", sty.reveal__bEk3N)}
-                  direction={"up" as const}
-                  triggerOnce={false}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__nuOoY)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__nuOoY)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__eqFvW)}
+                    direction={"up" as const}
+                    triggerOnce={false}
                   >
                     <ValueProp
                       className={classNames(
@@ -359,7 +371,13 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
                       }
                       title={"VueJS vs React"}
                     />
+                  </Reveal>
 
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__tqnQ2)}
+                    direction={"up" as const}
+                    triggerOnce={false}
+                  >
                     <ValueProp
                       className={classNames(
                         "__wab_instance",
@@ -425,7 +443,13 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
                       }
                       title={"VueJS vs Angular"}
                     />
+                  </Reveal>
 
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__aYb6M)}
+                    direction={"up" as const}
+                    triggerOnce={false}
+                  >
                     <ValueProp
                       className={classNames(
                         "__wab_instance",
@@ -488,8 +512,8 @@ function PlasmicLandingPagesVue2__RenderFunc(props: {
                       }
                       title={"VueJS vs Svelte"}
                     />
-                  </p.Stack>
-                </Reveal>
+                  </Reveal>
+                </p.Stack>
               </p.Stack>
             </Section>
 
@@ -1353,12 +1377,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesVue2__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesVue2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesVue2__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesVue2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesVue2__RenderFunc({
       variants,

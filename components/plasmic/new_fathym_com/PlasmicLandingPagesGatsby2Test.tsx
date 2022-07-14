@@ -86,9 +86,6 @@ export type PlasmicLandingPagesGatsby2Test__OverridesType = {
 
 export interface DefaultLandingPagesGatsby2TestProps {}
 
-export const defaultLandingPagesGatsby2Test__Args: Partial<PlasmicLandingPagesGatsby2Test__ArgsType> =
-  {};
-
 function PlasmicLandingPagesGatsby2Test__RenderFunc(props: {
   variants: PlasmicLandingPagesGatsby2Test__VariantsArgs;
   args: PlasmicLandingPagesGatsby2Test__ArgsType;
@@ -97,13 +94,19 @@ function PlasmicLandingPagesGatsby2Test__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign(
-    {},
-    defaultLandingPagesGatsby2Test__Args,
-    props.args
-  );
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -119,6 +122,11 @@ function PlasmicLandingPagesGatsby2Test__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Gatsby Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Gatsby Development & Deployments in record time"}
         />
       </Head>
@@ -1327,12 +1335,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesGatsby2Test__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesGatsby2Test__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesGatsby2Test__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesGatsby2Test__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesGatsby2Test__RenderFunc({
       variants,

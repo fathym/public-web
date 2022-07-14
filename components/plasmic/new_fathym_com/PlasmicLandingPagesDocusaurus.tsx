@@ -82,9 +82,6 @@ export type PlasmicLandingPagesDocusaurus__OverridesType = {
 
 export interface DefaultLandingPagesDocusaurusProps {}
 
-export const defaultLandingPagesDocusaurus__Args: Partial<PlasmicLandingPagesDocusaurus__ArgsType> =
-  {};
-
 function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
   variants: PlasmicLandingPagesDocusaurus__VariantsArgs;
   args: PlasmicLandingPagesDocusaurus__ArgsType;
@@ -93,13 +90,19 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign(
-    {},
-    defaultLandingPagesDocusaurus__Args,
-    props.args
-  );
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -115,6 +118,13 @@ function PlasmicLandingPagesDocusaurus__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={
+            "Fathym - Docusaurus Development & Deployments in record time"
+          }
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={
             "Fathym - Docusaurus Development & Deployments in record time"
           }
@@ -1012,12 +1022,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesDocusaurus__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesDocusaurus__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesDocusaurus__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesDocusaurus__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesDocusaurus__RenderFunc({
       variants,

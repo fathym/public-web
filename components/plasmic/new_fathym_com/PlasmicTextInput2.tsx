@@ -98,10 +98,6 @@ export interface DefaultTextInput2Props extends pp.BaseTextInputProps {
   fontSize?: SingleChoiceArg<"small">;
 }
 
-export const defaultTextInput2__Args: Partial<PlasmicTextInput2__ArgsType> = {
-  placeholder: "Enter something…" as const
-};
-
 function PlasmicTextInput2__RenderFunc(props: {
   variants: PlasmicTextInput2__VariantsArgs;
   args: PlasmicTextInput2__ArgsType;
@@ -110,9 +106,20 @@ function PlasmicTextInput2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultTextInput2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {
+          placeholder: "Enter something…" as const
+        },
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
     useTrigger("useFocusVisibleWithin", {
@@ -327,12 +334,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicTextInput2__ArgProps,
-      internalVariantPropNames: PlasmicTextInput2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicTextInput2__ArgProps,
+          internalVariantPropNames: PlasmicTextInput2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicTextInput2__RenderFunc({
       variants,

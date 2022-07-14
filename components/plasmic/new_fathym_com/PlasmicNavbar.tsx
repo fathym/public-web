@@ -78,8 +78,6 @@ export interface DefaultNavbarProps {
   className?: string;
 }
 
-export const defaultNavbar__Args: Partial<PlasmicNavbar__ArgsType> = {};
-
 function PlasmicNavbar__RenderFunc(props: {
   variants: PlasmicNavbar__VariantsArgs;
   args: PlasmicNavbar__ArgsType;
@@ -88,9 +86,19 @@ function PlasmicNavbar__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultNavbar__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -542,12 +550,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicNavbar__ArgProps,
-      internalVariantPropNames: PlasmicNavbar__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicNavbar__ArgProps,
+          internalVariantPropNames: PlasmicNavbar__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicNavbar__RenderFunc({
       variants,

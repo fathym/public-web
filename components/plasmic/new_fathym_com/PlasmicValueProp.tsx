@@ -97,8 +97,6 @@ export interface DefaultValuePropProps {
   className?: string;
 }
 
-export const defaultValueProp__Args: Partial<PlasmicValueProp__ArgsType> = {};
-
 function PlasmicValueProp__RenderFunc(props: {
   variants: PlasmicValueProp__VariantsArgs;
   args: PlasmicValueProp__ArgsType;
@@ -107,9 +105,19 @@ function PlasmicValueProp__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultValueProp__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -286,12 +294,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicValueProp__ArgProps,
-      internalVariantPropNames: PlasmicValueProp__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicValueProp__ArgProps,
+          internalVariantPropNames: PlasmicValueProp__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicValueProp__RenderFunc({
       variants,

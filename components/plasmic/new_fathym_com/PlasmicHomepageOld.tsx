@@ -84,9 +84,6 @@ export type PlasmicHomepageOld__OverridesType = {
 
 export interface DefaultHomepageOldProps {}
 
-export const defaultHomepageOld__Args: Partial<PlasmicHomepageOld__ArgsType> =
-  {};
-
 function PlasmicHomepageOld__RenderFunc(props: {
   variants: PlasmicHomepageOld__VariantsArgs;
   args: PlasmicHomepageOld__ArgsType;
@@ -95,9 +92,19 @@ function PlasmicHomepageOld__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomepageOld__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,6 +120,13 @@ function PlasmicHomepageOld__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={
+            "Fathym - Develop & Deploy modern web experiences with your team"
+          }
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={
             "Fathym - Develop & Deploy modern web experiences with your team"
           }
@@ -2175,12 +2189,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomepageOld__ArgProps,
-      internalVariantPropNames: PlasmicHomepageOld__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomepageOld__ArgProps,
+          internalVariantPropNames: PlasmicHomepageOld__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomepageOld__RenderFunc({
       variants,

@@ -102,6 +102,11 @@
 .img > .__wab_img-spacer > img {
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .img {
+    height: 256px;
+  }
+}
 .foreground2 {
   flex-direction: column;
   display: flex;

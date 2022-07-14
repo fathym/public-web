@@ -61,9 +61,6 @@ export interface DefaultHabistackFooterProps {
   className?: string;
 }
 
-export const defaultHabistackFooter__Args: Partial<PlasmicHabistackFooter__ArgsType> =
-  {};
-
 function PlasmicHabistackFooter__RenderFunc(props: {
   variants: PlasmicHabistackFooter__VariantsArgs;
   args: PlasmicHabistackFooter__ArgsType;
@@ -72,9 +69,19 @@ function PlasmicHabistackFooter__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHabistackFooter__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <Footer
@@ -127,12 +134,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHabistackFooter__ArgProps,
-      internalVariantPropNames: PlasmicHabistackFooter__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHabistackFooter__ArgProps,
+          internalVariantPropNames: PlasmicHabistackFooter__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHabistackFooter__RenderFunc({
       variants,

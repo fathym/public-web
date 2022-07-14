@@ -75,9 +75,6 @@ export type PlasmicHomepageVariant2__OverridesType = {
 
 export interface DefaultHomepageVariant2Props {}
 
-export const defaultHomepageVariant2__Args: Partial<PlasmicHomepageVariant2__ArgsType> =
-  {};
-
 function PlasmicHomepageVariant2__RenderFunc(props: {
   variants: PlasmicHomepageVariant2__VariantsArgs;
   args: PlasmicHomepageVariant2__ArgsType;
@@ -86,9 +83,19 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomepageVariant2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -97,7 +104,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
           {"Fathym - Develop & Deploy modern web experiences with your team"}
         </title>
@@ -109,9 +116,29 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
           }
         />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={
+            "Fathym - Develop & Deploy modern web experiences with your team"
+          }
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
           }
@@ -119,6 +146,13 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
         <meta
           key="og:image"
           property="og:image"
+          content={
+            "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
+          }
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
           content={
             "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
           }
@@ -201,7 +235,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           >
                             <React.Fragment>
                               <React.Fragment>
-                                {"Deliver stunning sites with the "}
+                                {"Deliver sites with the utmost"}
                               </React.Fragment>
                               <span
                                 className={
@@ -209,7 +243,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 }
                                 style={{ color: "#5856D6" }}
                               >
-                                {"utmost flexibility and speed."}
+                                {" flexibility and speed."}
                               </span>
                               <React.Fragment>{""}</React.Fragment>
                             </React.Fragment>
@@ -224,38 +258,40 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           >
                             <React.Fragment>
                               <React.Fragment>{""}</React.Fragment>
-                              <h2
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.h2,
-                                  projectcss.__wab_text,
-                                  sty.h2___4O9Ov
-                                )}
-                              >
-                                <React.Fragment>
+                              {
+                                <h2
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.h2,
+                                    projectcss.__wab_text,
+                                    sty.h2___4O9Ov
+                                  )}
+                                >
                                   <React.Fragment>
-                                    {
-                                      "Developers use Fathym to host, manage and deploy future-proof web projects and applications – "
-                                    }
+                                    <React.Fragment>
+                                      {
+                                        "Developers use Fathym to deploy and host future-proof web projects and applications – "
+                                      }
+                                    </React.Fragment>
+                                    <span
+                                      className={
+                                        "plasmic_default__all plasmic_default__span"
+                                      }
+                                      style={{
+                                        fontWeight: 700,
+                                        color: "#5856D6"
+                                      }}
+                                    >
+                                      {"powered by Azure"}
+                                    </span>
+                                    <React.Fragment>
+                                      {
+                                        " – with the flexibility and speed the modern web demands.\n\n"
+                                      }
+                                    </React.Fragment>
                                   </React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      fontWeight: 700,
-                                      color: "#5856D6"
-                                    }}
-                                  >
-                                    {"powered by Azure"}
-                                  </span>
-                                  <React.Fragment>
-                                    {
-                                      " – with the flexibility and speed the modern web demands.\n\n"
-                                    }
-                                  </React.Fragment>
-                                </React.Fragment>
-                              </h2>
+                                </h2>
+                              }
                               <React.Fragment>{""}</React.Fragment>
                             </React.Fragment>
                           </div>
@@ -417,7 +453,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 <React.Fragment>
                   <React.Fragment>
                     {
-                      " \n\nFathym automates CI/CD builds, hosting and deployment so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks, Static Site Generators or no code builders you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
+                      " \n\nFathym automates CI/CD builds, deployment and hosting so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks, Static Site Generators or no code builders you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
                     }
                   </React.Fragment>
                   <span
@@ -425,7 +461,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     style={{ fontWeight: 700 }}
                   >
                     {
-                      "Break your web project down into smaller and more manageable pieces for independent, flexible and scalable builds and deployments. "
+                      "Break your web project down into smaller and more manageable pieces for independent, flexible and scalable deployments. "
                     }
                   </span>
                   <React.Fragment>{""}</React.Fragment>
@@ -480,25 +516,27 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           "Getting started is as simple as connecting your GitHub repository. \n\n"
                         }
                       </React.Fragment>
-                      <p.PlasmicLink
-                        data-plasmic-name={"link"}
-                        data-plasmic-override={overrides.link}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          projectcss.plasmic_default__inline,
-                          sty.link
-                        )}
-                        component={Link}
-                        href={
-                          "https://www.fathym.com/dashboard/create-project" as const
-                        }
-                        platform={"nextjs"}
-                        target={"_blank" as const}
-                      >
-                        {"Select an open-source recipe"}
-                      </p.PlasmicLink>
+                      {
+                        <p.PlasmicLink
+                          data-plasmic-name={"link"}
+                          data-plasmic-override={overrides.link}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.link
+                          )}
+                          component={Link}
+                          href={
+                            "https://www.fathym.com/dashboard/create-project" as const
+                          }
+                          platform={"nextjs"}
+                          target={"_blank" as const}
+                        >
+                          {"Select an open-source recipe"}
+                        </p.PlasmicLink>
+                      }
                       <React.Fragment>
                         {
                           " from your favorite frameworks or static site generators see Fathym in action or bring in your own code."
@@ -683,9 +721,24 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         sty.text__avwzb
                       )}
                     >
-                      {
-                        "Break website projects down into smaller apps with individual repositories and automated build pipelines for:  \n\n"
-                      }
+                      <React.Fragment>
+                        <React.Fragment>
+                          {"Break website projects down into "}
+                        </React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#5856D6", fontWeight: 700 }}
+                        >
+                          {"modular, independently versioned apps"}
+                        </span>
+                        <React.Fragment>
+                          {
+                            " with individual code repositories and automated build pipelines for:  \n\n"
+                          }
+                        </React.Fragment>
+                      </React.Fragment>
                     </div>
 
                     <div
@@ -697,137 +750,139 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     >
                       <React.Fragment>
                         <React.Fragment>{""}</React.Fragment>
-                        <ol
-                          data-plasmic-name={"ol"}
-                          data-plasmic-override={overrides.ol}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.ol,
-                            sty.ol
-                          )}
-                        >
-                          <li
+                        {
+                          <ol
+                            data-plasmic-name={"ol"}
+                            data-plasmic-override={overrides.ol}
                             className={classNames(
                               projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__g1XRe
+                              projectcss.ol,
+                              sty.ol
                             )}
                           >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__g1XRe
+                              )}
+                            >
                               <React.Fragment>
-                                {"Smaller, more cohesive, decoupled "}
+                                <React.Fragment>
+                                  {"Smaller, more cohesive, decoupled "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"codebases."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"codebases."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__lZ7B
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__lZ7B
+                              )}
+                            >
                               <React.Fragment>
-                                {"Smaller, faster "}
+                                <React.Fragment>
+                                  {"Smaller, faster "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"builds."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"builds."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__i2UCd
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__i2UCd
+                              )}
+                            >
                               <React.Fragment>
-                                {"Simple testing, version control and "}
+                                <React.Fragment>
+                                  {"Simple testing, version control and "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"release management."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"release management."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__xnuU
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__xnuU
+                              )}
+                            >
                               <React.Fragment>
-                                {"Incremental upgrades and independent "}
+                                <React.Fragment>
+                                  {"Incremental upgrades and independent "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"deployments."}
+                                </span>
+                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"deployments."}
-                              </span>
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </li>
+                            </li>
 
-                          <li
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.li,
-                              projectcss.__wab_text,
-                              sty.li__l0Ono
-                            )}
-                          >
-                            <React.Fragment>
+                            <li
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.li,
+                                projectcss.__wab_text,
+                                sty.li__l0Ono
+                              )}
+                            >
                               <React.Fragment>
-                                {"Flexibility to fork and "}
+                                <React.Fragment>
+                                  {"Flexibility to fork and "}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700, color: "#5856D6" }}
+                                >
+                                  {"re-use modular apps"}
+                                </span>
+                                <React.Fragment>
+                                  {" for other projects."}
+                                </React.Fragment>
                               </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700, color: "#5856D6" }}
-                              >
-                                {"re-use modular apps"}
-                              </span>
-                              <React.Fragment>
-                                {" for other projects."}
-                              </React.Fragment>
-                            </React.Fragment>
-                          </li>
-                        </ol>
+                            </li>
+                          </ol>
+                        }
                         <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     </div>
@@ -847,16 +902,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   >
                     <React.Fragment>
                       <React.Fragment>{""}</React.Fragment>
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__rZuBw
-                        )}
-                      >
-                        {"You're a composer."}
-                      </h3>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__rZuBw
+                          )}
+                        >
+                          {"You're a composer."}
+                        </h3>
+                      }
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </h2>
@@ -871,14 +928,14 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     <React.Fragment>
                       <React.Fragment>
                         {
-                          "Build with the freedom to use different JavaScript frameworks, Static Site Generators or even no code builders on the one site. \n\n"
+                          "Build with the freedom to use different JavaScript frameworks, Static Site Generators or even no code builders on the one domain, if that works for you.\n\n"
                         }
                       </React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ fontWeight: 700, color: "#000000" }}
                       >
-                        {"Use the right framework for the right job. "}
+                        {"Use the best tool for the job. "}
                       </span>
                       <React.Fragment>{""}</React.Fragment>
                       <span
@@ -889,7 +946,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       </span>
                       <React.Fragment>
                         {
-                          "\n\nFathym effortlessly brings your project’s apps together to compose one cohesive and seamless website or web app on your custom domain. "
+                          "\n\nFathym effortlessly brings different repos and stacks together to compose one cohesive and seamless website or web app on your custom domain. "
                         }
                       </React.Fragment>
                     </React.Fragment>
@@ -965,18 +1022,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     </span>
                     <React.Fragment>
                       {
-                        " leverages the Azure CDN to deliver your content and sites to the global points closest to your users. \n\nTake advantage of "
+                        " leverages Azure CDN to deliver your content and sites to the global points closest to your users.\n\nTake advantage of "
                       }
                     </React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "#5856D6", fontWeight: 700 }}
                     >
-                      {"independent builds and deployments"}
+                      {"independent builds, versions and deployments"}
                     </span>
                     <React.Fragment>
                       {
-                        " so you can work concurrently on your web project.\n\nUpdate to any version of your apps with version control, and easily rollback when things go awry without impacting your production site. \n\n"
+                        " to rapidly release changes, upgrades, rollbacks and fixes.\n"
                       }
                     </React.Fragment>
                   </React.Fragment>
@@ -1096,16 +1153,34 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         </span>
                         <React.Fragment>
                           {
-                            " built to scale with you and your customer's needs.\n\nOutgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
+                            " built to scale with you and your team's needs.\n\nOutgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
                           }
                         </React.Fragment>
                         <span
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
+                          style={{ color: "#5856D6", fontWeight: 700 }}
+                        >
+                          {"automated"}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {" "}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
                           style={{ fontWeight: 700, color: "#5856D6" }}
                         >
-                          {"managed or private Azure clouds."}
+                          {" private Azure cloud."}
                         </span>
                         <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
@@ -1124,7 +1199,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     <React.Fragment>
                       <React.Fragment>
                         {
-                          "Take advantage of our simplified developer experience while scaling to your own Azure cloud with full access to your own infrastructure and the full range and power of Azure's extensive services.\n\n"
+                          "Take advantage of our simplified developer experience while scaling to your own Azure cloud with full access to your infrastructure and the full range and power of Azure's extensive services.\n\n"
                         }
                       </React.Fragment>
                       <span
@@ -1179,7 +1254,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ fontWeight: 700 }}
                 >
-                  {" interactive social feed"}
+                  {" social feed"}
                 </span>
                 <React.Fragment>{".  \n\nFathym offers "}</React.Fragment>
                 <span
@@ -1386,7 +1461,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   <React.Fragment>
                     <React.Fragment>
                       {
-                        "Fathym's powerful micro frontends allow work to be divided and conquered concurrently. Virtual developers handle the heavy lifting of the hosting and DevOps automation, saving you time and money. \n\nPlus, the freedom to use multiple frameworks, static site generators or no code builders on the one project!\n\n"
+                        "Fathym deploys, hosts and integrates multiple repos and your favourite tech stacks, frameworks, no code builders and data sources together on one domain.\n\n"
                       }
                     </React.Fragment>
                     <span
@@ -1394,7 +1469,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       style={{ fontWeight: 700 }}
                     >
                       {
-                        "Take advantage of Fathym's streamlined PaaS developer experience while future proofing your tech stack in the knowledge that you can scale to your own automated Azure cloud when ready."
+                        "Take advantage of Fathym's streamlined PaaS developer experience while future-proofing your tech stack knowing that you can scale to your own automated Azure cloud when ready."
                       }
                     </span>
                     <React.Fragment>{"\n"}</React.Fragment>
@@ -1496,12 +1571,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomepageVariant2__ArgProps,
-      internalVariantPropNames: PlasmicHomepageVariant2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomepageVariant2__ArgProps,
+          internalVariantPropNames: PlasmicHomepageVariant2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomepageVariant2__RenderFunc({
       variants,

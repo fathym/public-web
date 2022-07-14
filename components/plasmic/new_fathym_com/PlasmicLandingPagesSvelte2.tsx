@@ -85,9 +85,6 @@ export type PlasmicLandingPagesSvelte2__OverridesType = {
 
 export interface DefaultLandingPagesSvelte2Props {}
 
-export const defaultLandingPagesSvelte2__Args: Partial<PlasmicLandingPagesSvelte2__ArgsType> =
-  {};
-
 function PlasmicLandingPagesSvelte2__RenderFunc(props: {
   variants: PlasmicLandingPagesSvelte2__VariantsArgs;
   args: PlasmicLandingPagesSvelte2__ArgsType;
@@ -96,9 +93,19 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLandingPagesSvelte2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -114,6 +121,11 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Fathym - Svelte Development & Deployments in record time"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Fathym - Svelte Development & Deployments in record time"}
         />
       </Head>
@@ -276,7 +288,7 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Looking for the right framework for your next JAMStack example, tutorial or project?  Deploy Svelte alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Svelte app free with Fathym's micro frontend framework."
+                      "Looking for the right framework for your next Jamstack example, tutorial or project?  Deploy Svelte alongside any number of additional frameworks, get a feel for the development experience, and see how they perform.  Deploy your Svelte app free with Fathym's micro frontend framework."
                     }
                   </div>
                 </p.Stack>
@@ -287,15 +299,15 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__kO3Mc)}
               >
-                <Reveal
-                  className={classNames("__wab_instance", sty.reveal__zHtoB)}
-                  direction={"up" as const}
-                  triggerOnce={false}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__nuOoY)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__nuOoY)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__qxkSc)}
+                    direction={"up" as const}
+                    triggerOnce={false}
                   >
                     <ValueProp
                       className={classNames(
@@ -359,7 +371,13 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                       }
                       title={"Svelte vs React"}
                     />
+                  </Reveal>
 
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__cFiUf)}
+                    direction={"up" as const}
+                    triggerOnce={false}
+                  >
                     <ValueProp
                       className={classNames(
                         "__wab_instance",
@@ -422,7 +440,13 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                       }
                       title={"Svelte vs VueJS"}
                     />
+                  </Reveal>
 
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__v4Vl5)}
+                    direction={"up" as const}
+                    triggerOnce={false}
+                  >
                     <ValueProp
                       className={classNames(
                         "__wab_instance",
@@ -485,8 +509,8 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                       }
                       title={"Svelte vs Angular"}
                     />
-                  </p.Stack>
-                </Reveal>
+                  </Reveal>
+                </p.Stack>
               </p.Stack>
             </Section>
 
@@ -1337,12 +1361,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLandingPagesSvelte2__ArgProps,
-      internalVariantPropNames: PlasmicLandingPagesSvelte2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLandingPagesSvelte2__ArgProps,
+          internalVariantPropNames: PlasmicLandingPagesSvelte2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLandingPagesSvelte2__RenderFunc({
       variants,

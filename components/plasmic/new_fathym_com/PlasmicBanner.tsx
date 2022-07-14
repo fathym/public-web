@@ -72,15 +72,6 @@ export interface DefaultBannerProps {
   className?: string;
 }
 
-export const defaultBanner__Args: Partial<PlasmicBanner__ArgsType> = {
-  image: {
-    src: "/plasmic/new_fathym_com/images/image15.png",
-    fullWidth: 1384,
-    fullHeight: 1023,
-    aspectRatio: undefined
-  }
-};
-
 function PlasmicBanner__RenderFunc(props: {
   variants: PlasmicBanner__VariantsArgs;
   args: PlasmicBanner__ArgsType;
@@ -89,9 +80,25 @@ function PlasmicBanner__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultBanner__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {
+          image: {
+            src: "/plasmic/new_fathym_com/images/image15.png",
+            fullWidth: 1384,
+            fullHeight: 1023,
+            aspectRatio: undefined
+          }
+        },
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -245,12 +252,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicBanner__ArgProps,
-      internalVariantPropNames: PlasmicBanner__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicBanner__ArgProps,
+          internalVariantPropNames: PlasmicBanner__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicBanner__RenderFunc({
       variants,

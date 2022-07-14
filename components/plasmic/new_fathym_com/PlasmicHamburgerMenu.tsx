@@ -59,9 +59,6 @@ export interface DefaultHamburgerMenuProps {
   className?: string;
 }
 
-export const defaultHamburgerMenu__Args: Partial<PlasmicHamburgerMenu__ArgsType> =
-  {};
-
 function PlasmicHamburgerMenu__RenderFunc(props: {
   variants: PlasmicHamburgerMenu__VariantsArgs;
   args: PlasmicHamburgerMenu__ArgsType;
@@ -70,9 +67,19 @@ function PlasmicHamburgerMenu__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHamburgerMenu__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -133,12 +140,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHamburgerMenu__ArgProps,
-      internalVariantPropNames: PlasmicHamburgerMenu__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHamburgerMenu__ArgProps,
+          internalVariantPropNames: PlasmicHamburgerMenu__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHamburgerMenu__RenderFunc({
       variants,

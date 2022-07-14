@@ -70,8 +70,6 @@ export interface DefaultLogoProps {
   className?: string;
 }
 
-export const defaultLogo__Args: Partial<PlasmicLogo__ArgsType> = {};
-
 function PlasmicLogo__RenderFunc(props: {
   variants: PlasmicLogo__VariantsArgs;
   args: PlasmicLogo__ArgsType;
@@ -80,9 +78,19 @@ function PlasmicLogo__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultLogo__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -179,12 +187,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicLogo__ArgProps,
-      internalVariantPropNames: PlasmicLogo__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicLogo__ArgProps,
+          internalVariantPropNames: PlasmicLogo__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicLogo__RenderFunc({
       variants,

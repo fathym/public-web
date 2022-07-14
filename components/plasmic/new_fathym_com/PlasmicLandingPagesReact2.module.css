@@ -305,10 +305,6 @@
     margin-top: 24px;
   }
 }
-.reveal__s3Lc:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
 .freeBox__nuOoY {
   flex-direction: row;
   display: flex;
@@ -362,6 +358,10 @@
     margin-top: 24px;
   }
 }
+.reveal__sXbmf:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
 .valueProp__h3Bma:global(.__wab_instance) {
   width: 100%;
   min-width: 0;
@@ -387,13 +387,13 @@
 .button__orvOt:global(.__wab_instance) {
   display: none;
 }
-.svg__sDuCu {
+.svg__fTuS {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg___31Ud5 {
+.svg__pyi8W {
   width: 24px;
   height: 24px;
   position: relative;
@@ -404,6 +404,10 @@
   width: 28px;
   height: 28px;
   color: #34c759;
+}
+.reveal__hKwjK:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
 }
 .valueProp__jb4Kz:global(.__wab_instance) {
   width: 100%;
@@ -426,13 +430,13 @@
 .button__jc7Vf:global(.__wab_instance) {
   display: none;
 }
-.svg__cFEfb {
+.svg__rKPX {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg___7HqRb {
+.svg__nqCl0 {
   width: 24px;
   height: 24px;
   position: relative;
@@ -443,6 +447,10 @@
   width: 28px;
   height: 28px;
   color: #34c759;
+}
+.reveal___0Kn31:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
 }
 .valueProp___9IDsf:global(.__wab_instance) {
   width: 100%;
@@ -466,13 +474,13 @@
 .button__tcixz:global(.__wab_instance) {
   display: none;
 }
-.svg__kuRWh {
+.svg__lySl2 {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg__sTqf5 {
+.svg__tKS {
   width: 24px;
   height: 24px;
   position: relative;

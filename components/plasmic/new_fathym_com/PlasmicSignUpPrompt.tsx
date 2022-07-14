@@ -68,9 +68,6 @@ export interface DefaultSignUpPromptProps {
   className?: string;
 }
 
-export const defaultSignUpPrompt__Args: Partial<PlasmicSignUpPrompt__ArgsType> =
-  {};
-
 function PlasmicSignUpPrompt__RenderFunc(props: {
   variants: PlasmicSignUpPrompt__VariantsArgs;
   args: PlasmicSignUpPrompt__ArgsType;
@@ -79,9 +76,19 @@ function PlasmicSignUpPrompt__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultSignUpPrompt__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -264,12 +271,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicSignUpPrompt__ArgProps,
-      internalVariantPropNames: PlasmicSignUpPrompt__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicSignUpPrompt__ArgProps,
+          internalVariantPropNames: PlasmicSignUpPrompt__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicSignUpPrompt__RenderFunc({
       variants,
