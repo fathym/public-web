@@ -166,11 +166,13 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
-        <div
+        <p.Stack
+          as={"div"}
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
+          hasGap={true}
           className={classNames(
             projectcss.all,
             projectcss.root_reset,
@@ -405,7 +407,11 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       <p.PlasmicImg
                         alt={""}
                         className={classNames(sty.img__aivs)}
-                        displayHeight={"491px" as const}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? ("460px" as const)
+                            : ("491px" as const)
+                        }
                         displayMaxHeight={"none" as const}
                         displayMaxWidth={"100%" as const}
                         displayMinHeight={"0" as const}
@@ -928,7 +934,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     <React.Fragment>
                       <React.Fragment>
                         {
-                          "Build with the freedom to use different JavaScript frameworks, Static Site Generators or even no code builders on the one domain, if that works for you.\n\n"
+                          "Build with the freedom to use different frameworks, Static Site Generators or even no code builders on the one domain.\n\n"
                         }
                       </React.Fragment>
                       <span
@@ -946,7 +952,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       </span>
                       <React.Fragment>
                         {
-                          "\n\nFathym effortlessly brings different repos and stacks together to compose one cohesive and seamless website or web app on your custom domain. "
+                          "\n\nFathym effortlessly brings multiple repos and different stacks together to compose one cohesive and seamless website or web app on your custom domain. "
                         }
                       </React.Fragment>
                     </React.Fragment>
@@ -1050,7 +1056,11 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("460px" as const)
+                        : ("100%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: "/plasmic/new_fathym_com/images/processorDetailspng.png",
@@ -1065,12 +1075,20 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   <p.PlasmicImg
                     alt={""}
                     className={classNames(sty.img__ibJu)}
-                    displayHeight={"400px" as const}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("400px" as const)
+                        : ("400px" as const)
+                    }
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"150%" as const}
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"100%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("460px" as const)
+                        : ("100%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: "/plasmic/new_fathym_com/images/routes2Png.png",
@@ -1280,7 +1298,11 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   : ("527px" as const)
               }
               displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
+              displayMaxWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? ("450px" as const)
+                  : ("100%" as const)
+              }
               displayMinHeight={"0" as const}
               displayMinWidth={"0" as const}
               displayWidth={
@@ -1496,7 +1518,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
             data-plasmic-override={overrides.fathymFooter}
             className={classNames("__wab_instance", sty.fathymFooter)}
           />
-        </div>
+        </p.Stack>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
