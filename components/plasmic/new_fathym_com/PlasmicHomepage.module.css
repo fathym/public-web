@@ -1970,13 +1970,12 @@
 .columns__tPTt {
   display: flex;
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   align-items: stretch;
   flex-shrink: 1;
   flex-direction: row;
   flex-wrap: nowrap;
-  min-width: 0;
   padding: 8px;
 }
 .columns__tPTt > :nth-child(1n + 1) {
