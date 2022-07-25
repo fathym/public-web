@@ -2,9 +2,13 @@ name: fathym/public-web
 
 on:
   push:
-    branches: [main]
+    branches: 
+      - main      
+      - integration    
   pull_request:
-    branches: [main]
+    branches:
+      - main      
+      - integration       
 
 permissions: write-all
 
