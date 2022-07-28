@@ -423,9 +423,9 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         }
                         loading={"lazy" as const}
                         src={{
-                          src: "/plasmic/new_fathym_com/images/socialFeedDashboardpng.png",
-                          fullWidth: 1394,
-                          fullHeight: 1486,
+                          src: "/plasmic/new_fathym_com/images/activityFeedpng.png",
+                          fullWidth: 1420,
+                          fullHeight: 1564,
                           aspectRatio: undefined
                         }}
                       />
@@ -1116,13 +1116,13 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("400px" as const)
-                        : ("100%" as const)
+                        : ("auto" as const)
                     }
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/updatedProcessorDetailsScreenshotPng.png",
-                      fullWidth: 1170,
-                      fullHeight: 1008,
+                      src: "/plasmic/new_fathym_com/images/buildPipelines1Png.png",
+                      fullWidth: 1350,
+                      fullHeight: 728,
                       aspectRatio: undefined
                     }}
                   />
@@ -1148,7 +1148,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("400px" as const)
-                        : ("100%" as const)
+                        : ("auto" as const)
                     }
                     loading={"lazy" as const}
                     src={{
@@ -1358,20 +1358,20 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               displayHeight={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("274px" as const)
-                  : ("527px" as const)
+                  : ("600px" as const)
               }
               displayMaxHeight={"none" as const}
               displayMaxWidth={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("450px" as const)
-                  : ("100%" as const)
+                  : ("150%" as const)
               }
               displayMinHeight={"0" as const}
               displayMinWidth={"0" as const}
               displayWidth={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("400px" as const)
-                  : ("750px" as const)
+                  : ("1550px" as const)
               }
               loading={"lazy" as const}
               src={{

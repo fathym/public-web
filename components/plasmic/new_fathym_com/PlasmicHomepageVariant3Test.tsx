@@ -279,16 +279,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text__t797Y
-                              )}
-                            >
-                              {"Fathym."}
-                            </div>
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
                                 sty.text__tDnC
                               )}
                             >
