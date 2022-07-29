@@ -147,14 +147,14 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
           key="og:image"
           property="og:image"
           content={
-            "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
+            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
           }
         />
         <meta
           key="twitter:image"
           name="twitter:image"
           content={
-            "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
+            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
           }
         />
       </Head>
@@ -416,12 +416,16 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         displayMaxWidth={"100%" as const}
                         displayMinHeight={"0" as const}
                         displayMinWidth={"0" as const}
-                        displayWidth={"auto" as const}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? ("400px" as const)
+                            : ("auto" as const)
+                        }
                         loading={"lazy" as const}
                         src={{
-                          src: "/plasmic/new_fathym_com/images/socialFeedDashboardpng.png",
-                          fullWidth: 1400,
-                          fullHeight: 1486,
+                          src: "/plasmic/new_fathym_com/images/activityFeedpng.png",
+                          fullWidth: 1420,
+                          fullHeight: 1564,
                           aspectRatio: undefined
                         }}
                       />
@@ -504,11 +508,17 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   sty.h2__p6Cdd
                 )}
               >
-                {"1. Start with your code."}
+                {hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "Start with your code."
+                  : "Start with your code."}
               </h2>
 
               <div className={classNames(projectcss.all, sty.columns__anwWz)}>
-                <div className={classNames(projectcss.all, sty.column___7FFd)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column___7FFd)}
+                >
                   <div
                     className={classNames(
                       projectcss.all,
@@ -668,7 +678,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.column__kZKoU
+                          sty.column___8RvUw
                         )}
                       >
                         <p.PlasmicImg
@@ -679,19 +689,23 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           displayMaxWidth={"100%" as const}
                           displayMinHeight={"0" as const}
                           displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
+                          displayWidth={
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? ("400px" as const)
+                              : ("auto" as const)
+                          }
                           loading={"lazy" as const}
                           src={{
                             src: "/plasmic/new_fathym_com/images/gettingStartedTemplatepng.png",
-                            fullWidth: 1962,
-                            fullHeight: 1544,
+                            fullWidth: 1730,
+                            fullHeight: 1598,
                             aspectRatio: undefined
                           }}
                         />
                       </div>
                     </div>
                   </div>
-                </div>
+                </p.Stack>
               </div>
             </p.Stack>
           </div>
@@ -710,7 +724,9 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   sty.h2__uglUb
                 )}
               >
-                {"2. Break it down."}
+                {hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "Break it \ndown."
+                  : "   Break it down."}
               </h2>
 
               {true ? (
@@ -824,7 +840,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                             >
                               <React.Fragment>
                                 <React.Fragment>
-                                  {"Simple testing, version control and "}
+                                  {"Simpler testing, version control and "}
                                 </React.Fragment>
                                 <span
                                   className={
@@ -934,7 +950,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     <React.Fragment>
                       <React.Fragment>
                         {
-                          "Build with the freedom to use different frameworks, Static Site Generators or even no code builders on the one domain.\n\n"
+                          "Build with the freedom to use different frameworks, Static Site Generators or even no code builders for different sections of your site without the need for subdomains.\n\n"
                         }
                       </React.Fragment>
                       <span
@@ -963,12 +979,20 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   <p.PlasmicImg
                     alt={""}
                     className={classNames(sty.img__eMjOw)}
-                    displayHeight={"auto" as const}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("332px" as const)
+                        : ("auto" as const)
+                    }
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("400px" as const)
+                        : ("auto" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: "/plasmic/new_fathym_com/images/homeRoutespng3.png",
@@ -992,7 +1016,9 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   sty.h2__meclb
                 )}
               >
-                {"3. Deploy with confidence."}
+                {hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? " Deploy with confidence."
+                  : "Deploy with confidence."}
               </h2>
 
               <div
@@ -1013,7 +1039,18 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     </span>
                     <React.Fragment>
                       {
-                        " leverages Azure CDN to deliver your content and sites to the global points closest to your users. \n\nTake advantage of independent builds and deployments so you can work concurrently on your web project.\n\nUpdate to any version of your apps with version control, and easily rollback when things go awry without impacting your production site. \n\n"
+                        " leverages Azure CDN to deliver your content and sites to the global points closest to your users.\n\nTake advantage of "
+                      }
+                    </React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#5856D6", fontWeight: 700 }}
+                    >
+                      {"independent builds, versions and deployments"}
+                    </span>
+                    <React.Fragment>
+                      {
+                        " to rapidly release changes, upgrades, rollbacks and fixes.\n\n\n\n\n\n\n"
                       }
                     </React.Fragment>
                   </React.Fragment>
@@ -1046,6 +1083,22 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 )}
               </div>
 
+              {(
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? true
+                  : false
+              ) ? (
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___3Cx5Y
+                  )}
+                >
+                  {"\n\n\n"}
+                </div>
+              ) : null}
+
               <div className={classNames(projectcss.all, sty.columns__ru70O)}>
                 <div className={classNames(projectcss.all, sty.column__opza)}>
                   <p.PlasmicImg
@@ -1053,19 +1106,23 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     className={classNames(sty.img__m8JVp)}
                     displayHeight={"400px" as const}
                     displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("400px" as const)
+                        : ("100%" as const)
+                    }
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("460px" as const)
-                        : ("100%" as const)
+                        ? ("400px" as const)
+                        : ("auto" as const)
                     }
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/processorDetailspng.png",
-                      fullWidth: 1180,
-                      fullHeight: 1026,
+                      src: "/plasmic/new_fathym_com/images/buildPipelines1Png.png",
+                      fullWidth: 1350,
+                      fullHeight: 728,
                       aspectRatio: undefined
                     }}
                   />
@@ -1081,19 +1138,23 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         : ("400px" as const)
                     }
                     displayMaxHeight={"none" as const}
-                    displayMaxWidth={"150%" as const}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("400px" as const)
+                        : ("150%" as const)
+                    }
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("460px" as const)
-                        : ("100%" as const)
+                        ? ("400px" as const)
+                        : ("auto" as const)
                     }
                     loading={"lazy" as const}
                     src={{
-                      src: "/plasmic/new_fathym_com/images/routes2Png.png",
-                      fullWidth: 624,
-                      fullHeight: 626,
+                      src: "/plasmic/new_fathym_com/images/updatedRoutesScreenshotpng.png",
+                      fullWidth: 634,
+                      fullHeight: 620,
                       aspectRatio: undefined
                     }}
                   />
@@ -1116,7 +1177,9 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   sty.h2__tsnhg
                 )}
               >
-                {"4. Scale as you grow."}
+                {hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "    Scale as you  grow."
+                  : "Scale as you grow."}
               </h2>
 
               <div className={classNames(projectcss.all, sty.columns___72XVq)}>
@@ -1295,26 +1358,26 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               displayHeight={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("274px" as const)
-                  : ("527px" as const)
+                  : ("600px" as const)
               }
               displayMaxHeight={"none" as const}
               displayMaxWidth={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("450px" as const)
-                  : ("100%" as const)
+                  : ("150%" as const)
               }
               displayMinHeight={"0" as const}
               displayMinWidth={"0" as const}
               displayWidth={
                 hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("407px" as const)
-                  : ("750px" as const)
+                  ? ("400px" as const)
+                  : ("1550px" as const)
               }
               loading={"lazy" as const}
               src={{
-                src: "/plasmic/new_fathym_com/images/anotherSocialFeedShotpng.png",
-                fullWidth: 2144,
-                fullHeight: 1496,
+                src: "/plasmic/new_fathym_com/images/anotherDashboardScreenshotpng.png",
+                fullWidth: 2112,
+                fullHeight: 1482,
                 aspectRatio: undefined
               }}
             />
@@ -1350,70 +1413,141 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 sty.text__bVZlj
               )}
             >
-              <React.Fragment>
+              {hasVariant(globalVariants, "screen", "mobileOnly") ? (
                 <React.Fragment>
-                  {
-                    "Fathym leverages Azure for the most advanced, enterprise-grade infrastructure and world class "
-                  }
+                  <React.Fragment>
+                    {
+                      "Fathym leverages Azure for the most advanced, enterprise-grade infrastructure and world class "
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"performance, reliability and security. "}
+                  </span>
+                  <React.Fragment>
+                    {
+                      "\n\nControl who accesses your apps through out-of-the-box "
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"authentication"}
+                  </span>
+                  <React.Fragment>{" and"}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {" "}
+                  </span>
+                  <React.Fragment>{"\n"}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"identity management."}
+                  </span>
+                  <React.Fragment>
+                    {
+                      "\n\nAs you scale and need the flexibility and full range of services that only the big cloud providers offer, we'll"
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#5856D6" }}
+                  >
+                    {" "}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#5856D6", fontWeight: 700 }}
+                  >
+                    {
+                      "automate best practice infrastructure in your own Azure environment."
+                    }
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {" "}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"performance, reliability and security. "}
-                </span>
+              ) : (
                 <React.Fragment>
-                  {"\n\nControl who accesses your apps through out-of-the-box "}
+                  <React.Fragment>
+                    {
+                      "Fathym leverages Azure for the most advanced, enterprise-grade infrastructure and world class "
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"performance, reliability and security. "}
+                  </span>
+                  <React.Fragment>
+                    {
+                      "\n\nControl who accesses your apps through out-of-the-box "
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"authentication"}
+                  </span>
+                  <React.Fragment>{" and"}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {" "}
+                  </span>
+                  <React.Fragment>{"\n"}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"identity management."}
+                  </span>
+                  <React.Fragment>
+                    {
+                      "\n\nAs you scale and need the flexibility and full range of services that only the big cloud providers offer, we'll"
+                    }
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#5856D6" }}
+                  >
+                    {" "}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#5856D6", fontWeight: 700 }}
+                  >
+                    {
+                      "automate best practice infrastructure in your own Azure environment."
+                    }
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {" "}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"authentication"}
-                </span>
-                <React.Fragment>{" and"}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {" "}
-                </span>
-                <React.Fragment>{"\n"}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"identity management."}
-                </span>
-                <React.Fragment>
-                  {
-                    "\n\nAs you scale and need the flexibility and full range of services that only the big cloud providers offer, we'll"
-                  }
-                </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#5856D6" }}
-                >
-                  {" "}
-                </span>
-                <React.Fragment>{""}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#5856D6", fontWeight: 700 }}
-                >
-                  {
-                    "automate best practice infrastructure in your own Azure environment."
-                  }
-                </span>
-                <React.Fragment>{""}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {" "}
-                </span>
-                <React.Fragment>{""}</React.Fragment>
-              </React.Fragment>
+              )}
             </div>
 
             <p.PlasmicImg
@@ -1430,7 +1564,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
               displayMinWidth={"0" as const}
               displayWidth={
                 hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("439px" as const)
+                  ? ("400px" as const)
                   : ("auto" as const)
               }
               loading={"lazy" as const}
@@ -1483,7 +1617,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   <React.Fragment>
                     <React.Fragment>
                       {
-                        "Fathym deploys, hosts and integrates multiple repos and your favourite tech stacks, frameworks, no code builders and data sources together on one domain.\n\n"
+                        "Fathym deploys, hosts and seamlessly integrates multiple repos and your favourite tech stacks, frameworks, no code builders and data sources together under one domain.\n\n"
                       }
                     </React.Fragment>
                     <span

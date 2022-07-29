@@ -148,14 +148,14 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
           key="og:image"
           property="og:image"
           content={
-            "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
+            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
           }
         />
         <meta
           key="twitter:image"
           name="twitter:image"
           content={
-            "https://site-assets.plasmic.app/0ea48039573264deaac2bf1ff587c1cc.png"
+            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
           }
         />
       </Head>
@@ -274,16 +274,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                 <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </h1>
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__t797Y
-                              )}
-                            >
-                              {"Fathym."}
-                            </div>
 
                             <div
                               className={classNames(
