@@ -201,7 +201,6 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
-                                <React.Fragment>{""}</React.Fragment>
                                 <span
                                   className={
                                     "plasmic_default__all plasmic_default__span"
@@ -219,11 +218,9 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
                                 >
                                   {"under one domain."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             ) : (
                               <React.Fragment>
-                                <React.Fragment>{""}</React.Fragment>
                                 <span
                                   className={
                                     "plasmic_default__all plasmic_default__span"
@@ -250,7 +247,6 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
                                 >
                                   {"under one domain."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             )}
                           </div>
