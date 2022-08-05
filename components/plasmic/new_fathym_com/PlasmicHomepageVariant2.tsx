@@ -247,7 +247,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                               >
                                 {" flexibility and speed."}
                               </span>
-                              <React.Fragment>{""}</React.Fragment>
                             </React.Fragment>
                           </h1>
 
@@ -474,7 +473,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       "Break your web project down into smaller and more manageable pieces for independent, flexible and scalable deployments. "
                     }
                   </span>
-                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               </div>
             </p.Stack>
@@ -802,7 +800,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 >
                                   {"codebases."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -826,7 +823,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 >
                                   {"builds."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -850,7 +846,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 >
                                   {"release management."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -874,7 +869,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                                 >
                                   {"deployments."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -1217,7 +1211,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         >
                           {"managed or private Azure clouds."}
                         </span>
-                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     ) : (
                       <React.Fragment>
@@ -1263,7 +1256,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         >
                           {" private Azure cloud."}
                         </span>
-                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     )}
                   </div>
@@ -1298,7 +1290,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                       >
                         {""}
                       </span>
-                      <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </div>
                 </div>
@@ -1402,7 +1393,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                 >
                   {"minus the complexity."}
                 </span>
-                <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </h2>
 
@@ -1478,7 +1468,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   >
                     {" "}
                   </span>
-                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               ) : (
                 <React.Fragment>
@@ -1545,7 +1534,6 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   >
                     {" "}
                   </span>
-                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               )}
             </div>

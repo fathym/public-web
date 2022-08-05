@@ -244,7 +244,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                               )}
                             >
                               <React.Fragment>
-                                <React.Fragment>{""}</React.Fragment>
                                 <span
                                   className={
                                     "plasmic_default__all plasmic_default__span"
@@ -271,7 +270,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                 >
                                   {"Fathym."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </h1>
 
@@ -527,7 +525,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                       "Break your web project down into smaller and more manageable pieces for independent, flexible and scalable builds and deployments. "
                     }
                   </span>
-                  <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               </div>
             </p.Stack>
@@ -835,7 +832,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                 >
                                   {"codebases."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -859,7 +855,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                 >
                                   {"builds."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -883,7 +878,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                 >
                                   {"release management."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -907,7 +901,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                 >
                                   {"deployments."}
                                 </span>
-                                <React.Fragment>{""}</React.Fragment>
                               </React.Fragment>
                             </li>
 
@@ -1319,7 +1312,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                         >
                           {"managed or private Azure clouds."}
                         </span>
-                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     ) : (
                       <React.Fragment>
@@ -1347,7 +1339,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                         >
                           {"managed or private Azure clouds."}
                         </span>
-                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     )}
                   </div>
@@ -1382,7 +1373,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                       >
                         {""}
                       </span>
-                      <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </div>
                 </div>
@@ -1488,7 +1478,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                 >
                   {"minus the complexity."}
                 </span>
-                <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </h2>
 
@@ -1561,7 +1550,6 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                 >
                   {" "}
                 </span>
-                <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
           </div>
