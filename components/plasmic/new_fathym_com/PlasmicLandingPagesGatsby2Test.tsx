@@ -106,7 +106,10 @@ function PlasmicLandingPagesGatsby2Test__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -115,19 +118,44 @@ function PlasmicLandingPagesGatsby2Test__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Gatsby Development & Deployments in record time"}
+          {PlasmicLandingPagesGatsby2Test.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={"Fathym - Gatsby Development & Deployments in record time"}
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={"Fathym - Gatsby Development & Deployments in record time"}
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesGatsby2Test.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -1378,7 +1406,17 @@ export const PlasmicLandingPagesGatsby2Test = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesGatsby2Test
     internalVariantProps: PlasmicLandingPagesGatsby2Test__VariantProps,
-    internalArgProps: PlasmicLandingPagesGatsby2Test__ArgProps
+    internalArgProps: PlasmicLandingPagesGatsby2Test__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Gatsby Development & Deployments in record time",
+      description:
+        "Deploy and host your Gatsby project on Fathym in just a few clicks.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/c5775a66ddbdd65a79d4252344a622c8.png",
+      canonical: ""
+    }
   }
 );
 

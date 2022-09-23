@@ -13,7 +13,7 @@
 .img > picture > img {
   object-fit: cover;
 }
-.img > .__wab_img-spacer > img {
+.img > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {

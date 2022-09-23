@@ -105,7 +105,10 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -114,19 +117,44 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Svelte Development & Deployments in record time"}
+          {PlasmicLandingPagesSvelte2.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={"Fathym - Svelte Development & Deployments in record time"}
+          content={PlasmicLandingPagesSvelte2.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={"Fathym - Svelte Development & Deployments in record time"}
+          content={PlasmicLandingPagesSvelte2.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesSvelte2.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesSvelte2.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesSvelte2.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesSvelte2.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesSvelte2.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -335,7 +363,7 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                               sty.link__tzCcK
                             )}
                             component={Link}
-                            href={"/react" as const}
+                            href={`/react`}
                             platform={"nextjs"}
                           >
                             <div
@@ -404,7 +432,7 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                               sty.link__bywyd
                             )}
                             component={Link}
-                            href={"/vue" as const}
+                            href={`/vue`}
                             platform={"nextjs"}
                           >
                             <div
@@ -473,7 +501,7 @@ function PlasmicLandingPagesSvelte2__RenderFunc(props: {
                               sty.link___1Pczu
                             )}
                             component={Link}
-                            href={"/angular" as const}
+                            href={`/angular`}
                             platform={"nextjs"}
                           >
                             <div
@@ -1404,7 +1432,17 @@ export const PlasmicLandingPagesSvelte2 = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesSvelte2
     internalVariantProps: PlasmicLandingPagesSvelte2__VariantProps,
-    internalArgProps: PlasmicLandingPagesSvelte2__ArgProps
+    internalArgProps: PlasmicLandingPagesSvelte2__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Svelte Development & Deployments in record time",
+      description:
+        "Deploy and host your Svelte project on Fathym in just a few clicks. ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/2c55fdac029a023cd64910df84bd6305.jpg",
+      canonical: ""
+    }
   }
 );
 

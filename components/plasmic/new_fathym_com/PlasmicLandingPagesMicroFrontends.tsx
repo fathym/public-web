@@ -101,7 +101,10 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -110,23 +113,44 @@ function PlasmicLandingPagesMicroFrontends__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Micro Frontend Development & Deployments in record time"}
+          {PlasmicLandingPagesMicroFrontends.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Micro Frontend Development & Deployments in record time"
-          }
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Micro Frontend Development & Deployments in record time"
-          }
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesMicroFrontends.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -1011,7 +1035,17 @@ export const PlasmicLandingPagesMicroFrontends = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesMicroFrontends
     internalVariantProps: PlasmicLandingPagesMicroFrontends__VariantProps,
-    internalArgProps: PlasmicLandingPagesMicroFrontends__ArgProps
+    internalArgProps: PlasmicLandingPagesMicroFrontends__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Micro Frontend Development & Deployments in record time",
+      description:
+        "Develop your site as a series of micro frontends that are independently developed, deployed and managed for the utmost agility and flexibility.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/570ecb147c7a3a12821c8014030d45b5.png",
+      canonical: ""
+    }
   }
 );
 

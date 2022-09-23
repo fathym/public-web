@@ -104,7 +104,10 @@ function PlasmicLandingPagesDocusaurus2Test__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,23 +116,44 @@ function PlasmicLandingPagesDocusaurus2Test__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Docusaurus Development & Deployments in record time"}
+          {PlasmicLandingPagesDocusaurus2Test.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Docusaurus Development & Deployments in record time"
-          }
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Docusaurus Development & Deployments in record time"
-          }
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesDocusaurus2Test.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -1133,7 +1157,17 @@ export const PlasmicLandingPagesDocusaurus2Test = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesDocusaurus2Test
     internalVariantProps: PlasmicLandingPagesDocusaurus2Test__VariantProps,
-    internalArgProps: PlasmicLandingPagesDocusaurus2Test__ArgProps
+    internalArgProps: PlasmicLandingPagesDocusaurus2Test__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Docusaurus Development & Deployments in record time",
+      description:
+        "Deploy and host your Docusaurus project on Fathym in just a few clicks.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/8c0751f8c450f3cf6179b653c4a845cb.png",
+      canonical: ""
+    }
   }
 );
 

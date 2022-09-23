@@ -95,7 +95,10 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -104,23 +107,44 @@ function PlasmicHomepageVariant4Test__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Develop & Deploy modern web experiences with your team"}
+          {PlasmicHomepageVariant4Test.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageVariant4Test.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageVariant4Test.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicHomepageVariant4Test.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicHomepageVariant4Test.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicHomepageVariant4Test.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicHomepageVariant4Test.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicHomepageVariant4Test.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -2122,7 +2146,17 @@ export const PlasmicHomepageVariant4Test = Object.assign(
 
     // Metadata about props expected for PlasmicHomepageVariant4Test
     internalVariantProps: PlasmicHomepageVariant4Test__VariantProps,
-    internalArgProps: PlasmicHomepageVariant4Test__ArgProps
+    internalArgProps: PlasmicHomepageVariant4Test__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Develop & Deploy modern web experiences with your team",
+      description:
+        "Developers use Fathym to deploy and host future-proof web projects and applications – powered by Azure – with the flexibility, agility and speed the modern web demands.  ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/65bb7cdffb000dff2e366ce2b60dcbbb.png",
+      canonical: ""
+    }
   }
 );
 

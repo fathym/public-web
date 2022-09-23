@@ -470,7 +470,7 @@
 .img__asb8S > picture > img {
   object-fit: cover;
 }
-.img__asb8S > .__wab_img-spacer > img {
+.img__asb8S > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -509,7 +509,7 @@
 .img___6C8A > picture > img {
   object-fit: cover;
 }
-.img___6C8A > .__wab_img-spacer > img {
+.img___6C8A > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -933,7 +933,7 @@
 .img__nf09Y > picture > img {
   object-fit: cover;
 }
-.img__nf09Y > .__wab_img-spacer > img {
+.img__nf09Y > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__jY9X {
@@ -1311,7 +1311,7 @@
 .img___5NvVz > picture > img {
   object-fit: cover;
 }
-.img___5NvVz > .__wab_img-spacer > img {
+.img___5NvVz > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1458,7 +1458,7 @@
 .img__aJnz7 > picture > img {
   object-fit: cover;
 }
-.img__aJnz7 > .__wab_img-spacer > img {
+.img__aJnz7 > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1485,7 +1485,7 @@
 .img__woUxC > picture > img {
   object-fit: cover;
 }
-.img__woUxC > .__wab_img-spacer > img {
+.img__woUxC > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1529,7 +1529,7 @@
 .img__gbgKe > picture > img {
   object-fit: cover;
 }
-.img__gbgKe > .__wab_img-spacer > img {
+.img__gbgKe > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1551,7 +1551,7 @@
 .img__xhqWq > picture > img {
   object-fit: cover;
 }
-.img__xhqWq > .__wab_img-spacer > img {
+.img__xhqWq > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1831,7 +1831,7 @@
 .img__cyleg > picture > img {
   object-fit: cover;
 }
-.img__cyleg > .__wab_img-spacer > img {
+.img__cyleg > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1931,7 +1931,7 @@
 .img__qPcUo > picture > img {
   object-fit: cover;
 }
-.img__qPcUo > .__wab_img-spacer > img {
+.img__qPcUo > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .section {

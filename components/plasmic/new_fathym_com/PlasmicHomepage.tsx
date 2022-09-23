@@ -65,6 +65,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
+  h1?: p.Flex<"h1">;
   learnMore?: p.Flex<"a"> & Partial<LinkProps>;
   section?: p.Flex<"section">;
   foreground3?: p.Flex<"div">;
@@ -93,7 +94,10 @@ function PlasmicHomepage__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -102,23 +106,42 @@ function PlasmicHomepage__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
-        <title key="title">
-          {"Fathym - Develop & Deploy modern web experiences with your team"}
-        </title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepage.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicHomepage.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -186,25 +209,29 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.freeBox__wam0
                           )}
                         >
-                          <div
+                          <h1
+                            data-plasmic-name={"h1"}
+                            data-plasmic-override={overrides.h1}
                             className={classNames(
                               projectcss.all,
+                              projectcss.h1,
                               projectcss.__wab_text,
-                              sty.text__uboiu
+                              sty.h1
                             )}
                           >
                             {"The open web's future."}
-                          </div>
+                          </h1>
 
-                          <div
+                          <h2
                             className={classNames(
                               projectcss.all,
+                              projectcss.h2,
                               projectcss.__wab_text,
-                              sty.text__duPzt
+                              sty.h2__duPzt
                             )}
                           >
                             {"Your Code. Low Code. No Code."}
-                          </div>
+                          </h2>
 
                           <div
                             className={classNames(
@@ -397,16 +424,16 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox___6YqY5)}
             >
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__dtAfs
+                  sty.h2__dtAfs
                 )}
               >
                 {"1. Start with your skills"}
-              </h1>
+              </h2>
 
               <div className={classNames(projectcss.all, sty.columns__lWwUs)}>
                 <div className={classNames(projectcss.all, sty.column__ljuB)}>
@@ -559,16 +586,16 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__vdDkr)}
             >
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__luXzX
+                  sty.h2__luXzX
                 )}
               >
                 {"2. Use your team to do more"}
-              </h1>
+              </h2>
 
               {true ? (
                 <div className={classNames(projectcss.all, sty.columns__lZz5D)}>
@@ -886,16 +913,16 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__s22VJ)}
             >
-              <h1
+              <h2
                 className={classNames(
                   projectcss.all,
-                  projectcss.h1,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h1__fjZiy
+                  sty.h2__fjZiy
                 )}
               >
                 {"3. Scale your solutions"}
-              </h1>
+              </h2>
 
               <div className={classNames(projectcss.all, sty.columns__juFeZ)}>
                 <div className={classNames(projectcss.all, sty.column___0Z9Zj)}>
@@ -1138,7 +1165,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Fathym enhances your development workflow so your resources can can focus on the customer. Accelerate internal innovation and streamline customer engagement."
+                        "Fathym enhances your development workflow so your resources can focus on the customer. Accelerate internal innovation and streamline customer engagement."
                       }
                     </div>
                   </div>
@@ -1818,12 +1845,14 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navbar",
+    "h1",
     "learnMore",
     "section",
     "foreground3",
     "fathymFooter"
   ],
   navbar: ["navbar"],
+  h1: ["h1"],
   learnMore: ["learnMore"],
   section: ["section", "foreground3"],
   foreground3: ["foreground3"],
@@ -1835,6 +1864,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
+  h1: "h1";
   learnMore: "a";
   section: "section";
   foreground3: "div";
@@ -1903,6 +1933,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
+    h1: makeNodeComponent("h1"),
     learnMore: makeNodeComponent("learnMore"),
     section: makeNodeComponent("section"),
     foreground3: makeNodeComponent("foreground3"),
@@ -1910,7 +1941,17 @@ export const PlasmicHomepage = Object.assign(
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
-    internalArgProps: PlasmicHomepage__ArgProps
+    internalArgProps: PlasmicHomepage__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Develop & Deploy modern web experiences with your team",
+      description:
+        "Developers use Fathym to host, manage and deploy future-proof web projects and applications – powered by Azure – with the flexibility and speed the modern web demands.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/65bb7cdffb000dff2e366ce2b60dcbbb.png",
+      canonical: ""
+    }
   }
 );
 
