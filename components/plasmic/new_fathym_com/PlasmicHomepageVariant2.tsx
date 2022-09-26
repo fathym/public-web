@@ -35,7 +35,9 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: C-c1_GprIs0E/component
-import Button from "../../Button"; // plasmic-import: PDN2xmv-0aRn/component
+import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax"; // plasmic-import: bozP4lLlAZ/codeComponent
+import GetStartedForFreeButton from "../../GetStartedForFreeButton"; // plasmic-import: 4YW8uNKcBZ/component
+import CenteredSection from "../../CenteredSection"; // plasmic-import: yoezpFd4_O/component
 import FathymFooter from "../../FathymFooter"; // plasmic-import: 3jTJ0D37Jf/component
 
 import { useScreenVariants as useScreenVariantsbzFq34BwReL2 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: BzFq34bwReL2/globalVariant
@@ -45,9 +47,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_library_plasmic_color_type_css from "../library_plasmic_color_type/plasmic_library_plasmic_color_type.module.css"; // plasmic-import: seaQhLVS4bbjiGvJJrRwyL/projectcss
 import projectcss from "./plasmic_new_fathym_com.module.css"; // plasmic-import: jbURxL3XuiMBQsLhf7apui/projectcss
 import sty from "./PlasmicHomepageVariant2.module.css"; // plasmic-import: uslE6cORX7L/css
-
-import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: lodHYqINbTbi/icon
-import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: gpmIqNjGKjYR/icon
 
 export type PlasmicHomepageVariant2__VariantMembers = {};
 
@@ -63,13 +62,10 @@ export const PlasmicHomepageVariant2__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepageVariant2__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
-  h1?: p.Flex<"h1">;
-  svg?: p.Flex<"svg">;
   learnMore?: p.Flex<"a"> & Partial<LinkProps>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
   ol?: p.Flex<"ol">;
-  section?: p.Flex<"section">;
-  foreground3?: p.Flex<"div">;
+  centeredSection?: p.Flex<typeof CenteredSection>;
   fathymFooter?: p.Flex<typeof FathymFooter>;
 };
 
@@ -95,7 +91,10 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -105,57 +104,41 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
     <React.Fragment>
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <title key="title">
-          {"Fathym - Develop & Deploy modern web experiences with your team"}
-        </title>
+        <title key="title">{PlasmicHomepageVariant2.pageMetadata.title}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.title}
         />
         <meta
           key="description"
           name="description"
-          content={
-            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.description}
         />
         <meta
           key="og:description"
           property="og:description"
-          content={
-            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.description}
         />
         <meta
           key="twitter:description"
           name="twitter:description"
-          content={
-            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.description}
         />
         <meta
           key="og:image"
           property="og:image"
-          content={
-            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.ogImageSrc}
         />
         <meta
           key="twitter:image"
           name="twitter:image"
-          content={
-            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
-          }
+          content={PlasmicHomepageVariant2.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -190,31 +173,32 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__dZIg)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___4JB8L)}
+            <ParallaxWrapper
+              className={classNames("__wab_instance", sty.scrollParallax__r8HP)}
+              speed={20 as const}
             >
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__yclle)}
+                className={classNames(projectcss.all, sty.freeBox___4JB8L)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__vJAmc)}>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.columns__dw4R)}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__yclle)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__vJAmc)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.column__qImUc)}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.columns__dw4R)}
                     >
-                      <p.Stack
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__jbp5J
+                          sty.column__qImUc
                         )}
                       >
                         <p.Stack
@@ -222,260 +206,366 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                           hasGap={true}
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__bgER
+                            sty.freeBox__jbp5J
                           )}
                         >
-                          <h1
-                            data-plasmic-name={"h1"}
-                            data-plasmic-override={overrides.h1}
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.h1,
-                              projectcss.__wab_text,
-                              sty.h1
+                              sty.freeBox__bgER
                             )}
                           >
-                            <React.Fragment>
+                            <h1
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.h1,
+                                projectcss.__wab_text,
+                                sty.h1__iCzwf
+                              )}
+                            >
                               <React.Fragment>
-                                {"Deliver sites with the utmost"}
-                              </React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#5856D6" }}
-                              >
-                                {" flexibility and speed."}
-                              </span>
-                            </React.Fragment>
-                          </h1>
-
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___9Ncbn
-                            )}
-                          >
-                            <React.Fragment>
-                              <React.Fragment>{""}</React.Fragment>
-                              {
-                                <h2
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.h2,
-                                    projectcss.__wab_text,
-                                    sty.h2___4O9Ov
-                                  )}
+                                <React.Fragment>
+                                  {"Deliver sites with the utmost"}
+                                </React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#5856D6" }}
                                 >
-                                  <React.Fragment>
-                                    <React.Fragment>
-                                      {
-                                        "Developers use Fathym to deploy and host future-proof web projects and applications – "
-                                      }
-                                    </React.Fragment>
-                                    <span
-                                      className={
-                                        "plasmic_default__all plasmic_default__span"
-                                      }
-                                      style={{
-                                        fontWeight: 700,
-                                        color: "#5856D6"
-                                      }}
-                                    >
-                                      {"powered by Azure"}
-                                    </span>
-                                    <React.Fragment>
-                                      {
-                                        " – with the flexibility and speed the modern web demands.\n\n"
-                                      }
-                                    </React.Fragment>
-                                  </React.Fragment>
-                                </h2>
-                              }
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </div>
+                                  {" flexibility and speed."}
+                                </span>
+                              </React.Fragment>
+                            </h1>
 
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.columns__ygrE
-                            )}
-                          >
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.column__vrWJm
+                                projectcss.__wab_text,
+                                sty.text___9Ncbn
                               )}
                             >
-                              <Button
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.button__lqhIw
-                                )}
-                                color={
-                                  hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? ("blue" as const)
-                                    : ("blue" as const)
-                                }
-                                endIcon={
-                                  <ChevronRightIcon
-                                    data-plasmic-name={"svg"}
-                                    data-plasmic-override={overrides.svg}
+                              <React.Fragment>
+                                <React.Fragment>{""}</React.Fragment>
+                                {
+                                  <h2
                                     className={classNames(
                                       projectcss.all,
-                                      sty.svg
+                                      projectcss.h2,
+                                      projectcss.__wab_text,
+                                      sty.h2___4O9Ov
                                     )}
-                                    role={"img"}
-                                  />
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>
+                                        {
+                                          "Developers use Fathym to deploy and host future-proof web projects and applications – "
+                                        }
+                                      </React.Fragment>
+                                      <span
+                                        className={
+                                          "plasmic_default__all plasmic_default__span"
+                                        }
+                                        style={{
+                                          fontWeight: 700,
+                                          color: "#5856D6"
+                                        }}
+                                      >
+                                        {"powered by Azure"}
+                                      </span>
+                                      <React.Fragment>
+                                        {
+                                          " – with the flexibility and speed the modern web demands.\n\n"
+                                        }
+                                      </React.Fragment>
+                                    </React.Fragment>
+                                  </h2>
                                 }
-                                link={
-                                  hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? ("/dashboard/create-project" as const)
-                                    : ("/dashboard" as const)
-                                }
-                                showEndIcon={
-                                  hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? true
-                                    : true
-                                }
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__iehFv
-                                  )}
-                                >
-                                  {"Get Started for Free"}
-                                </div>
-                              </Button>
+                                <React.Fragment>{""}</React.Fragment>
+                              </React.Fragment>
                             </div>
 
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.column___4HY6J
+                                sty.columns__ygrE
                               )}
                             >
-                              <p.PlasmicLink
-                                data-plasmic-name={"learnMore"}
-                                data-plasmic-override={overrides.learnMore}
+                              <div
                                 className={classNames(
                                   projectcss.all,
-                                  projectcss.a,
-                                  sty.learnMore
+                                  sty.column__vrWJm
                                 )}
-                                component={Link}
-                                href={"/docs" as const}
-                                platform={"nextjs"}
-                                target={"_blank" as const}
                               >
-                                <div
+                                <GetStartedForFreeButton
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.getStartedForFreeButton__xwYOa
+                                  )}
+                                />
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.column___4HY6J
+                                )}
+                              >
+                                <p.PlasmicLink
+                                  data-plasmic-name={"learnMore"}
+                                  data-plasmic-override={overrides.learnMore}
                                   className={classNames(
                                     projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__uqgMe
+                                    projectcss.a,
+                                    sty.learnMore
                                   )}
+                                  component={Link}
+                                  href={"/docs" as const}
+                                  platform={"nextjs"}
+                                  target={"_blank" as const}
                                 >
-                                  {"Learn more >"}
-                                </div>
-                              </p.PlasmicLink>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__uqgMe
+                                    )}
+                                  >
+                                    {"Learn more >"}
+                                  </div>
+                                </p.PlasmicLink>
+                              </div>
                             </div>
-                          </div>
+                          </p.Stack>
                         </p.Stack>
-                      </p.Stack>
-                    </div>
+                      </div>
 
-                    <div
-                      className={classNames(projectcss.all, sty.column__fAeOf)}
-                    >
-                      <p.PlasmicImg
-                        alt={""}
-                        className={classNames(sty.img__aivs)}
-                        displayHeight={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("460px" as const)
-                            : ("491px" as const)
-                        }
-                        displayMaxHeight={"none" as const}
-                        displayMaxWidth={"100%" as const}
-                        displayMinHeight={"0" as const}
-                        displayMinWidth={"0" as const}
-                        displayWidth={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("400px" as const)
-                            : ("auto" as const)
-                        }
-                        loading={"lazy" as const}
-                        src={{
-                          src: "/plasmic/new_fathym_com/images/activityFeedpng.png",
-                          fullWidth: 1420,
-                          fullHeight: 1564,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </div>
-                  </p.Stack>
-                </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.column__fAeOf
+                        )}
+                      >
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__aivs)}
+                          displayHeight={
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? ("460px" as const)
+                              : ("491px" as const)
+                          }
+                          displayMaxHeight={"none" as const}
+                          displayMaxWidth={
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? ("380px" as const)
+                              : ("100%" as const)
+                          }
+                          displayMinHeight={"0" as const}
+                          displayMinWidth={"0" as const}
+                          displayWidth={
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? ("380px" as const)
+                              : ("auto" as const)
+                          }
+                          loading={"lazy" as const}
+                          src={{
+                            src: "/plasmic/new_fathym_com/images/activityFeedpng.png",
+                            fullWidth: 1420,
+                            fullHeight: 1564,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </div>
+                    </p.Stack>
+                  </div>
+                </p.Stack>
               </p.Stack>
-            </p.Stack>
+            </ParallaxWrapper>
           </div>
 
-          <div className={classNames(projectcss.all, sty.freeBox__nQx3L)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___10Kjo)}
-            >
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__yoyI0
-                )}
-              >
-                {"Say goodbye to unwieldy frontend monoliths."}
-              </h2>
+          <ParallaxWrapper
+            className={classNames("__wab_instance", sty.scrollParallax__ebrRa)}
+            speed={20 as const}
+          >
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <div className={classNames(projectcss.all, sty.freeBox__krK6P)}>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__axyYs)}
+                  displayHeight={"136px" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"160px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/image12.png",
+                    fullWidth: 1200,
+                    fullHeight: 848,
+                    aspectRatio: undefined
+                  }}
+                />
 
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__aml0A
-                )}
-              >
-                <React.Fragment>
-                  <React.Fragment>
-                    {
-                      " \n\nFathym automates CI/CD builds, deployment and hosting so you can focus on building Jamstack sites or Single Page Applications with the JavaScript frameworks, Static Site Generators or no code builders you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
-                    }
-                  </React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ fontWeight: 700 }}
-                  >
-                    {
-                      "Break your web project down into smaller and more manageable pieces for independent, flexible and scalable deployments. "
-                    }
-                  </span>
-                </React.Fragment>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__pYuhe)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"130px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/image13.png",
+                    fullWidth: 800,
+                    fullHeight: 800,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__pIkxu)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"150px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/image14.png",
+                    fullWidth: 1200,
+                    fullHeight: 1040,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__cdtv)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"100px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/image10.png",
+                    fullWidth: 1702,
+                    fullHeight: 2049,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img___2Cwnw)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"130px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/image17.png",
+                    fullWidth: 400,
+                    fullHeight: 400,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__vRt1J)}
+                  displayHeight={"auto" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"160px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: "/plasmic/new_fathym_com/images/docusauruspng.png",
+                    fullWidth: 300,
+                    fullHeight: 255,
+                    aspectRatio: undefined
+                  }}
+                />
               </div>
-            </p.Stack>
+            ) : null}
+          </ParallaxWrapper>
+
+          <div className={classNames(projectcss.all, sty.freeBox__nQx3L)}>
+            <ParallaxWrapper
+              className={classNames(
+                "__wab_instance",
+                sty.scrollParallax__tvYzn
+              )}
+              speed={20 as const}
+            >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox___10Kjo)}
+              >
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__yoyI0
+                  )}
+                >
+                  {"Say goodbye to unwieldy frontend monoliths."}
+                </h2>
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__aml0A
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>
+                      {
+                        " \n\nFathym automates CI/CD builds, deployment and hosting so you can focus on building Jamstack sites or Single Page Applications with the "
+                      }
+                    </React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ fontWeight: 700 }}
+                    >
+                      {
+                        "JavaScript frameworks, Static Site Generators and no-code builders"
+                      }
+                    </span>
+                    <React.Fragment>
+                      {
+                        " you love. \n\nSteer clear of clunky frontend monoliths.\n\n"
+                      }
+                    </React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ fontWeight: 700 }}
+                    >
+                      {
+                        "Break your web project down into smaller and more manageable pieces for independent, flexible and scalable deployments. "
+                      }
+                    </span>
+                  </React.Fragment>
+                </div>
+              </p.Stack>
+            </ParallaxWrapper>
           </div>
 
           {true ? (
@@ -493,750 +583,501 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
           ) : null}
 
           <div className={classNames(projectcss.all, sty.freeBox__yToSt)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___4D0Ej)}
+            <ParallaxWrapper
+              className={classNames("__wab_instance", sty.scrollParallax__jmzq)}
+              speed={20 as const}
             >
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__p6Cdd
-                )}
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox___4D0Ej)}
               >
-                {hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "Start with your code."
-                  : "Start with your code."}
-              </h2>
-
-              <div className={classNames(projectcss.all, sty.columns__anwWz)}>
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column___7FFd)}
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__p6Cdd
+                  )}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__aK0D
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>
-                        {
-                          "Getting started is as simple as connecting your GitHub repository. \n\n"
-                        }
-                      </React.Fragment>
-                      {
-                        <p.PlasmicLink
-                          data-plasmic-name={"link"}
-                          data-plasmic-override={overrides.link}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            projectcss.__wab_text,
-                            projectcss.plasmic_default__inline,
-                            sty.link
-                          )}
-                          component={Link}
-                          href={
-                            "https://www.fathym.com/dashboard/create-project" as const
-                          }
-                          platform={"nextjs"}
-                          target={"_blank" as const}
-                        >
-                          {"Select an open-source recipe"}
-                        </p.PlasmicLink>
-                      }
-                      <React.Fragment>
-                        {
-                          " from your favorite frameworks or static site generators see Fathym in action or bring in your own code."
-                        }
-                      </React.Fragment>
-                    </React.Fragment>
-                  </div>
+                  {hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "Start with your code."
+                    : "Start with your code."}
+                </h2>
 
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__fFlrQ)}
+                <div className={classNames(projectcss.all, sty.columns__anwWz)}>
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.column___7FFd)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.columns__eoqe6)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__aK0D
+                      )}
+                    >
+                      <React.Fragment>
+                        <React.Fragment>
+                          {
+                            "Getting started is as simple as connecting your GitHub repository. \n\n"
+                          }
+                        </React.Fragment>
+                        {
+                          <p.PlasmicLink
+                            data-plasmic-name={"link"}
+                            data-plasmic-override={overrides.link}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              projectcss.__wab_text,
+                              projectcss.plasmic_default__inline,
+                              sty.link
+                            )}
+                            component={Link}
+                            href={
+                              "https://www.fathym.com/dashboard/create-project" as const
+                            }
+                            platform={"nextjs"}
+                            target={"_blank" as const}
+                          >
+                            {"Select an open-source recipe"}
+                          </p.PlasmicLink>
+                        }
+                        <React.Fragment>
+                          {
+                            " from your favorite framework, static site generator or no-code template to see Fathym in action, or bring in your own project."
+                          }
+                        </React.Fragment>
+                      </React.Fragment>
+                    </div>
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__fFlrQ)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.column__p5Umo
+                          sty.columns__eoqe6
                         )}
                       >
-                        <h3
+                        <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__zGuew
+                            sty.column__p5Umo
                           )}
                         >
-                          {"Your code."}
-                        </h3>
+                          <h3
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h3,
+                              projectcss.__wab_text,
+                              sty.h3__zGuew
+                            )}
+                          >
+                            {"Your code, or no code."}
+                          </h3>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wYiiH
+                            )}
+                          >
+                            <React.Fragment>
+                              <React.Fragment>
+                                {
+                                  "Bring in your sites, apps or no-code projects that you already have through"
+                                }
+                              </React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#5856D6" }}
+                              >
+                                {" "}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700, color: "#5856D6" }}
+                              >
+                                {"GitHub"}
+                              </span>
+                              <React.Fragment>{" or "}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700, color: "#5856D6" }}
+                              >
+                                {"NPM"}
+                              </span>
+                              <React.Fragment>{"."}</React.Fragment>
+                            </React.Fragment>
+                          </div>
+
+                          <h3
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h3,
+                              projectcss.__wab_text,
+                              sty.h3___2Dtny
+                            )}
+                          >
+                            {"Build and deploy."}
+                          </h3>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tojJb
+                            )}
+                          >
+                            <React.Fragment>
+                              <React.Fragment>
+                                {"Let us handle the "}
+                              </React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700, color: "#5856D6" }}
+                              >
+                                {"automated build pipelines and deployments"}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {" "}
+                              </span>
+                              <React.Fragment>
+                                {
+                                  "behind the scenes so you can stick to the good stuff."
+                                }
+                              </React.Fragment>
+                            </React.Fragment>
+                          </div>
+                        </div>
 
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__wYiiH
+                            sty.column___8RvUw
                           )}
                         >
-                          <React.Fragment>
-                            <React.Fragment>
-                              {
-                                "Bring your sites and applications that you already have in"
-                              }
-                            </React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#5856D6" }}
-                            >
-                              {" "}
-                            </span>
-                            <React.Fragment>{""}</React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ fontWeight: 700, color: "#5856D6" }}
-                            >
-                              {"GitHub"}
-                            </span>
-                            <React.Fragment>{" or "}</React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ fontWeight: 700, color: "#5856D6" }}
-                            >
-                              {"NPM"}
-                            </span>
-                            <React.Fragment>{"."}</React.Fragment>
-                          </React.Fragment>
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__ryO1V)}
+                            displayHeight={"364px" as const}
+                            displayMaxHeight={"none" as const}
+                            displayMaxWidth={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("380px" as const)
+                                : ("100%" as const)
+                            }
+                            displayMinHeight={"0" as const}
+                            displayMinWidth={"0" as const}
+                            displayWidth={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("380px" as const)
+                                : ("auto" as const)
+                            }
+                            loading={"lazy" as const}
+                            src={{
+                              src: "/plasmic/new_fathym_com/images/gettingStartedTemplatepng.png",
+                              fullWidth: 1730,
+                              fullHeight: 1598,
+                              aspectRatio: undefined
+                            }}
+                          />
                         </div>
-
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3___2Dtny
-                          )}
-                        >
-                          {"Build and deploy."}
-                        </h3>
-
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__tojJb
-                          )}
-                        >
-                          <React.Fragment>
-                            <React.Fragment>
-                              {"Let us handle the "}
-                            </React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ fontWeight: 700, color: "#5856D6" }}
-                            >
-                              {"automated build pipelines and deployments"}
-                            </span>
-                            <React.Fragment>{""}</React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ fontWeight: 700 }}
-                            >
-                              {" "}
-                            </span>
-                            <React.Fragment>
-                              {
-                                "behind the scenes so you can stick to the good stuff."
-                              }
-                            </React.Fragment>
-                          </React.Fragment>
-                        </div>
-                      </div>
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.column___8RvUw
-                        )}
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__ryO1V)}
-                          displayHeight={"364px" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={
-                            hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? ("400px" as const)
-                              : ("auto" as const)
-                          }
-                          loading={"lazy" as const}
-                          src={{
-                            src: "/plasmic/new_fathym_com/images/gettingStartedTemplatepng.png",
-                            fullWidth: 1730,
-                            fullHeight: 1598,
-                            aspectRatio: undefined
-                          }}
-                        />
                       </div>
                     </div>
-                  </div>
-                </p.Stack>
-              </div>
-            </p.Stack>
+                  </p.Stack>
+                </div>
+              </p.Stack>
+            </ParallaxWrapper>
           </div>
 
           <div className={classNames(projectcss.all, sty.freeBox__wgToi)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__ok7Ef)}
+            <ParallaxWrapper
+              className={classNames(
+                "__wab_instance",
+                sty.scrollParallax__bl4DW
+              )}
+              speed={20 as const}
             >
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__uglUb
-                )}
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__ok7Ef)}
               >
-                {hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "Break it \ndown."
-                  : "   Break it down."}
-              </h2>
-
-              {true ? (
-                <div
-                  className={classNames(projectcss.all, sty.columns___4GblX)}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.column__gZwh5)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__avwzb
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>
-                          {"Break website projects down into "}
-                        </React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#5856D6", fontWeight: 700 }}
-                        >
-                          {"modular, independently versioned apps"}
-                        </span>
-                        <React.Fragment>
-                          {
-                            " with individual code repositories and automated build pipelines for:  \n\n"
-                          }
-                        </React.Fragment>
-                      </React.Fragment>
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__jTs7T
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <ol
-                            data-plasmic-name={"ol"}
-                            data-plasmic-override={overrides.ol}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.ol,
-                              sty.ol
-                            )}
-                          >
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__g1XRe
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>
-                                  {"Smaller, more cohesive, decoupled "}
-                                </React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700, color: "#5856D6" }}
-                                >
-                                  {"codebases."}
-                                </span>
-                              </React.Fragment>
-                            </li>
-
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__lZ7B
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>
-                                  {"Smaller, faster "}
-                                </React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700, color: "#5856D6" }}
-                                >
-                                  {"builds."}
-                                </span>
-                              </React.Fragment>
-                            </li>
-
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__i2UCd
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>
-                                  {"Simpler testing, version control and "}
-                                </React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700, color: "#5856D6" }}
-                                >
-                                  {"release management."}
-                                </span>
-                              </React.Fragment>
-                            </li>
-
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__xnuU
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>
-                                  {"Incremental upgrades and independent "}
-                                </React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700, color: "#5856D6" }}
-                                >
-                                  {"deployments."}
-                                </span>
-                              </React.Fragment>
-                            </li>
-
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__l0Ono
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>
-                                  {"Flexibility to fork and "}
-                                </React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700, color: "#5856D6" }}
-                                >
-                                  {"re-use modular apps"}
-                                </span>
-                                <React.Fragment>
-                                  {" for other projects."}
-                                </React.Fragment>
-                              </React.Fragment>
-                            </li>
-                          </ol>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    </div>
-                  </div>
-                </div>
-              ) : null}
-
-              <div className={classNames(projectcss.all, sty.columns__aeZrG)}>
-                <div className={classNames(projectcss.all, sty.column__tsZN)}>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__shzg3
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__rZuBw
-                          )}
-                        >
-                          {"You're a composer."}
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </h2>
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__zg7Zv
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>
-                        {
-                          "Build with the freedom to use different frameworks, Static Site Generators or even no code builders for different sections of your site without the need for subdomains.\n\n"
-                        }
-                      </React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700, color: "#000000" }}
-                      >
-                        {"Use the best tool for the job. "}
-                      </span>
-                      <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700 }}
-                      >
-                        {" "}
-                      </span>
-                      <React.Fragment>
-                        {
-                          "\n\nFathym effortlessly brings multiple repos and different stacks together to compose one cohesive and seamless website or web app on your custom domain. "
-                        }
-                      </React.Fragment>
-                    </React.Fragment>
-                  </div>
-                </div>
-
-                <div className={classNames(projectcss.all, sty.column___0QuNr)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__eMjOw)}
-                    displayHeight={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("332px" as const)
-                        : ("auto" as const)
-                    }
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("400px" as const)
-                        : ("auto" as const)
-                    }
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/homeRoutespng3.png",
-                      fullWidth: 400,
-                      fullHeight: 400,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-              </div>
-            </p.Stack>
-          </div>
-
-          <div className={classNames(projectcss.all, sty.freeBox__cGo34)}>
-            <div className={classNames(projectcss.all, sty.freeBox__uaXaw)}>
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__meclb
-                )}
-              >
-                {hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? " Deploy with confidence."
-                  : "Deploy with confidence."}
-              </h2>
-
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__mc3FI
-                )}
-              >
-                {hasVariant(globalVariants, "screen", "mobileOnly") ? (
-                  <React.Fragment>
-                    <React.Fragment>{"The "}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ fontWeight: 700, color: "#5856D6" }}
-                    >
-                      {"Fathym Global Edge Network"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        " leverages Azure CDN to deliver your content and sites to the global points closest to your users.\n\nTake advantage of "
-                      }
-                    </React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "#5856D6", fontWeight: 700 }}
-                    >
-                      {"independent builds, versions and deployments"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        " to rapidly release changes, upgrades, rollbacks and fixes.\n\n\n\n\n\n\n"
-                      }
-                    </React.Fragment>
-                  </React.Fragment>
-                ) : (
-                  <React.Fragment>
-                    <React.Fragment>{"The "}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ fontWeight: 700, color: "#5856D6" }}
-                    >
-                      {"Fathym Global Edge Network"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        " leverages Azure CDN to deliver your content and sites to the global points closest to your users.\n\nTake advantage of "
-                      }
-                    </React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "#5856D6", fontWeight: 700 }}
-                    >
-                      {"independent builds, versions and deployments"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        " to rapidly release changes, upgrades, rollbacks and fixes.\n"
-                      }
-                    </React.Fragment>
-                  </React.Fragment>
-                )}
-              </div>
-
-              {(
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? true
-                  : false
-              ) ? (
-                <div
+                <h2
                   className={classNames(
                     projectcss.all,
+                    projectcss.h2,
                     projectcss.__wab_text,
-                    sty.text___3Cx5Y
+                    sty.h2__uglUb
                   )}
                 >
-                  {"\n\n\n"}
-                </div>
-              ) : null}
+                  {hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "Break it down."
+                    : "   Break it down."}
+                </h2>
 
-              <div className={classNames(projectcss.all, sty.columns__ru70O)}>
-                <div className={classNames(projectcss.all, sty.column__opza)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__m8JVp)}
-                    displayHeight={"400px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("400px" as const)
-                        : ("100%" as const)
-                    }
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("400px" as const)
-                        : ("auto" as const)
-                    }
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/buildPipelines1Png.png",
-                      fullWidth: 1350,
-                      fullHeight: 728,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div className={classNames(projectcss.all, sty.column__mtf70)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__ibJu)}
-                    displayHeight={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("400px" as const)
-                        : ("400px" as const)
-                    }
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("400px" as const)
-                        : ("150%" as const)
-                    }
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ("400px" as const)
-                        : ("auto" as const)
-                    }
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/new_fathym_com/images/updatedRoutesScreenshotpng.png",
-                      fullWidth: 634,
-                      fullHeight: 620,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={classNames(projectcss.all, sty.freeBox__gtKs)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__kGaun)}
-            >
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__tsnhg
-                )}
-              >
-                {hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "    Scale as you  grow."
-                  : "Scale as you grow."}
-              </h2>
-
-              <div className={classNames(projectcss.all, sty.columns___72XVq)}>
-                <div className={classNames(projectcss.all, sty.column__dociy)}>
+                {true ? (
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__jPzIb
-                    )}
+                    className={classNames(projectcss.all, sty.columns___4GblX)}
                   >
-                    {hasVariant(globalVariants, "screen", "mobileOnly") ? (
-                      <React.Fragment>
+                    <div
+                      className={classNames(projectcss.all, sty.column__gZwh5)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__avwzb
+                        )}
+                      >
                         <React.Fragment>
-                          {"Get started for free in a \n"}
+                          <React.Fragment>
+                            {"Break website projects down into "}
+                          </React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#5856D6", fontWeight: 700 }}
+                          >
+                            {"modular, independently versioned apps"}
+                          </span>
+                          <React.Fragment>
+                            {
+                              " with individual code repositories and automated build pipelines for:  \n\n"
+                            }
+                          </React.Fragment>
                         </React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ fontWeight: 700, color: "#5856D6" }}
-                        >
-                          {"shared infrastructure environment"}
-                        </span>
+                      </div>
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__jTs7T
+                        )}
+                      >
                         <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
                           {
-                            " built to scale with you and your customer's needs.\n\nOutgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
+                            <ol
+                              data-plasmic-name={"ol"}
+                              data-plasmic-override={overrides.ol}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ol,
+                                sty.ol
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__g1XRe
+                                )}
+                              >
+                                <React.Fragment>
+                                  <React.Fragment>
+                                    {"Smaller, more cohesive, decoupled "}
+                                  </React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#5856D6"
+                                    }}
+                                  >
+                                    {"codebases."}
+                                  </span>
+                                </React.Fragment>
+                              </li>
+
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__lZ7B
+                                )}
+                              >
+                                <React.Fragment>
+                                  <React.Fragment>
+                                    {"Smaller, faster "}
+                                  </React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#5856D6"
+                                    }}
+                                  >
+                                    {"builds."}
+                                  </span>
+                                </React.Fragment>
+                              </li>
+
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__i2UCd
+                                )}
+                              >
+                                <React.Fragment>
+                                  <React.Fragment>
+                                    {"Simpler testing, version control and "}
+                                  </React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#5856D6"
+                                    }}
+                                  >
+                                    {"release management."}
+                                  </span>
+                                </React.Fragment>
+                              </li>
+
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__xnuU
+                                )}
+                              >
+                                <React.Fragment>
+                                  <React.Fragment>
+                                    {"Incremental upgrades and independent "}
+                                  </React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#5856D6"
+                                    }}
+                                  >
+                                    {"deployments."}
+                                  </span>
+                                </React.Fragment>
+                              </li>
+
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__l0Ono
+                                )}
+                              >
+                                <React.Fragment>
+                                  <React.Fragment>
+                                    {"Flexibility to fork and "}
+                                  </React.Fragment>
+                                  <span
+                                    className={
+                                      "plasmic_default__all plasmic_default__span"
+                                    }
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#5856D6"
+                                    }}
+                                  >
+                                    {"re-use modular apps"}
+                                  </span>
+                                  <React.Fragment>
+                                    {" for other projects."}
+                                  </React.Fragment>
+                                </React.Fragment>
+                              </li>
+                            </ol>
                           }
+                          <React.Fragment>{""}</React.Fragment>
                         </React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ fontWeight: 700, color: "#5856D6" }}
-                        >
-                          {"managed or private Azure clouds."}
-                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
+
+                <div className={classNames(projectcss.all, sty.columns__aeZrG)}>
+                  <div className={classNames(projectcss.all, sty.column__tsZN)}>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__shzg3
+                      )}
+                    >
+                      <React.Fragment>
+                        <React.Fragment>{""}</React.Fragment>
+                        {
+                          <h3
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h3,
+                              projectcss.__wab_text,
+                              sty.h3__rZuBw
+                            )}
+                          >
+                            {"You're a composer."}
+                          </h3>
+                        }
+                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
-                    ) : (
+                    </h2>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zg7Zv
+                      )}
+                    >
                       <React.Fragment>
                         <React.Fragment>
-                          {"Get started for free in a "}
-                        </React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ fontWeight: 700, color: "#5856D6" }}
-                        >
-                          {"shared infrastructure environment"}
-                        </span>
-                        <React.Fragment>
                           {
-                            " built to scale with you and your team's needs.\n\nOutgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
+                            "Build with the freedom to combine different frameworks, Static Site Generators and even no code tools for different sections of your site.\n\n"
                           }
                         </React.Fragment>
                         <span
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "#5856D6", fontWeight: 700 }}
+                          style={{ fontWeight: 700, color: "#000000" }}
                         >
-                          {"automated"}
+                          {"Use the best tool for the job. "}
                         </span>
                         <React.Fragment>{""}</React.Fragment>
                         <span
@@ -1247,132 +1088,332 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                         >
                           {" "}
                         </span>
-                        <React.Fragment>{""}</React.Fragment>
+                        <React.Fragment>
+                          {
+                            "\n\nFathym effortlessly brings multiple repos and different stacks together to compose one cohesive and seamless website or web app on your custom domain. "
+                          }
+                        </React.Fragment>
+                      </React.Fragment>
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.column___0QuNr)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__eMjOw)}
+                      displayHeight={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("332px" as const)
+                          : ("auto" as const)
+                      }
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={"100%" as const}
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("380px" as const)
+                          : ("auto" as const)
+                      }
+                      loading={"lazy" as const}
+                      src={{
+                        src: "/plasmic/new_fathym_com/images/mferPlasmicGatsbyDocuReactpng.png",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                </div>
+              </p.Stack>
+            </ParallaxWrapper>
+          </div>
+
+          <div className={classNames(projectcss.all, sty.freeBox__cGo34)}>
+            <ParallaxWrapper
+              className={classNames(
+                "__wab_instance",
+                sty.scrollParallax__wKnNp
+              )}
+              speed={20 as const}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__uaXaw)}>
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__meclb
+                  )}
+                >
+                  {hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? " Deploy with confidence."
+                    : "Deploy with confidence."}
+                </h2>
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__mc3FI
+                  )}
+                >
+                  {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                    <React.Fragment>
+                      <React.Fragment>{"The "}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700, color: "#5856D6" }}
+                      >
+                        {"Fathym Global Edge Network"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " leverages Azure CDN to deliver your content and sites to the global points closest to your users.\n\nTake advantage of "
+                        }
+                      </React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#5856D6", fontWeight: 700 }}
+                      >
+                        {"independent builds, versions and deployments"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " to rapidly release changes, upgrades, rollbacks and fixes.\n\n\n\n\n\n\n"
+                        }
+                      </React.Fragment>
+                    </React.Fragment>
+                  ) : (
+                    <React.Fragment>
+                      <React.Fragment>{"The "}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700, color: "#5856D6" }}
+                      >
+                        {"Fathym Global Edge Network"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " leverages Azure CDN to deliver your content and sites to the global points closest to your users.\n\nTake advantage of "
+                        }
+                      </React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#5856D6", fontWeight: 700 }}
+                      >
+                        {"independent builds, versions and deployments"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " to rapidly release changes, upgrades, rollbacks and fixes.\n"
+                        }
+                      </React.Fragment>
+                    </React.Fragment>
+                  )}
+                </div>
+
+                <div className={classNames(projectcss.all, sty.columns__ru70O)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__mtf70)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__ibJu)}
+                      displayHeight={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("400px" as const)
+                          : ("400px" as const)
+                      }
+                      displayMaxHeight={"none" as const}
+                      displayMaxWidth={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("400px" as const)
+                          : ("150%" as const)
+                      }
+                      displayMinHeight={"0" as const}
+                      displayMinWidth={"0" as const}
+                      displayWidth={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? ("350px" as const)
+                          : ("auto" as const)
+                      }
+                      loading={"lazy" as const}
+                      src={{
+                        src: "/plasmic/new_fathym_com/images/updatedRoutesScreenshotpng.png",
+                        fullWidth: 634,
+                        fullHeight: 620,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </ParallaxWrapper>
+          </div>
+
+          <ParallaxWrapper
+            className={classNames("__wab_instance", sty.scrollParallax__dLDro)}
+            speed={20 as const}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__gtKs)}>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__kGaun)}
+              >
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__tsnhg
+                  )}
+                >
+                  {hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "    Scale as you  grow."
+                    : "Scale as you grow."}
+                </h2>
+
+                <div
+                  className={classNames(projectcss.all, sty.columns___72XVq)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.column__dociy)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__jPzIb
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                        <React.Fragment>
+                          <React.Fragment>
+                            {"Get started for free in a \n"}
+                          </React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#5856D6" }}
+                          >
+                            {"shared infrastructure environment"}
+                          </span>
+                          <React.Fragment>
+                            {
+                              " built to scale with you and your customer's needs.\n\nOutgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
+                            }
+                          </React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#5856D6" }}
+                          >
+                            {"managed or private Azure clouds."}
+                          </span>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <React.Fragment>
+                            {"Get started for free in a "}
+                          </React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#5856D6" }}
+                          >
+                            {"shared infrastructure environment"}
+                          </span>
+                          <React.Fragment>
+                            {
+                              " built to scale with you and your team's needs.\n\nOutgrown Fathym's shared infrastructure?\n\nEmploy all the same great tools from your own "
+                            }
+                          </React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#5856D6", fontWeight: 700 }}
+                          >
+                            {"automated"}
+                          </span>
+                          <React.Fragment>{""}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700 }}
+                          >
+                            {" "}
+                          </span>
+                          <React.Fragment>{""}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#5856D6" }}
+                          >
+                            {" private Azure cloud."}
+                          </span>
+                        </React.Fragment>
+                      )}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.column__eY3L8)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__cK42J
+                      )}
+                    >
+                      <React.Fragment>
+                        <React.Fragment>
+                          {
+                            "Take advantage of our simplified developer experience while scaling to your own Azure cloud with full access to your infrastructure and the full range and power of Azure's extensive services.\n\n"
+                          }
+                        </React.Fragment>
                         <span
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
                           style={{ fontWeight: 700, color: "#5856D6" }}
                         >
-                          {" private Azure cloud."}
+                          {
+                            "Build a future-proof tech stack from the get-go without the complexity. "
+                          }
+                        </span>
+                        <React.Fragment>{"\n\n\n"}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ fontWeight: 700, color: "#5856D6" }}
+                        >
+                          {""}
                         </span>
                       </React.Fragment>
-                    )}
+                    </div>
                   </div>
                 </div>
-
-                <div className={classNames(projectcss.all, sty.column__eY3L8)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__cK42J
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>
-                        {
-                          "Take advantage of our simplified developer experience while scaling to your own Azure cloud with full access to your infrastructure and the full range and power of Azure's extensive services.\n\n"
-                        }
-                      </React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700, color: "#5856D6" }}
-                      >
-                        {
-                          "Build a future-proof tech stack from the get go without the complexity. "
-                        }
-                      </span>
-                      <React.Fragment>{"\n\n\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700, color: "#5856D6" }}
-                      >
-                        {""}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-            </p.Stack>
-          </div>
-
-          <div className={classNames(projectcss.all, sty.freeBox__poMuo)}>
-            <h2
-              className={classNames(
-                projectcss.all,
-                projectcss.h2,
-                projectcss.__wab_text,
-                sty.h2__jkk90
-              )}
-            >
-              {"Stay in sync with your team."}
-            </h2>
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__pVhLz
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>
-                  {
-                    "Collaborating and keeping updated with your teammate’s builds, pull requests and deploys has never been easier than through our"
-                  }
-                </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {" social feed"}
-                </span>
-                <React.Fragment>{".  \n\nFathym offers "}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"one consolidated workflow"}
-                </span>
-                <React.Fragment>
-                  {
-                    " for you to view and manage your web projects and their corresponding repositories and builds."
-                  }
-                </React.Fragment>
-              </React.Fragment>
+              </p.Stack>
             </div>
+          </ParallaxWrapper>
 
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img__fqLpJ)}
-              displayHeight={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("274px" as const)
-                  : ("600px" as const)
-              }
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("450px" as const)
-                  : ("150%" as const)
-              }
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("400px" as const)
-                  : ("1550px" as const)
-              }
-              loading={"lazy" as const}
-              src={{
-                src: "/plasmic/new_fathym_com/images/anotherDashboardScreenshotpng.png",
-                fullWidth: 2112,
-                fullHeight: 1482,
-                aspectRatio: undefined
-              }}
-            />
-          </div>
+          <CenteredSection
+            data-plasmic-name={"centeredSection"}
+            data-plasmic-override={overrides.centeredSection}
+            className={classNames("__wab_instance", sty.centeredSection)}
+          />
 
           <div className={classNames(projectcss.all, sty.freeBox__jd4L4)}>
             <h2
@@ -1491,7 +1532,7 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     className={"plasmic_default__all plasmic_default__span"}
                     style={{ fontWeight: 700 }}
                   >
-                    {"authentication"}
+                    {"user authentication"}
                   </span>
                   <React.Fragment>{" and"}</React.Fragment>
                   <span
@@ -1507,9 +1548,16 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                   >
                     {"identity management."}
                   </span>
+                  <React.Fragment>{"\n\nAs you scale and "}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#000000" }}
+                  >
+                    {"need"}
+                  </span>
                   <React.Fragment>
                     {
-                      "\n\nAs you scale and need the flexibility and full range of services that only the big cloud providers offer, we'll"
+                      " the flexibility and full range of services that only the largest cloud providers offer, Fathym will"
                     }
                   </React.Fragment>
                   <span
@@ -1524,15 +1572,31 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
                     style={{ color: "#5856D6", fontWeight: 700 }}
                   >
                     {
-                      "automate best practice infrastructure in your own Azure environment."
+                      "automate best practice infrastructure in your own Azure cloud."
+                    }
+                  </span>
+                  <React.Fragment>{"\n"}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#000000" }}
+                  >
+                    {
+                      "Fathym automates and handles services in your Azure cloud, so you don’t have to"
                     }
                   </span>
                   <React.Fragment>{""}</React.Fragment>
                   <span
                     className={"plasmic_default__all plasmic_default__span"}
-                    style={{ fontWeight: 700 }}
+                    style={{ color: "#5856D6" }}
                   >
-                    {" "}
+                    {"."}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#5856D6", fontWeight: 700 }}
+                  >
+                    {"  "}
                   </span>
                 </React.Fragment>
               )}
@@ -1565,75 +1629,51 @@ function PlasmicHomepageVariant2__RenderFunc(props: {
             />
           </div>
 
-          <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
-          >
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"foreground3"}
-              data-plasmic-override={overrides.foreground3}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.foreground3)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__miqAn)}
+          <div className={classNames(projectcss.all, sty.freeBox__h8IPh)}>
+            <div className={classNames(projectcss.all, sty.freeBox__hA9Z4)}>
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1___1ROm
+                )}
               >
-                <div className={classNames(projectcss.all, sty.freeBox___0thF)}>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__vem8O
-                    )}
-                  >
-                    {"Why deploy with Fathym?"}
-                  </h2>
-                </div>
+                {"Why deploy with Fathym?\n"}
+              </h1>
 
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__c7SrJ
-                  )}
-                >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__igcXq
+                )}
+              >
+                <React.Fragment>
                   <React.Fragment>
-                    <React.Fragment>
-                      {
-                        "Fathym deploys, hosts and seamlessly integrates multiple repos and your favourite tech stacks, frameworks, no code builders and data sources together under one domain.\n\n"
-                      }
-                    </React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ fontWeight: 700 }}
-                    >
-                      {
-                        "Take advantage of Fathym's streamlined PaaS developer experience while future-proofing your tech stack knowing that you can scale to your own automated Azure cloud when ready."
-                      }
-                    </span>
-                    <React.Fragment>{"\n"}</React.Fragment>
+                    {
+                      "Fathym deploys, hosts and seamlessly integrates multiple repos and your favourite tech stacks, frameworks, no code builders and data sources together under one domain.\n\nAssemble and deploy composable, cloud-native and future-proof web applications powered by modular frontends and APIs.\n\n"
+                    }
                   </React.Fragment>
-                </div>
-              </p.Stack>
-
-              <div className={classNames(projectcss.all, sty.columns__hYaZy)}>
-                <div className={classNames(projectcss.all, sty.column__t8VBq)}>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__f1Aqs)}
-                    color={"blue" as const}
-                    link={"/dashboard" as const}
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
                   >
-                    {"Get Started for Free"}
-                  </Button>
-                </div>
+                    {
+                      "Take advantage of Fathym's streamlined PaaS developer experience while future-proofing your tech stack knowing that you can scale to your own automated Azure cloud when ready."
+                    }
+                  </span>
+                </React.Fragment>
               </div>
-            </p.Stack>
-          </section>
+
+              <GetStartedForFreeButton
+                className={classNames(
+                  "__wab_instance",
+                  sty.getStartedForFreeButton__eFgMj
+                )}
+              />
+            </div>
+          </div>
 
           <FathymFooter
             data-plasmic-name={"fathymFooter"}
@@ -1650,23 +1690,17 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navbar",
-    "h1",
-    "svg",
     "learnMore",
     "link",
     "ol",
-    "section",
-    "foreground3",
+    "centeredSection",
     "fathymFooter"
   ],
   navbar: ["navbar"],
-  h1: ["h1"],
-  svg: ["svg"],
   learnMore: ["learnMore"],
   link: ["link"],
   ol: ["ol"],
-  section: ["section", "foreground3"],
-  foreground3: ["foreground3"],
+  centeredSection: ["centeredSection"],
   fathymFooter: ["fathymFooter"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1675,13 +1709,10 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
-  h1: "h1";
-  svg: "svg";
   learnMore: "a";
   link: "a";
   ol: "ol";
-  section: "section";
-  foreground3: "div";
+  centeredSection: typeof CenteredSection;
   fathymFooter: typeof FathymFooter;
 };
 
@@ -1747,18 +1778,25 @@ export const PlasmicHomepageVariant2 = Object.assign(
   {
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
-    h1: makeNodeComponent("h1"),
-    svg: makeNodeComponent("svg"),
     learnMore: makeNodeComponent("learnMore"),
     link: makeNodeComponent("link"),
     ol: makeNodeComponent("ol"),
-    section: makeNodeComponent("section"),
-    foreground3: makeNodeComponent("foreground3"),
+    centeredSection: makeNodeComponent("centeredSection"),
     fathymFooter: makeNodeComponent("fathymFooter"),
 
     // Metadata about props expected for PlasmicHomepageVariant2
     internalVariantProps: PlasmicHomepageVariant2__VariantProps,
-    internalArgProps: PlasmicHomepageVariant2__ArgProps
+    internalArgProps: PlasmicHomepageVariant2__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Develop & Deploy modern web experiences with your team",
+      description:
+        "Developers use Fathym to deploy and host future-proof web projects and applications – powered by Azure – with the flexibility, agility and speed the modern web demands.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/65bb7cdffb000dff2e366ce2b60dcbbb.png",
+      canonical: ""
+    }
   }
 );
 

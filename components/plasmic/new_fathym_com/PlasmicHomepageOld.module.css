@@ -286,7 +286,7 @@
 .img___9MwKm > picture > img {
   object-fit: cover;
 }
-.img___9MwKm > .__wab_img-spacer > img {
+.img___9MwKm > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .valuePropsSection:global(.__wab_instance) {
@@ -1922,7 +1922,7 @@
 .img__va5U > picture > img {
   object-fit: cover;
 }
-.img__va5U > .__wab_img-spacer > img {
+.img__va5U > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img__cjlZ6 {
@@ -1935,7 +1935,7 @@
 .img__cjlZ6 > picture > img {
   object-fit: cover;
 }
-.img__cjlZ6 > .__wab_img-spacer > img {
+.img__cjlZ6 > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img__uhUp1 {
@@ -1948,7 +1948,7 @@
 .img__uhUp1 > picture > img {
   object-fit: cover;
 }
-.img__uhUp1 > .__wab_img-spacer > img {
+.img__uhUp1 > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img__l2Shi {
@@ -1961,7 +1961,7 @@
 .img__l2Shi > picture > img {
   object-fit: cover;
 }
-.img__l2Shi > .__wab_img-spacer > img {
+.img__l2Shi > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img___8Oy9K {
@@ -1974,7 +1974,7 @@
 .img___8Oy9K > picture > img {
   object-fit: cover;
 }
-.img___8Oy9K > .__wab_img-spacer > img {
+.img___8Oy9K > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .testimonialsSection:global(.__wab_instance) {

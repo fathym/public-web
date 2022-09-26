@@ -3051,6 +3051,16 @@
       }
     },
     {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "#4A918E",
+      "category": "color",
+      "meta": {
+        "projectId": "jbURxL3XuiMBQsLhf7apui",
+        "id": "QboS_izMJ"
+      }
+    },
+    {
       "name": "UnnamedStyleToken 2",
       "type": "color",
       "value": "rgb(240,242,245)",

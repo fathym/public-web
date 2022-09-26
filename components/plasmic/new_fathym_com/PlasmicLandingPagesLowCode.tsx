@@ -103,7 +103,10 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -112,19 +115,44 @@ function PlasmicLandingPagesLowCode__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Low Code Development & Deployments in record time"}
+          {PlasmicLandingPagesLowCode.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={"Fathym - Low Code Development & Deployments in record time"}
+          content={PlasmicLandingPagesLowCode.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={"Fathym - Low Code Development & Deployments in record time"}
+          content={PlasmicLandingPagesLowCode.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesLowCode.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesLowCode.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesLowCode.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesLowCode.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesLowCode.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -1295,7 +1323,17 @@ export const PlasmicLandingPagesLowCode = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesLowCode
     internalVariantProps: PlasmicLandingPagesLowCode__VariantProps,
-    internalArgProps: PlasmicLandingPagesLowCode__ArgProps
+    internalArgProps: PlasmicLandingPagesLowCode__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Low Code Development & Deployments in record time",
+      description:
+        "Use Fathym to leverage your code, low code, and no code solutions to deliver powerful and composable web experiences for your users.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/5a0b7f1216ccf9c1c1925b0f673cb62a.png",
+      canonical: ""
+    }
   }
 );
 
