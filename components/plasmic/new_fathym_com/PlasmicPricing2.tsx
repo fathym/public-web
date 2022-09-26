@@ -99,7 +99,10 @@ function PlasmicPricing2__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -108,23 +111,42 @@ function PlasmicPricing2__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
-        <title key="title">
-          {"Fathym - Develop & Deploy modern web experiences with your team"}
-        </title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicPricing2.pageMetadata.title}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicPricing2.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicPricing2.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicPricing2.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicPricing2.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicPricing2.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicPricing2.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicPricing2.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -2028,7 +2050,17 @@ export const PlasmicPricing2 = Object.assign(
 
     // Metadata about props expected for PlasmicPricing2
     internalVariantProps: PlasmicPricing2__VariantProps,
-    internalArgProps: PlasmicPricing2__ArgProps
+    internalArgProps: PlasmicPricing2__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Develop & Deploy modern web experiences with your team",
+      description:
+        "Fathym offers a free plan for getting started and more advanced plans as you scale and grow. ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/65bb7cdffb000dff2e366ce2b60dcbbb.png",
+      canonical: ""
+    }
   }
 );
 

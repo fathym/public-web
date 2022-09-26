@@ -176,40 +176,42 @@
 .rootcolor_navLink:hover .slotTargetChildrencolor_navLink {
   color: var(--token-Gh2swhE2QtwV);
 }
-.rootcolor_navLink:hover .slotTargetChildrencolor_navLink > .__wab_text,
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot-string-wrapper,
+  > :global(.__wab_text),
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot
-  > .__wab_text,
+  > :global(.__wab_slot-string-wrapper),
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot
-  > .__wab_slot-string-wrapper,
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot
-  > .__wab_slot
-  > .__wab_text,
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper),
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot
-  > .__wab_slot
-  > .__wab_slot-string-wrapper,
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot
-  > .__wab_slot
-  > .__wab_slot
-  > .__wab_text,
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper),
 .rootcolor_navLink:hover
   .slotTargetChildrencolor_navLink
-  > .__wab_slot
-  > .__wab_slot
-  > .__wab_slot
-  > .__wab_slot-string-wrapper {
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
+.rootcolor_navLink:hover
+  .slotTargetChildrencolor_navLink
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper) {
   text-decoration-line: underline;
 }
 .slotTargetEndIcon {

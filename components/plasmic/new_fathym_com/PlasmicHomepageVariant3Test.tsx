@@ -96,7 +96,10 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -107,56 +110,42 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Develop & Deploy modern web experiences with your team"}
+          {PlasmicHomepageVariant3Test.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.title}
         />
         <meta
           key="description"
           name="description"
-          content={
-            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.description}
         />
         <meta
           key="og:description"
           property="og:description"
-          content={
-            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.description}
         />
         <meta
           key="twitter:description"
           name="twitter:description"
-          content={
-            "Fathym is a platform for hosting, managing and deploying Jamstack sites and web applications with the utmost flexibility and speed."
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.description}
         />
         <meta
           key="og:image"
           property="og:image"
-          content={
-            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.ogImageSrc}
         />
         <meta
           key="twitter:image"
           name="twitter:image"
-          content={
-            "https://site-assets.plasmic.app/281e5adf4ce02756f33826c5288ef77c.png"
-          }
+          content={PlasmicHomepageVariant3Test.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -250,7 +239,7 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                   }
                                   style={{ color: "#000000" }}
                                 >
-                                  {"Fast. Flexible."}
+                                  {"Fast, Flexible."}
                                 </span>
                                 <React.Fragment>{"\n"}</React.Fragment>
                                 <span
@@ -259,16 +248,7 @@ function PlasmicHomepageVariant3Test__RenderFunc(props: {
                                   }
                                   style={{ color: "#000000" }}
                                 >
-                                  {"Future Proof."}
-                                </span>
-                                <React.Fragment>{"\n"}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "#5F7AE6" }}
-                                >
-                                  {"Fathym."}
+                                  {"Future-Proof."}
                                 </span>
                               </React.Fragment>
                             </h1>
@@ -1772,7 +1752,17 @@ export const PlasmicHomepageVariant3Test = Object.assign(
 
     // Metadata about props expected for PlasmicHomepageVariant3Test
     internalVariantProps: PlasmicHomepageVariant3Test__VariantProps,
-    internalArgProps: PlasmicHomepageVariant3Test__ArgProps
+    internalArgProps: PlasmicHomepageVariant3Test__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Develop & Deploy modern web experiences with your team",
+      description:
+        "Developers use Fathym to deploy and host future-proof web projects and applications – powered by Azure – with the flexibility, agility and speed the modern web demands.  ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/65bb7cdffb000dff2e366ce2b60dcbbb.png",
+      canonical: ""
+    }
   }
 );
 

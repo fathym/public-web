@@ -109,7 +109,10 @@ function PlasmicLandingPagesAngular2Test__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -118,19 +121,44 @@ function PlasmicLandingPagesAngular2Test__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">
-          {"Fathym - Angular Development & Deployments in record time"}
+          {PlasmicLandingPagesAngular2Test.pageMetadata.title}
         </title>
         <meta
           key="og:title"
           property="og:title"
-          content={"Fathym - Angular Development & Deployments in record time"}
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={"Fathym - Angular Development & Deployments in record time"}
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesAngular2Test.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -1501,7 +1529,17 @@ export const PlasmicLandingPagesAngular2Test = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesAngular2Test
     internalVariantProps: PlasmicLandingPagesAngular2Test__VariantProps,
-    internalArgProps: PlasmicLandingPagesAngular2Test__ArgProps
+    internalArgProps: PlasmicLandingPagesAngular2Test__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Angular Development & Deployments in record time",
+      description:
+        "Deploy and host your Angular project on Fathym in just a few clicks. ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/eb2178be2c16a5eb5827ef99de8d0f7e.png",
+      canonical: ""
+    }
   }
 );
 

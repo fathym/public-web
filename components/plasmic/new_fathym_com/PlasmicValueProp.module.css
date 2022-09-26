@@ -69,7 +69,7 @@
 .img__gKrTh > picture > img {
   object-fit: cover;
 }
-.img__gKrTh > .__wab_img-spacer > img {
+.img__gKrTh > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .contentContainer {

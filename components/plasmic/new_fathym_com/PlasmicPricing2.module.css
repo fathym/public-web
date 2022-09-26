@@ -417,7 +417,7 @@
 .img__z8C2N > picture > img {
   object-fit: cover;
 }
-.img__z8C2N > .__wab_img-spacer > img {
+.img__z8C2N > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__oWwfZ {
@@ -699,7 +699,7 @@
 .img__yls5P > picture > img {
   object-fit: cover;
 }
-.img__yls5P > .__wab_img-spacer > img {
+.img__yls5P > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__svAi {
@@ -1001,7 +1001,7 @@
 .img__oVhF > picture > img {
   object-fit: cover;
 }
-.img__oVhF > .__wab_img-spacer > img {
+.img__oVhF > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column___1SeJ {
@@ -1178,7 +1178,7 @@
 .img__el8Op > picture > img {
   object-fit: cover;
 }
-.img__el8Op > .__wab_img-spacer > img {
+.img__el8Op > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .columns__sDsnQ {
@@ -1233,7 +1233,7 @@
 .img___3D6Ih > picture > img {
   object-fit: cover;
 }
-.img___3D6Ih > .__wab_img-spacer > img {
+.img___3D6Ih > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column___9GNkQ {
@@ -1341,7 +1341,7 @@
 .img__hnDan > picture > img {
   object-fit: cover;
 }
-.img__hnDan > .__wab_img-spacer > img {
+.img__hnDan > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__b4Ye {
@@ -1546,7 +1546,7 @@
 .img__q09Nt > picture > img {
   object-fit: cover;
 }
-.img__q09Nt > .__wab_img-spacer > img {
+.img__q09Nt > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__tc6S {
@@ -1723,7 +1723,7 @@
 .img__drfoR > picture > img {
   object-fit: cover;
 }
-.img__drfoR > .__wab_img-spacer > img {
+.img__drfoR > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .columns__jBtZx {
@@ -1779,7 +1779,7 @@
 .img__u7Evx > picture > img {
   object-fit: cover;
 }
-.img__u7Evx > .__wab_img-spacer > img {
+.img__u7Evx > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__h8DcZ {
@@ -1885,7 +1885,7 @@
 .img__os9Rs > picture > img {
   object-fit: cover;
 }
-.img__os9Rs > .__wab_img-spacer > img {
+.img__os9Rs > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__kVsdc {
@@ -2064,7 +2064,7 @@
 .img__yI5P > picture > img {
   object-fit: cover;
 }
-.img__yI5P > .__wab_img-spacer > img {
+.img__yI5P > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__xYnYw {
@@ -2190,7 +2190,7 @@
 .img__t31Ac > picture > img {
   object-fit: cover;
 }
-.img__t31Ac > .__wab_img-spacer > img {
+.img__t31Ac > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .personalPlan {
@@ -2231,7 +2231,7 @@
 .img__eKSqe > picture > img {
   object-fit: cover;
 }
-.img__eKSqe > .__wab_img-spacer > img {
+.img__eKSqe > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .proPlan {
@@ -2272,7 +2272,7 @@
 .img__n0K6 > picture > img {
   object-fit: cover;
 }
-.img__n0K6 > .__wab_img-spacer > img {
+.img__n0K6 > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .businessPlan {

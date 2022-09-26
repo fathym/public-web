@@ -104,7 +104,10 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,19 +116,42 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
-        <title key="title">
-          {"Fathym - React Development & Deployments in record time"}
-        </title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicLandingPagesReact.pageMetadata.title}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={"Fathym - React Development & Deployments in record time"}
+          content={PlasmicLandingPagesReact.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={"Fathym - React Development & Deployments in record time"}
+          content={PlasmicLandingPagesReact.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesReact.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesReact.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesReact.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesReact.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesReact.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -307,7 +333,7 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                             sty.link__hHlGr
                           )}
                           component={Link}
-                          href={"/angular" as const}
+                          href={`/angular`}
                           platform={"nextjs"}
                         >
                           <div
@@ -370,7 +396,7 @@ function PlasmicLandingPagesReact__RenderFunc(props: {
                             sty.link__fZuj
                           )}
                           component={Link}
-                          href={"/vue" as const}
+                          href={`/vue`}
                           platform={"nextjs"}
                         >
                           <div
@@ -1339,7 +1365,17 @@ export const PlasmicLandingPagesReact = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesReact
     internalVariantProps: PlasmicLandingPagesReact__VariantProps,
-    internalArgProps: PlasmicLandingPagesReact__ArgProps
+    internalArgProps: PlasmicLandingPagesReact__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - React Development & Deployments in record time",
+      description:
+        "Deploy and host your React project on Fathym in just a few clicks. ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/c98016b605c9675e8e464774855a3fdf.png",
+      canonical: ""
+    }
   }
 );
 

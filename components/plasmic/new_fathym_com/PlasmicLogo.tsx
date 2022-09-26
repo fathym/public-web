@@ -90,7 +90,10 @@ function PlasmicLogo__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -114,7 +117,7 @@ function PlasmicLogo__RenderFunc(props: {
         { [sty.root_50Opaque]: hasVariant(variants, "_50Opaque", "_50Opaque") }
       )}
       component={Link}
-      href={"/" as const}
+      href={`/`}
       platform={"nextjs"}
     >
       <p.PlasmicImg

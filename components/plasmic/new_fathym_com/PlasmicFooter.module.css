@@ -49,7 +49,7 @@
   object-fit: contain;
   object-position: center center;
 }
-.img__gGosq > .__wab_img-spacer > img {
+.img__gGosq > :global(.__wab_img-spacer) > img {
   object-fit: contain;
   object-position: center center;
 }
@@ -496,7 +496,7 @@
 .img__uAvr > picture > img {
   object-fit: cover;
 }
-.img__uAvr > .__wab_img-spacer > img {
+.img__uAvr > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .text__bf7Ms {
