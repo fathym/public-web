@@ -104,7 +104,10 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,19 +116,42 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
-        <title key="title">
-          {"Fathym - Vue Development & Deployments in record time"}
-        </title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicLandingPagesVue.pageMetadata.title}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={"Fathym - Vue Development & Deployments in record time"}
+          content={PlasmicLandingPagesVue.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={"Fathym - Vue Development & Deployments in record time"}
+          content={PlasmicLandingPagesVue.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicLandingPagesVue.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicLandingPagesVue.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicLandingPagesVue.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicLandingPagesVue.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicLandingPagesVue.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -305,7 +331,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                             sty.link__uGuJw
                           )}
                           component={Link}
-                          href={"/react" as const}
+                          href={`/react`}
                           platform={"nextjs"}
                         >
                           <div
@@ -368,7 +394,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                             sty.link__gXbDf
                           )}
                           component={Link}
-                          href={"/angular" as const}
+                          href={`/angular`}
                           platform={"nextjs"}
                         >
                           <div
@@ -431,7 +457,7 @@ function PlasmicLandingPagesVue__RenderFunc(props: {
                             sty.link__yqV4L
                           )}
                           component={Link}
-                          href={"/svelte-deployment" as const}
+                          href={`/svelte-deployment`}
                           platform={"nextjs"}
                         >
                           <div
@@ -1362,7 +1388,17 @@ export const PlasmicLandingPagesVue = Object.assign(
 
     // Metadata about props expected for PlasmicLandingPagesVue
     internalVariantProps: PlasmicLandingPagesVue__VariantProps,
-    internalArgProps: PlasmicLandingPagesVue__ArgProps
+    internalArgProps: PlasmicLandingPagesVue__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Vue Development & Deployments in record time",
+      description:
+        "Deploy and host your Vue project on Fathym in just a few clicks. ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/82aa3c4109d312a13990d9d053f1a5ca.png",
+      canonical: ""
+    }
   }
 );
 

@@ -104,7 +104,10 @@ function PlasmicHomepageOld__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -113,23 +116,42 @@ function PlasmicHomepageOld__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
-        <title key="title">
-          {"Fathym - Develop & Deploy modern web experiences with your team"}
-        </title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicHomepageOld.pageMetadata.title}</title>
         <meta
           key="og:title"
           property="og:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageOld.pageMetadata.title}
         />
         <meta
           key="twitter:title"
           name="twitter:title"
-          content={
-            "Fathym - Develop & Deploy modern web experiences with your team"
-          }
+          content={PlasmicHomepageOld.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicHomepageOld.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicHomepageOld.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicHomepageOld.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicHomepageOld.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicHomepageOld.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -1293,7 +1315,7 @@ function PlasmicHomepageOld__RenderFunc(props: {
                           />
                         }
                         flat={true}
-                        link={"/angular" as const}
+                        link={`/angular`}
                         showEndIcon={true}
                       >
                         <div
@@ -1364,7 +1386,7 @@ function PlasmicHomepageOld__RenderFunc(props: {
                           />
                         }
                         flat={true}
-                        link={"/react" as const}
+                        link={`/react`}
                         showEndIcon={true}
                       >
                         <div
@@ -1441,7 +1463,7 @@ function PlasmicHomepageOld__RenderFunc(props: {
                           />
                         }
                         flat={true}
-                        link={"/docusaurus" as const}
+                        link={`/docusaurus`}
                         showEndIcon={true}
                       >
                         <div
@@ -1512,7 +1534,7 @@ function PlasmicHomepageOld__RenderFunc(props: {
                           />
                         }
                         flat={true}
-                        link={"/svelte-deployment" as const}
+                        link={`/svelte-deployment`}
                         showEndIcon={true}
                       >
                         <div
@@ -1589,7 +1611,7 @@ function PlasmicHomepageOld__RenderFunc(props: {
                           />
                         }
                         flat={true}
-                        link={"/vue" as const}
+                        link={`/vue`}
                         showEndIcon={true}
                       >
                         <div
@@ -1660,7 +1682,7 @@ function PlasmicHomepageOld__RenderFunc(props: {
                           />
                         }
                         flat={true}
-                        link={"/gatsby" as const}
+                        link={`/gatsby`}
                         showEndIcon={true}
                       >
                         <div
@@ -2233,7 +2255,17 @@ export const PlasmicHomepageOld = Object.assign(
 
     // Metadata about props expected for PlasmicHomepageOld
     internalVariantProps: PlasmicHomepageOld__VariantProps,
-    internalArgProps: PlasmicHomepageOld__ArgProps
+    internalArgProps: PlasmicHomepageOld__ArgProps,
+
+    // Page metadata
+    pageMetadata: {
+      title: "Fathym - Develop & Deploy modern web experiences with your team",
+      description:
+        "Developers use Fathym to host, manage and deploy future-proof web projects and applications – powered by Azure – with the flexibility and speed the modern web demands.  ",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/5a0b7f1216ccf9c1c1925b0f673cb62a.png",
+      canonical: ""
+    }
   }
 );
 

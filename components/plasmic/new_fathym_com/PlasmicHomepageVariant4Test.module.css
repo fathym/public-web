@@ -467,7 +467,7 @@
 .img__pQffN > picture > img {
   object-fit: cover;
 }
-.img__pQffN > .__wab_img-spacer > img {
+.img__pQffN > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__jj3Wb {
@@ -759,7 +759,7 @@
 .img__beqKr > picture > img {
   object-fit: cover;
 }
-.img__beqKr > .__wab_img-spacer > img {
+.img__beqKr > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__xj3Z {
@@ -1087,7 +1087,7 @@
 .img__nfmLz > picture > img {
   object-fit: cover;
 }
-.img__nfmLz > .__wab_img-spacer > img {
+.img__nfmLz > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__rlvGe {
@@ -1301,7 +1301,7 @@
 .img__boiYl > picture > img {
   object-fit: cover;
 }
-.img__boiYl > .__wab_img-spacer > img {
+.img__boiYl > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .columns__qLi5Y {
@@ -1363,7 +1363,7 @@
 .img__lj4LV > picture > img {
   object-fit: cover;
 }
-.img__lj4LV > .__wab_img-spacer > img {
+.img__lj4LV > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__ki9U0 {
@@ -1509,7 +1509,7 @@
 .img__zXlhu > picture > img {
   object-fit: cover;
 }
-.img__zXlhu > .__wab_img-spacer > img {
+.img__zXlhu > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__eWaAk {
@@ -1724,7 +1724,7 @@
 .img__k3SKu > picture > img {
   object-fit: cover;
 }
-.img__k3SKu > .__wab_img-spacer > img {
+.img__k3SKu > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .column__rsLvB {
@@ -1910,7 +1910,7 @@
 .img__dPbnz > picture > img {
   object-fit: cover;
 }
-.img__dPbnz > .__wab_img-spacer > img {
+.img__dPbnz > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .columns__zUMn {
@@ -1975,7 +1975,7 @@
 .img__jpixk > picture > img {
   object-fit: cover;
 }
-.img__jpixk > .__wab_img-spacer > img {
+.img__jpixk > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .reveal__hiKtb:global(.__wab_instance) {
@@ -2043,7 +2043,7 @@
 .img__kPgMy > picture > img {
   object-fit: cover;
 }
-.img__kPgMy > .__wab_img-spacer > img {
+.img__kPgMy > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -2133,7 +2133,7 @@
 .img__izKaW > picture > img {
   object-fit: cover;
 }
-.img__izKaW > .__wab_img-spacer > img {
+.img__izKaW > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .section {

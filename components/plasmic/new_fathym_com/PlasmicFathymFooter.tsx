@@ -95,7 +95,10 @@ function PlasmicFathymFooter__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   return (
     <div
@@ -209,7 +212,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.habistack
               )}
               component={Link}
-              href={"https://www.habistack.com/" as const}
+              href={"https://www.fathym.com/forecast" as const}
               platform={"nextjs"}
             >
               <div
@@ -321,7 +324,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.enterpriseAgreement
               )}
               component={Link}
-              href={"/enterprise-agreement" as const}
+              href={"https://www.fathym.com/enterprise-agreement/" as const}
               platform={"nextjs"}
             >
               <div
@@ -344,7 +347,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.termsOfService
               )}
               component={Link}
-              href={"/terms-of-services" as const}
+              href={"https://www.fathym.com/terms-of-services/" as const}
               platform={"nextjs"}
             >
               <div
@@ -367,7 +370,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.privacyPolicy
               )}
               component={Link}
-              href={"/privacy-policy" as const}
+              href={"https://www.fathym.com/privacy-policy/" as const}
               platform={"nextjs"}
             >
               <div

@@ -57,7 +57,7 @@
   object-fit: contain;
   object-position: center center;
 }
-.img__yzwZr > .__wab_img-spacer > img {
+.img__yzwZr > :global(.__wab_img-spacer) > img {
   object-fit: contain;
   object-position: center center;
 }
@@ -335,7 +335,7 @@
 .img__kgJav > picture > img {
   object-fit: cover;
 }
-.img__kgJav > .__wab_img-spacer > img {
+.img__kgJav > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .text___4XPy7 {

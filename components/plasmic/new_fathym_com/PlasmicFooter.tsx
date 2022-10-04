@@ -109,7 +109,10 @@ function PlasmicFooter__RenderFunc(props: {
     [props.args]
   );
 
-  const $props = args;
+  const $props = {
+    ...args,
+    ...variants
+  };
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbzFq34BwReL2()
@@ -191,7 +194,7 @@ function PlasmicFooter__RenderFunc(props: {
               href={
                 hasVariant(globalVariants, "screen", "mobileOnly")
                   ? ("https://www.fathym.com/" as const)
-                  : ("/" as const)
+                  : `/`
               }
               platform={"nextjs"}
               target={"_blank" as const}
@@ -345,7 +348,7 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.enterpriseAgreement
               )}
               component={Link}
-              href={"/enterprise-agreement" as const}
+              href={`/enterprise-agreement`}
               platform={"nextjs"}
               target={undefined}
             >
@@ -362,7 +365,7 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.termsOfService
               )}
               component={Link}
-              href={"/terms-of-services" as const}
+              href={`/terms-of-services`}
               platform={"nextjs"}
               target={undefined}
             >
@@ -379,7 +382,7 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.privacyPolicy
               )}
               component={Link}
-              href={"/privacy-policy" as const}
+              href={`/privacy-policy`}
               platform={"nextjs"}
               target={undefined}
             >
