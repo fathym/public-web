@@ -348,7 +348,7 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.enterpriseAgreement
               )}
               component={Link}
-              href={`/enterprise-agreement`}
+              href={`/enterprise-agreement-old`}
               platform={"nextjs"}
               target={undefined}
             >
@@ -365,7 +365,7 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.termsOfService
               )}
               component={Link}
-              href={`/terms-of-services`}
+              href={`/terms-of-services-old`}
               platform={"nextjs"}
               target={undefined}
             >
@@ -382,7 +382,7 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.privacyPolicy
               )}
               component={Link}
-              href={`/privacy-policy`}
+              href={`/privacy-policy-old`}
               platform={"nextjs"}
               target={undefined}
             >

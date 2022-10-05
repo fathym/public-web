@@ -324,7 +324,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.enterpriseAgreement
               )}
               component={Link}
-              href={"https://www.fathym.com/enterprise-agreement/" as const}
+              href={"https://www.fathym.com/enterprise-agreement" as const}
               platform={"nextjs"}
             >
               <div
@@ -347,7 +347,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.termsOfService
               )}
               component={Link}
-              href={"https://www.fathym.com/terms-of-services/" as const}
+              href={"https://www.fathym.com/terms-of-services" as const}
               platform={"nextjs"}
             >
               <div
@@ -370,7 +370,7 @@ function PlasmicFathymFooter__RenderFunc(props: {
                 sty.privacyPolicy
               )}
               component={Link}
-              href={"https://www.fathym.com/privacy-policy/" as const}
+              href={"https://www.fathym.com/privacy-policy" as const}
               platform={"nextjs"}
             >
               <div

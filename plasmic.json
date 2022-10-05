@@ -463,45 +463,6 @@
           "componentType": "page"
         },
         {
-          "id": "IM6IUPKqqu",
-          "name": "EnterpriseAgreement",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicEnterpriseAgreement.tsx",
-          "importSpec": {
-            "modulePath": "../pages/enterprise-agreement.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicEnterpriseAgreement.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
-          "id": "4hgTMGuV5F0",
-          "name": "TermsOfServices",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicTermsOfServices.tsx",
-          "importSpec": {
-            "modulePath": "../pages/terms-of-services.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicTermsOfServices.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
-          "id": "8Fxhz1anqdV",
-          "name": "PrivacyPolicy",
-          "type": "managed",
-          "projectId": "jbURxL3XuiMBQsLhf7apui",
-          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicPrivacyPolicy.tsx",
-          "importSpec": {
-            "modulePath": "../pages/privacy-policy.tsx"
-          },
-          "cssFilePath": "plasmic/new_fathym_com/PlasmicPrivacyPolicy.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "3jTJ0D37Jf",
           "name": "FathymFooter",
           "type": "managed",
@@ -669,6 +630,45 @@
           "cssFilePath": "plasmic/new_fathym_com/PlasmicGetStartedForFreeButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "IM6IUPKqqu",
+          "name": "OldEnterpriseAgreement",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicOldEnterpriseAgreement.tsx",
+          "importSpec": {
+            "modulePath": "../pages/enterprise-agreement-old.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicOldEnterpriseAgreement.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "4hgTMGuV5F0",
+          "name": "OldTermsOfServices",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicOldTermsOfServices.tsx",
+          "importSpec": {
+            "modulePath": "../pages/terms-of-services-old.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicOldTermsOfServices.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "8Fxhz1anqdV",
+          "name": "OldPrivacyPolicy",
+          "type": "managed",
+          "projectId": "jbURxL3XuiMBQsLhf7apui",
+          "renderModuleFilePath": "plasmic/new_fathym_com/PlasmicOldPrivacyPolicy.tsx",
+          "importSpec": {
+            "modulePath": "../pages/privacy-policy-old.tsx"
+          },
+          "cssFilePath": "plasmic/new_fathym_com/PlasmicOldPrivacyPolicy.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -2121,7 +2121,8 @@
           "name": "YouTube",
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -2140,7 +2141,8 @@
           "name": "Reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -2174,7 +2176,8 @@
           "name": "DataProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "84wxoth5npGrp6RRXPL88z",
@@ -2198,7 +2201,8 @@
           "name": "ParallaxProviderWrapper",
           "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
